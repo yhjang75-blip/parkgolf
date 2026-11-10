@@ -1,0 +1,1513 @@
+{
+ "checked": "2026-11-10 20:46",
+ "items": [
+  {
+   "id": "bf33c9d6c7",
+   "name": "강릉파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "dc1966030b",
+   "name": "사천체육공원 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "3c05c66720",
+   "name": "주문진 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "97eb3948a2",
+   "name": "고성 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "69a932ccce",
+   "name": "무릉파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "b7acd8275c",
+   "name": "전천파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "577c864244",
+   "name": "미로파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "66bfcf96d9",
+   "name": "속초 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5ae9260e03",
+   "name": "방산면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "189b250083",
+   "name": "한반도섬 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "c08135d023",
+   "name": "남대천파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "f8d578a5fa",
+   "name": "영월군 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "3d95506b9a",
+   "name": "간현파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "02dca118d4",
+   "name": "문막파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5c2a356f24",
+   "name": "취병파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "cead05e38e",
+   "name": "태장파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "84d0580168",
+   "name": "학성파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "0a815be00d",
+   "name": "행구수변공원파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "4e4bf587f5",
+   "name": "인제(살구미) 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "2852ce3992",
+   "name": "인제(살구미) 파크골프장 보조경기장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5d13e87b6c",
+   "name": "녹송파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "ceccf974ab",
+   "name": "북평파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "fb0dd81a24",
+   "name": "철원파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "98e48bddec",
+   "name": "서면파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "dc0522f3cf",
+   "name": "소양강파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "a60e5e8b5a",
+   "name": "백산파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "cd65a52349",
+   "name": "스포츠파크 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "a5a8f5d0dd",
+   "name": "대화파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "246f005e62",
+   "name": "봉평파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "88f73df112",
+   "name": "용평파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "a75f9ef90d",
+   "name": "평창파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "d739247076",
+   "name": "내면 광원리 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "da38f2ec6d",
+   "name": "홍천 강변 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "711cc812eb",
+   "name": "산천어 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "1e738201d0",
+   "name": "생활체육공원 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "f79dbb6bad",
+   "name": "둔내(둔방) 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "068541deca",
+   "name": "둔내(우용) 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "caf0dbe562",
+   "name": "명품 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "905c5b21b0",
+   "name": "전천 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "6db80498a8",
+   "name": "청일 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "eac3e6b90e",
+   "name": "가평파크골프장",
+   "url": "https://booking.kakao.com/detail/ticketStore/27714",
+   "code": 200,
+   "final_url": "https://booking.kakao.com/detail/ticketStore/27714",
+   "status": "정상"
+  },
+  {
+   "id": "a0e923c36d",
+   "name": "재인폭포파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "6e79a921b3",
+   "name": "북부 체육공원",
+   "url": "https://www.2000fmc.or.kr/reservation3/sports/icsp/reservation/P82468384/parkgolf?gateToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFTlRFUklOR19UT0tFTiIsImV4cCI6MTc4NDU5NDAyNSwiVE9LRU5fSUQiOiI0MzhjMTYwNjc0OTk0OWMzOGIwMzkwM2ZjY2E5N2UwNiIsIkdST1VQX0lEIjoiNjlmNzU5ODM4ZWE4NTM0YzRkODY5NjNhIn0.Ae0bPzcgad2ljTAkv1MWe_GS0jOd29girPd7nS1NoQg",
+   "code": 200,
+   "final_url": "https://cdn.mirihae.com:9443/entering.html?uri=https://www.2000fmc.or.kr/reservation3/sports/icsp/reservation/P82468384/parkgolf",
+   "status": "정상"
+  },
+  {
+   "id": "4a5d6a264a",
+   "name": "가북면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "8e2ac3a11e",
+   "name": "가조면 파크골프장 1구장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "451c0b906c",
+   "name": "가조면 파크골프장 2구장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "1a3976e7a0",
+   "name": "거창스포츠파크 강변 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "edc8ea1d55",
+   "name": "거창스포츠파크 파크골프장 1구장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "611af2dc6a",
+   "name": "거창스포츠파크 파크골프장 2구장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "fad9739acb",
+   "name": "고제면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "272559842e",
+   "name": "신원면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "13bd191656",
+   "name": "웅양면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5ac7934b5d",
+   "name": "위천면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "478e0d3eb5",
+   "name": "제2창포원 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "49fc87cbee",
+   "name": "주상면 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5c71c5adc8",
+   "name": "경산파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f93944cea5",
+   "name": "하양물빛파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "2fc29669a5",
+   "name": "하양파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "76697835df",
+   "name": "경주파크골프1구장",
+   "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "code": 200,
+   "final_url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "status": "정상"
+  },
+  {
+   "id": "a3441e3004",
+   "name": "경주파크골프2구장",
+   "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "code": 200,
+   "final_url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "status": "정상"
+  },
+  {
+   "id": "32875bef84",
+   "name": "남경주파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "9c61a545b5",
+   "name": "동경주파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "8d64b0f08b",
+   "name": "서경주파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "2e61509fa7",
+   "name": "알천파크골프장",
+   "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "code": 200,
+   "final_url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "status": "정상"
+  },
+  {
+   "id": "5593374557",
+   "name": "다산파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "419ebb4ba5",
+   "name": "대가야파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e972446009",
+   "name": "구미파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "c54a1156e2",
+   "name": "도개파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "12fba632ea",
+   "name": "동락파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "c731267cd1",
+   "name": "선산파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "b7161e0764",
+   "name": "양포파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "adbbc1c4b7",
+   "name": "옥성파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "9b4610c675",
+   "name": "장애인파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "15e51fdb08",
+   "name": "해평파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "5c3cee77c1",
+   "name": "김천파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f19335fcd3",
+   "name": "가은 청솔공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "682013b907",
+   "name": "농암 대정 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ae5a3fae57",
+   "name": "동로면 황장산 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "09ac3a670a",
+   "name": "영강천변파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "92e22d6985",
+   "name": "내성천파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "62e6fd991a",
+   "name": "상주 병성천 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "0e10760cfe",
+   "name": "상주 함창 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "6f92cfc3b8",
+   "name": "가천파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f7b1b8b68a",
+   "name": "벽진파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e08b0f1703",
+   "name": "별고을파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "49ac339664",
+   "name": "선남파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7c26f33bfc",
+   "name": "성주파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "66d5e59aa5",
+   "name": "성주호파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7a6f840081",
+   "name": "수륜파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "42d6244f5d",
+   "name": "용암파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "c3b7f8681e",
+   "name": "초전파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "bdd12bb19f",
+   "name": "강남파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "dd11b07afa",
+   "name": "안동댐파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "1f90670495",
+   "name": "옥동파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "4336dd8eec",
+   "name": "용상파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "4f5af2ffbf",
+   "name": "송천파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e289fa5413",
+   "name": "영해생활체육공원파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f5413665be",
+   "name": "오십천파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "71e7018628",
+   "name": "장애인파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "06bb237003",
+   "name": "삼지연파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e621692e5e",
+   "name": "오수파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "8d48321a1e",
+   "name": "장애인파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "6f91ad9e88",
+   "name": "조교파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "54dc78dd77",
+   "name": "예천한천파크골프장(1구장)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "2d026f9aa5",
+   "name": "예천한천파크골프장(2구장)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "a17655484a",
+   "name": "남울진파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "8259f88af2",
+   "name": "울진파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "1529936868",
+   "name": "비안파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "9ed2b225bc",
+   "name": "각북파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "4c0f82a959",
+   "name": "청도군 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "53903dee72",
+   "name": "청송파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ef54ff5931",
+   "name": "덕산파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "c0be72a365",
+   "name": "북삼파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "01dd64b313",
+   "name": "석적파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ec0ec524f2",
+   "name": "왜관파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "eb289ff407",
+   "name": "곡강파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "117427030f",
+   "name": "지곡파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "49fb38c9be",
+   "name": "형산강파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "bab01bbc3d",
+   "name": "서봉파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "177db6b6b8",
+   "name": "임곡파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "47a6f3df9d",
+   "name": "승촌파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "cf2f86524a",
+   "name": "무등산파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "0444b82e14",
+   "name": "대상파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5249b096a6",
+   "name": "북구파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "20c75d18bb",
+   "name": "첨단체육공원파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "c04f9b1393",
+   "name": "효령파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "7339295b15",
+   "name": "덕흥동파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "a5ce2d1676",
+   "name": "염주파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "e652ef644b",
+   "name": "가창 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "d76c118232",
+   "name": "구지 평촌 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "c788889f3e",
+   "name": "논공 달성보 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "482bc5666f",
+   "name": "논공 위천 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "586c5af7ee",
+   "name": "다사 강창 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5be13e48b0",
+   "name": "다사 세천 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "c55ec2ecb0",
+   "name": "옥포 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "f14dc1b204",
+   "name": "유가 한정 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "743ac3563f",
+   "name": "현풍 원오 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "0eb7002fcd",
+   "name": "화원 진천천 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "0b511979df",
+   "name": "불로파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "5c37c54d48",
+   "name": "강변파크골프장(A, B구장)",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "c2116c3b9e",
+   "name": "강변파크골프장(C구장)",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "06014b5c21",
+   "name": "강변파크골프장(D구장)",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "9092de74ac",
+   "name": "강변파크골프장(E구장)",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "51b2ec85de",
+   "name": "검단파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "6c9521049b",
+   "name": "금호파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "fec9f06e65",
+   "name": "무태파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "63c2884dcb",
+   "name": "비산파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "d6511b7a76",
+   "name": "서남물재생센터 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "5ae6b514fd",
+   "name": "관악파크골프장",
+   "url": "https://booking.gwanakgongdan.or.kr/booking/1515?center=KWAN_AK13&type=1002&part=02&place=102-2015-2759",
+   "code": 200,
+   "final_url": "SSL인증서경고:https://booking.gwanakgongdan.or.kr/booking/1515?center=KWAN_AK13&type=1002&part=02&place=102-2015-2759",
+   "status": "인증서확인필요"
+  },
+  {
+   "id": "a6aa2315ac",
+   "name": "중랑천 파크골프장 (광진구)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "198fc0d3bc",
+   "name": "안양천 파크골프장 (구로①)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "73a421a055",
+   "name": "안양천 파크골프장 (구로②)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "b5ecaa6279",
+   "name": "안양천 파크골프장 (금천)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3e2d8ac336",
+   "name": "중랑천 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "0695621d42",
+   "name": "중랑천 파크골프장 (동대문구)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "6b3f4fd47e",
+   "name": "동작파크골프장",
+   "url": "https://sports.idongjak.or.kr/",
+   "code": 200,
+   "final_url": "https://sports.idongjak.or.kr/home/1",
+   "status": "정상"
+  },
+  {
+   "id": "25ff9f6db1",
+   "name": "상도역 파크골프스테이션",
+   "url": "https://sports.idongjak.or.kr/",
+   "code": 200,
+   "final_url": "https://sports.idongjak.or.kr/home/1",
+   "status": "정상"
+  },
+  {
+   "id": "5c1042ff0f",
+   "name": "월드컵공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "5dff263fa1",
+   "name": "잠실운동장 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "cc0b405cbc",
+   "name": "안양천 파크골프장 (양천)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e7a1781902",
+   "name": "안양천 파크골프장 (영등포)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "d491aaf437",
+   "name": "여의도한강 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f20194af14",
+   "name": "중랑구립파크골프장",
+   "url": "https://parkgolf.jungnangimc.or.kr/",
+   "code": 200,
+   "final_url": "https://parkgolf.jungnangimc.or.kr/",
+   "status": "정상"
+  },
+  {
+   "id": "ba8349315b",
+   "name": "금강파크골프장",
+   "url": "https://onestop.sejong.go.kr/Usr/etc/revInfo.do?infoType=use",
+   "code": 200,
+   "final_url": "https://onestop.sejong.go.kr/Usr/etc/revInfo.do?infoType=use",
+   "status": "정상"
+  },
+  {
+   "id": "787d4005d7",
+   "name": "부강생활체육공원",
+   "url": "https://onestop.sejong.go.kr/Usr/etc/revInfo.do?infoType=use",
+   "code": 200,
+   "final_url": "https://onestop.sejong.go.kr/Usr/etc/revInfo.do?infoType=use",
+   "status": "정상"
+  },
+  {
+   "id": "aab53b9ff5",
+   "name": "세종중앙공원 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "683cdd1641",
+   "name": "수질복원센터B 파크골프장",
+   "url": "https://onestop.sejong.go.kr/Usr/etc/revInfo.do?infoType=use",
+   "code": 200,
+   "final_url": "https://onestop.sejong.go.kr/Usr/etc/revInfo.do?infoType=use",
+   "status": "정상"
+  },
+  {
+   "id": "8641624e98",
+   "name": "오가낭뜰근린공원 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "1d26b5e39a",
+   "name": "조천변 파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "eff3c9294b",
+   "name": "한솔파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "e64b46042a",
+   "name": "계양경기장파크골프장",
+   "url": "https://reserve.insiseol.or.kr/",
+   "code": 200,
+   "final_url": "https://reserve.insiseol.or.kr/",
+   "status": "정상"
+  },
+  {
+   "id": "2832fb5778",
+   "name": "장수파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "6c0577080a",
+   "name": "공촌유수지 파크골프장",
+   "url": "https://reserve.insiseol.or.kr/",
+   "code": 200,
+   "final_url": "https://reserve.insiseol.or.kr/",
+   "status": "정상"
+  },
+  {
+   "id": "6676f7b829",
+   "name": "아시아드주경기장파크골프장",
+   "url": "https://reserve.insiseol.or.kr/",
+   "code": 200,
+   "final_url": "https://reserve.insiseol.or.kr/",
+   "status": "정상"
+  },
+  {
+   "id": "c82d63b977",
+   "name": "선학파크골프장",
+   "status": "없음",
+   "phone": true
+  },
+  {
+   "id": "7629ebdcbe",
+   "name": "송도파크골프장",
+   "url": "https://res.insiseol.or.kr/see/parkGolfList?up_id=07",
+   "code": 200,
+   "final_url": "https://res.insiseol.or.kr/see/parkGolfList?up_id=07",
+   "status": "정상"
+  },
+  {
+   "id": "da3648c9f8",
+   "name": "강진 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e7a379f93a",
+   "name": "곡성 동악파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "6220e187c9",
+   "name": "오곡 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "978667484d",
+   "name": "광양 섬진강둔치파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "e1f36890e4",
+   "name": "동천 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3a54d5be61",
+   "name": "선샤인 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "762a537fc8",
+   "name": "구례 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "d8338300ab",
+   "name": "혁신도시 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "8cff01a47a",
+   "name": "백진공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "4ab8fbabad",
+   "name": "남해 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7294eba8b4",
+   "name": "목포 실내체육관 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "5d98c91c9b",
+   "name": "부주산 국제파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "af2d3214e3",
+   "name": "북항 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "b7770b8933",
+   "name": "삼학도 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "5a255b7a7f",
+   "name": "상동 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "6f47064c2a",
+   "name": "서해 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3825ad3235",
+   "name": "남악 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f3f8e220f3",
+   "name": "무안 늘어지 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3b4c32697c",
+   "name": "무안 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "c7600ba8c6",
+   "name": "벌교 숲공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "8f1935c87d",
+   "name": "보성 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7d58a54bb7",
+   "name": "보성체육공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "45a87b3ec1",
+   "name": "복내 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "1977174b78",
+   "name": "상사 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "a3495108b8",
+   "name": "해룡 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "d93906e75c",
+   "name": "율촌 장도 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "52ccf85abe",
+   "name": "불갑 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "b7253bd147",
+   "name": "한빛원자력 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ffc5b2bb10",
+   "name": "삼호 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "cda1d43b09",
+   "name": "영암 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "19a97838a0",
+   "name": "고금테마공원파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "4e91197227",
+   "name": "장성 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "fe7e16f4c5",
+   "name": "관산 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7aa96fdacc",
+   "name": "탐진강 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ff31a42eea",
+   "name": "운림 삼별초공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "70ba309d72",
+   "name": "함평 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "f1c0c6b9a1",
+   "name": "산이 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "c8a0ee8465",
+   "name": "삼산 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "24d491aea7",
+   "name": "송지 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "eabfade1d8",
+   "name": "능주 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "99c4192e13",
+   "name": "화순 홍수조절지 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "18e29e1638",
+   "name": "고수 주민체육 체험시설 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "bb0df251ca",
+   "name": "상하 체육테마공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ec37ddb12c",
+   "name": "스포츠타운 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "a8f8aa3d61",
+   "name": "군산 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "0d14fcc6f7",
+   "name": "청하 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "29b10aff92",
+   "name": "남원 그린파크골프장 [주생 파크골프장]",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "aa2feee9e3",
+   "name": "춘향골 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "07dfcf7ef1",
+   "name": "부안 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3f928e3bb6",
+   "name": "순창 섬진강 체육공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "05c12b076b",
+   "name": "유등 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "cea3eaa77f",
+   "name": "고산 만경강 수변생태공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "454bc5dc6d",
+   "name": "둔산공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3c6b5fc007",
+   "name": "봉동 생강골 공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "a98cc770d7",
+   "name": "비봉생활체육공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "610570fc09",
+   "name": "삼례 금와습지 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "2b4808e672",
+   "name": "삼례 수도산 공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "8e9e1dfcb9",
+   "name": "상관생태공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ed4efdebd5",
+   "name": "이서 설화공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "40ef59df18",
+   "name": "이서 지사울공원 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "039289ac14",
+   "name": "만경강 목천지구 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "77bdc8de9f",
+   "name": "북부권 어울림 파크골프장 (장애인 겸용)",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "5ccacf561a",
+   "name": "임실 의견 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "772cbf8151",
+   "name": "마전 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "ebb52d973b",
+   "name": "온고을 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "eb3004b282",
+   "name": "신태인 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7d42a18c19",
+   "name": "동향 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "3fd3cba9b9",
+   "name": "부귀 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "1c53bfcb03",
+   "name": "안천 파크골프장",
+   "status": "없음",
+   "phone": false
+  },
+  {
+   "id": "7d9391c437",
+   "name": "진안군 파크골프장",
+   "status": "없음",
+   "phone": false
+  }
+ ]
+}

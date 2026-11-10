@@ -1,0 +1,12 @@
+{
+  "_설명": "사람이 직접 확인한 값으로 공개 자료를 고치거나 채운다. 키는 구장 id (사이트 주소창 #id=... 또는 data/courses.json 에서 확인). 수정 후 python scripts/build.py 실행.",
+  "_예시": {
+    "구장id": {
+      "reserve_url": "https://공식예약페이지주소",
+      "turf": "천연 잔디",
+      "course_length_m": 1200,
+      "_확인": "2026-11-10 운영기관 홈페이지에서 확인"
+    }
+  },
+  "courses": {}
+}
