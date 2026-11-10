@@ -2537,8 +2537,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (고령군 공공체육시설 통합예약, 목록에서 다산파크골프장 선택)",
+   "reserve_url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2554,6 +2554,7 @@
     }
    ],
    "id": "5593374557",
+   "reserve_source": "직접 확인 2026-11-10 고령군 예약 사이트 파크골프장 목록에 다산파크골프장 있음 확인",
    "data_date": "2026-10-21"
   },
   {
@@ -2576,8 +2577,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (고령군 공공체육시설 통합예약)",
+   "reserve_url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf/10",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2593,6 +2594,7 @@
     }
    ],
    "id": "419ebb4ba5",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 대가야파크골프장 전용 페이지 확인",
    "data_date": "2026-10-21"
   },
   {
@@ -2615,8 +2617,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2632,6 +2634,7 @@
     }
    ],
    "id": "e972446009",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {
@@ -2654,8 +2657,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2671,6 +2674,7 @@
     }
    ],
    "id": "c54a1156e2",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {
@@ -2693,8 +2697,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2710,6 +2714,7 @@
     }
    ],
    "id": "12fba632ea",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {
@@ -2732,8 +2737,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2749,6 +2754,7 @@
     }
    ],
    "id": "c731267cd1",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {
@@ -2771,8 +2777,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2788,6 +2794,7 @@
     }
    ],
    "id": "b7161e0764",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {
@@ -2810,8 +2817,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2827,6 +2834,7 @@
     }
    ],
    "id": "adbbc1c4b7",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {
@@ -2888,8 +2896,8 @@
    "hours": null,
    "closed_days": null,
    "fee": null,
-   "reserve_method": null,
-   "reserve_url": null,
+   "reserve_method": "온라인 (구미시통합예약)",
+   "reserve_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
    "reserve_note": null,
    "reserve_phone": null,
    "turf": null,
@@ -2905,6 +2913,7 @@
     }
    ],
    "id": "15e51fdb08",
+   "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
    "data_date": "2026-10-21"
   },
   {

@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-10 20:46",
+ "checked": "2026-11-10 22:23",
  "items": [
   {
    "id": "bf33c9d6c7",
@@ -398,50 +398,66 @@
   {
    "id": "5593374557",
    "name": "다산파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf",
+   "code": 200,
+   "final_url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf",
+   "status": "정상"
   },
   {
    "id": "419ebb4ba5",
    "name": "대가야파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf/10",
+   "code": 200,
+   "final_url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf/10",
+   "status": "정상"
   },
   {
    "id": "e972446009",
    "name": "구미파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "c54a1156e2",
    "name": "도개파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "12fba632ea",
    "name": "동락파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "c731267cd1",
    "name": "선산파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "b7161e0764",
    "name": "양포파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "adbbc1c4b7",
    "name": "옥성파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "9b4610c675",
@@ -452,8 +468,10 @@
   {
    "id": "15e51fdb08",
    "name": "해평파크골프장",
-   "status": "없음",
-   "phone": false
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "code": 200,
+   "final_url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "status": "정상"
   },
   {
    "id": "5c3cee77c1",

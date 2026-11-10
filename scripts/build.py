@@ -291,7 +291,10 @@ def main():
 
     # 주소 → 좌표 변환 결과 (scripts/geocode.py 가 만듦)
     geocache = json.loads(GEOCACHE.read_text(encoding="utf-8")) if GEOCACHE.exists() else {}
-    overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")).get("courses", {}) if OVERRIDES.exists() else {}
+    ov_all = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
+    overrides = ov_all.get("courses", {})
+    reserve_sites = ov_all.get("reserve_sites", {})
+    nospace = lambda s: re.sub(r"\s+", "", s or "")
 
     for c in merged:
         c.pop("_rank", None)
@@ -300,6 +303,14 @@ def main():
             g = geocache.get(c["address"])
             if g and g.get("lat"):
                 c["lat"], c["lng"], c["coord_source"] = g["lat"], g["lng"], g.get("source", "주소변환")
+        # 시·군 예약 사이트 (공개 자료에 예약 주소가 없을 때만)
+        if not c.get("reserve_url"):
+            for site in reserve_sites.get(f"{c['sido']}|{c['sigungu']}", []):
+                if nospace(c["name"]) in {nospace(n) for n in site["courses"]}:
+                    c["reserve_url"] = site["url"]
+                    c["reserve_method"] = site.get("method") or c.get("reserve_method")
+                    c["reserve_source"] = "직접 확인 " + site.get("_확인", "")
+                    break
         for k, v in overrides.get(c["id"], {}).items():
             if not k.startswith("_"):
                 c[k] = v
