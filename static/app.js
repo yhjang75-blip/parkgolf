@@ -232,13 +232,44 @@ const WMO = (code) => {
   return ["⛈️", "뇌우"];
 };
 
+/* 날씨: 이용자 브라우저에서 Open-Meteo 를 직접 조회 (무료 서버의 공용 IP 요청 제한을 피함).
+   실패하면 서버(/api/weather)를 거쳐 한 번 더 시도한다. */
+const wxCache = new Map();
+async function fetchWeather(c) {
+  const hit = wxCache.get(c.id);
+  if (hit && Date.now() - hit.t < 30 * 60 * 1000) return hit.w;
+  const p = new URLSearchParams({
+    latitude: c.lat, longitude: c.lng, timezone: "Asia/Seoul", forecast_days: 3, wind_speed_unit: "ms",
+    current: "temperature_2m,precipitation,weather_code,wind_speed_10m",
+    daily: "weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max",
+  });
+  let w = null;
+  try {
+    const r = await fetch(`https://api.open-meteo.com/v1/forecast?${p}`);
+    if (r.ok) {
+      const j = await r.json();
+      const d = new Date();
+      w = { current: j.current, daily: j.daily, source: "Open-Meteo",
+            fetched: `${d.toLocaleDateString("sv-SE")} ${d.toTimeString().slice(0, 5)}` };
+    }
+  } catch { /* 아래에서 서버로 재시도 */ }
+  if (!w) {
+    try {
+      const r = await fetch(`/api/weather/${encodeURIComponent(c.id)}`);
+      if (r.ok) w = await r.json();
+    } catch { /* 둘 다 실패 */ }
+  }
+  if (w) wxCache.set(c.id, { t: Date.now(), w });
+  return w;
+}
+
 async function loadWeather(c) {
   const box = $("#wx");
   if (c.lat == null) { box.innerHTML = `<p class="src">위치 정보가 없어 날씨를 표시할 수 없습니다.</p>`; return; }
   try {
-    const r = await fetch(`/api/weather/${encodeURIComponent(c.id)}`);
-    const w = await r.json();
-    if (!r.ok || state.active !== c.id) { if (state.active === c.id) box.innerHTML = `<p class="src">${esc(w.error)}</p>`; return; }
+    const w = await fetchWeather(c);
+    if (state.active !== c.id) return;
+    if (!w) { box.innerHTML = `<p class="src">날씨 정보를 잠시 가져올 수 없습니다.</p>`; return; }
     const [ic, tx] = WMO(w.current.weather_code);
     const labels = ["오늘", "내일", "모레"];
     box.innerHTML = `
