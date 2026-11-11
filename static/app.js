@@ -455,17 +455,22 @@ function ago(s) {
 }
 const isFresh = (s) => s && Date.now() - new Date(s.replace(" ", "T") + "+09:00").getTime() < 24 * 3600 * 1000;
 
-async function loadFeed(topic, el, limit) {
-  try {
-    const j = await fetch(`/api/news?topic=${topic}`).then((r) => r.json());
-    const items = j.items.slice(0, limit);
-    el.innerHTML = items.length ? items.map((x) => `<li><a href="${esc(safeUrl(x.url) || "#")}" target="_blank" rel="noopener">
-        <span class="t">${isFresh(x.date) ? '<span class="new">NEW</span>' : ""}${esc(x.title)}</span>
-        <span class="m">${esc(x.source)} · ${esc(ago(x.date))}</span></a></li>`).join("")
-      : `<li class="muted">최근 30일 동안 관련 기사가 없습니다.</li>`;
-  } catch {
-    el.innerHTML = `<li class="muted">소식을 잠시 불러올 수 없습니다.</li>`;
-  }
+/* 소식은 한 줄씩 짧게: 제목(넘치면 …) + 오른쪽에 날짜 */
+const briefLi = (url, title, meta, fresh, badge = "") => {
+  const body = `<span class="t">${badge}${fresh ? '<span class="new">N</span>' : ""}${esc(title)}</span><span class="m">${esc(meta)}</span>`;
+  const u = safeUrl(url);
+  return `<li>${u ? `<a href="${esc(u)}" target="_blank" rel="noopener" title="${esc(title)}">${body}</a>` : `<span class="row" title="${esc(title)}">${body}</span>`}</li>`;
+};
+const getNews = (topic) => fetch(`/api/news?topic=${topic}`).then((r) => r.json()).then((j) => j.items).catch(() => null);
+
+async function loadFeed(topics, el, limit) {
+  const lists = await Promise.all(topics.map(getNews));
+  if (lists.every((x) => x === null)) { el.innerHTML = `<li class="muted">소식을 잠시 불러올 수 없습니다.</li>`; return; }
+  const seen = new Set();
+  const items = lists.flat().filter((x) => x && !seen.has(x.title) && seen.add(x.title))
+    .sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, limit);
+  el.innerHTML = items.length ? items.map((x) => briefLi(x.url, x.title, ago(x.date), isFresh(x.date))).join("")
+    : `<li class="muted">최근 30일 동안 관련 기사가 없습니다.</li>`;
 }
 
 const fmtDay = (d) => { const [, m, dd] = d.split("-"); return `${+m}월 ${+dd}일`; };
@@ -473,12 +478,10 @@ async function loadTournaments() {
   const el = $("#tour");
   try {
     const j = await fetch("/api/tournaments").then((r) => r.json());
-    el.innerHTML = j.items.slice(0, 5).map((t) => {
-      const when = t.start ? (t.end && t.end !== t.start ? `${fmtDay(t.start)} ~ ${fmtDay(t.end)}` : fmtDay(t.start)) : (t.when || "일정 미정");
+    el.innerHTML = j.items.filter((t) => t.status !== "종료").concat(j.items.filter((t) => t.status === "종료")).slice(0, 4).map((t) => {
+      const when = t.start ? fmtDay(t.start) : ((t.when || "미정").replace(/\s*\(.*\)\s*/, "").replace(/^\d{4}년\s*/, ""));
       const st = t.status === "진행 중" ? "진행" : t.status;
-      const name = safeUrl(t.source) ? `<a href="${esc(t.source)}" target="_blank" rel="noopener">${esc(t.name)}</a>` : esc(t.name);
-      return `<li><span class="st ${st}">${esc(t.status)}</span>
-        <div><div class="nm">${name}</div><div class="dt">${esc(when)}${t.place ? ` · ${esc(t.place)}` : ""}</div></div></li>`;
+      return briefLi(t.source, t.name, when, false, `<span class="st ${st}">${esc(st)}</span>`);
     }).join("") || `<li class="muted">등록된 대회 일정이 없습니다.</li>`;
   } catch {
     el.innerHTML = `<li class="muted">대회 일정을 잠시 불러올 수 없습니다.</li>`;
@@ -588,7 +591,6 @@ async function loadCommunity() {
 loadMy();
 loadCommunity();
 loadTournaments();
-loadFeed("tournament", $("#feed-tournament"), 5);
-loadFeed("winner", $("#feed-winner"), 9);
-loadFeed("news", $("#feed-news"), 10);
+loadFeed(["winner"], $("#feed-winner"), 4);
+loadFeed(["tournament", "news"], $("#feed-news"), 4);
 loadVideos();

@@ -17,58 +17,6 @@
   </section>
 
   <main class="wrap home">
-    <!-- 회원 맞춤 정보 (로그인 전에는 가입 안내) -->
-    <section class="panel my" id="my" hidden></section>
-
-    <div class="grid2">
-      <section class="panel" id="sec-tour" aria-labelledby="h-tour">
-        <h2 id="h-tour">🏆 전국 대회 소식</h2>
-        <h3 class="sub-h">주요 대회 일정</h3>
-        <ul class="tour" id="tour"><li class="muted">불러오는 중…</li></ul>
-        <h3 class="sub-h">최근 대회 기사</h3>
-        <ul class="feed" id="feed-tournament"><li class="muted">불러오는 중…</li></ul>
-      </section>
-
-      <section class="panel" id="sec-win" aria-labelledby="h-win">
-        <h2 id="h-win">🥇 우승자 소식</h2>
-        <ul class="feed" id="feed-winner"><li class="muted">불러오는 중…</li></ul>
-        <p class="src">최근 30일 기사 중 '우승·정상·1위' 등이 들어간 소식을 모았습니다. 출처: Google 뉴스</p>
-      </section>
-    </div>
-
-    <section class="panel" id="sec-video" aria-labelledby="h-video">
-      <div class="panel-head">
-        <h2 id="h-video">📺 대회 영상</h2>
-        <a class="pill live" id="live-link" target="_blank" rel="noopener"
-           href="https://www.youtube.com/results?search_query=%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84+%EB%8C%80%ED%9A%8C&sp=EgJAAQ%253D%253D">● 지금 생중계 찾기 ↗</a>
-      </div>
-      <div class="video">
-        <div class="player" id="player"></div>
-        <ul class="vlist" id="vlist"></ul>
-      </div>
-      <p class="src" id="video-src">방송사·파크골프 채널의 유튜브 공개 영상</p>
-    </section>
-
-    {% if db_on %}
-    <section class="panel" id="sec-comm" aria-labelledby="h-comm">
-      <div class="panel-head">
-        <h2 id="h-comm">💬 파크골퍼 커뮤니티</h2>
-        <a class="pill" href="/board/write">✏️ 글쓰기</a>
-      </div>
-      <div class="comm">
-        <div>
-          <ul class="feed" id="comm-posts"><li class="muted">불러오는 중…</li></ul>
-          <p class="src"><a href="/board">게시판 전체 보기 →</a></p>
-        </div>
-        <div>
-          <div class="gallery mini" id="comm-photos"></div>
-          <h3 class="sub-h">🏅 이달의 나이스 회원</h3>
-          <ol class="rank" id="comm-rank"></ol>
-        </div>
-      </div>
-    </section>
-    {% endif %}
-
     <section class="finder" id="finder" aria-labelledby="h-finder">
       <div class="panel-head">
         <h2 id="h-finder">📍 구장 찾기</h2>
@@ -109,11 +57,60 @@
       </p>
     </section>
 
-    <section class="panel" id="sec-news" aria-labelledby="h-news">
-      <h2 id="h-news">📰 파크골프 뉴스</h2>
-      <ul class="feed cols" id="feed-news"><li class="muted">불러오는 중…</li></ul>
-      <p class="src">최근 30일 기사 · 출처: Google 뉴스 · 기사를 누르면 언론사 사이트로 이동합니다.</p>
+    <!-- 회원 맞춤 정보 (로그인 전에는 가입 안내) -->
+    <section class="panel my" id="my" hidden></section>
+
+    <section class="panel" id="sec-brief" aria-labelledby="h-brief">
+      <h2 id="h-brief">📰 파크골프 소식 한눈에</h2>
+      <div class="brief-grid">
+        <div>
+          <h3 class="sub-h">🏆 대회 일정</h3>
+          <ul class="brief" id="tour"><li class="muted">불러오는 중…</li></ul>
+        </div>
+        <div>
+          <h3 class="sub-h">🥇 우승 소식</h3>
+          <ul class="brief" id="feed-winner"><li class="muted">불러오는 중…</li></ul>
+        </div>
+        <div>
+          <h3 class="sub-h">🗞️ 대회·뉴스</h3>
+          <ul class="brief" id="feed-news"><li class="muted">불러오는 중…</li></ul>
+        </div>
+      </div>
+      <p class="src">최근 30일 기사 · 출처: Google 뉴스 · 제목을 누르면 언론사 사이트로 이동합니다.</p>
     </section>
+
+    <section class="panel" id="sec-video" aria-labelledby="h-video">
+      <div class="panel-head">
+        <h2 id="h-video">📺 대회 영상</h2>
+        <a class="pill live" id="live-link" target="_blank" rel="noopener"
+           href="https://www.youtube.com/results?search_query=%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84+%EB%8C%80%ED%9A%8C&sp=EgJAAQ%253D%253D">● 지금 생중계 찾기 ↗</a>
+      </div>
+      <div class="video">
+        <div class="player" id="player"></div>
+        <ul class="vlist" id="vlist"></ul>
+      </div>
+      <p class="src" id="video-src">방송사·파크골프 채널의 유튜브 공개 영상</p>
+    </section>
+
+    {% if db_on %}
+    <section class="panel" id="sec-comm" aria-labelledby="h-comm">
+      <div class="panel-head">
+        <h2 id="h-comm">💬 파크골퍼 커뮤니티</h2>
+        <a class="pill" href="/board/write">✏️ 글쓰기</a>
+      </div>
+      <div class="comm">
+        <div>
+          <ul class="feed" id="comm-posts"><li class="muted">불러오는 중…</li></ul>
+          <p class="src"><a href="/board">게시판 전체 보기 →</a></p>
+        </div>
+        <div>
+          <div class="gallery mini" id="comm-photos"></div>
+          <h3 class="sub-h">🏅 이달의 나이스 회원</h3>
+          <ol class="rank" id="comm-rank"></ol>
+        </div>
+      </div>
+    </section>
+    {% endif %}
   </main>
 
   <aside id="detail" class="detail" hidden aria-live="polite">
@@ -125,5 +122,5 @@
   <script>window.CSRF = {{ csrf|tojson }};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-  <script src="{{ url_for('static', filename='app.js') }}?v=3"></script>
+  <script src="{{ url_for('static', filename='app.js') }}?v=4"></script>
 {% endblock %}

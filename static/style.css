@@ -65,6 +65,22 @@ body { overflow-x: hidden; }
 .feed.cols { grid-template-columns: 1fr 1fr; column-gap: 16px; }
 .feed .new { display: inline-block; background: var(--red); color: #fff; font-size: .7rem; padding: 0 6px; border-radius: 4px; margin-right: 4px; vertical-align: 2px; }
 
+/* 소식 한눈에: 한 줄 요약 목록 3칸 */
+.brief-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 22px; }
+.brief-grid .sub-h { margin-top: 4px; }
+.brief { list-style: none; margin: 0; padding: 0; }
+.brief li { border-top: 1px solid var(--line); }
+.brief li:first-child { border-top: 0; }
+.brief li > a, .brief li > .row { display: flex; align-items: flex-start; gap: 8px; padding: 8px 4px; color: var(--ink); text-decoration: none; border-radius: 6px; }
+.brief li > a:hover { background: var(--green-bg); }
+.brief .t { flex: 1; min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.4; font-weight: 600; }
+.brief .m { flex: none; font-size: .8rem; color: var(--muted); margin-top: 3px; white-space: nowrap; }
+.brief .st { font-size: .72rem; font-weight: 800; padding: 1px 7px; border-radius: 999px; margin-right: 6px; vertical-align: 1px; }
+.brief .st.예정 { background: var(--blue-bg); color: var(--blue); }
+.brief .st.진행 { background: var(--red); color: #fff; }
+.brief .st.종료 { background: #eceeed; color: var(--muted); }
+.brief .new { display: inline-block; background: var(--red); color: #fff; font-size: .68rem; padding: 0 5px; border-radius: 4px; margin-right: 5px; vertical-align: 1px; }
+.brief .muted { padding: 8px 4px; }
 .tour { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .tour li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; }
 .tour .st { font-size: .78rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; white-space: nowrap; margin-top: 2px; }
@@ -204,6 +220,7 @@ body { overflow-x: hidden; }
   .hero-search button { padding: 0 14px; }
   .grid2 { grid-template-columns: minmax(0, 1fr); }
   .feed.cols { grid-template-columns: 1fr; }
+  .brief-grid { grid-template-columns: minmax(0, 1fr); }
   .vlist { grid-template-columns: 1fr; max-height: 400px; }
   .panel, .finder { padding: 14px 14px; border-radius: 14px; }
   .filters .row { grid-template-columns: 1fr 1fr; }
