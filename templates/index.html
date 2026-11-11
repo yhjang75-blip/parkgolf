@@ -82,19 +82,6 @@
       <p class="src">최근 30일 기사 · 출처: Google 뉴스 · 제목을 누르면 언론사 사이트로 이동합니다.</p>
     </section>
 
-    <section class="panel" id="sec-video" aria-labelledby="h-video">
-      <div class="panel-head">
-        <h2 id="h-video">📺 대회 영상</h2>
-        <a class="pill live" id="live-link" target="_blank" rel="noopener"
-           href="https://www.youtube.com/results?search_query=%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84+%EB%8C%80%ED%9A%8C&sp=EgJAAQ%253D%253D">● 지금 생중계 찾기 ↗</a>
-      </div>
-      <div class="video">
-        <div class="player" id="player"></div>
-        <ul class="vlist" id="vlist"></ul>
-      </div>
-      <p class="src" id="video-src">방송사·파크골프 채널의 유튜브 공개 영상</p>
-    </section>
-
     {% if db_on %}
     <section class="panel" id="sec-comm" aria-labelledby="h-comm">
       <div class="panel-head">
@@ -125,5 +112,5 @@
   <script>window.CSRF = {{ csrf|tojson }};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-  <script src="{{ url_for('static', filename='app.js') }}?v=4"></script>
+  <script src="{{ url_for('static', filename='app.js') }}?v=5"></script>
 {% endblock %}

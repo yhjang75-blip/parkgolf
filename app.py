@@ -275,10 +275,41 @@ def tournaments():
     return jsonify({"items": items, "today": today})
 
 
+def tournament_timeline(items, today):
+    """대회 일정 막대그래프용: 기간 안에서 각 대회의 시작 위치·길이(%)를 계산한다."""
+    from datetime import date
+    import calendar
+    d = lambda s: date.fromisoformat(s)
+    days = [d(t["start"]) for t in items if t.get("start")] + [d(t.get("end") or t["start"]) for t in items if t.get("start")] + [d(today)]
+    first = min(days).replace(day=1)
+    last = max(days)
+    last = last.replace(day=calendar.monthrange(last.year, last.month)[1])
+    span = (last - first).days + 1
+    pct = lambda x: round((x - first).days / span * 100, 2)
+    months, m = [], first
+    while m <= last:
+        months.append({"label": f"{m.month}월", "left": pct(m)})
+        m = date(m.year + (m.month == 12), m.month % 12 + 1, 1)
+    rows = []
+    for t in items:
+        if t.get("start"):
+            s0, e0 = d(t["start"]), d(t.get("end") or t["start"])
+            rows.append({"t": t, "left": pct(s0), "width": max(round(((e0 - s0).days + 1) / span * 100, 2), 1.2), "tbd": False})
+        else:  # 날짜 미정: 'N월'이 적혀 있으면 그 달 전체를 점선으로
+            mm = re.search(r"(\d{1,2})월", t.get("when") or "")
+            hit = next((x for x in months if mm and x["label"] == f"{int(mm.group(1))}월"), None)
+            if hit:
+                i = months.index(hit)
+                end = months[i + 1]["left"] if i + 1 < len(months) else 100
+                rows.append({"t": t, "left": hit["left"], "width": round(end - hit["left"], 2), "tbd": True})
+    rows.sort(key=lambda r: r["left"])
+    return {"months": months, "rows": rows, "today": pct(d(today))}
+
+
 @app.get("/tournament")
 def tournament_page():
     items, today = tournament_items()
-    return render_template("tournament.html", items=items, today=today)
+    return render_template("tournament.html", items=items, today=today, tl=tournament_timeline(items, today))
 
 
 @app.get("/favicon.ico")

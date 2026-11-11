@@ -10,7 +10,7 @@
   <meta property="og:description" content="전국 파크골프장 예약 안내, 대회 소식, 우승 소식, 대회 영상, 파크골퍼 커뮤니티를 한곳에서.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⛳%3C/text%3E%3C/svg%3E">
   {% block head %}{% endblock %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=5">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=6">
   <link rel="stylesheet" href="{{ url_for('static', filename='community.css') }}?v=1">
 </head>
 <body>
@@ -20,7 +20,7 @@
       <nav class="topnav" aria-label="메뉴">
         <a href="/#finder">구장 찾기</a>
         <a href="/tournament">대회 안내</a>
-        <a href="/#sec-video">대회 영상</a>
+        <a href="/tournament#t-video">대회 영상</a>
         <a href="/board">커뮤니티</a>
         <a href="/benefits">회원 혜택</a>
         <a href="/about">소개</a>

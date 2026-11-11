@@ -86,7 +86,7 @@
       "published": "2026-07-11"
     }
   ],
-  "_tournaments_설명": "주요 전국 대회 일정. start/end 는 YYYY-MM-DD. 날짜가 지나면 화면에 '종료'로 표시된다. 참가 전 대회 요강을 꼭 확인. players·format·eligibility·entry·fee·prize·tie·refs 는 대회 요강·기사에서 확인한 내용만 적는다(모르면 비워 둠).",
+  "_tournaments_설명": "주요 전국 대회 일정. start/end 는 YYYY-MM-DD. 날짜가 지나면 화면에 '종료'로 표시된다. 참가 전 대회 요강을 꼭 확인. players·format·eligibility·entry·fee·prize·tie·refs 는 대회 요강·기사에서 확인한 내용만 적는다(모르면 비워 둠). 그래프용 숫자: players_n(참가 인원, 명), prize_man(총상금, 만 원), short(그래프에 쓰는 짧은 이름).",
   "tournaments": [
     {
       "name": "제1회 순창고추장배 전국파크골프대회",
@@ -112,7 +112,12 @@
           "파크골프투데이",
           "https://www.parkgolftoday.kr/news/articleView.html?idxno=19158"
         ]
-      ]
+      ],
+      "short": "순창고추장배",
+      "players_n": 1280,
+      "prize_man": 4960,
+      "holes_short": "예선→결선 36홀",
+      "fee_short": "4만 원~"
     },
     {
       "name": "제16회 대한파크골프협회장기 전국파크골프대회",
@@ -131,7 +136,8 @@
           "대한파크골프협회",
           "https://kpga7330.com/"
         ]
-      ]
+      ],
+      "short": "대한파크골프협회장기"
     },
     {
       "name": "제4회 문화체육관광부장관기 전국파크골프대회",
@@ -152,7 +158,11 @@
           "대회 요강 정리",
           "https://dnublog.co.kr/2026/09/17/%EC%A0%9C4%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%B2%B4%EC%9C%A1%EA%B4%80%EA%B4%91%EB%B6%80%EC%9E%A5%EA%B4%80%EA%B8%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC/"
         ]
-      ]
+      ],
+      "short": "문체부장관기",
+      "players_n": 856,
+      "holes_short": "36홀",
+      "fee_short": "2만 원"
     },
     {
       "name": "제5회 정읍시장배 전국파크골프대회",
@@ -172,7 +182,12 @@
           "대회 요강 정리",
           "https://dnublog.co.kr/2026/08/29/%EC%A0%9C5%ED%9A%8C-%EC%A0%95%EC%9D%8D%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%B0%B8%EA%B0%80%EC%8B%A0%EC%B2%AD%C2%B7%EC%9D%BC%EC%A0%95/"
         ]
-      ]
+      ],
+      "short": "정읍시장배",
+      "players_n": 320,
+      "prize_man": 1100,
+      "holes_short": "36홀",
+      "fee_short": "5만 원"
     },
     {
       "name": "2026 전남·광주통합특별시장배 전국파크골프대회",
@@ -193,7 +208,12 @@
           "대회 요강 정리",
           "https://dnublog.co.kr/2026/08/29/2026-%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC%EC%A0%95/"
         ]
-      ]
+      ],
+      "short": "전남·광주시장배",
+      "players_n": 704,
+      "prize_man": 2280,
+      "holes_short": "36홀",
+      "fee_short": "5만 원"
     },
     {
       "name": "2026 화천 산천어 전국파크골프 페스티벌 결선",
@@ -210,7 +230,11 @@
           "경기경제신문",
           "https://www.geconomy.co.kr/mobile/article.html?no=323465"
         ]
-      ]
+      ],
+      "short": "화천 산천어",
+      "players_n": 3200,
+      "prize_man": 12240,
+      "holes_short": "예선 8회→결선"
     }
   ]
 }
