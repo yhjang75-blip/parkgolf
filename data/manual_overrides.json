@@ -1,35 +1,56 @@
 {
-  "_설명": "사람이 직접 확인한 값으로 공개 자료를 고치거나 채운다. 수정 후 python scripts/build.py 실행.",
-
-  "_reserve_sites_설명": "시·군 예약 사이트. key = '시도|시군구'. courses 에 적힌 구장(이름의 띄어쓰기 무시)에만 연결한다. 공개 자료에 예약 주소가 이미 있으면 그것을 우선한다.",
-  "reserve_sites": {
-    "경상북도|구미시": [
-      {
-        "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
-        "method": "온라인 (구미시통합예약)",
-        "courses": ["구미파크골프장", "도개파크골프장", "동락파크골프장", "선산파크골프장", "양포파크골프장", "옥성파크골프장", "해평파크골프장"],
-        "_확인": "2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)"
-      }
+ "_설명": "사람이 직접 확인한 값으로 공개 자료를 고치거나 채운다. 수정 후 python scripts/build.py 실행.",
+ "_reserve_sites_설명": "시·군 예약 사이트. key = '시도|시군구'. courses 에 적힌 구장(이름의 띄어쓰기 무시)에만 연결한다. 공개 자료에 예약 주소가 이미 있으면 그것을 우선한다.",
+ "reserve_sites": {
+  "경상북도|구미시": [
+   {
+    "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+    "method": "온라인 (구미시통합예약)",
+    "courses": [
+     "구미파크골프장",
+     "도개파크골프장",
+     "동락파크골프장",
+     "선산파크골프장",
+     "양포파크골프장",
+     "옥성파크골프장",
+     "해평파크골프장"
     ],
-    "경상북도|고령군": [
-      {
-        "url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf/10",
-        "method": "온라인 (고령군 공공체육시설 통합예약)",
-        "courses": ["대가야파크골프장"],
-        "_확인": "2026-11-10 사용자 제보, 대가야파크골프장 전용 페이지 확인"
-      },
-      {
-        "url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf",
-        "method": "온라인 (고령군 공공체육시설 통합예약, 목록에서 다산파크골프장 선택)",
-        "courses": ["다산파크골프장"],
-        "_확인": "2026-11-10 고령군 예약 사이트 파크골프장 목록에 다산파크골프장 있음 확인"
-      }
-    ]
-  },
-
-  "_courses_설명": "구장 하나씩 고칠 때. key = 구장 id (사이트 주소창 #id=... 값).",
-  "_courses_예시": {
-    "구장id": {"reserve_url": "https://...", "turf": "천연 잔디", "course_length_m": 1200, "_확인": "확인 날짜와 출처"}
-  },
-  "courses": {}
+    "_확인": "2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)"
+   }
+  ],
+  "경상북도|고령군": [
+   {
+    "url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf/10",
+    "method": "온라인 (고령군 공공체육시설 통합예약)",
+    "courses": [
+     "대가야파크골프장"
+    ],
+    "_확인": "2026-11-10 사용자 제보, 대가야파크골프장 전용 페이지 확인"
+   },
+   {
+    "url": "https://sports.goryeong.go.kr/grParkgolf/facility/parkgolf",
+    "method": "온라인 (고령군 공공체육시설 통합예약, 목록에서 다산파크골프장 선택)",
+    "courses": [
+     "다산파크골프장"
+    ],
+    "_확인": "2026-11-10 고령군 예약 사이트 파크골프장 목록에 다산파크골프장 있음 확인"
+   }
+  ]
+ },
+ "_courses_설명": "구장 하나씩 고칠 때. key = 구장 id (사이트 주소창 #id=... 값).",
+ "_courses_예시": {
+  "구장id": {
+   "reserve_url": "https://...",
+   "turf": "천연 잔디",
+   "course_length_m": 1200,
+   "_확인": "확인 날짜와 출처"
+  }
+ },
+ "courses": {
+  "15e51fdb08": {
+   "holes": 27,
+   "_구장": "해평파크골프장(구미시)",
+   "_확인": "2026-11-11 사용자 제보: 27홀 (공개 자료 2025-03 기준 18홀은 증설 전 값)"
+  }
+ }
 }

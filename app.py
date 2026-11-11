@@ -1,4 +1,4 @@
-"""전국 파크골프장 현황·예약 안내 웹사이트 (Flask).
+"""나이스파크 — 전국 파크골프장 현황·예약 안내 웹사이트 (Flask).
 
 실행:  python app.py   ->  http://127.0.0.1:5000
 배포:  gunicorn app:app   (무료 호스팅 Render 등. README.md 참고)
