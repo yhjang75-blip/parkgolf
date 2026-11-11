@@ -15,7 +15,17 @@ from sqlalchemy import (Boolean, Column, ForeignKey, Integer, LargeBinary, MetaD
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parent
 
-url = os.environ.get("DATABASE_URL", "")
+import logging
+import re
+
+log = logging.getLogger("db")
+
+# 붙여 넣은 값에 psql '...' 이나 따옴표·공백이 섞여 있어도 주소만 골라 쓴다
+_raw = os.environ.get("DATABASE_URL", "").strip()
+_m = re.search(r"postgres(?:ql)?://[^\s'\"]+", _raw)
+url = _m.group(0) if _m else ""
+if _raw and not url:
+    log.error("DATABASE_URL 값에서 postgresql:// 주소를 찾지 못했습니다. 값 앞부분: %r", _raw[:15])
 if url.startswith("postgres://"):
     url = "postgresql://" + url[len("postgres://"):]
 if url.startswith("postgresql://"):
@@ -154,8 +164,17 @@ redemptions = Table(
 
 
 def init():
-    if engine is not None:
+    """표를 만든다. 접속에 실패하면 사이트는 그대로 두고 회원 기능만 끈다 (로그에 이유를 남김)."""
+    global engine, ENABLED
+    if engine is None:
+        log.warning("회원 기능 꺼짐: DATABASE_URL 이 없습니다.")
+        return
+    try:
         md.create_all(engine)
+        log.warning("데이터베이스 연결 성공: %s", engine.url.host)
+    except Exception as e:  # 잘못된 주소·비밀번호 등
+        log.error("데이터베이스 연결 실패 (회원 기능 꺼짐): %s", str(e).splitlines()[0][:200])
+        engine, ENABLED = None, False
 
 
 def one(stmt):
