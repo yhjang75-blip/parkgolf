@@ -4,6 +4,27 @@
   {%- if n >= 10000 -%}{{ n // 10000 }}억{% if n % 10000 %} {{ "{:,}".format(n % 10000) }}만{% endif %}{%- else -%}{{ "{:,}".format(n) }}만{%- endif -%}
 {%- endmacro %}
 {% macro day(s) -%}{{ s[5:7]|int }}.{{ s[8:10]|int }}{%- endmacro %}
+{% macro refs(t) -%}
+  {%- if t.refs %}<p class="src">출처: {% for r in t.refs %}<a href="{{ r[1] }}" target="_blank" rel="noopener">{{ r[0] }} ↗</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif -%}
+{%- endmacro %}
+{% macro facts(t) -%}
+  {%- if t.format or t.eligibility or t.entry or t.tie or t.prize %}
+  <details class="more">
+    <summary>자세히</summary>
+    <dl class="t-facts">
+      {% if t.players_note %}<dt>참가 인원</dt><dd>{{ t.players }} ({{ t.players_note }})</dd>{% endif %}
+      {% if t.format %}<dt>경기 방식</dt><dd>{{ t.format }}</dd>{% endif %}
+      {% if t.eligibility %}<dt>참가 자격</dt><dd>{{ t.eligibility }}</dd>{% endif %}
+      {% if t.entry %}<dt>신청 방법</dt><dd>{{ t.entry }}</dd>{% endif %}
+      {% if t.fee %}<dt>참가비</dt><dd>{{ t.fee }}</dd>{% endif %}
+      {% if t.prize %}<dt>시상</dt><dd>{{ t.prize }}</dd>{% endif %}
+      {% if t.tie %}<dt>동타 처리</dt><dd>{{ t.tie }}</dd>{% endif %}
+      {% if t.host %}<dt>주최·주관</dt><dd>{{ t.host }}</dd>{% endif %}
+    </dl>
+    {{ refs(t) }}
+  </details>
+  {%- else %}{{ refs(t) }}{%- endif %}
+{%- endmacro %}
 {% block content %}
 <section class="about-hero t-hero">
   <div class="wrap narrow">
@@ -26,67 +47,60 @@
     <a href="#t-news"><span class="ic">📰</span>대회 소식</a>
   </nav>
 
-  <!-- 📅 대회 일정: 기간 막대그래프 + 카드 -->
+  <!-- 📅 대회 일정: 다가오는 대회 먼저, 종료된 대회는 아래 -->
+  {% set upcoming = items | rejectattr('status', 'equalto', '종료') | list %}
+  {% set ended = items | selectattr('status', 'equalto', '종료') | list %}
   <section class="panel" id="t-list" aria-labelledby="h-list">
     <h2 id="h-list">📅 대회 일정</h2>
-    <div class="gantt" role="img" aria-label="대회 일정 그래프">
-      <div class="g-axis">
-        {% for m in tl.months %}<span style="left:{{ m.left }}%">{{ m.label }}</span>{% endfor %}
-      </div>
-      <div class="g-rows">
-        <div class="g-layer" aria-hidden="true">
-          {% for m in tl.months %}<i class="g-grid" style="left:{{ m.left }}%"></i>{% endfor %}
-          <i class="g-today" style="left:{{ tl.today }}%"><b>오늘</b></i>
-        </div>
-        {% for r in tl.rows %}
-        {% set st = '진행' if r.t.status == '진행 중' else r.t.status %}
-        <div class="g-row">
-          <span class="g-name">{{ r.t.short or r.t.name }}</span>
-          <span class="g-track">
-            <span class="g-bar {{ st }} {{ 'tbd' if r.tbd }}" style="left:{{ r.left }}%;width:{{ r.width }}%"
-                  title="{{ r.t.name }} · {% if r.t.start %}{{ day(r.t.start) }}{% if r.t.end and r.t.end != r.t.start %}~{{ day(r.t.end) }}{% endif %}{% else %}{{ r.t.when }}{% endif %} · {{ r.t.status }}"></span>
-          </span>
-        </div>
-        {% endfor %}
-      </div>
-      <p class="g-legend"><span class="it"><span class="sw 진행"></span>진행 중</span><span class="it"><span class="sw 예정"></span>예정</span><span class="it"><span class="sw tbd"></span>날짜 미정</span><span class="it"><span class="sw 종료"></span>종료</span></p>
-    </div>
 
+    <h3 class="grp">🔜 진행 중·다가오는 대회 <span>{{ upcoming|length }}</span></h3>
     <div class="t-cards">
-      {% for t in items %}
+      {% for t in upcoming %}
       {% set st = '진행' if t.status == '진행 중' else t.status %}
-      <article class="t-card {{ 'done' if st == '종료' }}">
-        <div class="t-top">
-          <span class="st {{ st }}">{{ t.status }}</span>
-          <span class="when">{% if t.start %}{{ day(t.start) }}{% if t.end and t.end != t.start %} ~ {{ day(t.end) }}{% endif %}{% else %}{{ (t.when or '일정 미정').split('(')[0] }}{% endif %}</span>
+      <article class="t-card up">
+        <div class="cal {{ st }}">
+          {% if t.start %}
+            <span class="mo">{{ t.start[5:7]|int }}월</span>
+            <span class="dd">{{ t.start[8:10]|int }}{% if t.end and t.end != t.start %}<small>~ {% if t.end[5:7] != t.start[5:7] %}{{ t.end[5:7]|int }}.{% endif %}{{ t.end[8:10]|int }}일</small>{% endif %}</span>
+          {% else %}
+            <span class="mo">{{ (t.when or '').split('(')[0].replace('2026년', '').strip() or '미정' }}</span>
+            <span class="dd tbd">날짜<br>미정</span>
+          {% endif %}
         </div>
-        <h3>{{ t.name }}</h3>
-        {% if t.place %}<p class="place">📍 {{ t.place }}</p>{% endif %}
-        <div class="chips">
-          <span class="chip"><i>👥</i>{% if t.players_n %}<b>{{ "{:,}".format(t.players_n) }}</b>명{% else %}요강 발표 전{% endif %}</span>
-          {% if t.holes_short %}<span class="chip"><i>⛳</i>{{ t.holes_short }}</span>{% endif %}
-          {% if t.prize_man %}<span class="chip"><i>🏆</i>총상금 <b>{{ won(t.prize_man) }}</b>원</span>{% endif %}
-          {% if t.fee_short %}<span class="chip"><i>💳</i>참가비 {{ t.fee_short }}</span>{% endif %}
+        <div class="t-body">
+          <span class="st {{ st }}">{% if st == '진행' %}진행 중{% elif t.days is not none %}D-{{ t.days }}{% else %}날짜 발표 예정{% endif %}</span>
+          <h4>{{ t.name }}</h4>
+          {% if t.place %}<p class="place">📍 {{ t.place }}</p>{% endif %}
+          <div class="chips">
+            <span class="chip"><i>👥</i>{% if t.players_n %}<b>{{ "{:,}".format(t.players_n) }}</b>명{% else %}요강 발표 전{% endif %}</span>
+            {% if t.holes_short %}<span class="chip"><i>⛳</i>{{ t.holes_short }}</span>{% endif %}
+            {% if t.prize_man %}<span class="chip"><i>🏆</i>총상금 <b>{{ won(t.prize_man) }}</b>원</span>{% endif %}
+            {% if t.fee_short %}<span class="chip"><i>💳</i>참가비 {{ t.fee_short }}</span>{% endif %}
+          </div>
+          {{ facts(t) }}
         </div>
-        {% if t.format or t.eligibility or t.entry or t.tie or t.prize %}
-        <details>
-          <summary>자세히</summary>
-          <dl class="t-facts">
-            {% if t.players_note %}<dt>참가 인원</dt><dd>{{ t.players }} ({{ t.players_note }})</dd>{% endif %}
-            {% if t.format %}<dt>경기 방식</dt><dd>{{ t.format }}</dd>{% endif %}
-            {% if t.eligibility %}<dt>참가 자격</dt><dd>{{ t.eligibility }}</dd>{% endif %}
-            {% if t.entry %}<dt>신청 방법</dt><dd>{{ t.entry }}</dd>{% endif %}
-            {% if t.fee %}<dt>참가비</dt><dd>{{ t.fee }}</dd>{% endif %}
-            {% if t.prize %}<dt>시상</dt><dd>{{ t.prize }}</dd>{% endif %}
-            {% if t.tie %}<dt>동타 처리</dt><dd>{{ t.tie }}</dd>{% endif %}
-            {% if t.host %}<dt>주최·주관</dt><dd>{{ t.host }}</dd>{% endif %}
-          </dl>
-          {% if t.refs %}<p class="src">출처: {% for r in t.refs %}<a href="{{ r[1] }}" target="_blank" rel="noopener">{{ r[0] }} ↗</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
-        </details>
-        {% endif %}
       </article>
+      {% else %}
+      <p class="muted">지금 예정된 대회가 없습니다.</p>
       {% endfor %}
     </div>
+
+    {% if ended %}
+    <h3 class="grp done">✔️ 종료된 대회 <span>{{ ended|length }}</span></h3>
+    <ul class="ended">
+      {% for t in ended %}
+      <li>
+        <span class="e-date">{{ day(t.start) }}{% if t.end and t.end != t.start %} ~ {{ day(t.end) }}{% endif %}</span>
+        <span class="e-name">{{ t.name }}</span>
+        <span class="e-chips">
+          {% if t.players_n %}<span class="chip"><i>👥</i>{{ "{:,}".format(t.players_n) }}명</span>{% endif %}
+          {% if t.prize_man %}<span class="chip"><i>🏆</i>{{ won(t.prize_man) }}원</span>{% endif %}
+        </span>
+        {{ facts(t) }}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
     <p class="src">참가비 입금 계좌와 최종 일정은 반드시 주최 측 공식 요강에서 확인하세요.</p>
   </section>
 

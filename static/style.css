@@ -255,47 +255,39 @@ body { overflow-x: hidden; }
 .st.진행 { background: var(--red); color: #fff; }
 .st.종료 { background: #eceeed; color: var(--muted); }
 
-/* 일정 막대그래프 */
-.gantt { margin-bottom: 18px; --name: 150px; }
-.g-axis { position: relative; height: 24px; margin-left: var(--name); font-size: .8rem; color: var(--muted); font-weight: 700; }
-.g-axis span { position: absolute; top: 0; padding-left: 6px; }
-.g-rows { position: relative; }
-.g-layer { position: absolute; top: 0; bottom: 0; left: var(--name); right: 0; pointer-events: none; }
-.g-layer .g-grid, .g-layer .g-today { position: absolute; top: 0; bottom: 0; width: 0; }
-.g-layer .g-grid { border-left: 1px solid var(--line); }
-.g-layer .g-today { border-left: 2px dashed var(--red); z-index: 2; }
-.g-today b { position: absolute; bottom: -22px; left: -15px; font-size: .72rem; color: var(--red); background: var(--card); padding: 0 3px; white-space: nowrap; }
-.g-row { display: flex; align-items: center; height: 34px; }
-.g-name { flex: 0 0 var(--name); font-size: .86rem; font-weight: 700; padding-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.g-track { position: relative; flex: 1; height: 100%; }
-.g-bar { position: absolute; top: 9px; height: 16px; border-radius: 4px; background: #b9c1bb; min-width: 8px; }
-.g-bar.진행 { background: var(--red); }
-.g-bar.예정 { background: var(--blue); }
-.g-bar.tbd { background: repeating-linear-gradient(135deg, var(--blue-bg) 0 6px, #c6d6ef 6px 9px); border: 1.5px dashed var(--blue); }
-.g-row:hover .g-name { color: var(--green); }
-.g-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 26px 0 0; font-size: .8rem; color: var(--muted); }
-.g-legend .sw { display: inline-block; width: 14px; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; background: #b9c1bb; }
-.g-legend .sw.진행 { background: var(--red); }
-.g-legend .sw.예정 { background: var(--blue); }
-.g-legend .sw.tbd { background: var(--blue-bg); border: 1px dashed var(--blue); }
-.g-legend > span.it { white-space: nowrap; }
-
-/* 대회 카드 */
-.t-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.t-card { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; min-width: 0; }
-.t-card.done { background: #fafbfa; }
-.t-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.t-top .when { font-weight: 800; font-size: .92rem; }
-.t-card h3 { margin: 8px 0 2px; font-size: 1rem; line-height: 1.35; word-break: keep-all; }
-.t-card .place { margin: 0; color: var(--muted); font-size: .84rem; }
+/* 대회 일정: 다가오는 대회 카드 + 종료 목록 */
+.grp { display: flex; align-items: center; gap: 8px; margin: 4px 0 10px; font-size: 1.02rem; }
+.grp span { font-size: .8rem; font-weight: 800; background: var(--green); color: #fff; border-radius: 999px; padding: 0 8px; }
+.grp.done { margin-top: 24px; color: var(--muted); }
+.grp.done span { background: #b9c1bb; }
+.t-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.t-card { display: flex; gap: 14px; border: 1px solid var(--line); border-radius: 14px; padding: 14px; min-width: 0; }
+.cal { flex: 0 0 76px; align-self: flex-start; text-align: center; border-radius: 12px; overflow: hidden; border: 1.5px solid var(--blue); background: var(--card); }
+.cal .mo { display: block; background: var(--blue); color: #fff; font-size: .82rem; font-weight: 800; padding: 3px 0; }
+.cal .dd { display: block; font-size: 1.75rem; font-weight: 900; line-height: 1.1; padding: 6px 2px 8px; color: var(--ink); }
+.cal .dd small { display: block; font-size: .76rem; font-weight: 700; color: var(--muted); margin-top: 2px; }
+.cal .dd.tbd { font-size: .95rem; line-height: 1.3; padding: 8px 2px; color: var(--blue); }
+.cal.진행 { border-color: var(--red); }
+.cal.진행 .mo { background: var(--red); }
+.t-body { flex: 1; min-width: 0; }
+.t-card h4 { margin: 6px 0 2px; font-size: 1.05rem; line-height: 1.35; word-break: keep-all; }
+.t-card .place { margin: 0; color: var(--muted); font-size: .86rem; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .chip { display: inline-flex; align-items: center; gap: 4px; font-size: .84rem; padding: 3px 9px; border-radius: 8px; background: var(--green-bg); }
 .chip i { font-style: normal; }
-.t-card details { margin-top: 8px; }
-.t-card summary { cursor: pointer; font-weight: 700; color: var(--green); font-size: .88rem; padding: 4px 0; }
+details.more { margin-top: 8px; }
+details.more summary { cursor: pointer; font-weight: 700; color: var(--green); font-size: .88rem; padding: 4px 0; }
 .t-facts { display: grid; grid-template-columns: auto 1fr; gap: 5px 10px; margin: 6px 0 0; font-size: .86rem; }
 .t-facts dt { font-weight: 700; white-space: nowrap; color: var(--muted); }
 .t-facts dd { margin: 0; word-break: keep-all; }
+.ended { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.ended li { display: grid; grid-template-columns: 120px minmax(0, 1fr) auto; align-items: center; gap: 2px 12px; padding: 10px 6px; border-bottom: 1px solid var(--line); color: var(--muted); }
+.ended .e-date { font-weight: 800; font-variant-numeric: tabular-nums; }
+.ended .e-name { font-weight: 600; color: #4a544d; word-break: keep-all; }
+.ended .e-chips { display: flex; gap: 6px; }
+.ended .chip { background: #f0f2f0; font-size: .8rem; }
+.ended details.more, .ended > li > .src { grid-column: 2 / -1; margin: 0; }
+.ended details.more summary { font-size: .82rem; color: var(--muted); }
 .t-table small { display: block; color: var(--muted); font-size: .8rem; }
 
 /* 가로 막대그래프: 한 가지 색, 값은 막대 끝 글자로 */
@@ -386,15 +378,17 @@ details.tbl summary { cursor: pointer; color: var(--green); font-weight: 700; fo
 .t-foot { padding: 0 4px; line-height: 1.7; }
 
 @media (max-width: 980px) {
-  .t-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rule-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 820px) {
   .t-icons { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
   .t-icons a { font-size: .72rem; padding: 10px 2px; }
   .t-icons .ic { font-size: 1.45rem; }
-  .gantt { --name: 96px; }
-  .g-name { font-size: .76rem; }
+  .t-card { gap: 10px; padding: 12px; }
+  .cal { flex-basis: 64px; }
+  .cal .dd { font-size: 1.5rem; }
+  .ended li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .ended details.more, .ended > li > .src { grid-column: auto; }
   .t-cards { grid-template-columns: minmax(0, 1fr); }
   .hb-row { grid-template-columns: 92px 1fr auto; gap: 6px; }
   .hb-name { font-size: .8rem; }
