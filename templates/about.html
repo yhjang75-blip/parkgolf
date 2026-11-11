@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}나이스파크 소개{% endblock %}
+{% block content %}
+<section class="about-hero">
+  <div class="wrap narrow">
+    <p class="kicker">나이스파크 이야기</p>
+    <h1>{{ site.story_title or '나이스파크가 태어난 이야기' }}</h1>
+  </div>
+</section>
+<main class="wrap page narrow">
+  <article class="panel story">
+    {% for para in site.story %}<p>{{ para }}</p>{% else %}<p class="muted">이야기를 준비하고 있습니다.</p>{% endfor %}
+    <p class="sign">— 나이스파크{% if site.operator %} 운영자 {{ site.operator }}{% endif %}</p>
+  </article>
+
+  <section class="panel">
+    <h2>나이스파크에서 할 수 있는 일</h2>
+    <ul class="perks">
+      <li>📍 <b>전국 파크골프장 찾기</b> — 지자체·시설관리공단 공개 자료로 모은 전국 구장의 위치, 홀 수, 운영 정보, 날씨</li>
+      <li>🗓️ <b>예약 바로가기</b> — 구장 예약 페이지와 시·군 통합예약 사이트로 바로 연결, 전화 예약 구장은 전화 버튼</li>
+      <li>🏆 <b>대회 소식·우승 소식·대회 영상</b> — 전국 파크골프 대회 일정과 소식을 매일 새로</li>
+      <li>💬 <b>파크골퍼 커뮤니티</b> — 구장 후기, 사진 자랑, 대회 이야기</li>
+      <li>🎁 <b>회원 포인트와 혜택</b> — 활동할수록 쌓이는 포인트와 등급, 제휴 혜택</li>
+    </ul>
+    <p class="src">나이스파크는 예약을 대신 받지 않습니다. 예약은 각 구장을 운영하는 지자체·시설관리공단의 공식 창구에서 이루어집니다.</p>
+  </section>
+
+  <section class="panel">
+    <h2>운영 정보</h2>
+    <dl class="kv">
+      <dt>서비스</dt><dd>{{ site.name }} — {{ site.slogan }}</dd>
+      <dt>운영자</dt><dd>{{ site.operator or '준비 중' }}</dd>
+      <dt>문의</dt><dd>{{ site.contact_email or '준비 중' }}</dd>
+      <dt>제휴 문의</dt><dd>{{ site.partner_contact or site.contact_email or '준비 중' }}</dd>
+      <dt>자료 출처</dt><dd>공공데이터포털 지자체·시설관리공단 파크골프장 자료, OpenStreetMap, Open-Meteo, Google 뉴스, YouTube</dd>
+    </dl>
+    <p class="src"><a href="/terms">이용약관</a> · <a href="/privacy">개인정보처리방침</a></p>
+  </section>
+</main>
+{% endblock %}

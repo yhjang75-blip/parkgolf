@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}관리 — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page">
+  <section class="panel">
+    <h1>🔧 관리자</h1>
+    <div class="stats dark">{% for k, v in stats.items() %}<span class="stat"><b>{{ v }}</b> {{ k }}</span>{% endfor %}</div>
+  </section>
+
+  <section class="panel">
+    <h2>혜택 교환 신청</h2>
+    <table class="tbl">
+      <tr><th>신청일</th><th>회원</th><th>혜택</th><th>포인트</th><th>연락처</th><th>상태</th><th></th></tr>
+      {% for r in reds %}
+        <tr><td>{{ r.created_at[:16] }}</td><td>{{ r.nickname }}</td><td>{{ r.title }}</td><td>{{ r.cost }}</td>
+          <td>{{ r.contact or '' }}</td><td>{{ r.status }}</td>
+          <td>{% if r.status == '신청' %}
+            <form method="post" action="/admin/redemption/{{ r.id }}/done" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">지급완료</button></form>
+            <form method="post" action="/admin/redemption/{{ r.id }}/cancel" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">취소·환불</button></form>
+          {% endif %}</td></tr>
+      {% else %}<tr><td colspan="7" class="muted">신청이 없습니다.</td></tr>{% endfor %}
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>제휴 혜택 등록·수정</h2>
+    <div class="bens">
+      {% for b in bens + [None] %}
+        <form class="ben edit" method="post" action="/admin/benefit">
+          <input type="hidden" name="csrf" value="{{ csrf }}">
+          {% if b %}<input type="hidden" name="id" value="{{ b.id }}">{% else %}<h3>➕ 새 혜택</h3>{% endif %}
+          <label class="field">제휴처<input name="partner" value="{{ b.partner if b }}" placeholder="예: ○○골프용품" required></label>
+          <label class="field">혜택 이름<input name="title" value="{{ b.title if b }}" placeholder="예: 파크골프공 1개" required></label>
+          <label class="field">설명<textarea name="description" rows="2">{{ b.description if b and b.description }}</textarea></label>
+          <div class="row2">
+            <label class="field">필요 포인트<input name="cost" type="number" min="0" value="{{ b.cost if b }}" required></label>
+            <label class="field">수량 (비우면 무제한)<input name="stock" type="number" min="0" value="{{ b.stock if b and b.stock is not none }}"></label>
+          </div>
+          <label class="field">최소 등급<select name="min_grade">{% for need, name, icon in GRADES %}<option value="{{ loop.index0 }}" {{ 'selected' if b and b.min_grade == loop.index0 }}>{{ icon }} {{ name }}</option>{% endfor %}</select></label>
+          <label class="check"><input type="checkbox" name="active" {{ 'checked' if not b or b.active }}> 회원에게 공개</label>
+          <button class="btn {{ 'secondary' if b else 'primary' }} small" type="submit">{{ '저장' if b else '등록' }}</button>
+        </form>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <h2>신고 (처리 전)</h2>
+      <ul class="feed">{% for r in reps %}
+        <li><p><b>{{ '글' if r.kind == 'post' else '댓글' }} #{{ r.target_id }}</b> · {{ r.nickname }} · {{ r.reason or '' }} · {{ r.created_at[5:16] }}
+          {% if r.kind == 'post' %}<a href="/board/{{ r.target_id }}">보기</a>{% endif %}
+          <form method="post" action="/admin/report/{{ r.id }}/done" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">처리함</button></form></p></li>
+      {% else %}<li class="muted">없습니다.</li>{% endfor %}</ul>
+      <h3 class="sub-h">숨겨진 글</h3>
+      <ul class="feed">{% for p in hidden %}
+        <li><p><a href="/board/{{ p.id }}">{{ p.title }}</a> · {{ p.nickname }} · 신고 {{ p.reports }}
+          <form method="post" action="/admin/post/{{ p.id }}/show" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">다시 보이기</button></form></p></li>
+      {% else %}<li class="muted">없습니다.</li>{% endfor %}</ul>
+    </section>
+    <section class="panel">
+      <h2>회원 (모은 포인트 순)</h2>
+      <table class="tbl">{% for u in users_ %}
+        <tr><td>{{ grade_of(u.earned).icon }} {{ u.nickname }}</td><td class="num">{{ u.earned }} / {{ u.points }}P</td><td>{{ u.created_at[:10] }}</td>
+          <td><form method="post" action="/admin/user/{{ u.id }}/ban" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">{{ '제한 풀기' if u.banned else '이용 제한' }}</button></form></td></tr>
+      {% endfor %}</table>
+    </section>
+  </div>
+</main>
+{% endblock %}

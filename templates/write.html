@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}글쓰기 — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <form class="panel" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <h1>{{ '글 고치기' if old else '✏️ 글쓰기' }}</h1>
+    <label class="field">게시판
+      <select name="category">{% for k, v in CATEGORIES.items() %}<option value="{{ k }}" {{ 'selected' if k == cat }}>{{ v }}</option>{% endfor %}</select></label>
+    <label class="field">구장 (선택 — 구장 후기라면 골라 주세요)
+      {% if course %}
+        <input type="hidden" name="course_id" value="{{ course.id }}">
+        <input value="{{ course.name }} ({{ course.sigungu or course.sido }})" disabled>
+      {% else %}
+        <input name="course_name" list="courses" placeholder="구장 이름을 적으면 목록이 나옵니다">
+        <datalist id="courses">{% for n in course_names %}<option value="{{ n }}">{% endfor %}</datalist>
+      {% endif %}
+    </label>
+    <label class="field">제목<input name="title" maxlength="100" required minlength="2" value="{{ old.title if old }}"></label>
+    <label class="field">내용<textarea name="body" rows="10" maxlength="5000" required minlength="2"
+      placeholder="구장 분위기, 잔디 상태, 예약 팁, 주변 맛집 등 자유롭게 나눠 주세요.">{{ old.body if old }}</textarea></label>
+
+    {% if old_imgs %}
+      <p class="field">올린 사진 (체크를 풀면 지워집니다)</p>
+      <div class="keep">
+        {% for i in old_imgs %}
+          <label><img src="/img/{{ i.id }}/thumb" alt=""><span class="check"><input type="checkbox" name="keep_img" value="{{ i.id }}" checked> 남기기</span></label>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <label class="field">사진 (최대 4장, 한 장 15MB까지 — 자동으로 줄여서 올립니다)
+      <input type="file" name="photos" accept="image/*" multiple id="photos"></label>
+    <div class="preview" id="preview"></div>
+    <p class="src">사진을 올리면 +5P를 더 드립니다. 다른 사람이 찍은 사진이나 얼굴이 크게 나온 사진은 허락을 받고 올려 주세요.</p>
+    <button class="btn primary" type="submit">{{ '저장' if old else '올리기' }}</button>
+  </form>
+</main>
+{% endblock %}
+{% block scripts %}
+<script>
+  const inp = document.getElementById("photos"), pv = document.getElementById("preview");
+  inp.addEventListener("change", () => {
+    if (inp.files.length > 4) { alertBox("사진은 4장까지 올릴 수 있습니다. 앞의 4장만 올라갑니다."); }
+    pv.innerHTML = "";
+    [...inp.files].slice(0, 4).forEach((f) => { const i = document.createElement("img"); i.src = URL.createObjectURL(f); pv.appendChild(i); });
+  });
+  function alertBox(t) { const p = document.createElement("p"); p.className = "guide warn"; p.textContent = t; pv.before(p); }
+</script>
+{% endblock %}

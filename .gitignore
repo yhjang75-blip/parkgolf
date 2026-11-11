@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 data/geocode_log.txt
 data/reserve_probe.json
+data/community.db
+data/.secret_key

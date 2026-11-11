@@ -12,8 +12,14 @@ from datetime import timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import secrets
+
 import requests
 from flask import Flask, abort, jsonify, render_template, request
+from werkzeug.middleware.proxy_fix import ProxyFix
+
+import community
+import db as cdb
 
 KST = timezone(timedelta(hours=9))
 
@@ -22,6 +28,29 @@ DATA = ROOT / "data" / "courses.json"
 
 app = Flask(__name__)
 app.json.ensure_ascii = False
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)  # Render 뒤에서 https 주소를 바르게 만들기
+
+
+def secret_key():
+    """로그인 유지용 비밀값. 공개 서버는 환경변수 SECRET_KEY, 내 PC 는 data/.secret_key 파일."""
+    if os.environ.get("SECRET_KEY"):
+        return os.environ["SECRET_KEY"]
+    f = ROOT / "data" / ".secret_key"
+    if not f.exists():
+        f.write_text(secrets.token_hex(32))
+    return f.read_text().strip()
+
+
+app.config.update(
+    SECRET_KEY=secret_key(),
+    MAX_CONTENT_LENGTH=40 * 1024 * 1024,  # 사진 4장
+    PERMANENT_SESSION_LIFETIME=timedelta(days=30),
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE="Lax",
+    SESSION_COOKIE_SECURE=bool(os.environ.get("RENDER")),
+)
+app.register_blueprint(community.bp)
+cdb.init()
 
 _db = {"mtime": 0, "data": None}
 _weather_cache = {}  # course_id -> (시각, 결과)
@@ -45,6 +74,9 @@ def db():
         _db["by_id"] = {c["id"]: c for c in _db["data"]["courses"]}
         _db["mtime"] = m
     return _db
+
+
+app.config["COURSE_DB"] = db  # community.py 가 구장 자료를 쓸 때
 
 
 @app.get("/")
@@ -158,6 +190,14 @@ WIN_RE = re.compile(r"우승|정상|챔피언|1위|금메달|대상 수상|패�
 def news():
     """topic = tournament(대회 소식) | winner(우승 소식) | news(일반 뉴스). 구글 뉴스 RSS, 30분 캐시."""
     topic = request.args.get("topic", "news")
+    if topic == "local":  # 회원 관심 지역 소식: 구장이 있는 시·도/시·군·구 이름만 받는다
+        region = request.args.get("region", "")
+        known = {c["sido"] for c in db()["data"]["courses"]} | {c["sigungu"] for c in db()["data"]["courses"] if c["sigungu"]}
+        if region not in known:
+            abort(404)
+        q = f"파크골프 {region}"
+        items = cached(f"news:local:{region}", NEWS_TTL, lambda: google_news(q, 10)) or []
+        return jsonify({"items": items[:6], "source": "Google 뉴스", "query": q})
     q = media()["news_queries"].get(topic)
     if not q:
         abort(404)

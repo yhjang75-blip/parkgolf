@@ -1,0 +1,24 @@
+{% set R = regions() %}
+<div class="field">관심 지역 (첫 화면에 이 지역 소식을 보여 드립니다)
+  <div class="row2">
+    <select name="fav_sido" id="fav_sido">
+      <option value="">시·도 선택</option>
+      {% for s in R %}<option value="{{ s }}" {{ 'selected' if me.fav_sido == s }}>{{ s }}</option>{% endfor %}
+    </select>
+    <select name="fav_sigungu" id="fav_sigungu" data-value="{{ me.fav_sigungu or '' }}">
+      <option value="">시·군·구 선택</option>
+    </select>
+  </div>
+</div>
+<script>
+  (() => {
+    const R = {{ R|tojson }}, a = document.getElementById("fav_sido"), b = document.getElementById("fav_sigungu");
+    const fill = () => {
+      const keep = b.dataset.value;
+      b.innerHTML = '<option value="">시·군·구 선택</option>' +
+        (R[a.value] || []).map((x) => `<option ${x === keep ? "selected" : ""}>${x}</option>`).join("");
+    };
+    a.addEventListener("change", () => { b.dataset.value = ""; fill(); });
+    fill();
+  })();
+</script>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}로그인·가입 — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <section class="panel center">
+    <h1>나이스파크 회원이 되어 보세요</h1>
+    <p class="lead">카카오 계정으로 <b>버튼 한 번</b>이면 가입됩니다.<br>비밀번호를 따로 만들 필요가 없습니다.</p>
+    <ul class="perks">
+      <li>⭐ <b>내 구장 즐겨찾기</b> — 자주 가는 구장의 예약 바로가기</li>
+      <li>📍 <b>우리 동네 소식</b> — 관심 지역 파크골프 뉴스를 첫 화면에</li>
+      <li>📸 <b>커뮤니티</b> — 구장 후기·사진 공유, 대회 이야기</li>
+      <li>🎁 <b>포인트·등급 혜택</b> — 활동할수록 쌓이는 포인트로 제휴 혜택 교환</li>
+    </ul>
+    {% if kakao_ready %}
+      <a class="btn kakao" href="{{ url_for('community.kakao_start', next=next) }}">
+        <span aria-hidden="true">💬</span> 카카오로 3초 만에 시작하기</a>
+    {% else %}
+      <p class="guide warn">카카오 로그인 설정을 준비하고 있습니다. 조금만 기다려 주세요.</p>
+    {% endif %}
+    {% if dev_login %}
+      <p class="src">내 PC 시험용:
+        <a href="{{ url_for('community.dev_login', name='시험회원', next=next) }}">시험회원으로 로그인</a> ·
+        <a href="{{ url_for('community.dev_login', name='두번째회원', next=next) }}">두번째회원으로 로그인</a></p>
+    {% endif %}
+    <p class="src">로그인하면 <a href="/terms">이용약관</a>과 <a href="/privacy">개인정보처리방침</a>을 확인하는 단계가 이어집니다.</p>
+  </section>
+</main>
+{% endblock %}

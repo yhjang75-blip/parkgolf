@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}{{ p.title }} — 나이스파크{% endblock %}
+{% block content %}
+{% set mine = me and (me.id == p.user_id or me.is_admin) %}
+<main class="wrap page narrow">
+  <article class="panel post">
+    <p class="crumb"><a href="/board?cat={{ p.category }}">{{ CATEGORIES[p.category] }}</a>{% if p.hidden %} · <span class="badge warn">숨김 (신고 확인 중)</span>{% endif %}</p>
+    <h1>{{ p.title }}</h1>
+    <p class="pm">{{ grade_of(p.earned).icon }} <b>{{ p.nickname }}</b> · {{ p.created_at[:16] }}{% if p.updated_at %} (수정됨){% endif %} · 조회 {{ p.views }}</p>
+    {% if course %}<p><a class="pill" href="/#id={{ course.id }}">📍 {{ course.name }} ({{ course.sigungu or course.sido }}) 구장 정보 보기</a></p>{% endif %}
+
+    {% for im in imgs %}
+      <a href="/img/{{ im.id }}" target="_blank"><img class="pimg" src="/img/{{ im.id }}" width="{{ im.width }}" height="{{ im.height }}" alt="첨부 사진 {{ loop.index }}" loading="lazy"></a>
+    {% endfor %}
+    <div class="pbody">{{ p.body }}</div>
+
+    <div class="pact">
+      {% if me %}
+        <form method="post" action="/board/{{ p.id }}/like"><input type="hidden" name="csrf" value="{{ csrf }}">
+          <button class="btn {{ 'primary' if liked else 'secondary' }} small" type="submit">{{ '♥' if liked else '♡' }} 추천 {{ p.likes }}</button></form>
+      {% else %}
+        <a class="btn secondary small" href="/login?next=/board/{{ p.id }}">♡ 추천 {{ p.likes }}</a>
+      {% endif %}
+      {% if mine %}
+        <a class="btn secondary small" href="/board/{{ p.id }}/edit">수정</a>
+        <form method="post" action="/board/{{ p.id }}/delete" onsubmit="return twice(this)"><input type="hidden" name="csrf" value="{{ csrf }}">
+          <button class="btn secondary small" type="submit">삭제</button></form>
+      {% elif me %}
+        <details class="rep"><summary>신고</summary>
+          <form method="post" action="/report/post/{{ p.id }}"><input type="hidden" name="csrf" value="{{ csrf }}">
+            <input name="reason" placeholder="신고 이유 (예: 광고, 욕설)" maxlength="200"><button class="btn secondary small">신고하기</button></form></details>
+      {% endif %}
+    </div>
+  </article>
+
+  <section class="panel" id="comments">
+    <h2>댓글 {{ cmts|length }}</h2>
+    <ul class="clist">
+      {% for c in cmts %}
+        <li>
+          <p class="pm">{{ grade_of(c.earned).icon }} <b>{{ c.nickname }}</b> · {{ c.created_at[5:16] }}</p>
+          {% if c.hidden and not (me and me.is_admin) %}<p class="muted">신고가 쌓여 가려진 댓글입니다.</p>
+          {% else %}<p class="cbody">{{ c.body }}</p>{% endif %}
+          {% if me and (me.id == c.user_id or me.is_admin) %}
+            <form method="post" action="/comment/{{ c.id }}/delete" class="inline" onsubmit="return twice(this)"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">삭제</button></form>
+          {% elif me %}
+            <form method="post" action="/report/comment/{{ c.id }}" class="inline" onsubmit="return twice(this)"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">신고</button></form>
+          {% endif %}
+        </li>
+      {% else %}<li class="muted">첫 댓글을 남겨 주세요 (+2P)</li>{% endfor %}
+    </ul>
+    {% if me %}
+      <form method="post" action="/board/{{ p.id }}/comment" class="cform"><input type="hidden" name="csrf" value="{{ csrf }}">
+        <textarea name="body" rows="3" maxlength="1000" placeholder="따뜻한 댓글을 남겨 주세요" required></textarea>
+        <button class="btn primary small" type="submit">댓글 등록</button></form>
+    {% else %}
+      <p><a href="/login?next=/board/{{ p.id }}">로그인</a>하면 댓글을 쓸 수 있습니다.</p>
+    {% endif %}
+  </section>
+  <p><a href="/board?cat={{ p.category }}">← 목록으로</a></p>
+</main>
+{% endblock %}
+{% block scripts %}
+<script>
+  function twice(f) {  // 확인 창 대신 한 번 더 누르기
+    const b = f.querySelector("button");
+    if (b.dataset.sure) return true;
+    b.dataset.sure = "1"; b.textContent = "한 번 더 누르면 실행됩니다";
+    return false;
+  }
+</script>
+{% endblock %}

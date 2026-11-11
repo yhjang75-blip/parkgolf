@@ -1,32 +1,10 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>나이스파크 — 전국 파크골프장 예약·대회 소식</title>
-  <meta name="description" content="나이스파크: 전국 파크골프장 위치·예약 안내와 대회 소식, 우승 소식, 대회 영상, 파크골프 뉴스를 한곳에서.">
-  <meta name="theme-color" content="#1f6b3a">
-  <meta property="og:title" content="나이스파크 — 전국 파크골프장 예약·대회 소식">
-  <meta property="og:description" content="전국 파크골프장 예약 안내, 대회 소식, 우승 소식, 대회 영상을 한곳에서.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⛳%3C/text%3E%3C/svg%3E">
+{% extends "base.html" %}
+{% block head %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  <header class="top">
-    <div class="top-in">
-      <a class="brand" href="#">⛳ 나이스파크</a>
-      <nav class="topnav" aria-label="바로가기">
-        <a href="#sec-tour">대회 소식</a>
-        <a href="#sec-video">대회 영상</a>
-        <a href="#finder">구장 찾기</a>
-        <a href="#sec-news">뉴스</a>
-      </nav>
-    </div>
-  </header>
-
+{% endblock %}
+{% block content %}
   <section class="hero">
     <div class="wrap">
       <p class="hero-sub" id="summary">불러오는 중…</p>
@@ -39,6 +17,9 @@
   </section>
 
   <main class="wrap home">
+    <!-- 회원 맞춤 정보 (로그인 전에는 가입 안내) -->
+    <section class="panel my" id="my" hidden></section>
+
     <div class="grid2">
       <section class="panel" id="sec-tour" aria-labelledby="h-tour">
         <h2 id="h-tour">🏆 전국 대회 소식</h2>
@@ -67,6 +48,26 @@
       </div>
       <p class="src" id="video-src">방송사·파크골프 채널의 유튜브 공개 영상</p>
     </section>
+
+    {% if db_on %}
+    <section class="panel" id="sec-comm" aria-labelledby="h-comm">
+      <div class="panel-head">
+        <h2 id="h-comm">💬 파크골퍼 커뮤니티</h2>
+        <a class="pill" href="/board/write">✏️ 글쓰기</a>
+      </div>
+      <div class="comm">
+        <div>
+          <ul class="feed" id="comm-posts"><li class="muted">불러오는 중…</li></ul>
+          <p class="src"><a href="/board">게시판 전체 보기 →</a></p>
+        </div>
+        <div>
+          <div class="gallery mini" id="comm-photos"></div>
+          <h3 class="sub-h">🏅 이달의 나이스 회원</h3>
+          <ol class="rank" id="comm-rank"></ol>
+        </div>
+      </div>
+    </section>
+    {% endif %}
 
     <section class="finder" id="finder" aria-labelledby="h-finder">
       <div class="panel-head">
@@ -119,20 +120,10 @@
     <button class="close" id="close" aria-label="닫기">✕ 닫기</button>
     <div id="detail-body"></div>
   </aside>
-
-  <footer class="foot">
-    <div class="wrap">
-      자료: <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 지자체·시설관리공단 공개 자료 ·
-      지도 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ·
-      날씨 <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> ·
-      뉴스 Google 뉴스 · 영상 YouTube<br>
-      예약은 각 운영기관의 공식 사이트에서 이루어집니다. 운영·휴장 여부는 방문 전 운영기관에 꼭 확인하세요.
-      기사·영상·사진의 저작권은 각 원작자에게 있습니다.
-    </div>
-  </footer>
-
+{% endblock %}
+{% block scripts %}
+  <script>window.CSRF = {{ csrf|tojson }};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-  <script src="{{ url_for('static', filename='app.js') }}"></script>
-</body>
-</html>
+  <script src="{{ url_for('static', filename='app.js') }}?v=3"></script>
+{% endblock %}

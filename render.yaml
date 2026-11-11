@@ -3,6 +3,16 @@ services:
     name: parkgolf
     runtime: python
     plan: free
+    region: singapore
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2
     healthCheckPath: /healthz
+    envVars:
+      - key: SECRET_KEY          # 로그인 유지용 비밀값 (자동 생성)
+        generateValue: true
+      - key: DATABASE_URL        # Neon 접속 주소 (Render 화면에서 직접 입력)
+        sync: false
+      - key: KAKAO_REST_API_KEY  # 카카오 로그인용 REST API 키
+        sync: false
+      - key: ADMIN_KAKAO_IDS     # 관리자 회원번호 (예: kakao:1234567890)
+        sync: false

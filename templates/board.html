@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ CATEGORIES[cat] if cat else '커뮤니티' }} — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page">
+  <section class="panel">
+    <div class="panel-head">
+      <h1>💬 파크골퍼 커뮤니티{% if course %} · {{ course.name }}{% endif %}</h1>
+      <a class="btn primary small" href="/board/write{{ '?cat=' ~ cat if cat }}{{ ('&' if cat else '?') ~ 'course=' ~ course.id if course }}">✏️ 글쓰기</a>
+    </div>
+    <nav class="cats">
+      <a href="/board" class="{{ 'on' if not cat }}">전체</a>
+      {% for k, v in CATEGORIES.items() %}<a href="/board?cat={{ k }}" class="{{ 'on' if cat == k }}">{{ v }}</a>{% endfor %}
+    </nav>
+    <form class="bsearch" method="get">
+      {% if cat %}<input type="hidden" name="cat" value="{{ cat }}">{% endif %}
+      <input type="search" name="q" value="{{ q }}" placeholder="제목·내용 검색">
+      <button class="btn secondary small" type="submit">검색</button>
+    </form>
+
+    {% if cat == 'photo' %}
+      <div class="gallery">
+        {% for p in rows %}
+          <a href="/board/{{ p.id }}" class="gcell">
+            {% if first_img.get(p.id) %}<img src="/img/{{ first_img[p.id] }}/thumb" alt="" loading="lazy">{% else %}<span class="noimg">📝</span>{% endif %}
+            <span class="gt">{{ p.title }}</span><span class="gm">{{ grade_of(p.earned).icon }} {{ p.nickname }} · ♥ {{ p.likes }}</span>
+          </a>
+        {% else %}<p class="muted">아직 사진이 없습니다. 첫 사진을 올려 주세요!</p>{% endfor %}
+      </div>
+    {% else %}
+      <ul class="plist">
+        {% for p in rows %}
+          <li><a href="/board/{{ p.id }}">
+            {% if first_img.get(p.id) %}<img src="/img/{{ first_img[p.id] }}/thumb" alt="" loading="lazy">{% endif %}
+            <span class="pt"><span class="pc">{{ CATEGORIES[p.category] }}</span> {{ p.title }}
+              {% if p.comments %}<span class="cc">[{{ p.comments }}]</span>{% endif %}{% if p.photos %} 📷{% endif %}</span>
+            <span class="pm">{{ grade_of(p.earned).icon }} {{ p.nickname }} · {{ p.created_at[5:16] }} · 조회 {{ p.views }} · 추천 {{ p.likes }}
+              {% if p.course_id and byid.get(p.course_id) %} · 📍{{ byid[p.course_id].name }}{% endif %}</span>
+          </a></li>
+        {% else %}
+          <li class="muted empty">아직 글이 없습니다. 첫 글의 주인공이 되어 주세요! (+10P)</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if pages > 1 %}
+      <nav class="pager">
+        {% for n in range(1, pages + 1) %}
+          <a class="{{ 'on' if n == page }}" href="?{{ 'cat=' ~ cat ~ '&' if cat }}{{ 'q=' ~ q ~ '&' if q }}page={{ n }}">{{ n }}</a>
+        {% endfor %}
+      </nav>
+    {% endif %}
+  </section>
+</main>
+{% endblock %}
