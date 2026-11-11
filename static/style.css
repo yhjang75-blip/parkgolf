@@ -238,3 +238,55 @@ body { overflow-x: hidden; }
   .detail { width: 100%; padding: 12px 16px 40px; }
   .facts { gap: 6px; }
 }
+
+/* ---------- 대회 안내 페이지 ---------- */
+.t-hero { padding: 36px 0 30px; }
+.t-hero-sub { margin: 10px auto 0; max-width: 640px; opacity: .9; font-size: .92rem; word-break: keep-all; }
+.t-page { max-width: 1100px; }
+.t-page .grid2 { align-items: start; }
+.t-icons { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 10px; }
+.t-icons a { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 4px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); font-weight: 700; font-size: .9rem; text-align: center; word-break: keep-all; }
+.t-icons a:hover { background: var(--green-bg); border-color: var(--green-2); }
+.t-icons .ic { font-size: 1.8rem; line-height: 1; }
+.t-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.t-card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; min-width: 0; }
+.t-card.done { background: #fafbfa; }
+.t-card h3 { margin: 6px 0 4px; font-size: 1.08rem; line-height: 1.35; word-break: keep-all; }
+.t-card .when { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+.t-card .st { display: inline-block; font-size: .78rem; font-weight: 800; padding: 2px 9px; border-radius: 999px; }
+.t-card .st.예정 { background: var(--blue-bg); color: var(--blue); }
+.t-card .st.진행 { background: var(--red); color: #fff; }
+.t-card .st.종료 { background: #eceeed; color: var(--muted); }
+.t-facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 0; font-size: .93rem; }
+.t-facts dt { font-weight: 700; white-space: nowrap; }
+.t-facts dd { margin: 0; word-break: keep-all; }
+.t-facts small, .t-table small { display: block; color: var(--muted); font-size: .8rem; }
+.t-card details { margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 8px; }
+.t-card summary { cursor: pointer; font-weight: 700; color: var(--green); padding: 4px 0; }
+.t-card details .t-facts { margin-top: 8px; }
+.t-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.t-table th, .t-table td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.t-table th { color: var(--muted); font-size: .85rem; }
+.t-table td:last-child { white-space: nowrap; color: var(--muted); }
+.steps { margin: 0; padding-left: 1.4em; display: grid; gap: 10px; }
+.steps li { line-height: 1.6; word-break: keep-all; }
+.steps b, .bul > li > b { display: inline-block; margin-right: 6px; color: var(--green); }
+.steps em, .bul em { font-style: normal; font-weight: 700; background: var(--warn-bg); padding: 0 3px; border-radius: 3px; }
+.steps.compact { gap: 8px; }
+.tip { margin: 12px 0 0; padding: 10px 12px; background: var(--warn-bg); color: var(--warn); border-radius: 10px; font-size: .92rem; }
+.bul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; line-height: 1.6; word-break: keep-all; }
+.bul ul { margin: 4px 0 0; padding-left: 1.1em; }
+.lead { margin: 0 0 12px; font-size: 1.02rem; }
+.rule-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+.rule { position: relative; border: 1px solid var(--line); border-radius: 12px; padding: 12px 12px 10px; }
+.rule b { display: block; padding-right: 48px; }
+.rule p { margin: 4px 0 0; font-size: .88rem; color: var(--muted); word-break: keep-all; }
+.rule .pen { position: absolute; top: 10px; right: 10px; background: var(--red); color: #fff; font-weight: 800; font-size: .82rem; padding: 1px 8px; border-radius: 999px; }
+.rule .pen.dq { background: var(--ink); }
+.check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; line-height: 1.55; word-break: keep-all; }
+.t-foot { padding: 0 4px; line-height: 1.7; }
+@media (max-width: 820px) {
+  .t-icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .t-cards, .rule-grid { grid-template-columns: minmax(0, 1fr); }
+  .t-table th:last-child, .t-table td:last-child { display: none; }
+}

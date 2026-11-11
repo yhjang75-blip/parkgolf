@@ -1,48 +1,216 @@
 {
- "_설명": "메인 화면 소식 설정. 뉴스는 구글 뉴스 RSS, 영상은 아래 유튜브 채널의 공식 RSS 에서 '파크골프'가 들어간 영상을 자동으로 모은다. 대회 일정(tournaments)은 사람이 확인해 적는다.",
-
- "news_queries": {
-  "tournament": "파크골프 전국대회",
-  "winner": "파크골프 대회 우승",
-  "news": "파크골프"
- },
-
- "youtube_channels": [
-  {"id": "UCnY8QXU95EhOiPj30e9Maqg", "name": "SBS Golf 레슨"},
-  {"id": "UC12XQWcIlaavjjbhh6EeMJw", "name": "SBS Golf"},
-  {"id": "UCqBqJKzMCoKBvJjcHbNxGSA", "name": "MBN SPORTS"},
-  {"id": "UCV5FUnJ-dcymMrHINxrH1mA", "name": "TBC"},
-  {"id": "UCdkrHEDb1xT3gts9lct12Ug", "name": "KBS N SPORTS"},
-  {"id": "UCk07dPKjgXke0RsFyYsll7Q", "name": "NBS한국농업방송"},
-  {"id": "UCftXwVEn6d0HIbOI1FVYxPQ", "name": "파크골프채널"},
-  {"id": "UCVBsJJSXERw0PaCEUCeGvVg", "name": "보니아라 파크골프"},
-  {"id": "UCL4-2w2-D0-rxjSn3YIjsFg", "name": "파크골프다이제스트"},
-  {"id": "UCxmVX8fJfEn-E8M-zZP00cQ", "name": "광양파크골프TV"}
- ],
-
- "_fallback_videos_설명": "유튜브 RSS 를 잠시 못 읽을 때 보여 줄 영상 (2026-11-11 유튜브에서 확인).",
- "fallback_videos": [
-  {"id": "02GyIONQs2Y", "title": "2026 여주시장배 전국 파크골프 대회 남자부 경기 영상", "channel": "보니아라 파크골프", "published": "2026-11-08"},
-  {"id": "RSlHaKJFqp8", "title": "제3회 고령 대가야배 전국파크골프대회 3,000만원 주인공 경기 및 전체경기 영상", "channel": "찰스 문", "published": "2026-11-07"},
-  {"id": "UBDu2aRmWtI", "title": "[제2회 농업인 파크골프 대회 1회] 강원 지역 예선", "channel": "NBS한국농업방송", "published": "2026-11-04"},
-  {"id": "qpge4G7uP3o", "title": "(녹화방송) 제2회 달성군-MBN 전국파크골프대회 결승전", "channel": "MBN SPORTS", "published": "2026-10-21"},
-  {"id": "uKzPBJu9uO0", "title": "[KPPGA 프로파크골프 삼척 오픈 with 하이원] 파크골프 최강자를 가린다!", "channel": "SBS Golf 레슨", "published": "2026-09-11"},
-  {"id": "xTZBMuS_mxw", "title": "제14회 대한체육회장기 전국 파크골프대회 — 17개 시도 대표 선수들의 승부", "channel": "SBS Golf 레슨", "published": "2026-07-11"}
- ],
-
- "_tournaments_설명": "주요 전국 대회 일정. start/end 는 YYYY-MM-DD. 날짜가 지나면 화면에 '종료'로 표시된다. 참가 전 대회 요강을 꼭 확인.",
- "tournaments": [
-  {"name": "제1회 순창고추장배 전국파크골프대회", "start": "2026-11-07", "end": "2026-11-15", "place": "전북 순창 섬진강파크골프장",
-   "source": "https://news.google.com/search?q=%EC%88%9C%EC%B0%BD%EA%B3%A0%EC%B6%94%EC%9E%A5%EB%B0%B0%20%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84&hl=ko&gl=KR&ceid=KR:ko"},
-  {"name": "제16회 대한파크골프협회장기 전국파크골프대회", "start": null, "end": null, "when": "2026년 11월 (날짜는 협회 공고 예정)", "host": "대한파크골프협회",
-   "source": "https://geconomy.co.kr/news/article.html?no=322578"},
-  {"name": "제4회 문화체육관광부장관기 전국파크골프대회", "start": "2026-10-20", "end": "2026-10-21", "place": "경남 창원 대산면파크골프장", "host": "대한파크골프협회",
-   "source": "https://dnublog.co.kr/2026/09/17/%EC%A0%9C4%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%B2%B4%EC%9C%A1%EA%B4%80%EA%B4%91%EB%B6%80%EC%9E%A5%EA%B4%80%EA%B8%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC/"},
-  {"name": "제5회 정읍시장배 전국파크골프대회", "start": "2026-10-17", "end": "2026-10-17", "place": "전북 정읍 신태인파크골프장",
-   "source": "https://dnublog.co.kr/2026/08/29/%EC%A0%9C5%ED%9A%8C-%EC%A0%95%EC%9D%8D%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%B0%B8%EA%B0%80%EC%8B%A0%EC%B2%AD%C2%B7%EC%9D%BC%EC%A0%95/"},
-  {"name": "2026 전남·광주통합특별시장배 전국파크골프대회", "start": "2026-09-28", "end": "2026-09-29", "place": "광주",
-   "source": "https://dnublog.co.kr/2026/08/29/2026-%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC%EC%A0%95/"},
-  {"name": "2026 화천 산천어 전국파크골프 페스티벌 결선", "start": "2026-09-15", "end": "2026-09-18", "place": "강원 화천 산천어파크골프장",
-   "source": "https://www.geconomy.co.kr/mobile/article.html?no=323465"}
- ]
+  "_설명": "메인 화면 소식 설정. 뉴스는 구글 뉴스 RSS, 영상은 아래 유튜브 채널의 공식 RSS 에서 '파크골프'가 들어간 영상을 자동으로 모은다. 대회 일정(tournaments)은 사람이 확인해 적는다.",
+  "news_queries": {
+    "tournament": "파크골프 전국대회",
+    "winner": "파크골프 대회 우승",
+    "news": "파크골프"
+  },
+  "youtube_channels": [
+    {
+      "id": "UCnY8QXU95EhOiPj30e9Maqg",
+      "name": "SBS Golf 레슨"
+    },
+    {
+      "id": "UC12XQWcIlaavjjbhh6EeMJw",
+      "name": "SBS Golf"
+    },
+    {
+      "id": "UCqBqJKzMCoKBvJjcHbNxGSA",
+      "name": "MBN SPORTS"
+    },
+    {
+      "id": "UCV5FUnJ-dcymMrHINxrH1mA",
+      "name": "TBC"
+    },
+    {
+      "id": "UCdkrHEDb1xT3gts9lct12Ug",
+      "name": "KBS N SPORTS"
+    },
+    {
+      "id": "UCk07dPKjgXke0RsFyYsll7Q",
+      "name": "NBS한국농업방송"
+    },
+    {
+      "id": "UCftXwVEn6d0HIbOI1FVYxPQ",
+      "name": "파크골프채널"
+    },
+    {
+      "id": "UCVBsJJSXERw0PaCEUCeGvVg",
+      "name": "보니아라 파크골프"
+    },
+    {
+      "id": "UCL4-2w2-D0-rxjSn3YIjsFg",
+      "name": "파크골프다이제스트"
+    },
+    {
+      "id": "UCxmVX8fJfEn-E8M-zZP00cQ",
+      "name": "광양파크골프TV"
+    }
+  ],
+  "_fallback_videos_설명": "유튜브 RSS 를 잠시 못 읽을 때 보여 줄 영상 (2026-11-11 유튜브에서 확인).",
+  "fallback_videos": [
+    {
+      "id": "02GyIONQs2Y",
+      "title": "2026 여주시장배 전국 파크골프 대회 남자부 경기 영상",
+      "channel": "보니아라 파크골프",
+      "published": "2026-11-08"
+    },
+    {
+      "id": "RSlHaKJFqp8",
+      "title": "제3회 고령 대가야배 전국파크골프대회 3,000만원 주인공 경기 및 전체경기 영상",
+      "channel": "찰스 문",
+      "published": "2026-11-07"
+    },
+    {
+      "id": "UBDu2aRmWtI",
+      "title": "[제2회 농업인 파크골프 대회 1회] 강원 지역 예선",
+      "channel": "NBS한국농업방송",
+      "published": "2026-11-04"
+    },
+    {
+      "id": "qpge4G7uP3o",
+      "title": "(녹화방송) 제2회 달성군-MBN 전국파크골프대회 결승전",
+      "channel": "MBN SPORTS",
+      "published": "2026-10-21"
+    },
+    {
+      "id": "uKzPBJu9uO0",
+      "title": "[KPPGA 프로파크골프 삼척 오픈 with 하이원] 파크골프 최강자를 가린다!",
+      "channel": "SBS Golf 레슨",
+      "published": "2026-09-11"
+    },
+    {
+      "id": "xTZBMuS_mxw",
+      "title": "제14회 대한체육회장기 전국 파크골프대회 — 17개 시도 대표 선수들의 승부",
+      "channel": "SBS Golf 레슨",
+      "published": "2026-07-11"
+    }
+  ],
+  "_tournaments_설명": "주요 전국 대회 일정. start/end 는 YYYY-MM-DD. 날짜가 지나면 화면에 '종료'로 표시된다. 참가 전 대회 요강을 꼭 확인. players·format·eligibility·entry·fee·prize·tie·refs 는 대회 요강·기사에서 확인한 내용만 적는다(모르면 비워 둠).",
+  "tournaments": [
+    {
+      "name": "제1회 순창고추장배 전국파크골프대회",
+      "start": "2026-11-07",
+      "end": "2026-11-15",
+      "place": "전북 순창 섬진강파크골프장",
+      "source": "https://news.google.com/search?q=%EC%88%9C%EC%B0%BD%EA%B3%A0%EC%B6%94%EC%9E%A5%EB%B0%B0%20%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84&hl=ko&gl=KR&ceid=KR:ko",
+      "players": "예선 1,280명 · 결선 640명",
+      "players_note": "남녀 각 640명 예선 → 남녀 각 320명 결선 진출",
+      "format": "남녀 개인전 · 예선 18홀, 결선 2일 36홀 합산 · 샷건 출발",
+      "tie": "예선 백카운트 / 결선 1~3위 동타는 니어핀 서든데스",
+      "eligibility": "2026년 1~9월 대한파크골프협회 등록 회원 (실업·프로 선수 제외)",
+      "entry": "9/21~9/30 선착순, 파크모아 앱·홈페이지 접수 (전화 접수 불가)",
+      "fee": "예선 4만 원 · 결선 5만 원",
+      "prize": "총상금 4,960만 원 (MVP 1,000만 원, 남녀 우승 각 500만 원)",
+      "host": "순창군파크골프협회 주관",
+      "refs": [
+        [
+          "국제뉴스",
+          "https://www.gukjenews.com/news/articleView.html?idxno=3740184"
+        ],
+        [
+          "파크골프투데이",
+          "https://www.parkgolftoday.kr/news/articleView.html?idxno=19158"
+        ]
+      ]
+    },
+    {
+      "name": "제16회 대한파크골프협회장기 전국파크골프대회",
+      "start": null,
+      "end": null,
+      "when": "2026년 11월 (날짜는 협회 공고 예정)",
+      "host": "대한파크골프협회",
+      "source": "https://geconomy.co.kr/news/article.html?no=322578",
+      "entry": "날짜·요강은 대한파크골프협회 공고 예정",
+      "refs": [
+        [
+          "경기경제신문",
+          "https://geconomy.co.kr/news/article.html?no=322578"
+        ],
+        [
+          "대한파크골프협회",
+          "https://kpga7330.com/"
+        ]
+      ]
+    },
+    {
+      "name": "제4회 문화체육관광부장관기 전국파크골프대회",
+      "start": "2026-10-20",
+      "end": "2026-10-21",
+      "place": "경남 창원 대산면파크골프장",
+      "host": "대한파크골프협회 주최",
+      "source": "https://dnublog.co.kr/2026/09/17/%EC%A0%9C4%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%B2%B4%EC%9C%A1%EA%B4%80%EA%B4%91%EB%B6%80%EC%9E%A5%EA%B4%80%EA%B8%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC/",
+      "players": "선수 856명",
+      "players_note": "심판 64명 등 운영 인원 포함 전체 990명",
+      "format": "개인전 36홀(18홀×2일) · 단체전 남녀 2인 베스트볼 · 대학부·가족유소년부 18홀 · 샷건 출발",
+      "eligibility": "8/31까지 협회 등록 회원 · 일반부/시니어부는 출생연도로 구분 · 1인 1종목",
+      "entry": "개인 신청 없음 — 소속 시·도 파크골프협회가 일괄 신청",
+      "fee": "개인전·단체전 1인 2만 원 · 대학부 1만 원",
+      "prize": "개인전 1위 100만 원·2위 50만 원·3위 40만 원, 시·도 종합 1위 300만 원",
+      "refs": [
+        [
+          "대회 요강 정리",
+          "https://dnublog.co.kr/2026/09/17/%EC%A0%9C4%ED%9A%8C-%EB%AC%B8%ED%99%94%EC%B2%B4%EC%9C%A1%EA%B4%80%EA%B4%91%EB%B6%80%EC%9E%A5%EA%B4%80%EA%B8%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC/"
+        ]
+      ]
+    },
+    {
+      "name": "제5회 정읍시장배 전국파크골프대회",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "place": "전북 정읍 신태인파크골프장",
+      "source": "https://dnublog.co.kr/2026/08/29/%EC%A0%9C5%ED%9A%8C-%EC%A0%95%EC%9D%8D%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%B0%B8%EA%B0%80%EC%8B%A0%EC%B2%AD%C2%B7%EC%9D%BC%EC%A0%95/",
+      "players": "선수 320명",
+      "players_note": "남녀 각 160명 · 운영 인원 포함 400명",
+      "format": "남녀 개인전 36홀 (오전·오후 18홀씩) · 샷건 출발 · 3~4인 1조",
+      "eligibility": "2026년 1~8월 협회 등록 회원 (프로·실업 선수 제외)",
+      "entry": "9/6~9/15 선착순, 참가신청서를 이메일로 접수 (전화 접수 불가, 환불 불가)",
+      "fee": "1인 5만 원",
+      "prize": "남녀 각 1위 300만 원 (총 1,100만 원)",
+      "refs": [
+        [
+          "대회 요강 정리",
+          "https://dnublog.co.kr/2026/08/29/%EC%A0%9C5%ED%9A%8C-%EC%A0%95%EC%9D%8D%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%B0%B8%EA%B0%80%EC%8B%A0%EC%B2%AD%C2%B7%EC%9D%BC%EC%A0%95/"
+        ]
+      ]
+    },
+    {
+      "name": "2026 전남·광주통합특별시장배 전국파크골프대회",
+      "start": "2026-09-28",
+      "end": "2026-09-29",
+      "place": "광주 광산구 서봉파크골프장",
+      "source": "https://dnublog.co.kr/2026/08/29/2026-%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC%EC%A0%95/",
+      "players": "선수 704명 (선착순)",
+      "players_note": "심판·운영위원 포함 약 786명",
+      "format": "남녀 개인전 · 하루 18홀씩 2일 36홀 합산 · 4인 1조 원칙",
+      "tie": "1위 동타는 니어핀 서든데스",
+      "eligibility": "7/31까지 협회 등록 회원",
+      "entry": "9/5~9/12 선착순, 접수일에 열리는 네이버 폼에 본인이 직접 입력",
+      "fee": "1인 5만 원 (환불 불가)",
+      "prize": "남녀 각 1위 500만 원 (총 2,280만 원)",
+      "refs": [
+        [
+          "대회 요강 정리",
+          "https://dnublog.co.kr/2026/08/29/2026-%EC%A0%84%EB%82%A8%EA%B4%91%EC%A3%BC%ED%86%B5%ED%95%A9%ED%8A%B9%EB%B3%84%EC%8B%9C%EC%9E%A5%EB%B0%B0-%EC%A0%84%EA%B5%AD-%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EB%8C%80%ED%9A%8C-%EC%9D%BC%EC%A0%95/"
+        ]
+      ]
+    },
+    {
+      "name": "2026 화천 산천어 전국파크골프 페스티벌 결선",
+      "start": "2026-09-15",
+      "end": "2026-09-18",
+      "place": "강원 화천 산천어파크골프장",
+      "source": "https://www.geconomy.co.kr/mobile/article.html?no=323465",
+      "players": "신청 3,200여 명 (조기 마감)",
+      "players_note": "관계자 포함 약 4,000명",
+      "format": "예선 8차례(8~9월) → 결선 4일간",
+      "prize": "총상금 1억 2,240만 원 (남녀 MVP 각 3,000만 원)",
+      "refs": [
+        [
+          "경기경제신문",
+          "https://www.geconomy.co.kr/mobile/article.html?no=323465"
+        ]
+      ]
+    }
+  ]
 }

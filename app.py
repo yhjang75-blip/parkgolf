@@ -254,8 +254,7 @@ def videos():
     return jsonify({"items": vids, "fallback": fallback})
 
 
-@app.get("/api/tournaments")
-def tournaments():
+def tournament_items():
     today = time.strftime("%Y-%m-%d")
     items = []
     for t in media()["tournaments"]:
@@ -267,7 +266,19 @@ def tournaments():
     # 진행 중·예정은 가까운 날짜부터(날짜 미정은 뒤로), 종료는 최근에 끝난 것부터
     ahead = sorted((t for t in items if t["status"] != "종료"), key=lambda t: t.get("start") or "9999")
     done = sorted((t for t in items if t["status"] == "종료"), key=lambda t: t["end"], reverse=True)
-    return jsonify({"items": ahead + done, "today": today})
+    return ahead + done, today
+
+
+@app.get("/api/tournaments")
+def tournaments():
+    items, today = tournament_items()
+    return jsonify({"items": items, "today": today})
+
+
+@app.get("/tournament")
+def tournament_page():
+    items, today = tournament_items()
+    return render_template("tournament.html", items=items, today=today)
 
 
 @app.get("/favicon.ico")
