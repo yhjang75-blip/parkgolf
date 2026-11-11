@@ -8,7 +8,7 @@ const NONE = '<span class="none">정보 없음</span>';
 const val = (v) => (v === null || v === undefined || v === "" ? NONE : esc(v));
 const isMobile = () => window.matchMedia("(max-width: 820px)").matches;
 
-const state = { all: [], shown: [], markers: new Map(), active: null };
+const state = { all: [], shown: [], markers: new Map(), active: null, byId: new Map() };
 
 /* ---------- 지도 ---------- */
 const map = L.map("map", { zoomControl: true }).setView([36.3, 127.8], 7);
@@ -22,6 +22,47 @@ map.addLayer(cluster);
 const precise = (c) => c.coord_source && !c.coord_source.startsWith("대략");
 const pinIcon = (c) => L.divIcon({ className: "", html: `<div class="pin${precise(c) ? "" : " approx"}"></div>`, iconSize: [16, 16] });
 
+/* ---------- 예약 단계·대표 사진 ---------- */
+const LEVEL_BADGE = {
+  online: '<span class="badge ok">온라인 예약</span>',
+  portal: '<span class="badge portal">지자체 예약</span>',
+  phone: '<span class="badge">전화·현장</span>',
+  unknown: '<span class="badge gray">확인 필요</span>',
+};
+
+// 사진이 없는 구장은 구장마다 색이 조금씩 다른 그림을 보여 준다 (사진이 아님을 표시)
+function hashNum(s) { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)) >>> 0; return h; }
+function courseArt(c, small) {
+  const h = hashNum(c.id), hue = 95 + (h % 50), sky = 195 + (h % 25), fx = 40 + (h % 120);
+  const label = small ? "" : `<text x="12" y="22" font-size="13" fill="#fff" opacity=".9" font-family="sans-serif">대표 사진 준비 중</text>`;
+  return `<svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(c.name)} 그림">
+    <defs><linearGradient id="s${c.id}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(${sky},70%,62%)"/><stop offset="1" stop-color="hsl(${sky},60%,86%)"/></linearGradient></defs>
+    <rect width="320" height="180" fill="url(#s${c.id})"/>
+    <circle cx="${260 - (h % 60)}" cy="38" r="16" fill="#fff6c8" opacity=".9"/>
+    <path d="M0 105 Q80 70 160 98 T320 88 V180 H0Z" fill="hsl(${hue},35%,48%)"/>
+    <path d="M0 128 Q90 104 190 124 T320 116 V180 H0Z" fill="hsl(${hue},48%,42%)"/>
+    <ellipse cx="${fx + 90}" cy="150" rx="70" ry="13" fill="hsl(${hue},55%,58%)"/>
+    <line x1="${fx + 120}" y1="150" x2="${fx + 120}" y2="112" stroke="#fff" stroke-width="2.5"/>
+    <path d="M${fx + 120} 112 l22 7 l-22 7z" fill="#e53935"/>
+    <circle cx="${fx + 78}" cy="152" r="3.5" fill="#fff"/>
+    ${label}</svg>`;
+}
+function photoHtml(c, small) {
+  const p = c.photo;
+  const src = p && safeUrl(small ? (p.thumb || p.url) : (p.url || p.thumb));
+  if (!src) return courseArt(c, small);
+  // 사진을 못 불러오면 작은 미리보기 사진 → 그림 순서로 바꾼다
+  return `<img src="${esc(src)}" alt="${esc(c.name)} 사진" loading="lazy" referrerpolicy="no-referrer"
+           data-id="${esc(c.id)}" data-small="${small ? 1 : 0}" onerror="photoFail(this)">`;
+}
+function photoFail(img) {
+  const c = state.byId.get(img.dataset.id) || { id: "x", name: "" };
+  const thumb = c.photo && safeUrl(c.photo.thumb);
+  if (thumb && img.src !== thumb) { img.src = thumb; return; }
+  img.outerHTML = courseArt(c, img.dataset.small === "1");
+}
+
 /* ---------- 데이터 ---------- */
 async function load() {
   const [courses, meta] = await Promise.all([
@@ -29,8 +70,15 @@ async function load() {
     fetch("/api/meta").then((r) => r.json()),
   ]);
   state.all = courses;
+  for (const c of courses) state.byId.set(c.id, c);
   const regions = Object.values(meta.counts).filter((n) => n > 0).length;
-  $("#summary").textContent = `공개 자료 기준 ${meta.total.toLocaleString()}곳 · ${regions}개 시·도 · 자료 정리일 ${meta.built}`;
+  const lv = (k) => courses.filter((c) => c.reserve_level === k).length;
+  $("#summary").textContent = `공개 자료 기준 전국 파크골프장 ${meta.total.toLocaleString()}곳 · ${regions}개 시·도 · 자료 정리일 ${meta.built}`;
+  $("#stats").innerHTML = `
+    <span class="stat"><b>${lv("online")}</b>곳 온라인 예약</span>
+    <span class="stat"><b>${lv("portal")}</b>곳 지자체 통합예약</span>
+    <span class="stat"><b>${lv("phone") + lv("unknown")}</b>곳 전화·현장</span>`;
+  $("#finder-sum").textContent = `인터넷 예약 가능 ${lv("online") + lv("portal")}곳 / 전체 ${meta.total}곳`;
 
   const sidoSel = $("#sido");
   for (const [s, n] of Object.entries(meta.counts)) {
@@ -65,7 +113,7 @@ function filtered() {
     if (sido && c.sido !== sido) return false;
     if (sgg && c.sigungu !== sgg) return false;
     if (minH && (c.holes ?? 0) < minH) return false;
-    if (online && !safeUrl(c.reserve_url)) return false;
+    if (online && !["online", "portal"].includes(c.reserve_level)) return false;
     if (q) {
       const hay = `${c.name}${c.sido}${c.sigungu ?? ""}${c.address ?? ""}`.replace(/\s+/g, "");
       if (!hay.includes(q)) return false;
@@ -95,12 +143,13 @@ function render() {
   $("#count").textContent = `${rows.length.toLocaleString()}곳`;
   const ul = $("#list");
   ul.innerHTML = rows.slice(0, 400).map((c) => {
-    const reserve = safeUrl(c.reserve_url)
-      ? '<span class="badge ok">온라인 예약</span>'
-      : (c.reserve_phone || c.phone) ? '<span class="badge">전화 문의</span>' : '<span class="badge gray">예약 정보 없음</span>';
+    const reserve = LEVEL_BADGE[c.reserve_level] || LEVEL_BADGE.unknown;
     return `<li><button class="item${state.active === c.id ? " active" : ""}" data-id="${esc(c.id)}">
-      <span class="name">${esc(c.name)}</span>
-      <span class="meta"><span class="badge">${c.holes ?? "?"}홀</span>${esc(c.sido)} ${esc(c.sigungu ?? "")} ${reserve}</span>
+      <span class="thumb">${photoHtml(c, true)}</span>
+      <span class="txt">
+        <span class="name">${esc(c.name)}</span>
+        <span class="meta"><span class="badge gray">${c.holes ?? "?"}홀</span>${esc(c.sido)} ${esc(c.sigungu ?? "")} ${reserve}</span>
+      </span>
     </button></li>`;
   }).join("") + (rows.length > 400 ? `<li class="count">처음 400곳만 보입니다. 지역을 골라 좁혀 보세요.</li>` : "");
 
@@ -133,6 +182,7 @@ async function openDetail(id) {
   state.active = id;
   const c = await fetch(`/api/courses/${encodeURIComponent(id)}`).then((r) => r.json());
   const url = safeUrl(c.reserve_url);
+  const portal = c.portal && safeUrl(c.portal.url);
   const tel = c.reserve_phone || c.phone;
   const telHref = tel ? tel.split(/[,/]/)[0].replace(/[^\d-]/g, "") : null;
   const q = encodeURIComponent(c.name);
@@ -145,7 +195,15 @@ async function openDetail(id) {
   const src = c.sources.map((s) =>
     `<li><a href="${esc(safeUrl(s.url) || "#")}" target="_blank" rel="noopener">${esc(s.title)}</a> (기준 ${esc(s.date ?? "-")}, ${esc(s.license ?? "")})</li>`).join("");
 
+  const p = c.photo;
+  const photoCap = p && safeUrl(p.url || p.thumb)
+    ? `사진: ${safeUrl(p.source_url) ? `<a href="${esc(p.source_url)}" target="_blank" rel="noopener">${esc(p.source_name || "출처")}</a>` : esc(p.source_name || "")}
+       ${p.method === "직접" ? "" : " · 검색으로 찾은 사진이라 실제 구장과 다를 수 있습니다"}`
+    : "대표 사진이 아직 없어 그림으로 보여 드립니다.";
+
   $("#detail-body").innerHTML = `
+    <div class="photo">${photoHtml(c, false)}</div>
+    <p class="photo-cap">${photoCap}</p>
     <h2>${esc(c.name)}</h2>
     <p class="region">${esc(c.sido)} ${esc(c.sigungu ?? "")}</p>
 
@@ -156,15 +214,20 @@ async function openDetail(id) {
     </div>
 
     <div class="box">
-      <h3>예약</h3>
+      <h3>예약 ${LEVEL_BADGE[c.reserve_level] || ""}</h3>
+      ${reserveGuide(c, url, portal)}
       ${url ? `<a class="btn primary" href="${esc(url)}" target="_blank" rel="noopener">공식 예약 페이지로 이동 ↗</a>` : ""}
-      ${telHref ? `<a class="btn ${url ? "secondary" : "primary"}" href="tel:${esc(telHref)}">📞 전화 문의 ${esc(tel)}</a>` : ""}
-      <dl>
+      ${portal ? `<a class="btn ${url ? "secondary" : "portal"}" href="${esc(portal)}" target="_blank" rel="noopener">${esc(c.portal.name)}에서 예약 ↗</a>` : ""}
+      ${telHref ? `<a class="btn ${url || portal ? "secondary" : "primary"}" href="tel:${esc(telHref)}">📞 전화 문의 ${esc(tel)}</a>` : ""}
+      <div class="btn-row">
+        ${safeUrl(c.gov_home) ? `<a class="btn secondary" href="${esc(c.gov_home)}" target="_blank" rel="noopener">${esc(c.sigungu ?? "지자체")} 홈페이지</a>` : ""}
+        <a class="btn secondary" href="https://search.naver.com/search.naver?query=${encodeURIComponent(`${c.sigungu ?? ""} ${c.name} 예약`)}" target="_blank" rel="noopener">예약 방법 검색</a>
+      </div>
+      <dl style="margin-top:10px">
         <dt>예약 방식</dt><dd>${val(c.reserve_method)}</dd>
         ${c.reserve_note ? `<dt>예약 안내</dt><dd>${esc(c.reserve_note)}</dd>` : ""}
         <dt>운영기관</dt><dd>${val(c.operator)}</dd>
       </dl>
-      ${!url && !telHref ? `<p class="src">공개 자료에 예약 방법이 없습니다. 운영기관(${esc(c.operator ?? c.sigungu ?? "지자체")})에 문의하세요.</p>` : ""}
     </div>
 
     <div class="box">
@@ -217,6 +280,18 @@ async function openDetail(id) {
   if (m && !isMobile()) cluster.zoomToShowLayer(m, () => m.openTooltip());
   writeHash();
   loadWeather(c);
+}
+
+function reserveGuide(c, url, portal) {
+  if (url) return "";
+  if (c.reserve_level === "online") return ""; // 카카오톡 채널 예약 등 — 예약 안내 칸에 표시
+  if (portal) {
+    return c.portal.parkgolf
+      ? `<p class="guide">이 지자체 통합예약 사이트에 <b>파크골프</b> 예약 메뉴가 있습니다. 사이트에서 '${esc(c.name)}'을(를) 찾아 예약하세요.</p>`
+      : `<p class="guide">지자체 통합예약 사이트입니다. 사이트에서 '파크골프'를 찾아보고, 목록에 없으면 전화로 문의하세요.</p>`;
+  }
+  return `<p class="guide warn">인터넷 예약 경로를 찾지 못했습니다. 이런 구장은 대부분 <b>현장 선착순</b>이거나 <b>전화 예약</b>입니다.
+          방문 전에 전화로 확인하세요.</p>`;
 }
 
 const WMO = (code) => {
@@ -327,3 +402,96 @@ document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("cli
 }));
 
 load().catch(() => { $("#summary").textContent = "자료를 불러오지 못했습니다. 잠시 후 새로고침해 주세요."; });
+
+/* ---------- 첫 화면 검색 → 구장 찾기 ---------- */
+$("#hero-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  $("#q").value = $("#hero-q").value;
+  render();
+  $("#finder").scrollIntoView();
+});
+
+/* ---------- 소식: 대회 일정·대회 기사·우승 소식·뉴스 ---------- */
+function ago(s) {
+  if (!s) return "";
+  const t = new Date(s.replace(" ", "T") + "+09:00").getTime();
+  const m = Math.round((Date.now() - t) / 60000);
+  if (m < 60) return `${Math.max(m, 1)}분 전`;
+  if (m < 60 * 24) return `${Math.round(m / 60)}시간 전`;
+  if (m < 60 * 24 * 7) return `${Math.round(m / 1440)}일 전`;
+  return s.slice(0, 10);
+}
+const isFresh = (s) => s && Date.now() - new Date(s.replace(" ", "T") + "+09:00").getTime() < 24 * 3600 * 1000;
+
+async function loadFeed(topic, el, limit) {
+  try {
+    const j = await fetch(`/api/news?topic=${topic}`).then((r) => r.json());
+    const items = j.items.slice(0, limit);
+    el.innerHTML = items.length ? items.map((x) => `<li><a href="${esc(safeUrl(x.url) || "#")}" target="_blank" rel="noopener">
+        <span class="t">${isFresh(x.date) ? '<span class="new">NEW</span>' : ""}${esc(x.title)}</span>
+        <span class="m">${esc(x.source)} · ${esc(ago(x.date))}</span></a></li>`).join("")
+      : `<li class="muted">최근 30일 동안 관련 기사가 없습니다.</li>`;
+  } catch {
+    el.innerHTML = `<li class="muted">소식을 잠시 불러올 수 없습니다.</li>`;
+  }
+}
+
+const fmtDay = (d) => { const [, m, dd] = d.split("-"); return `${+m}월 ${+dd}일`; };
+async function loadTournaments() {
+  const el = $("#tour");
+  try {
+    const j = await fetch("/api/tournaments").then((r) => r.json());
+    el.innerHTML = j.items.slice(0, 5).map((t) => {
+      const when = t.start ? (t.end && t.end !== t.start ? `${fmtDay(t.start)} ~ ${fmtDay(t.end)}` : fmtDay(t.start)) : (t.when || "일정 미정");
+      const st = t.status === "진행 중" ? "진행" : t.status;
+      const name = safeUrl(t.source) ? `<a href="${esc(t.source)}" target="_blank" rel="noopener">${esc(t.name)}</a>` : esc(t.name);
+      return `<li><span class="st ${st}">${esc(t.status)}</span>
+        <div><div class="nm">${name}</div><div class="dt">${esc(when)}${t.place ? ` · ${esc(t.place)}` : ""}</div></div></li>`;
+    }).join("") || `<li class="muted">등록된 대회 일정이 없습니다.</li>`;
+  } catch {
+    el.innerHTML = `<li class="muted">대회 일정을 잠시 불러올 수 없습니다.</li>`;
+  }
+}
+
+/* 영상: 처음에는 표지 그림만 보여 주고, 누르면 유튜브 플레이어를 연다 (페이지가 빨리 뜨도록) */
+const ytThumb = (id) => `https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`;
+function showVideo(v, play) {
+  const box = $("#player");
+  if (play) {
+    box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.id)}?autoplay=1&rel=0"
+      title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+  } else {
+    box.innerHTML = `<button class="cover" style="background-image:url('${ytThumb(v.id)}')" aria-label="${esc(v.title)} 재생"></button>
+      <div class="cap">${v.live ? '<span class="tag live">LIVE</span>' : ""}${esc(v.title)}</div>`;
+    box.querySelector(".cover").addEventListener("click", () => showVideo(v, true));
+  }
+  document.querySelectorAll("#vlist button").forEach((b) => b.classList.toggle("on", b.dataset.id === v.id));
+}
+async function loadVideos() {
+  try {
+    const j = await fetch("/api/videos").then((r) => r.json());
+    const vids = j.items;
+    if (!vids.length) throw new Error("no videos");
+    $("#vlist").innerHTML = vids.map((v) => `<li><button data-id="${esc(v.id)}">
+        <img src="${ytThumb(v.id)}" alt="" loading="lazy">
+        <span><span class="t">${v.live ? '<span class="tag live">LIVE</span>' : v.game ? '<span class="tag game">대회</span>' : ""}${esc(v.title)}</span>
+        <span class="m">${esc(v.channel)}${v.published ? ` · ${esc(v.published)}` : ""}</span></span></button></li>`).join("");
+    $("#vlist").addEventListener("click", (e) => {
+      const b = e.target.closest("button");
+      if (b) showVideo(vids.find((v) => v.id === b.dataset.id), true);
+    });
+    showVideo(vids[0], false);
+    $("#video-src").textContent = j.fallback
+      ? "유튜브 새 영상 목록을 잠시 못 불러와 저장해 둔 대회 영상을 보여 드립니다."
+      : "방송사·파크골프 채널의 유튜브 공개 영상 중 '파크골프' 영상 (1시간마다 새로 고침). 생중계는 오른쪽 위 버튼으로 찾을 수 있습니다.";
+  } catch {
+    $("#player").innerHTML = "";
+    $("#video-src").textContent = "영상을 잠시 불러올 수 없습니다.";
+  }
+}
+
+loadTournaments();
+loadFeed("tournament", $("#feed-tournament"), 5);
+loadFeed("winner", $("#feed-winner"), 9);
+loadFeed("news", $("#feed-news"), 10);
+loadVideos();

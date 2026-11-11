@@ -35,6 +35,41 @@ python -m venv .venv
 - **사람이 확인한 정보 넣기**: 예약 주소, 잔디 종류, 코스 길이 등을 직접 확인했으면 `data/manual_overrides.json` 에 구장 id 별로 적습니다.
   구장 id 는 사이트에서 구장을 열었을 때 주소창의 `#id=...` 값입니다.
 
+### 예약 안내 단계
+
+`scripts/build.py` 가 구장마다 예약 단계를 정합니다.
+
+| 단계 | 뜻 | 근거 |
+|---|---|---|
+| 온라인 예약 | 구장 예약 주소 확인 | 공개 자료, `manual_overrides.json` |
+| 지자체 예약 | 시·군·구(공단) 통합예약 사이트에서 구장을 골라 예약 | `data/gov_sites.json` 의 `portal` |
+| 전화·현장 | 인터넷 예약 경로를 못 찾음 (현장 선착순·전화 예약이 많음) | 전화번호만 있음 |
+| 확인 필요 | 예약 정보 없음 | |
+
+- 통합예약 사이트 후보 찾기: `.venv\Scripts\python scripts\find_reserve_sites.py` → `data/reserve_probe.json` 을 보고 `gov_sites.json` 에 옮겨 적습니다.
+- `portal.parkgolf: true` 는 예약 사이트 첫 화면에 '파크골프'가 보이는 곳입니다.
+
+### 대표 사진
+
+`data/photos.json` 의 사진을 씁니다. 사진이 없는 구장은 그림으로 대신 보여 줍니다.
+
+```powershell
+$env:KAKAO_REST_API_KEY = "카카오 REST API 키"   # https://developers.kakao.com (무료)
+.venv\Scripts\python scripts\photos.py           # 카카오 이미지 검색으로 구장마다 1장
+.venv\Scripts\python scripts\build.py
+```
+
+검색으로 찾은 사진은 다른 곳 사진일 수 있습니다. 틀린 사진은 주소를 `data/photo_blocklist.json` 에 넣고
+`photos.py --retry` 를 실행하면 그 구장만 다음 후보로 다시 찾습니다.
+직접 찍었거나 허락받은 사진은 `photos.json` 에 `"method": "직접"` 으로 넣습니다 (다시 찾아도 덮어쓰지 않음).
+
+### 첫 화면 소식
+
+`data/media.json` 에서 설정합니다.
+- 대회 기사·우승 소식·뉴스: Google 뉴스 RSS (검색어 `news_queries`, 30분마다 새로 고침)
+- 대회 영상: `youtube_channels` 에 적은 유튜브 채널의 공식 RSS 에서 '파크골프' 영상 (1시간마다). 못 읽으면 `fallback_videos` 를 보여 줌
+- 주요 대회 일정: `tournaments` 에 사람이 확인해 적음 (날짜가 지나면 자동으로 '종료')
+
 ### 더 정확한 위치 (선택)
 
 키 없이 쓰는 OpenStreetMap 은 대부분 읍·면·동 중심점만 찾습니다. 화면에는 "대략 위치"로 표시됩니다.
@@ -59,7 +94,8 @@ $env:KAKAO_REST_API_KEY = "카카오 REST API 키"   # https://developers.kakao.
 ## 4. 구성
 
 ```
-app.py                  Flask 서버 (화면, /api/courses, /api/meta, /api/weather/<id>)
+app.py                  Flask 서버 (화면, /api/courses, /api/meta, /api/weather/<id>,
+                        /api/news, /api/videos, /api/tournaments)
 templates/index.html    화면 뼈대
 static/app.js           검색·필터·지도·상세 화면
 static/style.css        PC·휴대폰 화면 디자인 (큰 글씨)

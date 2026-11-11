@@ -1,0 +1,557 @@
+{
+ "_설명": "시·군·구 공식 홈페이지(home)와 공공시설 통합예약 사이트(portal). key='시도|시군구'. portal.parkgolf=true 는 2026-11-11 예약 사이트 첫 화면에 '파크골프'가 보이는 곳, false 는 예약 사이트는 있으나 파크골프 메뉴 여부 미확인. scripts/find_reserve_sites.py 로 후보를 다시 찾을 수 있다.",
+ "강원특별자치도|강릉시": {
+  "home": "https://www.gn.go.kr"
+ },
+ "강원특별자치도|고성군": {
+  "home": "https://www.gwgs.go.kr"
+ },
+ "강원특별자치도|동해시": {
+  "home": "https://www.dh.go.kr"
+ },
+ "강원특별자치도|삼척시": {
+  "home": "https://www.samcheok.go.kr"
+ },
+ "강원특별자치도|속초시": {
+  "home": "https://www.sokcho.go.kr"
+ },
+ "강원특별자치도|양구군": {
+  "home": "https://www.yanggu.go.kr"
+ },
+ "강원특별자치도|양양군": {
+  "home": "https://www.yangyang.go.kr"
+ },
+ "강원특별자치도|영월군": {
+  "home": "https://www.yw.go.kr"
+ },
+ "강원특별자치도|원주시": {
+  "home": "https://www.wonju.go.kr"
+ },
+ "강원특별자치도|인제군": {
+  "home": "https://www.inje.go.kr",
+  "portal": {
+   "url": "https://www.inje.go.kr/reserve/",
+   "name": "인제군 공공체육시설 예약",
+   "parkgolf": false
+  }
+ },
+ "강원특별자치도|정선군": {
+  "home": "https://www.jeongseon.go.kr"
+ },
+ "강원특별자치도|철원군": {
+  "home": "https://www.cwg.go.kr"
+ },
+ "강원특별자치도|춘천시": {
+  "home": "https://www.chuncheon.go.kr"
+ },
+ "강원특별자치도|태백시": {
+  "home": "https://www.taebaek.go.kr"
+ },
+ "강원특별자치도|평창군": {
+  "home": "https://www.pc.go.kr",
+  "portal": {
+   "url": "https://reserve.pc.go.kr/",
+   "name": "평창 통합예약",
+   "parkgolf": false
+  }
+ },
+ "강원특별자치도|홍천군": {
+  "home": "https://www.hongcheon.go.kr"
+ },
+ "강원특별자치도|화천군": {
+  "home": "https://www.ihc.go.kr"
+ },
+ "강원특별자치도|횡성군": {
+  "home": "https://www.hsg.go.kr",
+  "portal": {
+   "url": "https://www.hsg.go.kr/reserve/index.do",
+   "name": "횡성군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경기도|가평군": {
+  "home": "https://www.gp.go.kr"
+ },
+ "경기도|연천군": {
+  "home": "https://www.yeoncheon.go.kr",
+  "portal": {
+   "url": "https://www.yeoncheon.go.kr/reserve/index.do",
+   "name": "연천군 통합예약",
+   "parkgolf": true
+  }
+ },
+ "경기도|이천시": {
+  "home": "https://www.icheon.go.kr"
+ },
+ "경상남도|거창군": {
+  "home": "https://www.geochang.go.kr"
+ },
+ "경상북도|경산시": {
+  "home": "https://www.gbgs.go.kr"
+ },
+ "경상북도|경주시": {
+  "home": "https://www.gyeongju.go.kr",
+  "portal": {
+   "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+   "name": "경주 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "경상북도|고령군": {
+  "home": "https://www.goryeong.go.kr"
+ },
+ "경상북도|구미시": {
+  "home": "https://www.gumi.go.kr",
+  "portal": {
+   "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+   "name": "구미시 통합예약 (파크골프)",
+   "parkgolf": true
+  }
+ },
+ "경상북도|김천시": {
+  "home": "https://www.gc.go.kr"
+ },
+ "경상북도|문경시": {
+  "home": "https://www.gbmg.go.kr",
+  "portal": {
+   "url": "https://www.gbmg.go.kr/reservation/main.do",
+   "name": "문경시 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경상북도|봉화군": {
+  "home": "https://www.bonghwa.go.kr",
+  "portal": {
+   "url": "https://www.bonghwa.go.kr/reservation/main.do",
+   "name": "봉화군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경상북도|상주시": {
+  "home": "https://www.sangju.go.kr",
+  "portal": {
+   "url": "https://www.sangju.go.kr/reserve/main.tc",
+   "name": "상주시 통합예약",
+   "parkgolf": true
+  }
+ },
+ "경상북도|성주군": {
+  "home": "https://www.sj.go.kr"
+ },
+ "경상북도|안동시": {
+  "home": "https://www.andong.go.kr",
+  "portal": {
+   "url": "https://www.andong.go.kr/reservation/main.do",
+   "name": "안동시 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경상북도|영덕군": {
+  "home": "https://www.yd.go.kr"
+ },
+ "경상북도|영양군": {
+  "home": "https://www.yyg.go.kr"
+ },
+ "경상북도|영천시": {
+  "home": "https://www.yc.go.kr",
+  "portal": {
+   "url": "https://www.yc.go.kr/yeyak/main.do",
+   "name": "영천 통합예약",
+   "parkgolf": true
+  }
+ },
+ "경상북도|예천군": {
+  "home": "https://www.ycg.go.kr"
+ },
+ "경상북도|울진군": {
+  "home": "https://www.uljin.go.kr",
+  "portal": {
+   "url": "https://www.uljin.go.kr/reserve/index.do",
+   "name": "울진군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경상북도|의성군": {
+  "home": "https://www.usc.go.kr",
+  "portal": {
+   "url": "https://www.usc.go.kr/reserve/index.do",
+   "name": "의성군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경상북도|청도군": {
+  "home": "https://www.cheongdo.go.kr",
+  "portal": {
+   "url": "https://www.cheongdo.go.kr/reservation/main.do",
+   "name": "청도군 통합예약",
+   "parkgolf": true
+  }
+ },
+ "경상북도|청송군": {
+  "home": "https://www.cs.go.kr"
+ },
+ "경상북도|칠곡군": {
+  "home": "https://www.chilgok.go.kr",
+  "portal": {
+   "url": "https://www.chilgok.go.kr/reservation/main.do",
+   "name": "칠곡군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "경상북도|포항시": {
+  "home": "https://www.pohang.go.kr",
+  "portal": {
+   "url": "https://www.phsisul.org/main/main.do",
+   "name": "포항시시설관리공단",
+   "parkgolf": true
+  }
+ },
+ "광주광역시|광산구": {
+  "home": "https://www.gwangsan.go.kr",
+  "portal": {
+   "url": "https://sports.gwangsan.go.kr/",
+   "name": "광산구 직영 체육시설 예약",
+   "parkgolf": true
+  }
+ },
+ "광주광역시|남구": {
+  "home": "https://www.namgu.gwangju.kr",
+  "portal": {
+   "url": "https://www.gwangju.go.kr/reserve/",
+   "name": "광주 바로예약",
+   "parkgolf": false
+  }
+ },
+ "광주광역시|동구": {
+  "home": "https://www.donggu.kr",
+  "portal": {
+   "url": "https://www.gwangju.go.kr/reserve/",
+   "name": "광주 바로예약",
+   "parkgolf": false
+  }
+ },
+ "광주광역시|북구": {
+  "home": "https://bukgu.gwangju.kr",
+  "portal": {
+   "url": "https://www.gwangju.go.kr/reserve/",
+   "name": "광주 바로예약",
+   "parkgolf": false
+  }
+ },
+ "광주광역시|서구": {
+  "home": "https://www.seogu.gwangju.kr",
+  "portal": {
+   "url": "https://www.gwangju.go.kr/reserve/",
+   "name": "광주 바로예약",
+   "parkgolf": false
+  }
+ },
+ "대구광역시|달성군": {
+  "home": "https://www.dalseong.daegu.kr",
+  "portal": {
+   "url": "https://yeyak.dssiseol.or.kr/",
+   "name": "달성군시설관리공단 통합예약",
+   "parkgolf": true
+  }
+ },
+ "대구광역시|동구": {
+  "home": "https://www.dong.daegu.kr"
+ },
+ "대구광역시|북구": {
+  "home": "https://www.buk.daegu.kr",
+  "portal": {
+   "url": "https://www.buk.daegu.kr/reserve/index.do",
+   "name": "대구 북구 통합예약",
+   "parkgolf": false
+  }
+ },
+ "대구광역시|서구": {
+  "home": "https://www.dgs.go.kr",
+  "portal": {
+   "url": "https://www.dgs.go.kr/reserve/main.do",
+   "name": "대구 서구 통합예약",
+   "parkgolf": false
+  }
+ },
+ "서울특별시|강서구": {
+  "home": "https://www.gangseo.seoul.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|관악구": {
+  "home": "https://www.gwanak.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|광진구": {
+  "home": "https://www.gwangjin.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|구로구": {
+  "home": "https://www.guro.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|금천구": {
+  "home": "https://www.geumcheon.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|노원구": {
+  "home": "https://www.nowon.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|동대문구": {
+  "home": "https://www.ddm.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|동작구": {
+  "home": "https://www.dongjak.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|마포구": {
+  "home": "https://www.mapo.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|송파구": {
+  "home": "https://www.songpa.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|양천구": {
+  "home": "https://www.yangcheon.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|영등포구": {
+  "home": "https://www.ydp.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "서울특별시|중랑구": {
+  "home": "https://www.jungnang.go.kr",
+  "portal": {
+   "url": "https://yeyak.seoul.go.kr/web/main.do",
+   "name": "서울시 공공서비스예약",
+   "parkgolf": true
+  }
+ },
+ "세종특별자치시|세종시": {
+  "home": "https://www.sejong.go.kr",
+  "portal": {
+   "url": "https://onestop.sejong.go.kr/",
+   "name": "세종 통합예약",
+   "parkgolf": false
+  }
+ },
+ "인천광역시|계양구": {
+  "home": "https://www.gyeyang.go.kr"
+ },
+ "인천광역시|남동구": {
+  "home": "https://www.namdong.go.kr"
+ },
+ "인천광역시|서해구": {
+  "home": "https://www.seo.incheon.kr"
+ },
+ "인천광역시|연수구": {
+  "home": "https://www.yeonsu.go.kr"
+ },
+ "전라남도|강진군": {
+  "home": "https://www.gangjin.go.kr",
+  "portal": {
+   "url": "https://www.gangjin.go.kr/reserve/index.do",
+   "name": "강진군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전라남도|곡성군": {
+  "home": "https://www.gokseong.go.kr"
+ },
+ "전라남도|광양시": {
+  "home": "https://www.gwangyang.go.kr",
+  "portal": {
+   "url": "https://gwangyang.go.kr/reserve/",
+   "name": "광양시 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전라남도|구례군": {
+  "home": "https://www.gurye.go.kr"
+ },
+ "전라남도|나주시": {
+  "home": "https://www.naju.go.kr"
+ },
+ "전라남도|담양군": {
+  "home": "https://www.damyang.go.kr"
+ },
+ "전라남도|목포시": {
+  "home": "https://www.mokpo.go.kr"
+ },
+ "전라남도|무안군": {
+  "home": "https://www.muan.go.kr"
+ },
+ "전라남도|보성군": {
+  "home": "https://www.boseong.go.kr"
+ },
+ "전라남도|순천시": {
+  "home": "https://www.suncheon.go.kr",
+  "portal": {
+   "url": "https://www.suncheon.go.kr/yeyak/",
+   "name": "순천시 바로예약",
+   "parkgolf": false
+  }
+ },
+ "전라남도|여수시": {
+  "home": "https://www.yeosu.go.kr"
+ },
+ "전라남도|영광군": {
+  "home": "https://www.yeonggwang.go.kr"
+ },
+ "전라남도|영암군": {
+  "home": "https://www.yeongam.go.kr"
+ },
+ "전라남도|완도군": {
+  "home": "https://www.wando.go.kr"
+ },
+ "전라남도|장성군": {
+  "home": "https://www.jangseong.go.kr"
+ },
+ "전라남도|장흥군": {
+  "home": "https://www.jangheung.go.kr"
+ },
+ "전라남도|진도군": {
+  "home": "https://www.jindo.go.kr"
+ },
+ "전라남도|함평군": {
+  "home": "https://www.hampyeong.go.kr"
+ },
+ "전라남도|해남군": {
+  "home": "https://www.haenam.go.kr"
+ },
+ "전라남도|화순군": {
+  "home": "https://www.hwasun.go.kr",
+  "portal": {
+   "url": "https://www.hwasun.go.kr/reserve/index.do",
+   "name": "화순군 통합예약",
+   "parkgolf": true
+  }
+ },
+ "전북특별자치도|고창군": {
+  "home": "https://www.gochang.go.kr",
+  "portal": {
+   "url": "https://www.gochang.go.kr/reserve/index.do",
+   "name": "고창군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전북특별자치도|군산시": {
+  "home": "https://www.gunsan.go.kr"
+ },
+ "전북특별자치도|김제시": {
+  "home": "https://www.gimje.go.kr",
+  "portal": {
+   "url": "https://www.gimje.go.kr/reserve/index.do",
+   "name": "김제시 통합예약",
+   "parkgolf": true
+  }
+ },
+ "전북특별자치도|남원시": {
+  "home": "https://www.namwon.go.kr",
+  "portal": {
+   "url": "https://www.namwon.go.kr/reserve/index.do",
+   "name": "남원시 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전북특별자치도|부안군": {
+  "home": "https://www.buan.go.kr",
+  "portal": {
+   "url": "https://www.buan.go.kr/reserve/index.do",
+   "name": "부안군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전북특별자치도|순창군": {
+  "home": "https://www.sunchang.go.kr",
+  "portal": {
+   "url": "https://yeyak.sunchang.go.kr/",
+   "name": "순창군 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전북특별자치도|완주군": {
+  "home": "https://www.wanju.go.kr"
+ },
+ "전북특별자치도|익산시": {
+  "home": "https://www.iksan.go.kr",
+  "portal": {
+   "url": "https://www.iksan.go.kr/reserve/index.do",
+   "name": "익산시 통합예약",
+   "parkgolf": true
+  }
+ },
+ "전북특별자치도|임실군": {
+  "home": "https://www.imsil.go.kr"
+ },
+ "전북특별자치도|전주시": {
+  "home": "https://www.jeonju.go.kr",
+  "portal": {
+   "url": "https://www.jeonju.go.kr/reserve/index.9is",
+   "name": "전주시 통합신청지원",
+   "parkgolf": false
+  }
+ },
+ "전북특별자치도|정읍시": {
+  "home": "https://www.jeongeup.go.kr",
+  "portal": {
+   "url": "https://www.jeongeup.go.kr/reserve/index.do",
+   "name": "정읍시 통합예약",
+   "parkgolf": false
+  }
+ },
+ "전북특별자치도|진안군": {
+  "home": "https://www.jinan.go.kr"
+ },
+ "_확인일": "2026-11-11"
+}

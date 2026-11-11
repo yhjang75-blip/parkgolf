@@ -1,0 +1,28 @@
+{
+ "_설명": "틀린 사진(지도·글자 배너·관계없는 사진) 주소. photos.py 가 다시 고르지 않는다. python scripts/photos.py --retry 로 해당 구장만 다시 찾음.",
+ "urls": [
+  "https://ssl.daumcdn.net/map3/staticmap/image?center=920835%2C1187503&lv=4&size=540x350&srs=WCONGNAMUL&markers=symbol%3Asc_marker%7Clocation%3A920837%2C1187505",
+  "https://t1.daumcdn.net/news/202610/25/551736-SOd9ttJ/20261025100655732rfxy.jpg",
+  "https://blog.kakaocdn.net/dn/tm8bt/dJMcahMpYyj/DMLPFqIGKuKKjSVAYiRo01/img.png",
+  "https://blog.kakaocdn.net/dn/bJ5BHW/dJMcaa6W5ko/emtGnyvrs5Vm58qXxWFbJ1/img.jpg",
+  "https://blog.kakaocdn.net/dn/bNSgWW/dJMb99URx1L/hdmKgnsfLqBlilbGKrFRUk/img.jpg",
+  "https://t1.daumcdn.net/cafeattach/1YVpS/ed11da42b3db3acad576500a044caedc512a8bf8",
+  "https://blog.kakaocdn.net/dn/buSy9p/btsMnlp5O8H/eFzfcgdJDMSROGKg0ZfSqK/img.jpg",
+  "http://mediajn.net/upimages/gisaimg/202410/202410-147019_auto.jpg",
+  "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Freviewfim.com%2Fwp-content%2Fuploads%2F2026%2F06%2F%25EB%2584%25A4%25EC%259D%25B4%25EB%25B2%2584%25EC%258D%25B8%25EB%2584%25A4%25EC%259D%25BC-%25ED%2585%259C%25ED%2594%258C%25EB%25A6%25BF-001-2026-06-15T225747.664.jpg%22&type=ff500_300",
+  "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fbeomstory.co.kr%2Fwp-content%2Fuploads%2F2025%2F04%2F%25EB%258B%25AC%25EC%2584%25B1%25EA%25B5%25B0-%25EA%25B5%25AC%25EC%25A7%2580%25ED%258F%2589%25EC%25B4%258C%25ED%258C%258C%25ED%2581%25AC%25EA%25B3%25A8%25ED%2594%2584%25EC%259E%25A5-optimized.png%22&type=ff500_300",
+  "https://t1.daumcdn.net/news/202203/31/ned/20220331092944397rsdk.jpg",
+  "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fparkgolfmap.kr%2Fwp-content%2Fuploads%2F2026%2F04%2Fcropped-Gemini_Generated_Image_gh675fgh675fgh67.png%22&type=ff500_300",
+  "http://tr.xza.kr/imgdata/tr_xza_kr/202511/20251127092805-25376.jpg",
+  "https://www.polinews.co.kr/news/photo/202504/689114_499260_3210.jpg",
+  "http://gwangnam.co.kr/upimages/gisaimg/202508/03_513900-95.jpg",
+  "https://blog.kakaocdn.net/dn/bdTYIx/dJMcaftsoJb/K83sFqArH5H59pZXhHkAhK/img.png",
+  "https://postfiles.pstatic.net/MjAyNjA5MjBfMTA5/MDAxNzg5ODcwNjE2OTUz.2dJoHBbwi4s1ifRMRjLQ8CxQl5XwbNCj-Y7F1Ch6jt8g.8qDnt2rKRUxz2pzlaHmGhejK71gNqGhV_r0RqmE9eKUg.PNG/news_00_74693a322c5a4880a58676fccfb552ca0d2115275fef2e6d015c442c7e24a65e.png?type=w966",
+  "https://t1.daumcdn.net/cafeattach/1ZL3w/4af46686e3a537b5e53aa652300009a26c40df38",
+  "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fcravcy.com%2Fwp-content%2Fuploads%2F2026%2F10%2F%25EC%25B2%25AD%25EB%258F%2584-%25EA%25B0%2581%25EB%25B6%2581%25ED%258C%258C%25ED%2581%25AC%25EA%25B3%25A8%25ED%2594%2584%25EC%259E%25A5-%25EC%2598%2588%25EC%2595%25BD-optimized.png%22&type=ff500_300",
+  "http://www.newstoktok.com/upimages/gisaimg/202406/162932_6_auto.jpg",
+  "https://postfiles.pstatic.net/MjAyNjA5MjBfMTI2/MDAxNzg5ODczODUyNDYz.8rYt9P6nOQqP2G7EnrAGKghTJKyO2AxhOCIOxvHuQ3wg.0t1mX9v6MtKMe7C3xSgHJogHFfCDdvDBLdTFANPpRT8g.JPEG/news_00_644a76d7350a3464bd3a9efeaacdef7f3f321ab5a7f432b00cd04b540ea13e00.jpg?type=w966",
+  "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fblogthumb.pstatic.net%2FMjAyNjA2MTVfMjYz%2FMDAxNzgxNTE2NTgxODAw.Ei1ag4sbxd-OsLYgi_ajpvRL-G59Vn43B4QLrC1UMC0g.S2gypObZL2tgOr8C___dY-ulQLTsMUOGK-StoB9AmIAg.JPEG%2F900_004.jpg%3Ftype%3Dw2%22&type=ff500_300",
+  "http://tr.xza.kr/imgdata/tr_xza_kr/202410/20241008115305-31097.jpg"
+ ]
+}

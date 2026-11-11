@@ -5,11 +5,17 @@
 """
 import json
 import os
+import re
 import time
+import xml.etree.ElementTree as ET
+from datetime import timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 import requests
-from flask import Flask, abort, jsonify, render_template
+from flask import Flask, abort, jsonify, render_template, request
+
+KST = timezone(timedelta(hours=9))
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data" / "courses.json"
@@ -21,8 +27,14 @@ _db = {"mtime": 0, "data": None}
 _weather_cache = {}  # course_id -> (시각, 결과)
 WEATHER_TTL = 30 * 60
 
+MEDIA = ROOT / "data" / "media.json"
+_feed_cache = {}  # key -> (시각, 결과)
+NEWS_TTL = 30 * 60
+VIDEO_TTL = 60 * 60
+UA = {"User-Agent": "Mozilla/5.0 (parkgolf-map)"}
+
 LIST_FIELDS = ("id", "name", "sido", "sigungu", "address", "lat", "lng", "coord_source",
-               "holes", "reserve_url", "phone", "reserve_phone", "operator")
+               "holes", "reserve_url", "phone", "reserve_phone", "operator", "reserve_level", "photo")
 
 
 def db():
@@ -91,6 +103,131 @@ def weather(cid):
            "source": "Open-Meteo", "fetched": time.strftime("%Y-%m-%d %H:%M")}
     _weather_cache[cid] = (time.time(), out)
     return jsonify(out)
+
+
+def media():
+    return json.loads(MEDIA.read_text(encoding="utf-8"))
+
+
+def cached(key, ttl, fn):
+    """fn() 결과를 ttl 초 동안 보관. 실패하면 지난 결과라도 돌려준다."""
+    hit = _feed_cache.get(key)
+    if hit and time.time() - hit[0] < ttl:
+        return hit[1]
+    try:
+        out = fn()
+    except Exception:  # 외부 서비스 오류 — 지난 결과 또는 빈 결과
+        return hit[1] if hit else None
+    if out:
+        _feed_cache[key] = (time.time(), out)
+    return out or (hit[1] if hit else out)
+
+
+def google_news(query, limit=12):
+    r = requests.get("https://news.google.com/rss/search", headers=UA, timeout=10,
+                     params={"q": f"{query} when:30d", "hl": "ko", "gl": "KR", "ceid": "KR:ko"})
+    r.raise_for_status()
+    items = []
+    for it in ET.fromstring(r.content).iter("item"):
+        source = it.findtext("source") or ""
+        title = it.findtext("title") or ""
+        if source and title.endswith(f" - {source}"):
+            title = title[: -len(source) - 3]
+        try:
+            pub = parsedate_to_datetime(it.findtext("pubDate")).astimezone(KST)
+        except (TypeError, ValueError):
+            pub = None
+        items.append({"title": title, "url": it.findtext("link"), "source": source,
+                      "date": pub.strftime("%Y-%m-%d %H:%M") if pub else None, "_t": pub.timestamp() if pub else 0})
+    items.sort(key=lambda x: -x["_t"])
+    seen, out = set(), []
+    for x in items:  # 같은 보도자료를 여러 신문이 실은 경우 하나만
+        k = re.sub(r"[^가-힣A-Za-z0-9]", "", x["title"])[:18]
+        if k in seen:
+            continue
+        seen.add(k)
+        x.pop("_t")
+        out.append(x)
+    return out[:limit]
+
+
+WIN_RE = re.compile(r"우승|정상|챔피언|1위|금메달|대상 수상|패권")
+
+
+@app.get("/api/news")
+def news():
+    """topic = tournament(대회 소식) | winner(우승 소식) | news(일반 뉴스). 구글 뉴스 RSS, 30분 캐시."""
+    topic = request.args.get("topic", "news")
+    q = media()["news_queries"].get(topic)
+    if not q:
+        abort(404)
+    items = cached(f"news:{topic}", NEWS_TTL, lambda: google_news(q, 30)) or []
+    if topic == "winner":
+        items = [x for x in items if WIN_RE.search(x["title"])]
+    elif topic == "tournament":
+        items = [x for x in items if "대회" in x["title"]]
+    return jsonify({"items": items[:10], "source": "Google 뉴스", "query": q})
+
+
+def youtube_videos():
+    ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
+    vids = []
+    for ch in media()["youtube_channels"]:
+        try:
+            r = requests.get("https://www.youtube.com/feeds/videos.xml", headers=UA, timeout=8,
+                             params={"channel_id": ch["id"]})
+            if r.status_code != 200:
+                continue
+            root = ET.fromstring(r.content)
+        except (requests.RequestException, ET.ParseError):
+            continue
+        for e in root.findall("a:entry", ns):
+            title = e.findtext("a:title", namespaces=ns) or ""
+            if "파크골프" not in title.replace(" ", ""):
+                continue
+            vids.append({"id": e.findtext("yt:videoId", namespaces=ns), "title": title,
+                         "channel": ch["name"], "published": (e.findtext("a:published", namespaces=ns) or "")[:10]})
+    since = time.strftime("%Y-%m-%d", time.localtime(time.time() - 120 * 86400))
+    vids = [v for v in vids if v["published"] >= since]  # 최근 4개월 영상만
+    vids.sort(key=lambda v: v["published"], reverse=True)
+    return vids[:8]
+
+
+LIVE_RE = re.compile(r"LIVE|라이브|생중계|실시간", re.I)
+GAME_RE = re.compile(r"대회|결승|라운드|오픈|최강전|선수권|챔피언|예선|본선")
+
+
+@app.get("/api/videos")
+def videos():
+    """방송사·파크골프 채널의 유튜브 공식 RSS 에서 파크골프 영상을 모은다. 1시간 캐시."""
+    vids = cached("videos", VIDEO_TTL, youtube_videos)
+    fallback = not vids
+    if fallback:
+        vids = [dict(v, published=None) for v in media()["fallback_videos"]]
+    recent = time.strftime("%Y-%m-%d", time.localtime(time.time() - 36 * 3600))
+    for v in vids:
+        # 제목에 LIVE 가 있어도 지난 생중계(다시보기)는 LIVE 로 표시하지 않는다
+        v["live"] = bool(LIVE_RE.search(v["title"])) and bool(v.get("published")) and v["published"] >= recent
+        v["game"] = bool(GAME_RE.search(v["title"]))
+    # 생중계 > 대회 영상 > 기타 순서 (같은 묶음 안에서는 최신순 유지)
+    vids = sorted(vids, key=lambda v: (not v["live"], not v["game"]))
+    return jsonify({"items": vids, "fallback": fallback})
+
+
+@app.get("/api/tournaments")
+def tournaments():
+    today = time.strftime("%Y-%m-%d")
+    items = []
+    for t in media()["tournaments"]:
+        if not t.get("start"):  # 날짜 미정
+            status = "예정"
+        else:
+            status = "예정" if t["start"] > today else "진행 중" if (t.get("end") or t["start"]) >= today else "종료"
+        items.append(dict(t, status=status))
+    # 진행 중·예정은 가까운 날짜부터(날짜 미정은 뒤로), 종료는 최근에 끝난 것부터
+    ahead = sorted((t for t in items if t["status"] != "종료"), key=lambda t: t.get("start") or "9999")
+    done = sorted((t for t in items if t["status"] == "종료"), key=lambda t: t["end"], reverse=True)
+    return jsonify({"items": ahead + done, "today": today})
 
 
 @app.get("/favicon.ico")

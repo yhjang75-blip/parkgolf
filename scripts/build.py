@@ -22,6 +22,8 @@ RAW = ROOT / "data" / "raw"
 OUT = ROOT / "data" / "courses.json"
 OVERRIDES = ROOT / "data" / "manual_overrides.json"
 GEOCACHE = ROOT / "data" / "geocode_cache.json"
+GOV_SITES = ROOT / "data" / "gov_sites.json"   # 시·군·구 홈페이지와 통합예약 사이트
+PHOTOS = ROOT / "data" / "photos.json"         # 구장 대표 사진 (scripts/photos.py 또는 직접 입력)
 
 SIDO = {
     "서울": "서울특별시", "부산": "부산광역시", "대구": "대구광역시", "인천": "인천광역시",
@@ -232,6 +234,28 @@ def to_course(row, ds_id, meta):
     return c
 
 
+def classify_reserve(c, gov):
+    """예약 방법을 네 단계로 나눈다.
+    online  : 이 구장의 온라인 예약 주소가 확인됨
+    portal  : 지자체(공단) 통합예약 사이트가 있음 — 사이트에서 구장을 골라야 함
+    phone   : 온라인 예약 경로를 찾지 못함, 전화번호 있음 (현장 선착순·전화 예약)
+    unknown : 예약 정보 없음
+    """
+    c["gov_home"] = gov.get("home")
+    portal = gov.get("portal")
+    if c.get("reserve_url"):
+        c["reserve_level"] = "online"
+    elif c.get("reserve_method") and "카카오" in c["reserve_method"]:
+        c["reserve_level"] = "online"  # 카카오톡 채널 예약 (주소 대신 채널명 안내)
+    elif portal:
+        c["reserve_level"] = "portal"
+    elif c.get("reserve_phone") or c.get("phone"):
+        c["reserve_level"] = "phone"
+    else:
+        c["reserve_level"] = "unknown"
+    c["portal"] = portal if portal and portal["url"] != c.get("reserve_url") else None
+
+
 # ---------- 합치기 ----------
 def same(a, b):
     # 같은 자료 안의 행은 서로 다른 구장으로 본다
@@ -295,6 +319,9 @@ def main():
     overrides = ov_all.get("courses", {})
     reserve_sites = ov_all.get("reserve_sites", {})
     nospace = lambda s: re.sub(r"\s+", "", s or "")
+    gov_sites = json.loads(GOV_SITES.read_text(encoding="utf-8")) if GOV_SITES.exists() else {}
+    photos = json.loads(PHOTOS.read_text(encoding="utf-8")) if PHOTOS.exists() else {}
+    photos = {k: v for k, v in photos.items() if not k.startswith("_") and v and v.get("url")}
 
     for c in merged:
         c.pop("_rank", None)
@@ -315,6 +342,8 @@ def main():
             if not k.startswith("_"):
                 c[k] = v
         c["data_date"] = max((s["date"] or "" for s in c["sources"]), default=None) or None
+        classify_reserve(c, gov_sites.get(f"{c['sido']}|{c['sigungu']}", {}))
+        c["photo"] = photos.get(c["id"])
 
     merged.sort(key=lambda c: (SIDO_LIST.index(c["sido"]) if c["sido"] in SIDO_LIST else 99,
                                c["sigungu"] or "", c["name"]))
@@ -330,8 +359,12 @@ def main():
         print(f"  {s:10s} {by_sido.get(s, 0):4d}")
     def rate(k):
         return f"{sum(1 for c in merged if c.get(k) not in (None, '')) / len(merged) * 100:5.1f}%"
-    for k in ("holes", "lat", "phone", "hours", "fee", "reserve_url", "turf"):
+    for k in ("holes", "lat", "phone", "hours", "fee", "reserve_url", "turf", "photo"):
         print(f"  {k:12s} 채움 {rate(k)}")
+    lv = {}
+    for c in merged:
+        lv[c["reserve_level"]] = lv.get(c["reserve_level"], 0) + 1
+    print("  예약 단계", lv)
 
 
 if __name__ == "__main__":

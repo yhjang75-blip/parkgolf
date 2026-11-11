@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>전국 파크골프장 지도</title>
-  <meta name="description" content="전국 파크골프장의 위치, 홀 수, 필드 상태를 확인하고 공식 예약 페이지로 바로 이동합니다.">
+  <title>전국 파크골프장</title>
+  <meta name="description" content="전국 파크골프장 위치·예약 안내와 대회 소식, 우승 소식, 대회 영상, 파크골프 뉴스를 한곳에서.">
   <meta name="theme-color" content="#1f6b3a">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⛳%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -14,37 +14,103 @@
 </head>
 <body>
   <header class="top">
-    <h1>⛳ 전국 파크골프장</h1>
-    <p class="sub" id="summary">불러오는 중…</p>
+    <div class="top-in">
+      <a class="brand" href="#">⛳ 전국 파크골프장</a>
+      <nav class="topnav" aria-label="바로가기">
+        <a href="#sec-tour">대회 소식</a>
+        <a href="#sec-video">대회 영상</a>
+        <a href="#finder">구장 찾기</a>
+        <a href="#sec-news">뉴스</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="filters" aria-label="검색 조건">
-    <input id="q" type="search" placeholder="구장 이름이나 지역 검색 (예: 강변, 포항)" aria-label="검색어">
-    <div class="row">
-      <select id="sido" aria-label="시·도"><option value="">전체 시·도</option></select>
-      <select id="sigungu" aria-label="시·군·구"><option value="">전체 시·군·구</option></select>
-      <select id="holes" aria-label="홀 수">
-        <option value="0">홀 수 전체</option>
-        <option value="9">9홀 이상</option>
-        <option value="18">18홀 이상</option>
-        <option value="36">36홀 이상</option>
-      </select>
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-sub" id="summary">불러오는 중…</p>
+      <form class="hero-search" id="hero-form" role="search">
+        <input id="hero-q" type="search" placeholder="구장 이름이나 지역 (예: 성주, 한강)" aria-label="구장 검색">
+        <button type="submit">구장 찾기</button>
+      </form>
+      <div class="stats" id="stats"></div>
     </div>
-    <label class="check"><input type="checkbox" id="online"> 온라인 예약 주소가 있는 곳만</label>
   </section>
 
-  <nav class="tabs" aria-label="보기 전환">
-    <button data-view="list" class="on">목록</button>
-    <button data-view="map">지도</button>
-  </nav>
+  <main class="wrap home">
+    <div class="grid2">
+      <section class="panel" id="sec-tour" aria-labelledby="h-tour">
+        <h2 id="h-tour">🏆 전국 대회 소식</h2>
+        <h3 class="sub-h">주요 대회 일정</h3>
+        <ul class="tour" id="tour"><li class="muted">불러오는 중…</li></ul>
+        <h3 class="sub-h">최근 대회 기사</h3>
+        <ul class="feed" id="feed-tournament"><li class="muted">불러오는 중…</li></ul>
+      </section>
 
-  <main class="layout" data-view="list">
-    <section class="list-pane">
-      <p class="count" id="count"></p>
-      <ul id="list" class="list"></ul>
-      <div id="gap" class="notice"></div>
+      <section class="panel" id="sec-win" aria-labelledby="h-win">
+        <h2 id="h-win">🥇 우승자 소식</h2>
+        <ul class="feed" id="feed-winner"><li class="muted">불러오는 중…</li></ul>
+        <p class="src">최근 30일 기사 중 '우승·정상·1위' 등이 들어간 소식을 모았습니다. 출처: Google 뉴스</p>
+      </section>
+    </div>
+
+    <section class="panel" id="sec-video" aria-labelledby="h-video">
+      <div class="panel-head">
+        <h2 id="h-video">📺 대회 영상</h2>
+        <a class="pill live" id="live-link" target="_blank" rel="noopener"
+           href="https://www.youtube.com/results?search_query=%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84+%EB%8C%80%ED%9A%8C&sp=EgJAAQ%253D%253D">● 지금 생중계 찾기 ↗</a>
+      </div>
+      <div class="video">
+        <div class="player" id="player"></div>
+        <ul class="vlist" id="vlist"></ul>
+      </div>
+      <p class="src" id="video-src">방송사·파크골프 채널의 유튜브 공개 영상</p>
     </section>
-    <section class="map-pane"><div id="map" role="region" aria-label="지도"></div></section>
+
+    <section class="finder" id="finder" aria-labelledby="h-finder">
+      <div class="panel-head">
+        <h2 id="h-finder">📍 구장 찾기</h2>
+        <span class="muted" id="finder-sum"></span>
+      </div>
+      <div class="filters" aria-label="검색 조건">
+        <input id="q" type="search" placeholder="구장 이름이나 지역 검색 (예: 강변, 포항)" aria-label="검색어">
+        <div class="row">
+          <select id="sido" aria-label="시·도"><option value="">전체 시·도</option></select>
+          <select id="sigungu" aria-label="시·군·구"><option value="">전체 시·군·구</option></select>
+          <select id="holes" aria-label="홀 수">
+            <option value="0">홀 수 전체</option>
+            <option value="9">9홀 이상</option>
+            <option value="18">18홀 이상</option>
+            <option value="36">36홀 이상</option>
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" id="online"> 인터넷 예약이 되는 곳만 (지자체 통합예약 포함)</label>
+      </div>
+
+      <nav class="tabs" aria-label="보기 전환">
+        <button data-view="list" class="on">목록</button>
+        <button data-view="map">지도</button>
+      </nav>
+
+      <div class="layout" data-view="list">
+        <section class="list-pane">
+          <p class="count" id="count"></p>
+          <ul id="list" class="list"></ul>
+          <div id="gap" class="notice"></div>
+        </section>
+        <section class="map-pane"><div id="map" role="region" aria-label="지도"></div></section>
+      </div>
+      <p class="src legend">
+        <span class="badge ok">온라인 예약</span> 구장 예약 주소 확인 ·
+        <span class="badge portal">지자체 예약</span> 시·군 통합예약 사이트에서 구장 선택 ·
+        <span class="badge">전화·현장</span> 인터넷 예약 경로를 찾지 못함 (선착순·전화 예약이 많음)
+      </p>
+    </section>
+
+    <section class="panel" id="sec-news" aria-labelledby="h-news">
+      <h2 id="h-news">📰 파크골프 뉴스</h2>
+      <ul class="feed cols" id="feed-news"><li class="muted">불러오는 중…</li></ul>
+      <p class="src">최근 30일 기사 · 출처: Google 뉴스 · 기사를 누르면 언론사 사이트로 이동합니다.</p>
+    </section>
   </main>
 
   <aside id="detail" class="detail" hidden aria-live="polite">
@@ -53,10 +119,14 @@
   </aside>
 
   <footer class="foot">
-    자료: <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 지자체·시설관리공단 공개 자료 ·
-    지도 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ·
-    날씨 <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a><br>
-    예약은 각 운영기관의 공식 사이트에서 이루어집니다. 운영·휴장 여부는 방문 전 운영기관에 꼭 확인하세요.
+    <div class="wrap">
+      자료: <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 지자체·시설관리공단 공개 자료 ·
+      지도 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ·
+      날씨 <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> ·
+      뉴스 Google 뉴스 · 영상 YouTube<br>
+      예약은 각 운영기관의 공식 사이트에서 이루어집니다. 운영·휴장 여부는 방문 전 운영기관에 꼭 확인하세요.
+      기사·영상·사진의 저작권은 각 원작자에게 있습니다.
+    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>

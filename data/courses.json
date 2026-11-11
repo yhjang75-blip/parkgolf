@@ -37,7 +37,20 @@
     }
    ],
    "id": "bf33c9d6c7",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.gn.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1Ri2q/64ecf6c436b035378deb719c99e255e85d8403d3",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/9dmkH4ozOC8",
+    "source_url": "https://cafe.daum.net/sanhaengannae/KAdP/10",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "강릉파크골프장",
+    "name": "강릉파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "사천체육공원 파크골프장",
@@ -76,7 +89,20 @@
     }
    ],
    "id": "dc1966030b",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.gn.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202303/21/akn/20230321074818243osjd.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/7Due8J15SDk",
+    "source_url": "https://v.daum.net/v/20230321074817158",
+    "source_name": "아시아경제",
+    "method": "카카오 이미지 검색",
+    "query": "사천체육공원파크골프장",
+    "name": "사천체육공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "주문진 파크골프장",
@@ -115,7 +141,20 @@
     }
    ],
    "id": "3c05c66720",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.gn.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FbHhfck%252FbtsIBe8cFI2%252F9uFQlklCADDmGqpDYISEv0%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/Kjok2IZ16oQ",
+    "source_url": "http://blog.naver.com/memepro/223545313343",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "주문진파크골프장",
+    "name": "주문진 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "고성 파크골프장",
@@ -154,7 +193,20 @@
     }
    ],
    "id": "97eb3948a2",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.gwgs.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDEwMDdfMjUz/MDAxNzI4MjkzNjY4Mzg0.bLgOeyUrhdXEklpLbG1urLrw-YKZQg5uR3BRwdPwIQgg.DItlSLiNaUq0Do4jJPADRhVcy_NJD6U0Pj_0UIYrUuUg.JPEG/%EA%B3%A0%EC%84%B1_%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/K3fexO3JVTX",
+    "source_url": "http://blog.naver.com/memepro/223610431578",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "고성파크골프장",
+    "name": "고성 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "무릉파크골프장",
@@ -193,7 +245,20 @@
     }
    ],
    "id": "69a932ccce",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.dh.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfNjQg/MDAxNzIzODk0MDE1NzU2.V4JS6sZmR4XmCsQJdSjJZgxyEvb27o8PPjsGTNg0qeEg.O7KqhoDUz1-_49yY-dbKKxe4q45Fb-QSzKB8SmBrQ7Ag.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/LtD5rqWttCp",
+    "source_url": "http://blog.naver.com/parkgolfs/223551198237",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "무릉파크골프장",
+    "name": "무릉파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "전천파크골프장",
@@ -232,7 +297,20 @@
     }
    ],
    "id": "b7acd8275c",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.dh.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDEwMjhfMTk1/MDAxNzMwMTIwMjkxNjc0.B9hQY8XvHtBW2LvrY1Lhgqont7D-Ky18FSDr7F22IQkg.BTRoROQzuYe1D-awvjg-irwnOhTpxiH3jrcERCVwSaQg.JPEG/Untitled-154.jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/JWaHp59jsRO",
+    "source_url": "http://blog.naver.com/memepro/223637317090",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "전천파크골프장",
+    "name": "전천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "미로파크골프장",
@@ -271,7 +349,20 @@
     }
    ],
    "id": "577c864244",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.samcheok.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FPXMTf%252FbtsKEweU8WT%252Fd7mIwmWBfGbL4ur6DFDkRK%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/IdBBf3W1fCz",
+    "source_url": "http://blog.naver.com/parkgolfs/223655643381",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "미로파크골프장",
+    "name": "미로파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "속초 파크골프장",
@@ -310,7 +401,20 @@
     }
    ],
    "id": "66bfcf96d9",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.sokcho.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202607/02/nocut/20260702154212192ezei.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/EaMJuFFYJPm",
+    "source_url": "https://v.daum.net/v/20260702154210537",
+    "source_name": "노컷뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "속초파크골프장",
+    "name": "속초 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "방산면 파크골프장",
@@ -349,7 +453,20 @@
     }
    ],
    "id": "5ae9260e03",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.yanggu.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202608/07/551736-SOd9ttJ/20260807000647296nipx.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/JD5cnaLdj4d",
+    "source_url": "https://v.daum.net/v/20260807000646226",
+    "source_name": "강원일보",
+    "method": "카카오 이미지 검색",
+    "query": "방산면파크골프장",
+    "name": "방산면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "한반도섬 파크골프장",
@@ -388,7 +505,20 @@
     }
    ],
    "id": "189b250083",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.yanggu.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1Xctn/f414f7a06cabda265a029c69b784d8c6b58dbe19",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/2xgZOycE9jQ",
+    "source_url": "https://cafe.daum.net/parkgolf.goyang/UqfB/146",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "한반도섬파크골프장",
+    "name": "한반도섬 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "남대천파크골프장",
@@ -427,7 +557,20 @@
     }
    ],
    "id": "c08135d023",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.yangyang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bjpAUH/btsM13v1tTU/eFkFYbdzIKRS15XroGAjkK/img.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/9bYjnlvPqBn",
+    "source_url": "https://kwtimes.tistory.com/39907",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "남대천파크골프장",
+    "name": "남대천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "영월군 파크골프장",
@@ -466,7 +609,20 @@
     }
    ],
    "id": "f8d578a5fa",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.yw.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://www.webeconomy.co.kr/news/photo/202603/2120354_927535_494.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/E65LWgdbQFa",
+    "source_url": "https://cp.news.search.daum.net/p/175916612",
+    "source_name": "웹이코노미",
+    "method": "카카오 이미지 검색",
+    "query": "영월군파크골프장",
+    "name": "영월군 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "간현파크골프장",
@@ -505,7 +661,20 @@
     }
    ],
    "id": "3d95506b9a",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.wonju.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "http://news.lghellovision.net/news/photo/202506/510930_135693_5345.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/kQB3BICtV",
+    "source_url": "https://cp.news.search.daum.net/p/164677311",
+    "source_name": "LG헬로비전",
+    "method": "카카오 이미지 검색",
+    "query": "간현파크골프장",
+    "name": "간현파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "문막파크골프장",
@@ -544,7 +713,20 @@
     }
    ],
    "id": "02dca118d4",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.wonju.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfMTMw/MDAxNzIzODkzNDYzNzkw.XwN73EKX3gkbNfsO4lzRZQI1ovLz2Qps3bFAzFrI1REg.0vw_aO1oMxD6iu_3n-mz44K4hfpV6Ii1NPeFP3YeQl0g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2).jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/6cn5J4Zwe3Y",
+    "source_url": "http://blog.naver.com/parkgolfs/223551191882",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "문막파크골프장",
+    "name": "문막파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "취병파크골프장",
@@ -583,7 +765,20 @@
     }
    ],
    "id": "5c2a356f24",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.wonju.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA3MDRfMTky/MDAxNzgzMTU3ODAzNTUx.h0jhjSVbBoqIR5Ko8d0iL5dWO7nshUKfZUL8uFI_zfkg.w0hV1zt48LtYj7Yvxx4ftljgZO6ASTNkZNj8zFJ93jAg.PNG/%EB%AC%B8%EB%A7%89c3.png?type=w580",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/LevZJHLBF8y",
+    "source_url": "http://blog.naver.com/lovseed/224355880897",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "취병파크골프장",
+    "name": "취병파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "태장파크골프장",
@@ -622,7 +817,20 @@
     }
    ],
    "id": "cead05e38e",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.wonju.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "http://cfile274.uf.daum.net/image/22309D4A56FF8F7919363D",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/LKoRST66tnk",
+    "source_url": "https://cafe.daum.net/aznos/Y6p8/66",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "태장파크골프장",
+    "name": "태장파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "학성파크골프장",
@@ -661,7 +869,20 @@
     }
    ],
    "id": "84d0580168",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.wonju.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Flee.leetae.com%2Fwp-content%2Fuploads%2F2026%2F04%2F%25ED%258C%258C%25ED%2581%25AC%25EA%25B3%25A8%25ED%2594%258411111-4.png%22&type=ff500_300",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/FqZMhcSKUW9",
+    "source_url": "http://blog.naver.com/leetae7224/224256891153",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "학성파크골프장",
+    "name": "학성파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "행구수변공원파크골프장",
@@ -700,7 +921,20 @@
     }
    ],
    "id": "0a815be00d",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.wonju.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA3MjRfMzAg/MDAxNzg0ODQ3ODE0NzM4.I66wgHf6RM-3m3rS2IVMJbXfRDcujyFyhJQRHb1abnMg.1jo-9vjhIGzgtZ3XUGmYiRhf40w2WThH7bIAlVxIlX8g.JPEG/img_ab2fbd7a.jpg?type=w966",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/7hcz66q6ZMI",
+    "source_url": "http://blog.naver.com/tn35444/224356213045",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "행구수변공원파크골프장",
+    "name": "행구수변공원파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "인제(살구미) 파크골프장",
@@ -739,7 +973,24 @@
     }
    ],
    "id": "4e4bf587f5",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.inje.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.inje.go.kr/reserve/",
+    "name": "인제군 공공체육시설 예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://www.webeconomy.co.kr/news/photo/202609/2285173_1094484_1614.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/IaUxh3snAIn",
+    "source_url": "https://cp.news.search.daum.net/p/181403441",
+    "source_name": "웹이코노미",
+    "method": "카카오 이미지 검색",
+    "query": "인제(살구미)파크골프장",
+    "name": "인제(살구미) 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "인제(살구미) 파크골프장 보조경기장",
@@ -778,7 +1029,24 @@
     }
    ],
    "id": "2852ce3992",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.inje.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.inje.go.kr/reserve/",
+    "name": "인제군 공공체육시설 예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA3MjVfNjEg/MDAxNzg0OTQ1MDQyMTg3.bIQ1u5TXwdZFbiOBZU6nzmvJe2vZ6Pf04I78fmF7uHUg.rQl_9gCqWdddhsP_sYVY9BJ03D68hwA3brLnMHuQw1Eg.PNG/%EC%9D%B8%EC%A0%9C%EA%B5%B0%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5.png?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/BTpJfH50rp",
+    "source_url": "http://blog.naver.com/sports-news300/224357332062",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "인제(살구미)파크골프장보조경기장",
+    "name": "인제(살구미) 파크골프장 보조경기장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "녹송파크골프장",
@@ -817,7 +1085,20 @@
     }
    ],
    "id": "5d13e87b6c",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.jeongseon.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252Fmos0N%252FbtsIpUJYvCX%252FjKi1Pu6Vn2A1QznH7IilOK%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/GAb7S3HxEbj",
+    "source_url": "http://blog.naver.com/memepro/223545269136",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "녹송파크골프장",
+    "name": "녹송파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "북평파크골프장",
@@ -856,7 +1137,20 @@
     }
    ],
    "id": "ceccf974ab",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.jeongseon.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfMjcy/MDAxNzIzODkyOTQyNzQy.QRmMyYfGOsowfWULdEJ-6yEJOzy9wrQNHPkrhPQpYicg.r5DlInFwsS7bk4SAGn8yoqMsbonF2npwq_95Zjnxk6Mg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(59).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/BCi4cFichBQ",
+    "source_url": "http://blog.naver.com/parkgolfs/223551186155",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "북평파크골프장",
+    "name": "북평파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "철원파크골프장",
@@ -895,7 +1189,20 @@
     }
    ],
    "id": "fb0dd81a24",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.cwg.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/d6kgiP/btsLx95A7gV/jVaRrIPaojSHNN7MAgkvXK/img.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/310rOtjhmqx",
+    "source_url": "https://parkgolf-tip.tistory.com/570",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "철원파크골프장",
+    "name": "철원파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "서면파크골프장",
@@ -934,7 +1241,20 @@
     }
    ],
    "id": "98e48bddec",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.chuncheon.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1Xctn/db9f92b8f067309ca5246049e12e7eaabb1e84a7",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/KPNmCvnoZrA",
+    "source_url": "https://cafe.daum.net/parkgolf.goyang/UqfB/141",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "서면파크골프장",
+    "name": "서면파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "소양강파크골프장",
@@ -973,7 +1293,20 @@
     }
    ],
    "id": "dc0522f3cf",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.chuncheon.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1BgV1/4e71b7a1c00201d50ee50eda918afe3f61b7b6f6",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/5O2sMht2owa",
+    "source_url": "https://cafe.daum.net/beautiful5060/JXiB/6882",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "소양강파크골프장",
+    "name": "소양강파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "백산파크골프장",
@@ -1012,7 +1345,20 @@
     }
    ],
    "id": "a60e5e8b5a",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.taebaek.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/N5wy0/btsPbnyTcKK/OPwJNgXvrmArAaG8hq1CrK/img.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/HsZCtuL9yJV",
+    "source_url": "https://tngus3700.tistory.com/123",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "백산파크골프장",
+    "name": "백산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "스포츠파크 파크골프장",
@@ -1051,7 +1397,20 @@
     }
    ],
    "id": "cd65a52349",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.taebaek.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/dKX9yH/dJMcafmitB3/eg4HYwG31KBnRPKmL8bKj1/img.png",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/2DzBtRWvTyr",
+    "source_url": "https://hazuo2.hasuo100.com/351",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "태백시 스포츠파크파크골프장",
+    "name": "스포츠파크 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "대화파크골프장",
@@ -1090,7 +1449,24 @@
     }
    ],
    "id": "a5a8f5d0dd",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.pc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://reserve.pc.go.kr/",
+    "name": "평창 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfNDkg/MDAxNzIzODkzOTE2Njkz.j9-SS_unFbuGF9B4HxXR9vve98QnhO6SK7OmKXKzZwcg.w7y3Zeh8OgrasXDfXcsjv_RYSLN36-J5heT-Uzl6N3Ug.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2)_(1).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/7fhVQNZA6a1",
+    "source_url": "http://blog.naver.com/parkgolfs/223551197029",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "대화파크골프장",
+    "name": "대화파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "봉평파크골프장",
@@ -1129,7 +1505,24 @@
     }
    ],
    "id": "246f005e62",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.pc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://reserve.pc.go.kr/",
+    "name": "평창 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA5MThfMTEx/MDAxNzI2NjY3NDQwNDky.kk76AUsiVCTm5DMvYG4PkqbUaY4YrcVZEdOaC7u6lWQg.C2_loMfqcVNGDVn43W_KwYxoGyeY6P115ynqmhLqqusg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(4).jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/7aSsdBhN7jy",
+    "source_url": "http://blog.naver.com/parkgolfs/223587901634",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "봉평파크골프장",
+    "name": "봉평파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "용평파크골프장",
@@ -1168,7 +1561,24 @@
     }
    ],
    "id": "88f73df112",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.pc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://reserve.pc.go.kr/",
+    "name": "평창 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMTA5MTVfNDUg/MDAxNjMxNjYzODU2NTE2.xbB7cBeNCvFn_RF46YkWSdQuE5obpWP5P-Kz8wLCJAcg.6eJRgsPkwCMKJ3Ivnh9A9h04lM8cxm8H92MlLw4Rj28g.JPEG.lovefoolsp/IMG_4015.jpg?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/D6p8dutjWha",
+    "source_url": "http://blog.naver.com/sophs_/222506506353",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "용평파크골프장",
+    "name": "용평파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "평창파크골프장",
@@ -1207,7 +1617,24 @@
     }
    ],
    "id": "a75f9ef90d",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.pc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://reserve.pc.go.kr/",
+    "name": "평창 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/AVbM9/btsIcCiWzrT/4dEk5caAbzx21vVMvPKZQ0/img.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/LfrP6tNBbSV",
+    "source_url": "https://happy700photo.tistory.com/6574",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "평창파크골프장",
+    "name": "평창파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "내면 광원리 파크골프장",
@@ -1246,7 +1673,20 @@
     }
    ],
    "id": "d739247076",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hongcheon.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMjAyMjJfMjA5/MDAxNjQ1NTA1NTM1MzQ1.O-bGHEHiUB8CEGr1IacteDB61hrDXp8q9NOiT6KQ6mkg.UzkMFMW-uodjJEhz2PVKgwpIqwfVZsTcBDjD-VCOP30g.JPEG.hcns0403/53857_54296_5026.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/9BJHnRkzxx1",
+    "source_url": "http://blog.naver.com/hcns0403/222654565598",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "내면광원리파크골프장",
+    "name": "내면 광원리 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "홍천 강변 파크골프장",
@@ -1285,7 +1725,20 @@
     }
    ],
    "id": "da38f2ec6d",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hongcheon.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTJfMjk4/MDAxNzIzNDQwNTQ3OTQ4.vO_E7iNX4KR8lViCdgTIkeKKb3JssxGSEjWWEuqbVsQg.Kk8xdEHBOTdBsmKdVhXDZXRBEU8fqEILmVdUrvSkmugg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(1).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/6uEvo5mrM6E",
+    "source_url": "http://blog.naver.com/memepro/223545239026",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "홍천강변파크골프장",
+    "name": "홍천 강변 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "산천어 파크골프장",
@@ -1324,7 +1777,20 @@
     }
    ],
    "id": "711cc812eb",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.ihc.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/b8hTcx/btsMAMORe6u/cY7Wqk03S5yC1IBIRBNWAK/img.png",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/JXADq4qPDsg",
+    "source_url": "https://only.news1info.com/24",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "산천어파크골프장",
+    "name": "산천어 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "생활체육공원 파크골프장",
@@ -1363,7 +1829,20 @@
     }
    ],
    "id": "1e738201d0",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.ihc.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://www.webeconomy.co.kr/news/photo/202609/2293560_1103036_1534.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/HqOGFWQYrOR",
+    "source_url": "https://cp.news.search.daum.net/p/181661564",
+    "source_name": "웹이코노미",
+    "method": "카카오 이미지 검색",
+    "query": "화천군 생활체육공원파크골프장",
+    "name": "생활체육공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "둔내(둔방) 파크골프장",
@@ -1402,7 +1881,24 @@
     }
    ],
    "id": "f79dbb6bad",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hsg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hsg.go.kr/reserve/index.do",
+    "name": "횡성군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1ZaCM/6baf233b4ca5684e9a97fcde25501c0849e46346",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/CznJoIwMfKL",
+    "source_url": "https://cafe.daum.net/jungrangpagol1/bewr/206",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "둔내(둔방)파크골프장",
+    "name": "둔내(둔방) 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "둔내(우용) 파크골프장",
@@ -1441,7 +1937,24 @@
     }
    ],
    "id": "068541deca",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hsg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hsg.go.kr/reserve/index.do",
+    "name": "횡성군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA5MjZfMjUy%2FMDAxNzkwNDMxNjM4MTQx.hED8-qF0ZdG_xxW8QPRF1bYgewinPIye92m1pNCNs3sg.0qlRWS5C2ybHnxX9BiUxsJXwFiEBusKoUwh7hCkjYQgg.JPEG%2F20260925_13%25BD%25C309%25BA%25D009%25C3%25CA_iPhone_13_Pro_Max.jpg&type=sc960_832",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/LL59vsl4SWo",
+    "source_url": "http://blog.naver.com/parkwood5823/224424504980",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "둔내(우용)파크골프장",
+    "name": "둔내(우용) 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "명품 파크골프장",
@@ -1480,7 +1993,24 @@
     }
    ],
    "id": "caf0dbe562",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hsg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hsg.go.kr/reserve/index.do",
+    "name": "횡성군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTExMjRfMTgx/MDAxNzYzOTUwMjY0Mjc2.uXEaky20R2mgGw9z_BXrWduqP9aHw6wZKWWZ_lMHnB0g.tOKGE7IsYbqIrNfe2tFIxJ7eZjSEiBF5RoicXckCFlwg.JPEG/%ED%95%98%EB%8F%99%EA%B5%B0_%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5(%EC%A7%84%EA%B5%90).jpg?type=w580",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/3Rd9wthwvbs",
+    "source_url": "http://blog.naver.com/hdnews9001/224086086739",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "명품파크골프장",
+    "name": "명품 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "전천 파크골프장",
@@ -1519,7 +2049,24 @@
     }
    ],
    "id": "905c5b21b0",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hsg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hsg.go.kr/reserve/index.do",
+    "name": "횡성군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FIzgtg%252FbtsKnl5TUBE%252FYbo6IKhRkKZkvueKXM0UdK%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/BN7hw7xwlip",
+    "source_url": "http://blog.naver.com/memepro/223637317090",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "전천파크골프장",
+    "name": "전천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "청일 파크골프장",
@@ -1558,7 +2105,24 @@
     }
    ],
    "id": "6db80498a8",
-   "data_date": "2025-11-28"
+   "data_date": "2025-11-28",
+   "gov_home": "https://www.hsg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hsg.go.kr/reserve/index.do",
+    "name": "횡성군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfMjYg/MDAxNzIzODk0NTQzMDc4.Y5EmeidybxCv--W69zowPjmeUSxgHQwoyoY9mNeZL34g.iQoKBxOBw0zInXhf86acs40_kky5M-9hB-LmuPbL3_Eg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/1bz6oSxFcP6",
+    "source_url": "http://blog.naver.com/parkgolfs/223551408447",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "청일파크골프장",
+    "name": "청일 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가평파크골프장",
@@ -1597,7 +2161,20 @@
     }
    ],
    "id": "eac3e6b90e",
-   "data_date": "2026-07-21"
+   "data_date": "2026-07-21",
+   "gov_home": "https://www.gp.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA5MTVfMjg0/MDAxNzg5NDUwOTQyNzU4.D0C7gdRFk6Mx7gfvzZEzMOuX4qWidkA38KsJDy0ZXkYg.BjvUxAXISgDZEc8oPVg14I2xslanntSn8X6YjghmFz8g.JPEG/ckImgSubmit.jpeg?type=w966",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/3sQKNpnXNEB",
+    "source_url": "http://blog.naver.com/idpark_golf/224412569721",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "가평파크골프장",
+    "name": "가평파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "재인폭포파크골프장",
@@ -1636,7 +2213,24 @@
     }
    ],
    "id": "a0e923c36d",
-   "data_date": "2026-07-14"
+   "data_date": "2026-07-14",
+   "gov_home": "https://www.yeoncheon.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://www.yeoncheon.go.kr/reserve/index.do",
+    "name": "연천군 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202411/14/seouleconomy/20241114153902011fnvc.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/Icv5A3HKSAK",
+    "source_url": "https://v.daum.net/v/20241114153446734",
+    "source_name": "서울경제",
+    "method": "카카오 이미지 검색",
+    "query": "재인폭포파크골프장",
+    "name": "재인폭포파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "북부 체육공원",
@@ -1675,7 +2269,20 @@
     }
    ],
    "id": "6e79a921b3",
-   "data_date": "2026-07-27"
+   "data_date": "2026-07-27",
+   "gov_home": "https://www.icheon.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202606/09/inews24/20260609124324344alub.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/EiHkVRQK2bn",
+    "source_url": "https://v.daum.net/v/20260609124323458",
+    "source_name": "아이뉴스24",
+    "method": "카카오 이미지 검색",
+    "query": "북부체육공원",
+    "name": "북부 체육공원",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가북면 파크골프장",
@@ -1714,7 +2321,20 @@
     }
    ],
    "id": "4a5d6a264a",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://cdn.topnews24.kr/news/photo/202503/53539_77470_531.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/CieN5yYIgAG",
+    "source_url": "http://blog.naver.com/jbkjbk2002/223803730836",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "가북면파크골프장",
+    "name": "가북면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가조면 파크골프장 1구장",
@@ -1753,7 +2373,20 @@
     }
    ],
    "id": "8e2ac3a11e",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDAzMThfMTYz/MDAxNzEwNzUzNTk2MzI0.0cYA0Q7qg3TFHak8w6aw7agBDkVuFGs6E49vXKoFHggg.7Mi_KTZTtT0TRymHpyY3zI7XHMtdXm-PBw6gZ-VjAQIg.PNG/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-03-18_180439.png?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/KeWZdFz5ruR",
+    "source_url": "http://blog.naver.com/vita_club/223387420931",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "가조면파크골프장1구장",
+    "name": "가조면 파크골프장 1구장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가조면 파크골프장 2구장",
@@ -1792,7 +2425,20 @@
     }
    ],
    "id": "451c0b906c",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://images.unsplash.com/photo-1514480573427-1f96cbed6a27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NjQ5OTN8MHwxfHNlYXJjaHw1fHxnb2xmfGVufDB8fHx8MTczMjE3NzIzOHww&ixlib=rb-4.0.3&q=80&w=400",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/7aa5vJwBQZP",
+    "source_url": "https://hunterrise.tistory.com/129",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "가조면파크골프장2구장",
+    "name": "가조면 파크골프장 2구장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "거창스포츠파크 강변 파크골프장",
@@ -1831,7 +2477,20 @@
     }
    ],
    "id": "1a3976e7a0",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/BvV5i/btsGEXugUZn/Lr38driH0L7CknkuAL5crK/img.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/3x8NYj2eNaz",
+    "source_url": "https://juding.tistory.com/673",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "거창스포츠파크강변파크골프장",
+    "name": "거창스포츠파크 강변 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "거창스포츠파크 파크골프장 1구장",
@@ -1870,7 +2529,20 @@
     }
    ],
    "id": "edc8ea1d55",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202208/30/newsis/20220830113257262tzcp.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/9psctEMB2mD",
+    "source_url": "https://v.daum.net/v/20220830113257819",
+    "source_name": "뉴시스",
+    "method": "카카오 이미지 검색",
+    "query": "거창스포츠파크파크골프장1구장",
+    "name": "거창스포츠파크 파크골프장 1구장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "거창스포츠파크 파크골프장 2구장",
@@ -1909,7 +2581,20 @@
     }
    ],
    "id": "611af2dc6a",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMDExMTdfMjE1/MDAxNjA1NTg2NjQ2OTg4.NguLTxHuqqvgSHdaUU6TeYKDAQ6DEyW0zWKx_alTAL0g.1qkcMkVqIbUBwJcaDy1jvXs3FjoXU5DHiBpjtlJAgucg.PNG.parkgolfnews/image.png?type=w966",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/4tCNClVLzdH",
+    "source_url": "http://blog.naver.com/parkgolfnews/222146576109",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "거창스포츠파크파크골프장2구장",
+    "name": "거창스포츠파크 파크골프장 2구장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "고제면 파크골프장",
@@ -1948,7 +2633,20 @@
     }
    ],
    "id": "fad9739acb",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/caym9C/dJMcac9LX4t/cUtVmH6wrlPHD1IG9pIMKk/img.png",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/8P2pSVJlUt0",
+    "source_url": "https://kimsangsu.tistory.com/196",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "고제면파크골프장",
+    "name": "고제면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "신원면 파크골프장",
@@ -1987,7 +2685,20 @@
     }
    ],
    "id": "272559842e",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202512/21/551753-slRgb6U/20251221112301299kdbe.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/J1eKf0YMNvR",
+    "source_url": "https://v.daum.net/v/20251221112300467",
+    "source_name": "경남신문",
+    "method": "카카오 이미지 검색",
+    "query": "신원면파크골프장",
+    "name": "신원면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "웅양면 파크골프장",
@@ -2026,7 +2737,20 @@
     }
    ],
    "id": "13bd191656",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202008/21/newsis/20200821153051589sncq.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/FrwPjr172SD",
+    "source_url": "https://v.daum.net/v/20200821153051558",
+    "source_name": "뉴시스",
+    "method": "카카오 이미지 검색",
+    "query": "웅양면파크골프장",
+    "name": "웅양면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "위천면 파크골프장",
@@ -2065,7 +2789,20 @@
     }
    ],
    "id": "5ac7934b5d",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA4MjFfMTQy/MDAxNzg3MjcwNDMxOTA2.TvfJRHYH6hXF0L3fMHKTpstX6c8eS5wnFG0fnJg67yog.S6neW0RU3w-LWVcp9mzFQ2hK6FHdl8xPeg545-_wz2Ig.JPEG/900_Screenshot_20260821_085840_Samsung_Browser.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/DjKVFqIGWmO",
+    "source_url": "http://blog.naver.com/jhk6257/224361816389",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "위천면파크골프장",
+    "name": "위천면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "제2창포원 파크골프장",
@@ -2104,7 +2841,20 @@
     }
    ],
    "id": "478e0d3eb5",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202607/28/551744-1PikkrB/20260728125014309xwtf.png",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/KwXhX5l1Hc8",
+    "source_url": "https://v.daum.net/v/20260728125012740",
+    "source_name": "경남도민일보",
+    "method": "카카오 이미지 검색",
+    "query": "제2창포원파크골프장",
+    "name": "제2창포원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "주상면 파크골프장",
@@ -2143,7 +2893,20 @@
     }
    ],
    "id": "49fc87cbee",
-   "data_date": "2026-08-27"
+   "data_date": "2026-08-27",
+   "gov_home": "https://www.geochang.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://cdn.topnews24.kr/news/photo/202503/53539_77471_552.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/4bU2KQH8OsW",
+    "source_url": "http://blog.naver.com/jbkjbk2002/223803730836",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "주상면파크골프장",
+    "name": "주상면 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "경산파크골프장",
@@ -2182,7 +2945,20 @@
     }
    ],
    "id": "5c71c5adc8",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbgs.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTZfMjA1/MDAxNzIzNzc2NTUwMjc3.CPz26npE7lD2mduYXu6P9UJ4fAYzgCWjiZmEXzfVbgwg.oH3jLTFhbMhkS5yyPeC2eZ1RRHl2xjPz_zhBRjCey5Mg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/DNmSrwPaAU3",
+    "source_url": "http://blog.naver.com/memepro/223549705811",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "경산파크골프장",
+    "name": "경산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "하양물빛파크골프장",
@@ -2221,7 +2997,20 @@
     }
    ],
    "id": "f93944cea5",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbgs.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202510/01/sportsdonga/20251001173719301teqw.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/AsoLk3wZFxp",
+    "source_url": "https://v.daum.net/v/20251001173718637",
+    "source_name": "스포츠동아",
+    "method": "카카오 이미지 검색",
+    "query": "하양물빛파크골프장",
+    "name": "하양물빛파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "하양파크골프장",
@@ -2260,7 +3049,20 @@
     }
    ],
    "id": "2fc29669a5",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbgs.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MjBfMjIg/MDAxNzI0MTU1ODgxMDQw.UtciS-lN47FWykIavBwL9hXbtqfXIPaAEBE6igw-_1Eg.3hGWonXyYgPUZ5IJAkd-gHN8q9VlFtg-LnloysiQYeYg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3)_(5).jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/DNmSrwPaAU3",
+    "source_url": "http://blog.naver.com/parkgolfs/223554797526",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "하양파크골프장",
+    "name": "하양파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "경주파크골프1구장",
@@ -2306,7 +3108,20 @@
     }
    ],
    "id": "76697835df",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gyeongju.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA5MjZfMTA5/MDAxNzU4ODg0MjQxNDEw.YZrX1xgXJ54b8HKK3ylQhdlyQWR-WVtqO4iFbQOf9nAg.63RoCnbFpD-HikEEu8ln5i1dEvDZa8Rzi8QPr4jgx1wg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(11).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/41jRJo4FQMO",
+    "source_url": "http://blog.naver.com/parkgolfs/224022947290",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "경주파크골프1구장",
+    "name": "경주파크골프1구장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "경주파크골프2구장",
@@ -2352,7 +3167,20 @@
     }
    ],
    "id": "a3441e3004",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gyeongju.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1FgCu/2c430329f5c630f55b5749ea85b0092542b590ba",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/JPM48VHtN8r",
+    "source_url": "https://cafe.daum.net/gsparkgolf/TSDr/1080",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "경주파크골프2구장",
+    "name": "경주파크골프2구장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "남경주파크골프장",
@@ -2391,7 +3219,24 @@
     }
    ],
    "id": "32875bef84",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gyeongju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+    "name": "경주 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202405/16/inews24/20240516182546597ypjx.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/3SgIMJHt6US",
+    "source_url": "https://v.daum.net/v/20240516182545120",
+    "source_name": "아이뉴스24",
+    "method": "카카오 이미지 검색",
+    "query": "남경주파크골프장",
+    "name": "남경주파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "동경주파크골프장",
@@ -2430,7 +3275,24 @@
     }
    ],
    "id": "9c61a545b5",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gyeongju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+    "name": "경주 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMzEwMTlfMTcx/MDAxNjk3NzEwOTY1OTAz.yC_vvUCnuVicfz79ZDF4xIF1rsit0fDiBKhYQYd9wz4g.03auxWgrdR9dFtUwWxnpiwxZDh0CjJ3ksLyeUdy9zaQg.JPEG.pm5569/batch_05.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/JUpxIUItvGN",
+    "source_url": "http://blog.naver.com/pension114_com/223241228397",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "동경주파크골프장",
+    "name": "동경주파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "서경주파크골프장",
@@ -2469,7 +3331,24 @@
     }
    ],
    "id": "8d64b0f08b",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gyeongju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gyeongju.go.kr/reserve/index.jsp",
+    "name": "경주 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjEwMTlfMjE3/MDAxNzkyMzQxNzA2NzUw.PLI5THA8CW6zHcd1fj2fivGdB7_sfyuQFbfUFJxMoA0g.4Me6-fr3SwSfFilr5dv-4pbGCbJY_8ukQgoVys0Fw8Ag.JPEG/4039471_753781_3143.jpg?type=w966",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/7YF3X3g2kV5",
+    "source_url": "http://blog.naver.com/traveler_99/224446025956",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "서경주파크골프장",
+    "name": "서경주파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "알천파크골프장",
@@ -2515,7 +3394,20 @@
     }
    ],
    "id": "2e61509fa7",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gyeongju.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202608/13/551748-p1FC4NB/20260813113231996fdja.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/Ev0MNQqMCzL",
+    "source_url": "https://v.daum.net/v/20260813113230712",
+    "source_name": "경북매일",
+    "method": "카카오 이미지 검색",
+    "query": "알천파크골프장",
+    "name": "알천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "다산파크골프장",
@@ -2555,7 +3447,20 @@
    ],
    "id": "5593374557",
    "reserve_source": "직접 확인 2026-11-10 고령군 예약 사이트 파크골프장 목록에 다산파크골프장 있음 확인",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.goryeong.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMzExMTVfNjkg/MDAxNzAwMDMxNDMwNDAy._JesX8PN6yQ0_XjLajBSJnwc_QSOgOqQSQiXTEg7Nhkg.ZnOnBX5yACMXjHiqlqsho28osAFHO3RycwNnxru495gg.JPEG.gokory/DSC_9710.JPG?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/K2mmHl8MvAu",
+    "source_url": "http://blog.naver.com/gokory/223265570113",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "다산파크골프장",
+    "name": "다산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "대가야파크골프장",
@@ -2595,7 +3500,20 @@
    ],
    "id": "419ebb4ba5",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 대가야파크골프장 전용 페이지 확인",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.goryeong.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1Xctn/acbfc2c5fada828384b13cdb8add4de83281e650",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/8V6iKlHd5DN",
+    "source_url": "https://cafe.daum.net/parkgolf.goyang/UqfB/138",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "대가야파크골프장",
+    "name": "대가야파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "구미파크골프장",
@@ -2635,7 +3553,20 @@
    ],
    "id": "e972446009",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bO730d/btsgiBDJsvo/58FX5Mj7e7qoKqLJMqxAH1/img.png",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/H9y3Fg8vh6L",
+    "source_url": "https://parkgolf-tip.tistory.com/40",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "구미파크골프장",
+    "name": "구미파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "도개파크골프장",
@@ -2675,7 +3606,20 @@
    ],
    "id": "c54a1156e2",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjAzMjNfODcg/MDAxNzc0MjQ2ODE5MjI1.ZFZEYS4ceQ9Jhhnyy2F7lvL7tEHE_8UkjgWOOH3Kl7Qg.paYhiETjM2VF9xXbgmkGiAND-ikN5XH2zvKuC3jOiucg.JPEG/SE-c070888b-29c4-4639-95b3-c4e011da0bd8.jpg?type=w966",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/2fAn2cUceHI",
+    "source_url": "http://blog.naver.com/piaominzhen/224226622449",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "도개파크골프장",
+    "name": "도개파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "동락파크골프장",
@@ -2715,7 +3659,20 @@
    ],
    "id": "12fba632ea",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA3MzBfMTAy/MDAxNzUzODM4MTU4NjA5.rV3_f4Sxx-bRNv9LUuF_h6NpGEUUa2E9BKcElqkD280g.3hifMaZ2Y7mltm688_epqQsZH0T864uQiz2fFy4hUTUg.JPEG/KakaoTalk_20250728_132312471_13.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/C9pIuJ39i55",
+    "source_url": "http://blog.naver.com/tkdal0527/223952223270",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "동락파크골프장",
+    "name": "동락파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "선산파크골프장",
@@ -2755,7 +3712,20 @@
    ],
    "id": "c731267cd1",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fwww.gumi.go.kr%2Freservation%2FDATA%2FcmmAtchmnfl%2Ftn_alsfc%2F20260625%2F8f1fece2-57ab-45b2-a750-0d7bcaf9ba1b_20260625104635244.png%22&type=ff500_300",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/3z68pRwU8vs",
+    "source_url": "http://blog.naver.com/jhk6257/224334305949",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "선산파크골프장",
+    "name": "선산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "양포파크골프장",
@@ -2795,7 +3765,20 @@
    ],
    "id": "b7161e0764",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjAzMTRfMTI4/MDAxNzczNDE1MTI2MDA5.QI5GPG7RENQeWLz2NRmLiu9s8OwaVCy2Ei6QdAWOxp8g.IWtIQ86aow5br6RRqixTO29uMooa6ojHu-C3S-lhyhgg.JPEG/2026-03-14_00_08_51.jpg?type=w966",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/HxP4pofGG0t",
+    "source_url": "http://blog.naver.com/piaominzhen/224215729114",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "양포파크골프장",
+    "name": "양포파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "옥성파크골프장",
@@ -2835,7 +3818,20 @@
    ],
    "id": "adbbc1c4b7",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/dpImZY/dJMcahJxAbN/by6bO2jVCBq6XqrgBkbG3k/tfile.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/DYnmzgcM4ZW",
+    "source_url": "https://sonsangwoo7.tistory.com/1036",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "옥성파크골프장",
+    "name": "옥성파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "장애인파크골프장",
@@ -2874,7 +3870,24 @@
     }
    ],
    "id": "9b4610c675",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gumi.go.kr/reservation/www/selectTnAlsfcListU.do?key=62&sc1=GOLF&rcpp=6&cpn=1&scrit_init=Y",
+    "name": "구미시 통합예약 (파크골프)",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bvQA9T/btr0gCRYzuL/Gw3gzpRi7lPbUXWMigQtT0/img.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/GjPWy2yerEt",
+    "source_url": "https://scpdeck.tistory.com/196",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "구미시 장애인파크골프장",
+    "name": "장애인파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "해평파크골프장",
@@ -2914,7 +3927,20 @@
    ],
    "id": "15e51fdb08",
    "reserve_source": "직접 확인 2026-11-10 사용자 제보, 사이트 목록 7곳 확인 (장애인파크골프장은 목록에 없음)",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gumi.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/b9bJdt/dJMcaja52Zl/ThYNhVA75qmehuNhI9shAk/tfile.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/4jyHFUihu1x",
+    "source_url": "https://sonsangwoo7.tistory.com/1134",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "해평파크골프장",
+    "name": "해평파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "김천파크골프장",
@@ -2953,7 +3979,20 @@
     }
    ],
    "id": "5c3cee77c1",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gc.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202204/27/yonhap/20220427155725818toxn.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/9y41MJuTChM",
+    "source_url": "https://v.daum.net/v/20220427155725186",
+    "source_name": "연합뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "김천파크골프장",
+    "name": "김천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가은 청솔공원 파크골프장",
@@ -2992,7 +4031,24 @@
     }
    ],
    "id": "f19335fcd3",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbmg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gbmg.go.kr/reservation/main.do",
+    "name": "문경시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://www.globalnewsagency.kr/news/photo/202501/365495_378983_5056.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/ER63yPHpdf4",
+    "source_url": "https://cp.news.search.daum.net/p/158219248",
+    "source_name": "글로벌뉴스통신",
+    "method": "카카오 이미지 검색",
+    "query": "가은청솔공원파크골프장",
+    "name": "가은 청솔공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "농암 대정 파크골프장",
@@ -3031,7 +4087,24 @@
     }
    ],
    "id": "682013b907",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbmg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gbmg.go.kr/reservation/main.do",
+    "name": "문경시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://www.mgmaeil.com/files/upload/2024-03-15/20240315170850766455601.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/IWlnRpH5HYV",
+    "source_url": "https://cp.news.search.daum.net/p/144877402",
+    "source_name": "문경매일신문",
+    "method": "카카오 이미지 검색",
+    "query": "농암대정파크골프장",
+    "name": "농암 대정 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "동로면 황장산 파크골프장",
@@ -3070,7 +4143,24 @@
     }
    ],
    "id": "ae5a3fae57",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbmg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gbmg.go.kr/reservation/main.do",
+    "name": "문경시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bSaKlO/btsEBthnhfS/quko0U7XGQDkyuh1tNXFN1/img.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/4OmWffWN2GX",
+    "source_url": "https://golfhwang.tistory.com/5542",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "동로면황장산파크골프장",
+    "name": "동로면 황장산 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "영강천변파크골프장",
@@ -3109,7 +4199,24 @@
     }
    ],
    "id": "09ac3a670a",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.gbmg.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gbmg.go.kr/reservation/main.do",
+    "name": "문경시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA4MjBfMjA3/MDAxNzg3MjAyMDY5Mzk5.9SDba-6AGGZfMr6fB0ZTKWjFIxZ64jUTItt3gyoownYg.91Ih2cNHXa9vJz_M5Y4QHj4x8eXaH8e7GLxeNjehSGYg.PNG/%EC%98%81%EA%B0%95%EC%B2%9C%EB%B3%80%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5_%EB%A9%94%EC%9D%B85.png?type=w966",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/BolHD7YpOWR",
+    "source_url": "http://blog.naver.com/sbj533/224384431423",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "영강천변파크골프장",
+    "name": "영강천변파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "내성천파크골프장",
@@ -3148,7 +4255,24 @@
     }
    ],
    "id": "92e22d6985",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.bonghwa.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.bonghwa.go.kr/reservation/main.do",
+    "name": "봉화군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://images.unsplash.com/photo-1593435015647-99f3dd66b38c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NjQ5OTN8MHwxfHNlYXJjaHw4fHxwYXJrJTIwZ29sZnxlbnwwfHx8fDE3MzIxNzcyNDF8MA&ixlib=rb-4.0.3&q=80&w=400",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/F8ETDMpD4Ge",
+    "source_url": "https://hunterrise.tistory.com/125",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "내성천파크골프장",
+    "name": "내성천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "상주 병성천 파크골프장",
@@ -3187,7 +4311,24 @@
     }
    ],
    "id": "62e6fd991a",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sangju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sangju.go.kr/reserve/main.tc",
+    "name": "상주시 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://gazetai.s3.ap-northeast-2.amazonaws.com/bbagleai/e40cb61a-78f3-4b8a-8b85-86e843fd4765/free_img_e40cb61a-78f3-4b8a-8b85-86e843fd4765_1786883208.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/yaQhUUh7nR",
+    "source_url": "http://blog.naver.com/kskagml0914/224380968882",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "상주병성천파크골프장",
+    "name": "상주 병성천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "상주 함창 파크골프장",
@@ -3226,7 +4367,24 @@
     }
    ],
    "id": "0e10760cfe",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sangju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sangju.go.kr/reserve/main.tc",
+    "name": "상주시 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202506/02/nongmin/20250602170446903pizt.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/1HY88N2TDd3",
+    "source_url": "https://v.daum.net/v/20250602170445280",
+    "source_name": "농민신문",
+    "method": "카카오 이미지 검색",
+    "query": "상주함창파크골프장",
+    "name": "상주 함창 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가천파크골프장",
@@ -3265,7 +4423,20 @@
     }
    ],
    "id": "6f92cfc3b8",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MjBfNDcg/MDAxNzI0MTU2NDg4MjUx.BnpZMR_E0yFYHVC4WQd5tH8HPWj6yum9VTCPYLMBeDgg.X2XhUSeHqKb6SgOViFSJ95FbCRTLQBglFHQd0urDYpQg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(6)_(3).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/JlpVoTLngN1",
+    "source_url": "http://blog.naver.com/parkgolfs/223554807637",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "가천파크골프장",
+    "name": "가천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "벽진파크골프장",
@@ -3304,7 +4475,20 @@
     }
    ],
    "id": "f7b1b8b68a",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTZfMTUw/MDAxNzIzNzc3MTQzMzIx.zgW5PAkw9RpFAK8gx0DGmFX9EvnDH5h2FLZ4y3CEY-wg.za4B5wmWypcfnTjxFqKxS6TkhjBzC1BnoOzwJAZO_50g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(6).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/JlpVoTLngN1",
+    "source_url": "http://blog.naver.com/memepro/223549717555",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "벽진파크골프장",
+    "name": "벽진파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "별고을파크골프장",
@@ -3343,7 +4527,20 @@
     }
    ],
    "id": "e08b0f1703",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA5MDZfMjAx/MDAxNzg4Njg0MzY2MzUx.E-8HSh2fW_DH9V2wX7xDa7bZ0FgxXSHKZVOQ2ZjXVrwg.obcycPbbmoHDW0zD4b1T2wqS45kafciasuIGqY2m4yUg.PNG/900_file_00000000345c81f5bdceece2667ddbe5.png?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/4zMmOxIFLj1",
+    "source_url": "http://blog.naver.com/jkh5314/224402758370",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "별고을파크골프장",
+    "name": "별고을파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "선남파크골프장",
@@ -3382,7 +4579,20 @@
     }
    ],
    "id": "49ac339664",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FbK2tcy%252FbtsIpuydDqK%252Fa72GiHDtmm5McEpjPEWEFk%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/Ad1AocYrVA7",
+    "source_url": "http://blog.naver.com/memepro/223549342081",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "선남파크골프장",
+    "name": "선남파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "성주파크골프장",
@@ -3421,7 +4631,20 @@
     }
    ],
    "id": "7c26f33bfc",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fwww.sj.go.kr%2Fdesign2024%2Fparkgolf%2Fimg%2Fmain%2Flocation1.jpg%22&type=ff500_300",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/oo9BP3LR3k",
+    "source_url": "http://blog.naver.com/yeojjamong/224219563610",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "성주파크골프장",
+    "name": "성주파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "성주호파크골프장",
@@ -3460,7 +4683,20 @@
     }
    ],
    "id": "66d5e59aa5",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjAzMTdfMTQz/MDAxNzczNzUzNzM0Nzk2.89S6UGmQbA0N0MQwx3xKYvzop2L4KR-DjOIzcHS06Swg.2qVftazEZl8XvQXlxEycs_qKtLFPWJSfUF-DWJT7ODEg.JPEG/SE-5ad54b94-4ea4-4584-9fad-f233b169d8c4.jpg?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/5pbAb3nEXyD",
+    "source_url": "http://blog.naver.com/piaominzhen/224220159132",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "성주호파크골프장",
+    "name": "성주호파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "수륜파크골프장",
@@ -3499,7 +4735,20 @@
     }
    ],
    "id": "7a6f840081",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202105/04/seouleconomy/20210504142110370qwpw.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/ECbyEVadGU7",
+    "source_url": "https://v.daum.net/v/20210504142108979",
+    "source_name": "서울경제",
+    "method": "카카오 이미지 검색",
+    "query": "수륜파크골프장",
+    "name": "수륜파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "용암파크골프장",
@@ -3538,7 +4787,20 @@
     }
    ],
    "id": "42d6244f5d",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1KuFc/57f02fc74cd2799a551f4650df2c083d47c06a57",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/AnisFaNzugJ",
+    "source_url": "https://cafe.daum.net/jsparkgolf/RAlQ/102",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "용암파크골프장",
+    "name": "용암파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "초전파크골프장",
@@ -3577,7 +4839,20 @@
     }
    ],
    "id": "c3b7f8681e",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.sj.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://tr.xza.kr/imgdata/tr_xza_kr/202510/20251014102023-99398.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/B3CcoXlPQWM",
+    "source_url": "https://cp.news.search.daum.net/p/169190968",
+    "source_name": "미디어투데이",
+    "method": "카카오 이미지 검색",
+    "query": "초전파크골프장",
+    "name": "초전파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "강남파크골프장",
@@ -3616,7 +4891,24 @@
     }
    ],
    "id": "bdd12bb19f",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.andong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.andong.go.kr/reservation/main.do",
+    "name": "안동시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1ZRXF/59c6daca2278cd6b83857add200a3ce65ef69672",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/15CCB0bYRjG",
+    "source_url": "https://cafe.daum.net/eumseongPG/cNSY/9",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "강남파크골프장",
+    "name": "강남파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안동댐파크골프장",
@@ -3655,7 +4947,24 @@
     }
    ],
    "id": "dd11b07afa",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.andong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.andong.go.kr/reservation/main.do",
+    "name": "안동시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/cp5sS6/btrRjy5qlDZ/iRuvVK8Q23AdDIKqPdlgjk/img.png",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/LQZ3Ii7iE6B",
+    "source_url": "https://openclick.tistory.com/2099",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "안동댐파크골프장",
+    "name": "안동댐파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "옥동파크골프장",
@@ -3694,7 +5003,24 @@
     }
    ],
    "id": "1f90670495",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.andong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.andong.go.kr/reservation/main.do",
+    "name": "안동시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1FgCu/1dadc2382bd1f66b8bb45a051b25c9df7c7021ec",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/AAy3joyXBIs",
+    "source_url": "https://cafe.daum.net/gsparkgolf/UNIz/637",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "옥동파크골프장",
+    "name": "옥동파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "용상파크골프장",
@@ -3733,7 +5059,24 @@
     }
    ],
    "id": "4336dd8eec",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.andong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.andong.go.kr/reservation/main.do",
+    "name": "안동시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://cfile262.uf.daum.net/image/16154F4B504C14EB10AED6",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/E7qi6i61xfl",
+    "source_url": "https://cafe.daum.net/0538146302/iHQ1/75",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "용상파크골프장",
+    "name": "용상파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "송천파크골프장",
@@ -3772,7 +5115,20 @@
     }
    ],
    "id": "4f5af2ffbf",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yd.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA5MDRfMjk0/MDAxNzg4NDkzNTI5NDY2.2l5ocIqLonY434RSnhZYy4LzPKfS5jhpJll7b-sN4b0g.vMYAhpzarj6C485o_K1BvvLnv5RgmwLk0DAE0-WJKLwg.PNG/%EC%86%A1%EC%B2%9C%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5_%EB%A9%94%EC%9D%B84.png?type=w966",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/L8NraSvhUdO",
+    "source_url": "http://blog.naver.com/sbj533/224400757223",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "송천파크골프장",
+    "name": "송천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "영해생활체육공원파크골프장",
@@ -3811,7 +5167,20 @@
     }
    ],
    "id": "e289fa5413",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yd.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bOLQee/dJMcagEAwaH/AqCux8s6X8oa1GVDGKAh8k/img.png",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/DpnB8w2OgYp",
+    "source_url": "https://kimsangsu.tistory.com/226",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "영해생활체육공원파크골프장",
+    "name": "영해생활체육공원파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "오십천파크골프장",
@@ -3850,7 +5219,20 @@
     }
    ],
    "id": "f5413665be",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yd.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://www.idaegu.co.kr/news/photo/202504/507886_205606_206.jpeg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/ETFGE9nZO6T",
+    "source_url": "https://cp.news.search.daum.net/p/162102249",
+    "source_name": "대구신문",
+    "method": "카카오 이미지 검색",
+    "query": "오십천파크골프장",
+    "name": "오십천파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "장애인파크골프장",
@@ -3889,7 +5271,20 @@
     }
    ],
    "id": "71e7018628",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yd.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202309/04/newsis/20230904181411775kcph.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/IS2PDxAxvmk",
+    "source_url": "https://v.daum.net/v/20230904181411860",
+    "source_name": "뉴시스",
+    "method": "카카오 이미지 검색",
+    "query": "영덕군 장애인파크골프장",
+    "name": "장애인파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "삼지연파크골프장",
@@ -3928,7 +5323,20 @@
     }
    ],
    "id": "06bb237003",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yyg.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA3MjBfMjA4/MDAxNzUzMDE4OTUxNzI4.wYRoWm20PZvCHeqyZ9KgD3Nd8h8giLD_tRPYVPtnVA0g.Ql863b-mikEw60xIHALdWiQMfGOzaKbW-BxxUef0zuIg.JPEG/900%EF%BC%BF20250720%EF%BC%BF111443.jpg?type=w580",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/JagU7Vp6XPG",
+    "source_url": "http://blog.naver.com/meju3c/223941411113",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "삼지연파크골프장",
+    "name": "삼지연파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "오수파크골프장",
@@ -3967,7 +5375,24 @@
     }
    ],
    "id": "e621692e5e",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.yc.go.kr/yeyak/main.do",
+    "name": "영천 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FnOZBj%252FbtsIbR04NcV%252FGNOLuA9nH6AE52Wzreabk0%252Fimg.png%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/GpKghl845Ub",
+    "source_url": "http://blog.naver.com/memepro/223549171259",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "오수파크골프장",
+    "name": "오수파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "장애인파크골프장",
@@ -4006,7 +5431,24 @@
     }
    ],
    "id": "8d48321a1e",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.yc.go.kr/yeyak/main.do",
+    "name": "영천 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1YVpS/b0a61c6b480d31efd4a1257c030355599cdd6ea5",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/Ky5kQ9GNRKs",
+    "source_url": "https://cafe.daum.net/gbyc01000/pzVw/135",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "영천시 장애인파크골프장",
+    "name": "장애인파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "조교파크골프장",
@@ -4045,7 +5487,24 @@
     }
    ],
    "id": "6f91ad9e88",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.yc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.yc.go.kr/yeyak/main.do",
+    "name": "영천 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1Xctn/ade7b2e75881dc0e47e595bc07c3371815704c74",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/8D7FrhN0HG6",
+    "source_url": "https://cafe.daum.net/parkgolf.goyang/UqfB/89",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "조교파크골프장",
+    "name": "조교파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "예천한천파크골프장(1구장)",
@@ -4084,7 +5543,20 @@
     }
    ],
    "id": "54dc78dd77",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.ycg.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202606/08/sportsdonga/20260608092310168adqf.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/79jiSHXp10s",
+    "source_url": "https://v.daum.net/v/20260608092309486",
+    "source_name": "스포츠동아",
+    "method": "카카오 이미지 검색",
+    "query": "예천한천파크골프장(1구장)",
+    "name": "예천한천파크골프장(1구장)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "예천한천파크골프장(2구장)",
@@ -4123,7 +5595,20 @@
     }
    ],
    "id": "2d026f9aa5",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.ycg.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://images.openai.com/static-rsc-4/USRuwQZq7pqxEg-msFO7n0soV2V52MZWkMCzXrJ8c4MK-PkWeKy9iKV04WkKCNAAGdhZzTBpkjiCJ7DEXfQXmzazmVN9ZsjcvBip2FYyIeg_UZuzTjagJYVyLkbFkY2Si48qg5cT5pUX699IeB834z3cG7uFU7hCRzKBYM7X0TekEp3RMson86VhgZ5FQb7-?purpose=fullsize",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/9yfxYQTFmPx",
+    "source_url": "http://blog.naver.com/kimpeople/224413663474",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "예천한천파크골프장(2구장)",
+    "name": "예천한천파크골프장(2구장)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "남울진파크골프장",
@@ -4162,7 +5647,24 @@
     }
    ],
    "id": "a17655484a",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.uljin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.uljin.go.kr/reserve/index.do",
+    "name": "울진군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202604/24/kukinews/20260424145533975xoxo.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/Hns0yN6kXpk",
+    "source_url": "https://v.daum.net/v/20260424145532155",
+    "source_name": "쿠키뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "남울진파크골프장",
+    "name": "남울진파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "울진파크골프장",
@@ -4201,7 +5703,24 @@
     }
    ],
    "id": "8259f88af2",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.uljin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.uljin.go.kr/reserve/index.do",
+    "name": "울진군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FbL6xAV%252FbtsIPVvcpLM%252F1IssgMOKvDtcbP1N0CBT51%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/KL9oUduC57a",
+    "source_url": "http://blog.naver.com/memepro/223549173725",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "울진파크골프장",
+    "name": "울진파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "비안파크골프장",
@@ -4240,7 +5759,24 @@
     }
    ],
    "id": "1529936868",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.usc.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.usc.go.kr/reserve/index.do",
+    "name": "의성군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202311/14/inews24/20231114105511841krev.png",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/FTLCnw3luJC",
+    "source_url": "https://v.daum.net/v/20231114105510115",
+    "source_name": "아이뉴스24",
+    "method": "카카오 이미지 검색",
+    "query": "비안파크골프장",
+    "name": "비안파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "각북파크골프장",
@@ -4279,7 +5815,15 @@
     }
    ],
    "id": "9ed2b225bc",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.cheongdo.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.cheongdo.go.kr/reservation/main.do",
+    "name": "청도군 통합예약",
+    "parkgolf": true
+   },
+   "photo": null
   },
   {
    "name": "청도군 파크골프장",
@@ -4318,7 +5862,24 @@
     }
    ],
    "id": "4c0f82a959",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.cheongdo.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.cheongdo.go.kr/reservation/main.do",
+    "name": "청도군 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202607/08/ned/20260708064017836pkit.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/7NbmoBGSlzg",
+    "source_url": "https://v.daum.net/v/20260708064017691",
+    "source_name": "헤럴드경제",
+    "method": "카카오 이미지 검색",
+    "query": "청도군파크골프장",
+    "name": "청도군 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "청송파크골프장",
@@ -4357,7 +5918,20 @@
     }
    ],
    "id": "53903dee72",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.cs.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202506/05/pressian/20250605160111945ebuz.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/7Fxd1yQ2djR",
+    "source_url": "https://v.daum.net/v/20250605160110786",
+    "source_name": "프레시안",
+    "method": "카카오 이미지 검색",
+    "query": "청송파크골프장",
+    "name": "청송파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "덕산파크골프장",
@@ -4396,7 +5970,24 @@
     }
    ],
    "id": "ef54ff5931",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.chilgok.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chilgok.go.kr/reservation/main.do",
+    "name": "칠곡군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTZfNjAg/MDAxNzIzNzc5MDU2NDQ5.QxUFZrtiap2-OUaPEOTI9Nc5JEp4hy_pM-gvTdFnj7kg.xsc8OPRC3qfqpVIl57DrBEGrpwk4wbMkhe-Zzy2ao3Ug.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(1).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/Ak6AUcCQmAt",
+    "source_url": "http://blog.naver.com/memepro/223549749498",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "덕산파크골프장",
+    "name": "덕산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "북삼파크골프장",
@@ -4435,7 +6026,24 @@
     }
    ],
    "id": "c0be72a365",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.chilgok.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chilgok.go.kr/reservation/main.do",
+    "name": "칠곡군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/zt7i/8e57f2a356df111a47e4d5bd3d8a2b31835ed15d",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/2cfc9SS6WiA",
+    "source_url": "https://cafe.daum.net/minpoem/RrDi/44591",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "북삼파크골프장",
+    "name": "북삼파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "석적파크골프장",
@@ -4474,7 +6082,24 @@
     }
    ],
    "id": "01dd64b313",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.chilgok.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chilgok.go.kr/reservation/main.do",
+    "name": "칠곡군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTVfMjMx/MDAxNzIzNzI2ODEzMTI2.AnJYNFGOfA3gUhfj9XN6yCYebk4xp5wiCC4fHpmGejYg.nOJNLtNlNY6aRGGlQ2PImPfj07ZLCsmdVCM6XNxb4Wcg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/6kN8gdRl5Zz",
+    "source_url": "http://blog.naver.com/memepro/223549166580",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "석적파크골프장",
+    "name": "석적파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "왜관파크골프장",
@@ -4513,7 +6138,24 @@
     }
    ],
    "id": "ec0ec524f2",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.chilgok.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chilgok.go.kr/reservation/main.do",
+    "name": "칠곡군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MjBfODUg/MDAxNzI0MTUyNzI1OTYz.fnZujEyv02ZOz33d6tJzyyTlkxBJC-9KOoDqeZ93Hsgg.22R7w6YigVOUq8h1kUyLzWA_1sikJRwzWLRru71qTcYg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(11)_(1).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/1XvcbahWcUc",
+    "source_url": "http://blog.naver.com/parkgolfs/223554749108",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "왜관파크골프장",
+    "name": "왜관파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "곡강파크골프장",
@@ -4552,7 +6194,24 @@
     }
    ],
    "id": "eb289ff407",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.pohang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.phsisul.org/main/main.do",
+    "name": "포항시시설관리공단",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202210/04/pressian/20221004085454265kffe.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/3NlDXLg0sjf",
+    "source_url": "https://v.daum.net/v/20221004085451161",
+    "source_name": "프레시안",
+    "method": "카카오 이미지 검색",
+    "query": "곡강파크골프장",
+    "name": "곡강파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "지곡파크골프장",
@@ -4591,7 +6250,24 @@
     }
    ],
    "id": "117427030f",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.pohang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.phsisul.org/main/main.do",
+    "name": "포항시시설관리공단",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252F0KGAc%252FbtsIPYMnqoQ%252Fr4Aje694HTBGKPEmkQWoE1%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/KhGe8dlnhj4",
+    "source_url": "http://blog.naver.com/memepro/223549754511",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "지곡파크골프장",
+    "name": "지곡파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "형산강파크골프장",
@@ -4630,7 +6306,24 @@
     }
    ],
    "id": "49fb38c9be",
-   "data_date": "2026-10-21"
+   "data_date": "2026-10-21",
+   "gov_home": "https://www.pohang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.phsisul.org/main/main.do",
+    "name": "포항시시설관리공단",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202604/18/551749-b6x3I4h/20260418143825146cqxl.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/FfyVr8dh6UR",
+    "source_url": "https://v.daum.net/v/20260418143823897",
+    "source_name": "경북도민일보",
+    "method": "카카오 이미지 검색",
+    "query": "형산강파크골프장",
+    "name": "형산강파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "서봉파크골프장",
@@ -4669,7 +6362,24 @@
     }
    ],
    "id": "bab01bbc3d",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://www.gwangsan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://sports.gwangsan.go.kr/",
+    "name": "광산구 직영 체육시설 예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MThfMTI2/MDAxNzIzOTY0ODM4ODc5.sBirfU91pY-kyAfIs-lhAALz-9BmWKKVqI3NfUNrZk4g.UTFGefDVcEQoVU-AI1ofBrpZxNUv8vLl2AZiMy9af1Ag.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(5).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/KIDCsnP21kD",
+    "source_url": "http://blog.naver.com/parkgolfs/223551915679",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "서봉파크골프장",
+    "name": "서봉파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "임곡파크골프장",
@@ -4708,7 +6418,24 @@
     }
    ],
    "id": "177db6b6b8",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://www.gwangsan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://sports.gwangsan.go.kr/",
+    "name": "광산구 직영 체육시설 예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202410/10/seouleconomy/20241010091957602rafg.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/Avw2ruPAYIt",
+    "source_url": "https://v.daum.net/v/20241010091955244",
+    "source_name": "서울경제",
+    "method": "카카오 이미지 검색",
+    "query": "임곡파크골프장",
+    "name": "임곡파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "승촌파크골프장",
@@ -4747,7 +6474,24 @@
     }
    ],
    "id": "47a6f3df9d",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://www.namgu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202605/06/551730-ch1iKEu/20260506190015891lexw.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/XqyNV2oYoF",
+    "source_url": "https://v.daum.net/v/20260506190014784",
+    "source_name": "남도일보",
+    "method": "카카오 이미지 검색",
+    "query": "승촌파크골프장",
+    "name": "승촌파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "무등산파크골프장",
@@ -4786,7 +6530,24 @@
     }
    ],
    "id": "cf2f86524a",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://www.donggu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202504/30/THEFACT/20250430093225871ponv.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/I31kjcpSGas",
+    "source_url": "https://v.daum.net/v/20250430093222465",
+    "source_name": "더팩트",
+    "method": "카카오 이미지 검색",
+    "query": "무등산파크골프장",
+    "name": "무등산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "대상파크골프장",
@@ -4825,7 +6586,24 @@
     }
    ],
    "id": "0444b82e14",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://bukgu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MThfMTcy/MDAxNzIzOTY1NTg2MTAy.NT4syUMD76FQ4vhd9hcNoStPN8cOqpMR8kIO-4_7rRIg.rEXDWJZzxjXlUIhM1f93bvdpQ5APE6Hl5xOtGn0ArP4g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(5).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/KSRzj9Aln4o",
+    "source_url": "http://blog.naver.com/parkgolfs/223551926594",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "대상파크골프장",
+    "name": "대상파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "북구파크골프장",
@@ -4864,7 +6642,24 @@
     }
    ],
    "id": "5249b096a6",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://bukgu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202406/01/yonhap/20240601160150436nzwc.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/Dsa3DSiaAGs",
+    "source_url": "https://v.daum.net/v/20240601160150999",
+    "source_name": "연합뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "북구파크골프장",
+    "name": "북구파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "첨단체육공원파크골프장",
@@ -4903,7 +6698,24 @@
     }
    ],
    "id": "20c75d18bb",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://bukgu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTJfNzIg/MDAxNzIzNDU1MDQ1MjU2.hjSZBfOpDcnOkfriH-6GQXLI4F5_PDemQTUUlFZ8_jEg.zGKcPmfLSIJ6kmvNNefi8JLSXlIsIPemMZODmMmvGq4g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/LKYHPoukP2y",
+    "source_url": "http://blog.naver.com/memepro/223545534747",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "첨단체육공원파크골프장",
+    "name": "첨단체육공원파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "효령파크골프장",
@@ -4942,7 +6754,24 @@
     }
    ],
    "id": "c04f9b1393",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://bukgu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTJfMTk0/MDAxNzIzNDU0MDc5NzM5.MH-8ktAvG0bPGRXM1bbr6vISqtass1kMg07Fx1CJ1gsg.R-TW0qzhnOdeLiOTMeybOz8bYFb8aeErkgng4dNGCm0g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(1).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/HwtiuUJb5eV",
+    "source_url": "http://blog.naver.com/memepro/223545516355",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "효령파크골프장",
+    "name": "효령파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "덕흥동파크골프장",
@@ -4981,7 +6810,24 @@
     }
    ],
    "id": "7339295b15",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://www.seogu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://www.gjtnews.com/news/photo/202101/323449_63435_020.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/FmmWFDQpnnH",
+    "source_url": "https://cp.news.search.daum.net/p/101472773",
+    "source_name": "광주타임즈",
+    "method": "카카오 이미지 검색",
+    "query": "덕흥동파크골프장",
+    "name": "덕흥동파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "염주파크골프장",
@@ -5020,7 +6866,24 @@
     }
    ],
    "id": "a5ce2d1676",
-   "data_date": "2025-11-29"
+   "data_date": "2025-11-29",
+   "gov_home": "https://www.seogu.gwangju.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gwangju.go.kr/reserve/",
+    "name": "광주 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDExMThfMjEz/MDAxNzMxOTM1ODgxNjQx.MHLfjI2HOg-x9d6gpnLxBrOrvpq2v7XN_uKOxd71dAQg.nCKWU9wdctpFSRrdPTp9-2OgQrh_GfmNO3lzNjZmFqQg.JPEG/DSC_4889.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/8GjBW7KFR2l",
+    "source_url": "http://blog.naver.com/parkgolfs/223665440179",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "염주파크골프장",
+    "name": "염주파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "가창 파크골프장",
@@ -5059,7 +6922,24 @@
     }
    ],
    "id": "e652ef644b",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA4MjhfMjYw/MDAxNzU2MzQ4OTQ1OTIw._fnlXbDUdMmFy90deFwNBvsnclb2hj1sPx6NimUeH-gg.ze53Z6npfnfg3FrJNQrSvpI4bLlRX72xwqb9s1HuKRsg.JPEG/SE-1ea60dea-a4d6-4009-b689-45828db2c963.jpg?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/HouRqIRZ6yF",
+    "source_url": "http://blog.naver.com/idpark_golf/223986369217",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "가창파크골프장",
+    "name": "가창 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "구지 평촌 파크골프장",
@@ -5098,7 +6978,24 @@
     }
    ],
    "id": "d76c118232",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/dAmJ6J/btr6nX4bbyF/jEjeRTfoGwLqif9nVEP6SK/img.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/8nrkaDcEED9",
+    "source_url": "https://parzero.tistory.com/26",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "구지평촌파크골프장",
+    "name": "구지 평촌 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "논공 달성보 파크골프장",
@@ -5137,7 +7034,24 @@
     }
    ],
    "id": "c788889f3e",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://www.kbsm.net/data/newsData/1500805795.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/D8KxvLXKD53",
+    "source_url": "https://cp.news.search.daum.net/p/58345729",
+    "source_name": "경북신문",
+    "method": "카카오 이미지 검색",
+    "query": "논공달성보파크골프장",
+    "name": "논공 달성보 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "논공 위천 파크골프장",
@@ -5176,7 +7090,24 @@
     }
    ],
    "id": "482bc5666f",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://tr.xza.kr/imgdata/tr_xza_kr/202305/20230523152210-73505.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/E8OlQaLd2Yt",
+    "source_url": "https://cp.news.search.daum.net/p/132888856",
+    "source_name": "케이에스피뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "논공위천파크골프장",
+    "name": "논공 위천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "다사 강창 파크골프장",
@@ -5215,7 +7146,24 @@
     }
    ],
    "id": "586c5af7ee",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://ssl.daumcdn.net/map3/staticmap/image?center=832230%2C657943&lv=4&size=540x350&srs=WCONGNAMUL&markers=symbol%3Asc_marker%7Clocation%3A832230%2C657946",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/JnstoQm7cyE",
+    "source_url": "https://cafe.daum.net/cafeparkgolf/W6kL/2",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "다사강창파크골프장",
+    "name": "다사 강창 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "다사 세천 파크골프장",
@@ -5254,7 +7202,24 @@
     }
    ],
    "id": "5be13e48b0",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA1MTVfMTQw/MDAxNzc4ODQ3ODU4OTQ1.m2jAcidkykhUsEmS_ExExC5B1iaFUDo6Thagm25c4FEg.zjM0OJETzZuZjDTn32NcR4yeZOhVPS0itXkv5Smy24cg.PNG/%EB%8B%A4%EC%82%AC%EC%84%B8%EC%B2%9C%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5_%EB%A9%94%EC%9D%B8.png?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/4dZPIKdgUI0",
+    "source_url": "http://blog.naver.com/sbj533/224286795669",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "다사세천파크골프장",
+    "name": "다사 세천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "옥포 파크골프장",
@@ -5293,7 +7258,24 @@
     }
    ],
    "id": "c55ec2ecb0",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA5MTdfMjky/MDAxNzg5NjEzMjc4ODYx.Hw9a4PSbZDcA8svAzblo1mBu6WOVzxU3cat3GMjacOQg.1ICHWIQ7WbTv1PK9p_4Na01IaZfh-Q1u6Al-cnYtVHcg.PNG/news_00_098be38ae9d2b372085c4c76d38b9e59e7502a750eb5e06aa8725bdc17d9fbba.png?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/iyKohqzcUD",
+    "source_url": "http://blog.naver.com/brandblog133/224414779106",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "옥포파크골프장",
+    "name": "옥포 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "유가 한정 파크골프장",
@@ -5332,7 +7314,24 @@
     }
    ],
    "id": "f14dc1b204",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA5MjhfMjk1/MDAxNzU5MDMzNDUzMzU5.ZC7doaD7prlI5sPApmWlprBLbWzk8SRkZ-qqkECEuikg.XKGOZFdl6aFCYNRezpswunWNQZWFVwpflULodZ7c1Rwg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/BADEV3ASq2F",
+    "source_url": "http://blog.naver.com/parkgolfs/224024499727",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "유가한정파크골프장",
+    "name": "유가 한정 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "현풍 원오 파크골프장",
@@ -5371,7 +7370,24 @@
     }
    ],
    "id": "743ac3563f",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1ZUAZ/3997173f3633eab1ac9d1c1c692820c58b6b9b19",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/5IKO45J4pd7",
+    "source_url": "https://cafe.daum.net/daeparkgolf/alXy/4",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "현풍원오파크골프장",
+    "name": "현풍 원오 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "화원 진천천 파크골프장",
@@ -5410,7 +7426,24 @@
     }
    ],
    "id": "0eb7002fcd",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.dalseong.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.dssiseol.or.kr/",
+    "name": "달성군시설관리공단 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://cfile238.uf.daum.net/image/2143D739539CCE9731DE92",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/H9mMVIN7wBl",
+    "source_url": "https://cafe.daum.net/daegokraemian/8fVG/121",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "화원진천천파크골프장",
+    "name": "화원 진천천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "불로파크골프장",
@@ -5449,7 +7482,20 @@
     }
    ],
    "id": "0b511979df",
-   "data_date": "2025-05-20"
+   "data_date": "2025-05-20",
+   "gov_home": "https://www.dong.daegu.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252F1gwNl%252FbtsIFqPLSUj%252F0nKWPNTMtSfgINIqLYNoX0%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/LXrGXnA6ToN",
+    "source_url": "http://blog.naver.com/parkgolfs/223552116782",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "불로파크골프장",
+    "name": "불로파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "강변파크골프장(A, B구장)",
@@ -5488,7 +7534,24 @@
     }
    ],
    "id": "5c37c54d48",
-   "data_date": "2025-05-20"
+   "data_date": "2025-05-20",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMjExMzBfMjk5/MDAxNjY5NzYwODU5MjA2.4wrGih9IY3E6NqnwiwEzUICZ7_r8uiXTGBCCKhuQlf4g.-eiko0FtVI30jjtSLOGuXKptKoqHLjDsysTwAQPe2bgg.JPEG.chul70688/%EC%BF%A05%EC%88%98.jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/9nvM551IVUf",
+    "source_url": "http://blog.naver.com/chul70688/222937282718",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "북구 강변파크골프장(A,B구장)",
+    "name": "강변파크골프장(A, B구장)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "강변파크골프장(C구장)",
@@ -5527,7 +7590,24 @@
     }
    ],
    "id": "c2116c3b9e",
-   "data_date": "2025-05-20"
+   "data_date": "2025-05-20",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FDBU8C%252FbtsITjn0xqr%252FeeJuHu6bKkHmZZklyJmJ8k%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/9f5plzuUMQ3",
+    "source_url": "http://blog.naver.com/parkgolfs/223552130811",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "북구 강변파크골프장(C구장)",
+    "name": "강변파크골프장(C구장)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "강변파크골프장(D구장)",
@@ -5566,7 +7646,24 @@
     }
    ],
    "id": "06014b5c21",
-   "data_date": "2025-05-20"
+   "data_date": "2025-05-20",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA5MjZfNjEg/MDAxNzkwNDAwNjI0NDQ2.3eTycE9ucesOkOdPryXdtKn8qOFbqepjJZOKT4vInRkg.mOH4TThCFNZThhSpic71xaD0IqrqdomTMZ1curhpeCMg.JPEG/news_04_011.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/7Tnv7pE1bx8",
+    "source_url": "http://blog.naver.com/harupickyo/224423104220",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "북구 강변파크골프장(D구장)",
+    "name": "강변파크골프장(D구장)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "강변파크골프장(E구장)",
@@ -5605,7 +7702,24 @@
     }
    ],
    "id": "9092de74ac",
-   "data_date": "2025-05-20"
+   "data_date": "2025-05-20",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA5MjRfMjc3/MDAxNzkwMjA1Mzc5MjA2.ZRYdP9MZ6pfnMyzJ8q80HFKzLiFaDNAREFXp9nWID3Yg.Wo-PnVSArO762C_Zot3NkmxuhF1-u2rlUGohabpAQYsg.JPEG/%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5%EA%B5%AC%EB%AF%B8%EB%82%99%EB%8F%99%EA%B0%95.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/I1tizJvfUiM",
+    "source_url": "http://blog.naver.com/paulyoo12/224421564284",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "북구 강변파크골프장(E구장)",
+    "name": "강변파크골프장(E구장)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "검단파크골프장",
@@ -5644,7 +7758,24 @@
     }
    ],
    "id": "51b2ec85de",
-   "data_date": "2026-09-03"
+   "data_date": "2026-09-03",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202405/03/newsis/20240503160713235yjyr.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/8cSIr7ymCIz",
+    "source_url": "https://v.daum.net/v/20240503160713220",
+    "source_name": "뉴시스",
+    "method": "카카오 이미지 검색",
+    "query": "검단파크골프장",
+    "name": "검단파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "금호파크골프장",
@@ -5683,7 +7814,24 @@
     }
    ],
    "id": "6c9521049b",
-   "data_date": "2026-09-03"
+   "data_date": "2026-09-03",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202505/30/inews24/20250530181900646tpkl.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/405cW9iU9Mf",
+    "source_url": "https://v.daum.net/v/20250530181859085",
+    "source_name": "아이뉴스24",
+    "method": "카카오 이미지 검색",
+    "query": "금호파크골프장",
+    "name": "금호파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "무태파크골프장",
@@ -5722,7 +7870,24 @@
     }
    ],
    "id": "fec9f06e65",
-   "data_date": "2026-09-03"
+   "data_date": "2026-09-03",
+   "gov_home": "https://www.buk.daegu.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buk.daegu.kr/reserve/index.do",
+    "name": "대구 북구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://cfile286.uf.daum.net/image/174E233D4D6C9E9C1AAE94",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/2UsNCvb5bLL",
+    "source_url": "https://cafe.daum.net/5479452/88In/121",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "무태파크골프장",
+    "name": "무태파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "비산파크골프장",
@@ -5761,7 +7926,24 @@
     }
    ],
    "id": "63c2884dcb",
-   "data_date": "2025-05-20"
+   "data_date": "2025-05-20",
+   "gov_home": "https://www.dgs.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.dgs.go.kr/reserve/main.do",
+    "name": "대구 서구 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MThfMTcx/MDAxNzIzOTc5MTMzMzQ2.hJRwsN-FdwUkgAyrJKiHBZo1K1H0xPmys5A_6wEETMkg.wwMubEy8BPY0eaRUMOqsCQMtePD9yG-uhIpX4QHJJvIg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/EYnjMjXemw8",
+    "source_url": "http://blog.naver.com/parkgolfs/223552123036",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "비산파크골프장",
+    "name": "비산파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "서남물재생센터 파크골프장",
@@ -5800,7 +7982,24 @@
     }
    ],
    "id": "d6511b7a76",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.gangseo.seoul.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://www.thekorea.kr/data/file/news/3731442413_bEwzWS1M_f0b5e2b6e2c12797e65b64ffe9898b6ad3c8bf61.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/GpesNviW8cw",
+    "source_url": "https://cp.news.search.daum.net/p/181383011",
+    "source_name": "더코리아",
+    "method": "카카오 이미지 검색",
+    "query": "서남물재생센터파크골프장",
+    "name": "서남물재생센터 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "관악파크골프장",
@@ -5839,7 +8038,24 @@
     }
    ],
    "id": "5ae6b514fd",
-   "data_date": "2026-07-23"
+   "data_date": "2026-07-23",
+   "gov_home": "https://www.gwanak.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjEwMTFfMjQz/MDAxNzkxNzI5MTc2NTkz.Hc2voUDGBHKPtLbkHo2YCabOje4pG2BMWQYliax-RGEg.iIkS1lHDbXIKgmMoIk87E-5q4hVgd3eLtGBNqDVa76Ig.PNG/%EA%B4%80%EC%95%85%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5_%EB%A9%94%EC%9D%B82.png?type=w966",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/G9AkiaFBtlf",
+    "source_url": "http://blog.naver.com/sbj533/224438417419",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "관악파크골프장",
+    "name": "관악파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "중랑천 파크골프장 (광진구)",
@@ -5878,7 +8094,24 @@
     }
    ],
    "id": "a6aa2315ac",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.gwangjin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://www.siminilbo.co.kr/news/data/20220331/p1160290319554008_807_thum.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/BYnWVc6OT7x",
+    "source_url": "https://cp.news.search.daum.net/p/117586644",
+    "source_name": "시민일보",
+    "method": "카카오 이미지 검색",
+    "query": "중랑천파크골프장(광진구)",
+    "name": "중랑천 파크골프장 (광진구)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안양천 파크골프장 (구로①)",
@@ -5917,7 +8150,24 @@
     }
    ],
    "id": "198fc0d3bc",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.guro.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA2MDJfMTE0/MDAxNzE3Mjc5NDYzMDQy.fW_EY5DGc5OJgFEN6bUeK34CgJZw9205Q0j4Ewg-rlEg.bCHnVVmWwVprwUH16DCGgZwT0oHxyelzhvy_kXxC3gog.JPEG/20240601_103040.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/612whaEJ0R0",
+    "source_url": "http://blog.naver.com/lhyang22/223467125043",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "안양천파크골프장(구로①)",
+    "name": "안양천 파크골프장 (구로①)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안양천 파크골프장 (구로②)",
@@ -5956,7 +8206,24 @@
     }
    ],
    "id": "73a421a055",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.guro.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fparkgolf24.co.kr%2Fstatic%2Fog-image.png%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/IxNx2DA2pIL",
+    "source_url": "http://blog.naver.com/sunnyday-jin/224355592963",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "안양천파크골프장(구로②)",
+    "name": "안양천 파크골프장 (구로②)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안양천 파크골프장 (금천)",
@@ -5995,7 +8262,24 @@
     }
    ],
    "id": "b5ecaa6279",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.geumcheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202307/05/ned/20230705080802424qouo.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/1yr98m4kvFp",
+    "source_url": "https://v.daum.net/v/20230705080801599",
+    "source_name": "헤럴드경제",
+    "method": "카카오 이미지 검색",
+    "query": "안양천파크골프장(금천)",
+    "name": "안양천 파크골프장 (금천)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "중랑천 파크골프장",
@@ -6034,7 +8318,24 @@
     }
    ],
    "id": "3e2d8ac336",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.nowon.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA5MTZfMjU0/MDAxNzU3OTkwMTAxMjg1.oxgv7EyMcLDYLyDelI484b4g1Wj1qNOjHgKY6EAgUxIg.CYCbaHfGLtH1_DGAUCssiGt0O_AiQx2GLC1BewTTLpcg.PNG/image.png?type=w580",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/BY0WdUia6Ib",
+    "source_url": "http://blog.naver.com/gopark33_/224009836152",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "중랑천파크골프장",
+    "name": "중랑천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "중랑천 파크골프장 (동대문구)",
@@ -6073,7 +8374,24 @@
     }
    ],
    "id": "0695621d42",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.ddm.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MDhfMTUx/MDAxNzIzMTIzNzE4Mzgz.90Da0pdcMmJtwRfV8mJIYioj78QFA_14ky-QW67iRxMg.F-wI7e4YKzYwTBONht-eY7uZbEdzkhNP6LcjlA3ugAMg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/55SD4GqOYGp",
+    "source_url": "http://blog.naver.com/memepro/223541367858",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "중랑천파크골프장(동대문구)",
+    "name": "중랑천 파크골프장 (동대문구)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "동작파크골프장",
@@ -6112,7 +8430,24 @@
     }
    ],
    "id": "6b3f4fd47e",
-   "data_date": "2026-07-21"
+   "data_date": "2026-07-21",
+   "gov_home": "https://www.dongjak.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202504/01/yonhap/20250401132351122vbqc.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/J6yF5Am4SOW",
+    "source_url": "https://v.daum.net/v/20250401132351166",
+    "source_name": "연합뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "동작파크골프장",
+    "name": "동작파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "상도역 파크골프스테이션",
@@ -6151,7 +8486,24 @@
     }
    ],
    "id": "25ff9f6db1",
-   "data_date": "2026-07-21"
+   "data_date": "2026-07-21",
+   "gov_home": "https://www.dongjak.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://localsegye.co.kr/news/data/2025/12/10/p1065570771107035_463_thum.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/5IbHvoiiALe",
+    "source_url": "https://cp.news.search.daum.net/p/171786454",
+    "source_name": "로컬세계",
+    "method": "카카오 이미지 검색",
+    "query": "상도역파크골프스테이션",
+    "name": "상도역 파크골프스테이션",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "월드컵공원 파크골프장",
@@ -6190,7 +8542,24 @@
     }
    ],
    "id": "5c1042ff0f",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.mapo.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202608/24/NEWS1/20260824111700897oytu.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/ADRlqixlU7d",
+    "source_url": "https://v.daum.net/v/20260824111658166",
+    "source_name": "뉴스1",
+    "method": "카카오 이미지 검색",
+    "query": "월드컵공원파크골프장",
+    "name": "월드컵공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "잠실운동장 파크골프장",
@@ -6229,7 +8598,24 @@
     }
    ],
    "id": "5dff263fa1",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.songpa.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bAtXPd/btsHKiyo59F/LmAY8KrmPhqLq9oUpotplK/img.png",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/FKmEX8LvIok",
+    "source_url": "https://vuswlqatoz.tistory.com/36",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "잠실운동장파크골프장",
+    "name": "잠실운동장 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안양천 파크골프장 (양천)",
@@ -6268,7 +8654,24 @@
     }
    ],
    "id": "cc0b405cbc",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.yangcheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/cIJikp/btsNZHEGKz1/TozRrjnyKE2cLoJNEuMMX0/img.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/6WD2KwqdYGQ",
+    "source_url": "https://onpark.tistory.com/39",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "안양천파크골프장(양천)",
+    "name": "안양천 파크골프장 (양천)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안양천 파크골프장 (영등포)",
@@ -6307,7 +8710,24 @@
     }
    ],
    "id": "e7a1781902",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.ydp.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202610/02/sbscnbc/20261002112547772gmbo.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/J6k8sgeobJq",
+    "source_url": "https://v.daum.net/v/20261002112111521",
+    "source_name": "SBS Biz",
+    "method": "카카오 이미지 검색",
+    "query": "안양천파크골프장(영등포)",
+    "name": "안양천 파크골프장 (영등포)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "여의도한강 파크골프장",
@@ -6346,7 +8766,24 @@
     }
    ],
    "id": "d491aaf437",
-   "data_date": "2025-11-24"
+   "data_date": "2025-11-24",
+   "gov_home": "https://www.ydp.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjAzMTZfNTUg/MDAxNzczNjM4NDk3MTgw.zGsuMfpx5MGk2AzceSDkIJbDv6pvt7tDzmAhbrfVxPgg.pya878dC1Vxhh-jZOKVST2gc1r318LE2heB6_SOps3sg.JPEG/2026-03-16_13_39_31.jpg?type=w966",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/5vJqRPoWBH3",
+    "source_url": "http://blog.naver.com/piaominzhen/224218273969",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "여의도한강파크골프장",
+    "name": "여의도한강 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "중랑구립파크골프장",
@@ -6385,7 +8822,24 @@
     }
    ],
    "id": "f20194af14",
-   "data_date": "2026-07-27"
+   "data_date": "2026-07-27",
+   "gov_home": "https://www.jungnang.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://yeyak.seoul.go.kr/web/main.do",
+    "name": "서울시 공공서비스예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://tr.xza.kr/imgdata/tr_xza_kr/202507/20250703070642-89166.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/Kb1IgPs8CRE",
+    "source_url": "https://cp.news.search.daum.net/p/165012495",
+    "source_name": "케이에스피뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "중랑구립파크골프장",
+    "name": "중랑구립파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "금강파크골프장",
@@ -6431,7 +8885,24 @@
     }
    ],
    "id": "ba8349315b",
-   "data_date": "2026-07-29"
+   "data_date": "2026-07-29",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/mYjUT/btsHEWnG2gd/HwB2H6On4JT0KCrNjnrKSK/img.png",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/P6PtxwMgGu",
+    "source_url": "https://hee0014.tistory.com/1098",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "금강파크골프장",
+    "name": "금강파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "부강생활체육공원",
@@ -6477,7 +8948,24 @@
     }
    ],
    "id": "787d4005d7",
-   "data_date": "2026-07-29"
+   "data_date": "2026-07-29",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://www.ebaekje.co.kr/news/photo/201709/60331_56000_4524.gif",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/40dAdbz9w7G",
+    "source_url": "https://cp.news.search.daum.net/p/59785620",
+    "source_name": "백제뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "부강생활체육공원",
+    "name": "부강생활체육공원",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "세종중앙공원 파크골프장",
@@ -6523,7 +9011,24 @@
     }
    ],
    "id": "aab53b9ff5",
-   "data_date": "2026-07-29"
+   "data_date": "2026-07-29",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTFfMTM2/MDAxNzIzMzA1MjYwNTU3.HKSRtrnUphc3gwLq8O12da00-cPLf_xaV2TVXEoRfsIg.W8Qj8RYy2s3fZmFiOHct0WNypTxRlaokp2putv1Cuosg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(7).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/4DZwslZEvD",
+    "source_url": "http://blog.naver.com/memepro/223543615041",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "세종중앙공원파크골프장",
+    "name": "세종중앙공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "수질복원센터B 파크골프장",
@@ -6569,7 +9074,24 @@
     }
    ],
    "id": "683cdd1641",
-   "data_date": "2026-07-29"
+   "data_date": "2026-07-29",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "online",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA0MTJfOTkg/MDAxNzc1OTc4NTU1ODIz.KUBYA8ucCHc_9A2JRAj3dFjQVCpadwNZ2flThitVaGIg.CmItttgECNWxEOC0tz2pkONyTChRVvwd2KbkG-eJK8Eg.PNG/image.png?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/BZVfL9oFEt7",
+    "source_url": "http://blog.naver.com/okong0314/224249689465",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "수질복원센터B파크골프장",
+    "name": "수질복원센터B 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "오가낭뜰근린공원 파크골프장",
@@ -6615,7 +9137,24 @@
     }
    ],
    "id": "8641624e98",
-   "data_date": "2026-07-29"
+   "data_date": "2026-07-29",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://www.cinpnews.kr/data/photos/portnews/202408/20240801170140-51640.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/B7d1TQ01KDL",
+    "source_url": "https://cp.news.search.daum.net/p/150965741",
+    "source_name": "충남도민일보",
+    "method": "카카오 이미지 검색",
+    "query": "오가낭뜰근린공원파크골프장",
+    "name": "오가낭뜰근린공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "조천변 파크골프장",
@@ -6654,7 +9193,24 @@
     }
    ],
    "id": "1d26b5e39a",
-   "data_date": "2025-09-01"
+   "data_date": "2025-09-01",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTExMTJfMTIz/MDAxNzYyOTMxMzE5NDAx.Kevc3wRsFwCY-SDVxBkNPvcOmeVOfBjm9kpXazVn_rsg.kfeIsXSyC46QLUQV8YMm3Yd6JtuV2ax2VruUXdjMSnYg.JPEG/3.jpg?type=w466",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/CgFb4kBH44E",
+    "source_url": "http://blog.naver.com/sejong_dementia/224073644915",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "조천변파크골프장",
+    "name": "조천변 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "한솔파크골프장",
@@ -6700,7 +9256,24 @@
     }
    ],
    "id": "eff3c9294b",
-   "data_date": "2026-07-29"
+   "data_date": "2026-07-29",
+   "gov_home": "https://www.sejong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://onestop.sejong.go.kr/",
+    "name": "세종 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfMjgx/MDAxNzIzODczODAwNzA2.7XeFG9Q7Pjb5mi_-pbubxlgTXWKkSD23VDKhlGc0pqgg.nWUpVQDFLUTXMp1R4C-v4pNTStZoKvytZTmVK1x1CuMg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(5)_(1).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/B89qO5nEiYn",
+    "source_url": "http://blog.naver.com/parkgolfs/223550944048",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "한솔파크골프장",
+    "name": "한솔파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "계양경기장파크골프장",
@@ -6739,7 +9312,20 @@
     }
    ],
    "id": "e64b46042a",
-   "data_date": "2026-09-30"
+   "data_date": "2026-09-30",
+   "gov_home": "https://www.gyeyang.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://www.ndnnews.co.kr/news/photo/202608/1076342_1089681_1127.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/ZmxWZRp3CH",
+    "source_url": "https://cp.news.search.daum.net/p/181066737",
+    "source_name": "엔디엔뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "계양경기장파크골프장",
+    "name": "계양경기장파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "장수파크골프장",
@@ -6778,7 +9364,20 @@
     }
    ],
    "id": "2832fb5778",
-   "data_date": "2025-12-01"
+   "data_date": "2025-12-01",
+   "gov_home": "https://www.namdong.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfNzMg/MDAxNzIzODIxMTk3Nzk2.uxu0k_4cyAGrfw-H2wzpGImIfW-PGfTmomYqUGqRRI4g.ZXoI1JTVzNZC_gacn4q1euYU_lyvkZF_uOX7GbNej8Qg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/BYgdGMAr6HP",
+    "source_url": "http://blog.naver.com/parkgolfs/223550464268",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "장수파크골프장",
+    "name": "장수파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "공촌유수지 파크골프장",
@@ -6824,7 +9423,20 @@
     }
    ],
    "id": "6c0577080a",
-   "data_date": "2026-09-30"
+   "data_date": "2026-09-30",
+   "gov_home": "https://www.seo.incheon.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "http://tr.xza.kr/imgdata/tr_xza_kr/202404/20240403081418-11498.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/CyxLXUT87GH",
+    "source_url": "https://cp.news.search.daum.net/p/145745098",
+    "source_name": "미디어이슈",
+    "method": "카카오 이미지 검색",
+    "query": "공촌유수지파크골프장",
+    "name": "공촌유수지 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "아시아드주경기장파크골프장",
@@ -6863,7 +9475,20 @@
     }
    ],
    "id": "6676f7b829",
-   "data_date": "2026-09-30"
+   "data_date": "2026-09-30",
+   "gov_home": "https://www.seo.incheon.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTAzMDRfNjcg/MDAxNzQxMDUzMTEzMjA4.yP17EuC8dLfC-y3iMPkkQWttlhjv3IJsLcYz8yfduIIg.UDX4SK4VxzUaXFuqHNzYUYvgdTi7--uW81_nQAq1PDIg.JPEG/%EC%9D%B8%EC%B2%9CAG%EC%A3%BC%EA%B2%BD%EA%B8%B0%EC%9E%A5_%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/IOuW4Ru2kL8",
+    "source_url": "http://blog.naver.com/khjksj37/223785606446",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "아시아드주경기장파크골프장",
+    "name": "아시아드주경기장파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "선학파크골프장",
@@ -6902,7 +9527,20 @@
     }
    ],
    "id": "c82d63b977",
-   "data_date": "2025-12-01"
+   "data_date": "2025-12-01",
+   "gov_home": "https://www.yeonsu.go.kr",
+   "reserve_level": "phone",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MDlfMTAz/MDAxNzIzMTMyODk3NTY4.PsllO0X8wORR0-WafMTroS52fxbBSIj6jnuJqAwk3YMg.a3672lHaaoWyIY_nx1d57GU6vDm13lemH45QMRytH_Eg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(1).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/JJjeNz7NCys",
+    "source_url": "http://blog.naver.com/memepro/223541510637",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "선학파크골프장",
+    "name": "선학파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "송도파크골프장",
@@ -6948,7 +9586,20 @@
     }
    ],
    "id": "7629ebdcbe",
-   "data_date": "2026-09-30"
+   "data_date": "2026-09-30",
+   "gov_home": "https://www.yeonsu.go.kr",
+   "reserve_level": "online",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/c0OxXz/btsHW7WWBod/mWdL4ad6GF2u4QStIMQjQ1/img.png",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/2wjgkAI6doH",
+    "source_url": "https://raroonghi.tistory.com/15",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "송도파크골프장",
+    "name": "송도파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "강진 파크골프장",
@@ -6987,7 +9638,24 @@
     }
    ],
    "id": "da3648c9f8",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gangjin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gangjin.go.kr/reserve/index.do",
+    "name": "강진군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA3MDZfMTkw/MDAxNzgzMzA1MjI0Mjk3.6rm4NmQlDaSYjIMvcRUpmEtVuncufUD97emeiNgyFqsg.rftuX4tzNgl8Gsgy_eFex6JzccNCDz8YmhARZ0HhwrUg.JPEG/1-_%EA%B9%80%EC%98%81%EB%AF%BC_%EC%98%81%EC%82%B0%EA%B0%95%EC%9C%A0%EC%97%AD%ED%99%98%EA%B2%BD%EC%B2%AD%EC%9E%A5_%EB%A9%B4%EB%8B%B4_(4).JPG?type=w580",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/2K0vtGergKA",
+    "source_url": "http://blog.naver.com/ncc-tv/224337852598",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "강진파크골프장",
+    "name": "강진 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "곡성 동악파크골프장",
@@ -7026,7 +9694,20 @@
     }
    ],
    "id": "e7a379f93a",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gokseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bJzDuD/btsGE3utzZf/4Y3EQbd0AAQRx7bmlyt3T1/img.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/1CJR3jhPDv1",
+    "source_url": "https://juding.tistory.com/675",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "곡성동악파크골프장",
+    "name": "곡성 동악파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "오곡 파크골프장",
@@ -7065,7 +9746,20 @@
     }
    ],
    "id": "6220e187c9",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gokseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTNfMTcg/MDAxNzIzNTI4ODc4Mzcy.mgF8C4WIobwUezkCN-lqlVbUyxofmo2ZAZR_9-clilIg.ANUemygu1ONvex2mzCEKSg6n8IN4iLGyfa8OAVswEQUg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/C277fmMNoGz",
+    "source_url": "http://blog.naver.com/memepro/223546553842",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "오곡파크골프장",
+    "name": "오곡 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "광양 섬진강둔치파크골프장",
@@ -7104,7 +9798,24 @@
     }
    ],
    "id": "978667484d",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gwangyang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://gwangyang.go.kr/reserve/",
+    "name": "광양시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://news.lghellovision.net/news/photo/202410/484286_100688_3757.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/KpMvIG6q42F",
+    "source_url": "https://cp.news.search.daum.net/p/153784110",
+    "source_name": "LG헬로비전",
+    "method": "카카오 이미지 검색",
+    "query": "광양섬진강둔치파크골프장",
+    "name": "광양 섬진강둔치파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "동천 파크골프장",
@@ -7143,7 +9854,24 @@
     }
    ],
    "id": "e1f36890e4",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gwangyang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://gwangyang.go.kr/reserve/",
+    "name": "광양시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202609/02/STNSPORTS/20260902144208956zjze.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/EdqQEMTBDVm",
+    "source_url": "https://v.daum.net/v/20260902144207042",
+    "source_name": "에스티엔",
+    "method": "카카오 이미지 검색",
+    "query": "동천파크골프장",
+    "name": "동천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "선샤인 파크골프장",
@@ -7182,7 +9910,24 @@
     }
    ],
    "id": "3a54d5be61",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gwangyang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://gwangyang.go.kr/reserve/",
+    "name": "광양시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTAyMTZfMTQx/MDAxNzM5Njg5MTY5NTc4.w8xO91zJIdCdPC5q_QnqJRk4rZxYwDElOhZkjkQfcK8g.Stw6z_Kweo45dxOWW_97UVAkejq5gkzHZGhJ3HtylEsg.JPEG/SE-1e60c0c3-ac94-41af-9071-da9942d59183.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/3RUmfKKsuYB",
+    "source_url": "http://blog.naver.com/memepro/223762486357",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "선샤인파크골프장",
+    "name": "선샤인 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "구례 파크골프장",
@@ -7221,7 +9966,20 @@
     }
    ],
    "id": "762a537fc8",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.gurye.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/yYSu/80c6461351bc92739bf710ea636b8c26a9ac7a02",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/LmWY1GqGzpd",
+    "source_url": "https://cafe.daum.net/betweenleaf/SEbw/81",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "구례파크골프장",
+    "name": "구례 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "혁신도시 파크골프장",
@@ -7260,7 +10018,20 @@
     }
    ],
    "id": "d8338300ab",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.naju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMjEwMTRfMjU1/MDAxNjY1NzA3OTk0ODk2.z9_JfXHSUOWN68gY5Z6JCT62X36QIEjokCD0kCy7iCog.AePxP-RweeAeN2ZcKLvOmIAzpzP1iUb07_TOoSoK_dMg.JPEG.eumseonggun/%EC%82%AC%EC%A7%844.JPG?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/1b1Gku9gANo",
+    "source_url": "http://blog.naver.com/eumseonggun/222899917585",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "혁신도시파크골프장",
+    "name": "혁신도시 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "백진공원 파크골프장",
@@ -7299,7 +10070,20 @@
     }
    ],
    "id": "8cff01a47a",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.damyang.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMzEyMDlfMTcw/MDAxNzAyMDgwMzE2NTA0.gTVhy4kpTskdFKn_XCFzApdZL2Pi544r6tXNQYm7C-Eg.6kcwyGl754NwYSJ2CudwUmzZq47OBe6n_xd-iMavYwcg.JPEG.sunghc8531/1702080118795.jpg?type=w580",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/d0wiUrW9rb",
+    "source_url": "http://blog.naver.com/sunghc8531/223287185046",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "백진공원파크골프장",
+    "name": "백진공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "남해 파크골프장",
@@ -7338,7 +10122,20 @@
     }
    ],
    "id": "4ab8fbabad",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://www.jjinews.net/news/photo/202106/57171_59748_427.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/H1ccpnGvH1",
+    "source_url": "http://blog.naver.com/enanews2580/222400982980",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "남해파크골프장",
+    "name": "남해 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "목포 실내체육관 파크골프장",
@@ -7377,7 +10174,20 @@
     }
    ],
    "id": "7294eba8b4",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjEwMDZfMjU1/MDAxNzkxMjg0MzYxNjQx.ZSMoHqTNTMavZRmdqt4Zk_wN9Vf4HQbMAaGv0DpUV6Eg.oi-xL8i0spC5546tIq73QO02n_UEf2b_h1pGyaF5YNMg.JPEG/news_12_x.jpg?type=w966",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/H8Iwi3Inahs",
+    "source_url": "http://blog.naver.com/kjin9106/224433400302",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "목포실내체육관파크골프장",
+    "name": "목포 실내체육관 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "부주산 국제파크골프장",
@@ -7416,7 +10226,20 @@
     }
    ],
    "id": "5d98c91c9b",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://cfile300.uf.daum.net/image/27402340542924312CA356",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/DQLRx1g6bAq",
+    "source_url": "https://cafe.daum.net/jsparkgolf/QVHU/67",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "부주산국제파크골프장",
+    "name": "부주산 국제파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "북항 파크골프장",
@@ -7455,7 +10278,20 @@
     }
    ],
    "id": "af2d3214e3",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/lLXJ6/btsMcBTd46s/urVCnXLzwkKE1bGwPLkoP1/img.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/Cm5NM1QnynC",
+    "source_url": "https://parkgolf-tip.tistory.com/964",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "북항파크골프장",
+    "name": "북항 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "삼학도 파크골프장",
@@ -7494,7 +10330,20 @@
     }
    ],
    "id": "b7770b8933",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA0MTlfMTAy/MDAxNzc2NTY5ODQ0Nzgx.wwzwr-yXamUWBUA_RwhKajiuGarZ7TiTmyyjLvz4s4sg.MhjLPp_4NTNTyDaZnhTlNz9SXHRZytuAelgDzsd5W-4g.PNG/image.png?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/Er7O1mOvyu0",
+    "source_url": "http://blog.naver.com/okong0314/224257544116",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "삼학도파크골프장",
+    "name": "삼학도 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "상동 파크골프장",
@@ -7533,7 +10382,20 @@
     }
    ],
    "id": "5a255b7a7f",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FciEJ3b%252FbtsIJSE0w7U%252FeozMT91zVdHUXOZCW5aKqk%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/FulY4KiS1k",
+    "source_url": "http://blog.naver.com/memepro/223545743790",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "상동파크골프장",
+    "name": "상동 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "서해 파크골프장",
@@ -7572,7 +10434,20 @@
     }
    ],
    "id": "6f47064c2a",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.mokpo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fwww.sbnnews.co.kr%2Fdata%2Fphotos%2F20221147%2Fart_16690162158848_141a8e.jpg%22&type=ff500_300",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/45GzeoWGqZ0",
+    "source_url": "http://blog.naver.com/ggy0119/222934482351",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "서해파크골프장",
+    "name": "서해 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "남악 파크골프장",
@@ -7611,7 +10486,20 @@
     }
    ],
    "id": "3825ad3235",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.muan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202404/23/seouleconomy/20240423105743593ohky.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/6TGmeTtX95f",
+    "source_url": "https://v.daum.net/v/20240423105741620",
+    "source_name": "서울경제",
+    "method": "카카오 이미지 검색",
+    "query": "남악파크골프장",
+    "name": "남악 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "무안 늘어지 파크골프장",
@@ -7650,7 +10538,20 @@
     }
    ],
    "id": "f3f8e220f3",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.muan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202512/16/inews24/20251216151238902quyp.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/3NV6BV10FXT",
+    "source_url": "https://v.daum.net/v/20251216151237998",
+    "source_name": "아이뉴스24",
+    "method": "카카오 이미지 검색",
+    "query": "무안늘어지파크골프장",
+    "name": "무안 늘어지 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "무안 파크골프장",
@@ -7689,7 +10590,20 @@
     }
    ],
    "id": "3b4c32697c",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.muan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjEwMDdfMTQ2/MDAxNzkxMzY4NjcwOTgy.44MVD9k37ULMvrU8WInSaQUMoDUk2PvMb4jukptoKyYg.PIgETxrS9JQdbxNgkxPrgcG12_npVOndyLIEXo78Kpkg.JPEG/news_00_3cff0082be4aa6d4df4e28ada817624da42bf9a395fd819a6fe66a3f02bf95eb.jpg?type=w966",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/464MP5xUy8m",
+    "source_url": "http://blog.naver.com/abek_aros_adsence/224434503170",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "무안파크골프장",
+    "name": "무안 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "벌교 숲공원 파크골프장",
@@ -7728,7 +10642,20 @@
     }
    ],
    "id": "c7600ba8c6",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.boseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjA3MzBfMjI5/MDAxNzg1NDA3NTAxMDYw.hPX6PzWnedpxujQsCpYg8xhWaKiAu1XuD9QSXVYfSFkg.TuiwFXCInvteUlw3PVgdl9vI3HpyavVEWeUWTaoYqMkg.JPEG/1.jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/LxzEkYXlaD4",
+    "source_url": "http://blog.naver.com/youngjin6690/224363106380",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "벌교숲공원파크골프장",
+    "name": "벌교 숲공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "보성 파크골프장",
@@ -7767,7 +10694,20 @@
     }
    ],
    "id": "8f1935c87d",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.boseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bY57Un/btsODrhbt57/NCauBscAXGUsaYHYxArFX0/img.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/8SiXlxsxmD6",
+    "source_url": "https://worldnews01.tistory.com/353",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "보성파크골프장",
+    "name": "보성 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "보성체육공원 파크골프장",
@@ -7806,7 +10746,20 @@
     }
    ],
    "id": "7d58a54bb7",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.boseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202605/11/inews24/20260511150516757phng.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/J2PrtRRQzWh",
+    "source_url": "https://v.daum.net/v/20260511150515588",
+    "source_name": "아이뉴스24",
+    "method": "카카오 이미지 검색",
+    "query": "보성체육공원파크골프장",
+    "name": "보성체육공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "복내 파크골프장",
@@ -7845,7 +10798,20 @@
     }
    ],
    "id": "45a87b3ec1",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.boseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMzEwMjlfMjE2/MDAxNjk4NTY3MzY1MTE4.XAXx3J8jfLPiKbk1tIvro8xjuYX_kgobi71dIEvRDVwg.h3k6i9Fbus7lqnNcbEcvs7xIMd5G_WQDZPKt2KnjsP8g.JPEG.celloedu7/20231029%EF%BC%BF164131.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/KDJdWlfcgLH",
+    "source_url": "http://blog.naver.com/celloedu7/223249718262",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "복내파크골프장",
+    "name": "복내 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "상사 파크골프장",
@@ -7884,7 +10850,24 @@
     }
    ],
    "id": "1977174b78",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.suncheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.suncheon.go.kr/yeyak/",
+    "name": "순천시 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MjBfMjc3/MDAxNzI0MTIyMDkxMjYy.qzHDm-fFsXWUJywBh8BqYHerC07Bf1qHFN5Nd14w5qog.txAWQV7x79qxiGgc2O1mfUJbIwXh9Y7CrUJTb_R3jOgg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(12).jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/5leWa6bBKlf",
+    "source_url": "http://blog.naver.com/parkgolfs/223554143875",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "상사파크골프장",
+    "name": "상사 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "해룡 파크골프장",
@@ -7923,7 +10906,24 @@
     }
    ],
    "id": "a3495108b8",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.suncheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.suncheon.go.kr/yeyak/",
+    "name": "순천시 바로예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://www.baronews.net/news/upload//20260204111510-8885.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/IMjArtrEEkn",
+    "source_url": "https://cp.news.search.daum.net/p/174324995",
+    "source_name": "중앙뉴스라인",
+    "method": "카카오 이미지 검색",
+    "query": "해룡파크골프장",
+    "name": "해룡 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "율촌 장도 파크골프장",
@@ -7962,7 +10962,20 @@
     }
    ],
    "id": "d93906e75c",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.yeosu.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDEyMDNfMjY4/MDAxNzMzMjE3NTY2Nzgx.MIvBI-0D-aI5RbOz784YCEA8pvUuQYRNqiwhQpV0M1Ug.Gx6MHKtZQ_N6M8c6uKUbu8RC8_BDJC3b6lBlnvNozJgg.JPEG/download_(11).jpeg?type=w580",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/7SsRCJnksCh",
+    "source_url": "http://blog.naver.com/toktilab/223681412258",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "율촌장도파크골프장",
+    "name": "율촌 장도 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "불갑 파크골프장",
@@ -8001,7 +11014,20 @@
     }
    ],
    "id": "52ccf85abe",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.yeonggwang.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://tr.xza.kr/imgdata/tr_xza_kr/202507/20250731125539-33865.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/41tEVv9jnQf",
+    "source_url": "https://cp.news.search.daum.net/p/166257474",
+    "source_name": "미디어이슈",
+    "method": "카카오 이미지 검색",
+    "query": "불갑파크골프장",
+    "name": "불갑 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "한빛원자력 파크골프장",
@@ -8040,7 +11066,20 @@
     }
    ],
    "id": "b7253bd147",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.yeonggwang.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjEwMTZfMTM0/MDAxNzkyMTQxNzY0NTE0.gMDnjVpytytLyiJregLVQeRjXMa6fmlVL_ATMwWyNlUg.ohCg0q2wKu1KInnTAjoMAh5Bm1wX2GdfuzOTlO27tlgg.JPEG/%ED%95%9C%EB%B9%9B%EC%9B%90%EC%9E%90%EB%A0%A5%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A51.jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/6YFeKWbQaVG",
+    "source_url": "http://blog.naver.com/spring_morning/224443967003",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "한빛원자력파크골프장",
+    "name": "한빛원자력 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "삼호 파크골프장",
@@ -8079,7 +11118,20 @@
     }
    ],
    "id": "ffc5b2bb10",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.yeongam.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://cfile285.uf.daum.net/image/9920AE3A5C37FA940D7550",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/14T9NIce1cG",
+    "source_url": "https://cafe.daum.net/jk0445/8OWl/136",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "삼호파크골프장",
+    "name": "삼호 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "영암 파크골프장",
@@ -8118,7 +11170,20 @@
     }
    ],
    "id": "cda1d43b09",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.yeongam.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://t1.daumcdn.net/cafeattach/1Wo23/d0a2759163a0727f7a26e632a4661a821484f21e",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/Hzg6EPwmtV8",
+    "source_url": "https://cafe.daum.net/parkinsons/gqzL/333",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "영암파크골프장",
+    "name": "영암 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "고금테마공원파크골프장",
@@ -8157,7 +11222,20 @@
     }
    ],
    "id": "19a97838a0",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.wando.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FbXanEL%252FbtsKpvuQ7cY%252F5KFbCFDyu3NcrHknZaK9ak%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/3OiK1W3pMxh",
+    "source_url": "http://blog.naver.com/memepro/223640263121",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "고금테마공원파크골프장",
+    "name": "고금테마공원파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "장성 파크골프장",
@@ -8196,7 +11274,20 @@
     }
    ],
    "id": "4e91197227",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.jangseong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://www.jndn.com/upimages/gisaimg/202405/01_385124.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/5F1vEAad9ii",
+    "source_url": "https://cp.news.search.daum.net/p/146947204",
+    "source_name": "전남매일",
+    "method": "카카오 이미지 검색",
+    "query": "장성파크골프장",
+    "name": "장성 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "관산 파크골프장",
@@ -8235,7 +11326,20 @@
     }
    ],
    "id": "fe7e16f4c5",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.jangheung.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FWPdCB%252FbtsKphDGT0J%252F3Oq2Jl3DrYUpDp9fP0mHQ1%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/EFKI0AUApXq",
+    "source_url": "http://blog.naver.com/memepro/223640269021",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "관산파크골프장",
+    "name": "관산 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "탐진강 파크골프장",
@@ -8274,7 +11378,20 @@
     }
    ],
    "id": "7aa96fdacc",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.jangheung.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://www.enewstoday.co.kr/news/photo/202302/1639502_695512_1134.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/Dy7izO1d5Rb",
+    "source_url": "https://cp.news.search.daum.net/p/129218865",
+    "source_name": "이뉴스투데이",
+    "method": "카카오 이미지 검색",
+    "query": "탐진강파크골프장",
+    "name": "탐진강 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "운림 삼별초공원 파크골프장",
@@ -8313,7 +11430,20 @@
     }
    ],
    "id": "ff31a42eea",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.jindo.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA5MjRfNDcg/MDAxNzU4NjgzNTc3MjUw.Z_Rd0ci7Sq8REnyJuDFCQpxgz3ydJki6wmA78naaJA8g.4Z5PStITg66fzE1fWkLd8FVs2kRlFGRBue3TXiC6xAMg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/7Ot7f4Dx8QJ",
+    "source_url": "http://blog.naver.com/parkgolfs/224019891646",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "운림삼별초공원파크골프장",
+    "name": "운림 삼별초공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "함평 파크골프장",
@@ -8352,7 +11482,20 @@
     }
    ],
    "id": "70ba309d72",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.hampyeong.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/bSBAHP/dJMcakzsR1O/sW2doa8kjALzt3Bd2Vfck1/img.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/LCUEdfKaK2k",
+    "source_url": "https://puco2009.tistory.com/421624",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "함평파크골프장",
+    "name": "함평 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "산이 파크골프장",
@@ -8391,7 +11534,20 @@
     }
    ],
    "id": "f1c0c6b9a1",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.haenam.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTNfNzEg/MDAxNzIzNTE5NzY4Mjky.PEBx-0LZpdbtk2UysFD9Vw4MiL6Gu9aRUdCCR21v99kg.g3xraj4vqzz7i50H_9G3EZMEjmH4nphSgM3EOndYr3kg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/J4UZokWpjpn",
+    "source_url": "http://blog.naver.com/memepro/223546373835",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "산이파크골프장",
+    "name": "산이 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "삼산 파크골프장",
@@ -8430,7 +11586,20 @@
     }
    ],
    "id": "c8a0ee8465",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.haenam.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202403/25/seouleconomy/20240325144413362fzwr.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/978bPUggfUd",
+    "source_url": "https://v.daum.net/v/20240325144411732",
+    "source_name": "서울경제",
+    "method": "카카오 이미지 검색",
+    "query": "삼산파크골프장",
+    "name": "삼산 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "송지 파크골프장",
@@ -8469,7 +11638,20 @@
     }
    ],
    "id": "24d491aea7",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.haenam.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MjJfNDMg/MDAxNzI0MzE1MTk2MTEx.vxuxmNhQSvkYw_CaDJ4xkCHu3-p_XcabF_scRFTUReEg.lg6DklVNlOayZeqZ0rQ1VMNxpkaKCMh091JjPAk6q8Ag.JPEG/20-%EC%86%A1%EC%A7%80%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84%EC%9E%A5_%EC%A4%80%EA%B3%B5_(3).jpg?type=w580",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/HbspNuImMaJ",
+    "source_url": "http://blog.naver.com/huejung/223557080701",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "송지파크골프장",
+    "name": "송지 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "능주 파크골프장",
@@ -8508,7 +11690,15 @@
     }
    ],
    "id": "eabfade1d8",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.hwasun.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hwasun.go.kr/reserve/index.do",
+    "name": "화순군 통합예약",
+    "parkgolf": true
+   },
+   "photo": null
   },
   {
    "name": "화순 홍수조절지 파크골프장",
@@ -8547,7 +11737,24 @@
     }
    ],
    "id": "99c4192e13",
-   "data_date": "2026-02-27"
+   "data_date": "2026-02-27",
+   "gov_home": "https://www.hwasun.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hwasun.go.kr/reserve/index.do",
+    "name": "화순군 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://www.webeconomy.co.kr/data/photos/portnews/202406/20240620121305-26129.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/8MkXGJf85za",
+    "source_url": "https://cp.news.search.daum.net/p/149070647",
+    "source_name": "웹이코노미",
+    "method": "카카오 이미지 검색",
+    "query": "화순홍수조절지파크골프장",
+    "name": "화순 홍수조절지 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "고수 주민체육 체험시설 파크골프장",
@@ -8586,7 +11793,15 @@
     }
    ],
    "id": "18e29e1638",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.gochang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gochang.go.kr/reserve/index.do",
+    "name": "고창군 통합예약",
+    "parkgolf": false
+   },
+   "photo": null
   },
   {
    "name": "상하 체육테마공원 파크골프장",
@@ -8625,7 +11840,15 @@
     }
    ],
    "id": "bb0df251ca",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.gochang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gochang.go.kr/reserve/index.do",
+    "name": "고창군 통합예약",
+    "parkgolf": false
+   },
+   "photo": null
   },
   {
    "name": "스포츠타운 파크골프장",
@@ -8664,7 +11887,24 @@
     }
    ],
    "id": "ec37ddb12c",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.gochang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gochang.go.kr/reserve/index.do",
+    "name": "고창군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202306/17/img_20230617172729_58b00fc1.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/BCyKrHxDXI0",
+    "source_url": "https://cp.news.search.daum.net/p/133821032",
+    "source_name": "위키트리",
+    "method": "카카오 이미지 검색",
+    "query": "스포츠타운파크골프장",
+    "name": "스포츠타운 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "군산 파크골프장",
@@ -8703,7 +11943,20 @@
     }
    ],
    "id": "a8f8aa3d61",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.gunsan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTNfMTc5/MDAxNzIzNTMwOTI2MjEy.LH84VwxzXyk5muky48qberjyfTXY6NCLm_hAwKGNKA8g.a2gVl2W8PKjA73IE4rrNniAB86s9CAdCemF0g-nF3U8g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(14).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/GcQGZBkillG",
+    "source_url": "http://blog.naver.com/memepro/223546599054",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "군산파크골프장",
+    "name": "군산 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "청하 파크골프장",
@@ -8742,7 +11995,24 @@
     }
    ],
    "id": "0d14fcc6f7",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.gimje.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gimje.go.kr/reserve/index.do",
+    "name": "김제시 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTNfOTIg/MDAxNzIzNTI5OTQ2NTYw.d0-pIcy2MbIC0ME-ts9QXQ1oCNibzicZN75fSMPeJmIg.Zwy8_6tbEJJ-re1Q7MmM6Tuogbej21l7G83MvHgvkMUg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(8).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/CcJMLfaqatf",
+    "source_url": "http://blog.naver.com/memepro/223546578087",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "청하파크골프장",
+    "name": "청하 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "남원 그린파크골프장 [주생 파크골프장]",
@@ -8781,7 +12051,24 @@
     }
    ],
    "id": "29b10aff92",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.namwon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.namwon.go.kr/reserve/index.do",
+    "name": "남원시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "http://www.domin.co.kr/news/photo/202606/1558612_768057_911.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/IxnEdYmUWt6",
+    "source_url": "https://cp.news.search.daum.net/p/178646101",
+    "source_name": "전북도민일보",
+    "method": "카카오 이미지 검색",
+    "query": "남원그린파크골프장[주생파크골프장]",
+    "name": "남원 그린파크골프장 [주생 파크골프장]",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "춘향골 파크골프장",
@@ -8820,7 +12107,24 @@
     }
    ],
    "id": "aa2feee9e3",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.namwon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.namwon.go.kr/reserve/index.do",
+    "name": "남원시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMzA0MTNfMTQz/MDAxNjgxMzg0NTkxODIy.Q6-B4eDUKPacQzSsSVE5Ljz1RqAzl-AdgLjfD05Vci4g.VMRQDIERjnfICApsEcHgDIQfzD8aS4Mq4Ui8-vn3ZgMg.JPEG.snow4you1/20230413_181928.jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/AAJcZd8CON0",
+    "source_url": "http://blog.naver.com/snow4you1/223073841384",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "춘향골파크골프장",
+    "name": "춘향골 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "부안 파크골프장",
@@ -8859,7 +12163,24 @@
     }
    ],
    "id": "07dfcf7ef1",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.buan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.buan.go.kr/reserve/index.do",
+    "name": "부안군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FcHh0Cq%252FbtsIpFGkPmC%252FYngpJ933adAiUA5dBXO4Dk%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/f2vXCt9lrR",
+    "source_url": "http://blog.naver.com/memepro/223546581266",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "부안파크골프장",
+    "name": "부안 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "순창 섬진강 체육공원 파크골프장",
@@ -8898,7 +12219,24 @@
     }
    ],
    "id": "3f928e3bb6",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.sunchang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.sunchang.go.kr/",
+    "name": "순창군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNTA2MTlfMjg3/MDAxNzUwMjk0ODUyMzcw.J0ua-1HNzI3Am7XYSdGibMmeCGPZ6qEi7kqiJXM30Cgg.D8rHjerR1os9MEgLYpPnVPKyVdkV_RE_HdQZp30nZWQg.PNG/%EC%A0%84%EB%B6%81_%EC%84%AC%EC%A7%84%EA%B0%952.png?type=w580",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/C5l4pNUztwO",
+    "source_url": "http://blog.naver.com/gopark33_/223904338423",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "순창섬진강체육공원파크골프장",
+    "name": "순창 섬진강 체육공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "유등 파크골프장",
@@ -8937,7 +12275,24 @@
     }
    ],
    "id": "05c12b076b",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.sunchang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.sunchang.go.kr/",
+    "name": "순창군 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1Xctn/04985f61af62b388c306de80465659df76f949c1",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/25jnv4YkNSy",
+    "source_url": "https://cafe.daum.net/parkgolf.goyang/UqfB/14",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "유등파크골프장",
+    "name": "유등 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "고산 만경강 수변생태공원 파크골프장",
@@ -8976,7 +12331,20 @@
     }
    ],
    "id": "cea3eaa77f",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202408/08/NEWS1/20240808113946760hkiy.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/IZyvgwxwHZ4",
+    "source_url": "https://v.daum.net/v/20240808113944254",
+    "source_name": "뉴스1",
+    "method": "카카오 이미지 검색",
+    "query": "고산만경강수변생태공원파크골프장",
+    "name": "고산 만경강 수변생태공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "둔산공원 파크골프장",
@@ -9015,7 +12383,20 @@
     }
    ],
    "id": "454bc5dc6d",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MThfMTI1/MDAxNzIzOTY2MDU4NDMy.-WPQnFbYMQJrsyeEIDNeDr9ERh9oR52NdGWjzGFHhF0g.J7Bip_lvc4n4pA2nz6quEq90vMIynkwTLbzXxsBv6sgg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(9).jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/5iDOWKD7NwB",
+    "source_url": "http://blog.naver.com/parkgolfs/223551933750",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "둔산공원파크골프장",
+    "name": "둔산공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "봉동 생강골 공원 파크골프장",
@@ -9054,7 +12435,20 @@
     }
    ],
    "id": "3c6b5fc007",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MThfMTM0/MDAxNzIzOTY2MTU2OTAw.0E8Dha2ESB1Lsel8GPyse-kS0yuT2wDQc1Oy4UgFg3wg.kW4PMhd-RbBbXRb4pbk3iFom_RoE27u3ewS8ZiQSaU4g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(10).jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/2JHtPAixsKm",
+    "source_url": "http://blog.naver.com/parkgolfs/223551935663",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "봉동생강골공원파크골프장",
+    "name": "봉동 생강골 공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "비봉생활체육공원 파크골프장",
@@ -9093,7 +12487,20 @@
     }
    ],
    "id": "a98cc770d7",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202004/03/kukinews/20200403095532696luny.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/D6Xe67r3kwX",
+    "source_url": "https://v.daum.net/v/20200403095531076",
+    "source_name": "쿠키뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "비봉생활체육공원파크골프장",
+    "name": "비봉생활체육공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "삼례 금와습지 파크골프장",
@@ -9132,7 +12539,20 @@
     }
    ],
    "id": "610570fc09",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA0MDRfMjI1/MDAxNzEyMjM4Mzc4NDMw.23jx4-HwLXDtrDaJciLjK-DPNjYNy3mFSOKLf7x0knAg.tDn004rp-NkLvhLuAxoOls-g6xtwV-TL80dyjS2BILkg.JPEG/NISI20240404_0001519327_web.jpg?type=w773",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/7c0ncFphCKc",
+    "source_url": "http://blog.naver.com/hmha2610/223406042536",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "삼례금와습지파크골프장",
+    "name": "삼례 금와습지 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "삼례 수도산 공원 파크골프장",
@@ -9171,7 +12591,20 @@
     }
    ],
    "id": "2b4808e672",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://t1.daumcdn.net/news/202404/04/pressian/20240404164150769jkhr.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/DMZ3v9AHBk8",
+    "source_url": "https://v.daum.net/v/20240404164149242",
+    "source_name": "프레시안",
+    "method": "카카오 이미지 검색",
+    "query": "삼례수도산공원파크골프장",
+    "name": "삼례 수도산 공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "상관생태공원 파크골프장",
@@ -9210,7 +12643,20 @@
     }
    ],
    "id": "8e9e1dfcb9",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyMDExMjNfMTg4/MDAxNjA2MDkwOTY0MDAz.hLWk39nN2AnsyGjesqj4vmvYatlsHqOkadJL-c3MReIg.pM-z2xUb4XhNV1-QWgeWSdl22V-c1-pQf7oSvrH9nwwg.JPEG.boryeongsi/05.JPG?type=w966",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/AMahk4c23kC",
+    "source_url": "http://blog.naver.com/boryeongsi/222152921994",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "상관생태공원파크골프장",
+    "name": "상관생태공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "이서 설화공원 파크골프장",
@@ -9249,7 +12695,20 @@
     }
    ],
    "id": "ed4efdebd5",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fimg1.daumcdn.net%2Fthumb%2FR800x0%2F%3Fscode%3Dmtistory2%26fname%3Dhttps%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FcWLT4g%252FbtsKm6ncAbe%252F8WWIPrk6Gb2xaPoKANuuFk%252Fimg.jpg%22&type=ff500_300",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/5sNlsYNbznD",
+    "source_url": "http://blog.naver.com/memepro/223637323155",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "이서설화공원파크골프장",
+    "name": "이서 설화공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "이서 지사울공원 파크골프장",
@@ -9288,7 +12747,20 @@
     }
    ],
    "id": "40ef59df18",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.wanju.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDEwMjhfMTE3/MDAxNzMwMTIwNTUxMzI3.J7g0FrXaQFXunixSF1Y_nM9vlcA2osknVmdpW9ennnog.DZi7NerFqK26nkyRTvGuSlHiaR0KWe0dSCfitZr0Otwg.JPEG/20231204%EF%BC%BF144224.jpg?type=w773",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/foAkEoYAhd",
+    "source_url": "http://blog.naver.com/memepro/223637323155",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "이서지사울공원파크골프장",
+    "name": "이서 지사울공원 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "만경강 목천지구 파크골프장",
@@ -9327,7 +12799,24 @@
     }
    ],
    "id": "039289ac14",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.iksan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.iksan.go.kr/reserve/index.do",
+    "name": "익산시 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "http://www.jjilbo.com/news/photo/202310/278863_136012_1556.jpg",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/EWu3fgofpUl",
+    "source_url": "https://cp.news.search.daum.net/p/138482690",
+    "source_name": "전주일보",
+    "method": "카카오 이미지 검색",
+    "query": "만경강목천지구파크골프장",
+    "name": "만경강 목천지구 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "북부권 어울림 파크골프장 (장애인 겸용)",
@@ -9366,7 +12855,24 @@
     }
    ],
    "id": "77bdc8de9f",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.iksan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.iksan.go.kr/reserve/index.do",
+    "name": "익산시 통합예약",
+    "parkgolf": true
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTNfMTY2/MDAxNzIzNTI5MzQ1Mjg5.Qe-JWYMhG4MRovr2cj7VzSu50wbKis6HQkmWW35aMLcg.zQM6ZG9oHzI2FQ7cl0sy0LPswomJqGXInMmw7yajhpMg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3).jpg?type=w773",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/JE3ieravDgz",
+    "source_url": "http://blog.naver.com/memepro/223546564290",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "북부권어울림파크골프장(장애인겸용)",
+    "name": "북부권 어울림 파크골프장 (장애인 겸용)",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "임실 의견 파크골프장",
@@ -9405,7 +12911,20 @@
     }
    ],
    "id": "5ccacf561a",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.imsil.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://www.webeconomy.co.kr/news/photo/202610/2328557_1138206_2050.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/J8TjpeQ3rxe",
+    "source_url": "https://cp.news.search.daum.net/p/182797804",
+    "source_name": "웹이코노미",
+    "method": "카카오 이미지 검색",
+    "query": "임실의견파크골프장",
+    "name": "임실 의견 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "마전 파크골프장",
@@ -9444,7 +12963,24 @@
     }
    ],
    "id": "772cbf8151",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jeonju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jeonju.go.kr/reserve/index.9is",
+    "name": "전주시 통합신청지원",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNjAzMzBfMTI5/MDAxNzc0ODgyNjMxNzUw.68Ovzei_jjq-275eih2bQj7yv768LTKNWxAwSF5cBiMg.EN92Elcf0zmqi4SzXCePIgIMp1UPRacaoCDjrmQkm2gg.JPEG/227908_124909_3645.jpg?type=w966",
+    "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/CT5ioUtJ34K",
+    "source_url": "http://blog.naver.com/piaominzhen/224235017405",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "마전파크골프장",
+    "name": "마전 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "온고을 파크골프장",
@@ -9483,7 +13019,24 @@
     }
    ],
    "id": "ebb52d973b",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jeonju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jeonju.go.kr/reserve/index.9is",
+    "name": "전주시 통합신청지원",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://t1.daumcdn.net/cafeattach/1ZZfe/e1a70fbd25987b5aff49bd4081e1c4893086785d",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/QdQ7q3g6Es",
+    "source_url": "https://cafe.daum.net/jatagong/bx0p/13",
+    "source_name": "Daum카페",
+    "method": "카카오 이미지 검색",
+    "query": "온고을파크골프장",
+    "name": "온고을 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "신태인 파크골프장",
@@ -9522,7 +13075,24 @@
     }
    ],
    "id": "eb3004b282",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jeongeup.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jeongeup.go.kr/reserve/index.do",
+    "name": "정읍시 통합예약",
+    "parkgolf": false
+   },
+   "photo": {
+    "url": "https://postfiles.pstatic.net/MjAyNDA4MTlfMjQg/MDAxNzI0MDUwODk3Njc3.dVEswCTd8egjs9j2AHEvMOCklVlZQWcNNVzrirDzcMcg.YZXw8gzRyi0wjogt-rBLcIz0ikrmQycVqasokrBSGf8g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(3)_(4).jpg?type=w773",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/C7kmwhLNShc",
+    "source_url": "http://blog.naver.com/parkgolfs/223553155213",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "신태인파크골프장",
+    "name": "신태인 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "동향 파크골프장",
@@ -9561,7 +13131,20 @@
     }
    ],
    "id": "7d42a18c19",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jinan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "https://blog.kakaocdn.net/dn/VYonb/btsQl27xwJZ/Hr6iWcoJGHOKK1wuWQmIkk/img.jpg",
+    "thumb": "https://search1.kakaocdn.net/argon/130x130_85_c/AVceJcl8iis",
+    "source_url": "https://survival-youcandoit.tistory.com/687",
+    "source_name": "티스토리",
+    "method": "카카오 이미지 검색",
+    "query": "동향파크골프장",
+    "name": "동향 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "부귀 파크골프장",
@@ -9600,7 +13183,20 @@
     }
    ],
    "id": "3fd3cba9b9",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jinan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://tr.xza.kr/imgdata/tr_xza_kr/202310/20231006112921-32921.jpg",
+    "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/APpW38gtNn7",
+    "source_url": "https://cp.news.search.daum.net/p/138207614",
+    "source_name": "케이에스피뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "부귀파크골프장",
+    "name": "부귀 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "안천 파크골프장",
@@ -9639,7 +13235,20 @@
     }
    ],
    "id": "1c53bfcb03",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jinan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://www.joseilbo.co.kr/gisa_img/1397094018.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/ClcVJofKN4M",
+    "source_url": "http://blog.naver.com/miso5295/120211152614",
+    "source_name": "네이버블로그",
+    "method": "카카오 이미지 검색",
+    "query": "안천파크골프장",
+    "name": "안천 파크골프장",
+    "checked": "2026-11-11"
+   }
   },
   {
    "name": "진안군 파크골프장",
@@ -9678,7 +13287,20 @@
     }
    ],
    "id": "7d9391c437",
-   "data_date": "2025-08-13"
+   "data_date": "2025-08-13",
+   "gov_home": "https://www.jinan.go.kr",
+   "reserve_level": "unknown",
+   "portal": null,
+   "photo": {
+    "url": "http://gtr.xza.kr/imgdata/gtr_xza_kr/202002/85-20200219110720.jpg",
+    "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/FHnKVYkctIu",
+    "source_url": "https://cp.news.search.daum.net/p/89824830",
+    "source_name": "오늘뉴스",
+    "method": "카카오 이미지 검색",
+    "query": "진안군파크골프장",
+    "name": "진안군 파크골프장",
+    "checked": "2026-11-11"
+   }
   }
  ],
  "sido_list": [

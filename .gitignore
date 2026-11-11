@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 data/geocode_log.txt
+data/reserve_probe.json
