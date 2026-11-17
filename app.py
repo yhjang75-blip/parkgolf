@@ -278,6 +278,12 @@ def tournaments():
     return jsonify({"items": items, "today": today})
 
 
+@app.get("/score")
+def score_page():
+    """파크골프 점수계산기 (연습게임용). 모든 기록은 이 기기의 브라우저에만 저장된다."""
+    return render_template("score.html")
+
+
 @app.get("/tournament")
 def tournament_page():
     items, today = tournament_items()

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}파크골프 점수계산기 — 이지 파크골프{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='score.css') }}?v=3">{% endblock %}
+{% block content %}
+<main class="wrap page sc" id="sc">
+  <section class="panel sc-head">
+    <div>
+      <h1>🧮 파크골프 점수계산기 <span class="badge">연습게임</span></h1>
+      <p class="src" id="sc-sub">팀별·개인별 타수를 입력하면 순위와 시상을 자동으로 계산합니다. 기록은 이 휴대폰(브라우저)에만 저장됩니다.</p>
+    </div>
+    <nav class="sc-tabs" id="sc-tabs" aria-label="점수계산기 메뉴">
+      <button data-v="setup"><span aria-hidden="true">⚙️</span>설정</button>
+      <button data-v="enter"><span aria-hidden="true">✍️</span>점수입력</button>
+      <button data-v="grid"><span aria-hidden="true">📋</span>전체표</button>
+      <button data-v="rank"><span aria-hidden="true">🏆</span>순위</button>
+      <button data-v="award"><span aria-hidden="true">🎖️</span>시상</button>
+    </nav>
+  </section>
+
+  <!-- 설정 -->
+  <section class="panel" id="v-setup" hidden></section>
+  <!-- 점수 입력 -->
+  <section class="panel" id="v-enter" hidden></section>
+  <!-- 전체표 -->
+  <section class="panel" id="v-grid" hidden></section>
+  <!-- 순위 -->
+  <section class="panel" id="v-rank" hidden></section>
+  <!-- 시상 -->
+  <section class="panel" id="v-award" hidden></section>
+</main>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='score.js') }}?v=2"></script>{% endblock %}
