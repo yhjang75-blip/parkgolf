@@ -50,6 +50,8 @@ export function gradeOf(earned: number) {
   return { level: lv, name: GRADES[lv][1], icon: GRADES[lv][2], next: lv + 1 < GRADES.length ? GRADES[lv + 1][0] : null };
 }
 export const CATEGORIES = { review: "구장 후기", photo: "사진 자랑", tour: "대회 이야기", qna: "질문·정보", free: "자유게시판" };
+// 게시판 분류별 아이콘 (화면 꾸밈)
+export const CAT_ICONS: Record<string, string> = { review: "⛳", photo: "📷", tour: "🏆", qna: "💡", free: "☕" };
 
 // ---------------------------------------------------------------- 화면 그리기
 nunjucks.installJinjaCompat();
@@ -85,6 +87,7 @@ nj.addFilter("format", (fmt: string, ...args: any[]) => {  // 파이썬 '%d', '%
 nj.addTest("none", (v: any) => v === null || v === undefined);
 nj.addGlobal("GRADES", GRADES);
 nj.addGlobal("CATEGORIES", CATEGORIES);
+nj.addGlobal("CAT_ICONS", CAT_ICONS);
 nj.addGlobal("site", SITE);
 nj.addGlobal("grade_of", gradeOf);
 nj.addGlobal("regions", regions);

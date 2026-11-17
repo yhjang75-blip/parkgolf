@@ -35,13 +35,25 @@ export async function boardPage(ctx: Ctx, db: DB) {
   if (course) { cond.push("p.course_id = ?"); args.push(course.id); }
   if (q) { cond.push("(p.title LIKE ? OR p.body LIKE ?)"); args.push(`%${q}%`, `%${q}%`); }
   const where = cond.join(" AND ");
-  const [total, rows] = await Promise.all([
+  const [total, rows, catRows, photos] = await Promise.all([
     db.val(`SELECT COUNT(*) FROM posts p WHERE ${where}`, ...args),
     db.all(`${POST_SQL} WHERE ${where} ORDER BY p.id DESC LIMIT ? OFFSET ?`, ...args, PAGE, (page - 1) * PAGE),
+    // 분류별 글 수 (분류 카드에 표시)
+    course ? db.all("SELECT category, COUNT(*) AS n FROM posts WHERE hidden = 0 AND course_id = ? GROUP BY category", course.id)
+      : db.all("SELECT category, COUNT(*) AS n FROM posts WHERE hidden = 0 GROUP BY category"),
+    // 첫 화면의 '최근 사진' 줄
+    !cat && !q && page === 1
+      ? db.all(`SELECT i.id, i.post_id, p.title FROM images i JOIN posts p ON p.id = i.post_id WHERE p.hidden = 0
+          ${course ? "AND p.course_id = ?" : ""} ORDER BY i.id DESC LIMIT 8`, ...(course ? [course.id] : []))
+      : Promise.resolve([]),
   ]);
+  const catCounts: Row = Object.fromEntries(catRows.map((r) => [r.category, r.n]));
+  catCounts.all = catRows.reduce((s, r) => s + r.n, 0);
+  const excerpt = (s: string) => { const t = String(s || "").replace(/\s+/g, " ").trim(); return t.length > 70 ? t.slice(0, 70) + "…" : t; };
   const qs = (n: number) => new URLSearchParams({ ...(cat && { cat }), ...(q && { q }), ...(course && { course: course.id }), page: String(n) }).toString();
   return ctx.render("board.html", {
-    rows: rows.map(withGrade), cat, q, course, page, pages: Math.max(1, Math.ceil(total / PAGE)), total,
+    rows: rows.map((r) => ({ ...withGrade(r), excerpt: excerpt(r.body) })), cat, q, course, page,
+    pages: Math.max(1, Math.ceil(total / PAGE)), total, cat_counts: catCounts, photos,
     first_img: await firstImages(db, rows.map((r) => r.id)), byid: courseById, qs,
     write_url: `/board/write?${new URLSearchParams({ ...(cat && { cat }), ...(course && { course: course.id }) })}`,
   });
