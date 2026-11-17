@@ -139,6 +139,10 @@ export default {
       return secret ? await saveSession(ctx, secret, resp) : resp;
     }
   },
+  /** 20분마다: 뉴스·영상 미리 받아 두기 (wrangler.jsonc triggers.crons) */
+  async scheduled(_ev: ScheduledController, env: Env, exec: ExecutionContext) {
+    exec.waitUntil(openDb(env).then((db) => feeds.refreshFeeds(db)));
+  },
 } satisfies ExportedHandler<Env>;
 
 void redirect;

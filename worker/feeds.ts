@@ -41,9 +41,17 @@ const blocks = (xml: string, name: string) => xml.match(new RegExp(`<${name}[\\s
 // ---------------------------------------------------------------- 뉴스
 async function googleNews(query: string, limit = 12) {
   const p = new URLSearchParams({ q: `${query} when:30d`, hl: "ko", gl: "KR", ceid: "KR:ko" });
-  const r = await fetch(`https://news.google.com/rss/search?${p}`, { headers: UA, signal: AbortSignal.timeout(10000) });
-  if (!r.ok) throw new Error(String(r.status));
-  const xml = await r.text();
+  // 구글 뉴스가 Cloudflare 서버에 가끔 '자동 요청 차단'(503)을 주므로 한 번 더 시도
+  let xml = "";
+  for (let i = 0; i < 2 && !xml.includes("<item>"); i++) {
+    try {
+      const r = await fetch(`https://news.google.com/rss/search?${p}`, { headers: UA, signal: AbortSignal.timeout(6000) });
+      xml = await r.text();
+      if (!r.ok || !xml.includes("<item>")) console.log("google news", query, r.status, xml.slice(0, 150).replace(/\s+/g, " "));
+      if (!r.ok) xml = "";
+    } catch (e) { console.log("google news", query, String(e)); xml = ""; }
+  }
+  if (!xml) throw new Error("google news unavailable");
   const items = blocks(xml, "item").map((it) => {
     const source = tag(it, "source");
     let title = tag(it, "title");
@@ -63,7 +71,17 @@ async function googleNews(query: string, limit = 12) {
   return out.slice(0, limit);
 }
 
-const WIN_RE = /우승|정상|챔피언|1위|금메달|대상 수상|패권/;
+/** 20분마다 (wrangler.jsonc 의 triggers.crons): 주요 뉴스·영상을 미리 받아 둔다.
+ *  구글이 Cloudflare 서버를 가끔 '자동 요청'으로 막기(503) 때문에, 방문자 요청 때 받지 못해도
+ *  마지막으로 성공한 자료를 보여 줄 수 있게 한다. 실패하면 이전 자료를 그대로 둔다. */
+export async function refreshFeeds(db: DB) {
+  for (const topic of ["news", "tournament", "winner"]) {
+    await cached(db, `news:${topic}`, 0, () => googleNews(media.news_queries[topic], 30));
+  }
+  await cached(db, "videos", 0, youtubeVideos);
+}
+
+const WIN_RE =/우승|정상|챔피언|1위|금메달|대상 수상|패권/;
 
 export async function news(ctx: Ctx, db: DB) {
   const topic = ctx.arg("topic") || "news";
