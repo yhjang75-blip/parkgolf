@@ -340,8 +340,8 @@ async function loadNearby(c) {
   const picks = (j.picks || []).length ? `
     <h4 class="near-h">⭐ 나이스파크 추천</h4>
     <ul class="near picks">${j.picks.map((x) => `
-      <li><a href="${esc(safeUrl(x.url) || `https://map.naver.com/p/search/${encodeURIComponent(x.name + " " + (x.address || ""))}`)}" target="_blank" rel="noopener">
-        <span class="noimg">${KIND[x.kind] || "⭐"}</span>
+      <li class="${x.photo ? "has-photo" : ""}"><a href="${esc(safeUrl(x.url) || `https://map.naver.com/p/search/${encodeURIComponent(x.name + " " + (x.address || ""))}`)}" target="_blank" rel="noopener">
+        ${/^\/static\//.test(x.photo || "") ? `<img class="pick-photo" src="${esc(x.photo)}" alt="${esc(x.name)} 가게 모습" loading="lazy">` : `<span class="noimg">${KIND[x.kind] || "⭐"}</span>`}
         <span class="t">${esc(x.name)}${x.category ? ` <small>${esc(x.category)}</small>` : ""}</span>
         <span class="m">${esc(x.address || "")}${x.hours ? ` · ${esc(x.hours)}` : ""}</span>
       </a></li>`).join("")}</ul>` : "";

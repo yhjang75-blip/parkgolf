@@ -423,3 +423,8 @@ details.tbl summary { cursor: pointer; color: var(--green); font-weight: 700; fo
 .near.picks a:hover { background: #fff1c7; }
 .near.picks .noimg { background: #ffe9a8; }
 .near .t small { color: #8a6d1f; font-weight: 700; margin-left: 4px; }
+/* 나이스파크 추천: 사진이 있으면 위에 크게 */
+.near.picks li.has-photo a { grid-template-columns: 1fr; grid-template-rows: auto; padding: 0; overflow: hidden; }
+.near.picks li.has-photo .pick-photo { grid-row: auto; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 0; display: block; }
+.near.picks li.has-photo .t { padding: 8px 10px 0; }
+.near.picks li.has-photo .m { padding: 0 10px 10px; }

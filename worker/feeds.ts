@@ -55,7 +55,7 @@ export async function nearby(ctx: Ctx, db: DB, cid: string) {
   const c = courseById[cid];
   if (!c) abort(404);
   // 운영자 추천 (data/nearby_picks.json) — 관광공사 자료와 상관없이 늘 보여 줌
-  const picks = ((PICKS as Row)[cid] || []).map(({ _course, ...p }: Row) => p);
+  const picks = ((PICKS as Row)[cid] || []).map(({ _course, _photo_from, ...p }: Row) => p);
   const key = ctx.env.TOUR_API_KEY;
   if (!key || c!.lat == null) return json(picks.length ? { enabled: true, picks } : { enabled: false });
   const out = await cached(db, `nearby:${cid}`, NEARBY_TTL, async () => {
