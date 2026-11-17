@@ -35,6 +35,7 @@ on("GET", "/api/courses/:str", async (ctx, _db, [cid]) => {
 });
 on("GET", "/api/courses/:str/posts", (ctx, db, [cid]) => m.apiCoursePosts(ctx, db, cid));
 on("GET", "/api/weather/:str", (ctx, db, [cid]) => feeds.weather(ctx, db, cid));
+on("GET", "/api/nearby/:str", (ctx, db, [cid]) => feeds.nearby(ctx, db, cid));
 on("GET", "/api/news", (ctx, db) => feeds.news(ctx, db));
 on("GET", "/api/videos", (ctx, db) => feeds.videos(ctx, db));
 on("GET", "/api/tournaments", () => feeds.tournamentsApi());
@@ -84,7 +85,7 @@ on("POST", "/admin/compete/:int/save", (ctx, db, [c]) => compete.adminSave(ctx, 
 on("GET", "/admin/compete/:int/csv", (ctx, db, [c]) => compete.adminCsv(ctx, db, n(c)));
 
 // 회원 정보가 필요 없는 요청 (빠르게)
-const NO_USER = /^\/(api\/(courses$|meta$|weather\/|news$|videos$|tournaments$)|healthz$|favicon\.ico$|api\/courses\/[^/]+$)/;
+const NO_USER = /^\/(api\/(courses$|meta$|weather\/|nearby\/|news$|videos$|tournaments$)|healthz$|favicon\.ico$|api\/courses\/[^/]+$)/;
 
 const ERR: Record<number, [string, string]> = {
   400: ["잘못된 요청", "요청을 처리할 수 없습니다. 새로고침 후 다시 시도해 주세요."],

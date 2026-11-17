@@ -259,6 +259,15 @@ async function openDetail(id) {
       </div>
     </div>
 
+    <div class="box" id="nearby">
+      <h3>🍽️ 주변 맛집·숙소·관광지</h3>
+      <p class="src">누르면 네이버 지도에서 <b>${esc(nearArea(c))}</b> 근처를 찾아 보여 드립니다.</p>
+      <div class="near-links">
+        ${NEAR_KW.map(([icon, label, kw]) => `<a class="btn secondary" href="${esc(nearUrl(c, kw))}" target="_blank" rel="noopener">${icon} ${label}</a>`).join("")}
+      </div>
+      <div id="near-list"></div>
+    </div>
+
     <div class="box">
       <h3>이용 정보</h3>
       <dl>
@@ -289,6 +298,46 @@ async function openDetail(id) {
   writeHash();
   loadWeather(c);
   loadCourseTalk(c);
+  loadNearby(c);
+}
+
+/* 주변 맛집·숙소·관광지 ① 네이버 지도 바로가기 (구장 좌표 중심) */
+const NEAR_KW = [["🍽️", "주변 맛집", "맛집"], ["🏨", "숙소", "숙박"], ["📸", "관광지", "관광명소"], ["☕", "카페", "카페"]];
+function nearArea(c) {
+  // 지번 주소의 읍·면·동 이름으로 검색하면 그 동네 결과가 나온다 (없으면 시·군·구)
+  // '북구'·'중구'처럼 여러 도시에 있는 구 이름은 도시 이름을 붙인다 (대구 북구)
+  const city = (c.sido || "").replace(/(광역시|특별시)$/, "");
+  const sgg = /구$/.test(c.sigungu || "") && city !== c.sido ? `${city} ${c.sigungu}` : c.sigungu || "";
+  for (const a of [c.address_jibun, c.address]) {
+    const t = (a || "").split(/\s+/).find((w, i) => i > 0 && /^[가-힣0-9]+(읍|면|동|가)$/.test(w));
+    if (t) return `${sgg} ${t}`.trim();
+  }
+  return c.sigungu ? `${c.sido} ${c.sigungu}` : c.sido || c.name;
+}
+function nearUrl(c, kw) {
+  const center = c.lat != null ? `?c=${c.lng},${c.lat},14,0,0,0,dh` : "";
+  return `https://map.naver.com/p/search/${encodeURIComponent(`${nearArea(c)} ${kw}`)}${center}`;
+}
+
+/* ② 한국관광공사 자료: 구장 10km 안 관광지·숙소·음식점 (가까운 순) */
+async function loadNearby(c) {
+  const box = $("#near-list");
+  if (!box) return;
+  let j;
+  try { j = await fetch(`/api/nearby/${encodeURIComponent(c.id)}`).then((r) => r.json()); } catch { return; }
+  if (state.active !== c.id || !j.enabled || j.error) return;
+  const km = (m) => (m == null ? "" : m < 1000 ? `${m}m` : `${(m / 1000).toFixed(1)}km`);
+  const group = (title, list) => !list || !list.length ? "" : `
+    <h4 class="near-h">${title}</h4>
+    <ul class="near">${list.slice(0, 4).map((x) => `
+      <li><a href="https://map.naver.com/p/search/${encodeURIComponent(x.title)}" target="_blank" rel="noopener">
+        ${safeUrl(x.img) ? `<img src="${esc(x.img)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<span class="noimg">📍</span>'}
+        <span class="t">${esc(x.title)}</span>
+        <span class="m">${esc(km(x.dist))}${x.addr ? ` · ${esc(x.addr.split(" ").slice(1, 3).join(" "))}` : ""}</span>
+      </a></li>`).join("")}</ul>`;
+  const html = group("📸 가까운 관광지", j.tour) + group("🏨 가까운 숙소", j.stay) + group("🍽️ 가까운 음식점", j.food);
+  if (!html) return;
+  box.innerHTML = html + `<p class="src">구장에서 10km 안, 가까운 순 · 자료: ${esc(j.source)} (${esc(j.fetched)} 기준) · 누르면 네이버 지도로 이동</p>`;
 }
 
 /* 구장 상세: 즐겨찾기 버튼 + 이 구장 후기 글 */

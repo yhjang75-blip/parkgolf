@@ -14,6 +14,7 @@ export interface Env {
   KAKAO_CLIENT_SECRET?: string;
   ADMIN_KAKAO_IDS?: string;
   ADMIN_IDS?: string;  // 관리자 가입 아이디 (쉼표로 여러 명)
+  TOUR_API_KEY?: string;  // 한국관광공사 TourAPI 인증키 (주변 관광지·숙소·음식점)
   DEV_LOGIN?: string;
 }
 

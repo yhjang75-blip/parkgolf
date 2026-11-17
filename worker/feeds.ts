@@ -26,6 +26,43 @@ export async function weather(ctx: Ctx, db: DB, cid: string) {
   return out ? json(out) : json({ error: "날씨 정보를 잠시 가져올 수 없습니다." }, 502);
 }
 
+// ---------------------------------------------------------------- 주변 관광지·숙소·음식점 (한국관광공사 TourAPI)
+// 비밀값 TOUR_API_KEY = 공공데이터포털 '한국관광공사_국문 관광정보 서비스_GW' 일반 인증키 (Decoding).
+// 구장마다 7일 동안 보관 (관광 정보는 자주 바뀌지 않고, 개발용 키는 하루 1,000건까지라서).
+const NEARBY_TTL = 7 * 86400;
+const NEARBY_TYPES: [string, string][] = [["tour", "12"], ["stay", "32"], ["food", "39"]];  // 관광지·숙박·음식점
+
+async function tourList(key: string, lat: number, lng: number, typeId: string) {
+  const p = new URLSearchParams({ serviceKey: key, MobileOS: "ETC", MobileApp: "nicepark", _type: "json",
+    mapX: String(lng), mapY: String(lat), radius: "10000", contentTypeId: typeId, arrange: "E", numOfRows: "6", pageNo: "1" });
+  const r = await fetch(`https://apis.data.go.kr/B551011/KorService2/locationBasedList2?${p}`, { signal: AbortSignal.timeout(8000) });
+  const text = await r.text();
+  if (!r.ok || !text.trim().startsWith("{")) throw new Error(`tourapi ${r.status} ${text.slice(0, 120)}`);
+  const j: Row = JSON.parse(text);
+  const head = j.response?.header;
+  if (!head || head.resultCode !== "0000") throw new Error(`tourapi ${JSON.stringify(head || j).slice(0, 160)}`);
+  let items = j.response.body?.items?.item || [];
+  if (!Array.isArray(items)) items = [items];
+  const https = (u: string) => (u ? String(u).replace(/^http:/, "https:") : null);
+  return items.map((x: Row) => ({
+    title: x.title, addr: [x.addr1, x.addr2].filter(Boolean).join(" "), tel: x.tel || null,
+    img: https(x.firstimage2 || x.firstimage), dist: x.dist ? Math.round(Number(x.dist)) : null,
+  }));
+}
+
+export async function nearby(ctx: Ctx, db: DB, cid: string) {
+  const c = courseById[cid];
+  if (!c) abort(404);
+  const key = ctx.env.TOUR_API_KEY;
+  if (!key || c!.lat == null) return json({ enabled: false });
+  const out = await cached(db, `nearby:${cid}`, NEARBY_TTL, async () => {
+    const lists = await Promise.all(NEARBY_TYPES.map(async ([k, t]) => [k, await tourList(key, c!.lat, c!.lng, t)] as const));
+    return { ...Object.fromEntries(lists), source: "한국관광공사", fetched: fmtKst(Date.now()).slice(0, 10) };
+  }).catch((e) => { console.log("nearby", cid, String(e)); return null; });
+  if (!out) return json({ enabled: true, error: "주변 정보를 잠시 가져올 수 없습니다." }, 502);
+  return json({ enabled: true, ...out }, 200, { "cache-control": "public, max-age=3600" });
+}
+
 // ---------------------------------------------------------------- XML 읽기 (간단한 RSS·Atom 용)
 const decode = (s: string) => s
   .replace(/^<!\[CDATA\[([\s\S]*?)\]\]>$/, "$1")
