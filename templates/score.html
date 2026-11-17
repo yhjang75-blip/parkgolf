@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}파크골프 점수계산기 — 이지 파크골프{% endblock %}
-{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='score.css') }}?v=3">{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='score.css') }}?v=4">{% endblock %}
 {% block content %}
 <main class="wrap page sc" id="sc">
   <section class="panel sc-head">
@@ -29,4 +29,4 @@
   <section class="panel" id="v-award" hidden></section>
 </main>
 {% endblock %}
-{% block scripts %}<script src="{{ url_for('static', filename='score.js') }}?v=2"></script>{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='score.js') }}?v=3"></script>{% endblock %}

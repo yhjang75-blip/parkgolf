@@ -89,33 +89,32 @@
     if (m) { s = m[1].trim(); g = m[2] || m[3]; }
     return { name: s.slice(0, 20), g };
   }
-  function parseRoster(text, size, shuffle) {
-    const nonEmpty = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-    if (!nonEmpty.length) return [];
-    const teams = [];
-    if (nonEmpty.some(l => /[,，、]/.test(l))) {          // 한 줄 = 한 팀 (쉼표 구분)
-      for (const l of nonEmpty) {
-        const h = l.match(/^([^:：]{1,20})[:：](.*)$/);
-        const rest = h ? h[2] : l;
-        const ps = rest.split(/[,，、]/).map(x => x.trim()).filter(Boolean).map(parseName);
-        if (ps.length) teams.push({ name: h ? h[1].trim() : '', players: ps });
-      }
-      return teams;
-    }
-    const blocks = text.split(/\r?\n\s*\r?\n/).map(b => b.split(/\r?\n/).map(x => x.trim()).filter(Boolean)).filter(b => b.length);
-    if (blocks.length > 1) {                                  // 빈 줄로 팀 구분
-      for (const b of blocks) {
-        const h = b[0].match(/^(.{1,20})[:：]\s*$/);
-        teams.push({ name: h ? h[1].trim() : '', players: (h ? b.slice(1) : b).map(parseName) });
-      }
-      return teams.filter(t => t.players.length);
-    }
-    const ps = nonEmpty.map(parseName);                      // 순서대로(또는 섞어서) 인원수만큼 나누기
+  // 명단(입력 줄) → 팀: 순서대로(또는 섞어서) 인원수만큼 고르게 나눈다
+  function splitTeams(ps, size, shuffle) {
+    ps = ps.filter(p => p.name).map(p => ({ name: p.name.slice(0, 20), g: p.g || '' }));
+    if (!ps.length) return [];
     if (shuffle) for (let i = ps.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [ps[i], ps[j]] = [ps[j], ps[i]]; }
     const k = Math.ceil(ps.length / size), base = Math.floor(ps.length / k), extra = ps.length % k;
+    const teams = [];
     let at = 0;
     for (let i = 0; i < k; i++) { const n = base + (i < extra ? 1 : 0); teams.push({ name: '', players: ps.slice(at, at + n) }); at += n; }
     return teams;
+  }
+  // 성별 선택 버튼 (남/여)
+  const gsel = (g, attrs) => `<div class="gsel" role="group" aria-label="성별" ${attrs}>${['남', '여'].map(x =>
+    `<button type="button" class="${(g || '남') === x ? 'on' : ''} ${x === '여' ? 'f' : ''}" data-act="g" data-g="${x}" aria-pressed="${(g || '남') === x}">${x}</button>`).join('')}</div>`;
+  // 새 게임 명단 입력 줄
+  let R = [{ name: '', g: '남' }, { name: '', g: '남' }, { name: '', g: '남' }, { name: '', g: '남' }];
+  function renderRoster(focus) {
+    const box = $('#f-roster'); if (!box) return;
+    box.innerHTML = R.map((r, i) => `<div class="rrow">
+        <span class="no">${i + 1}</span>
+        <input class="rn" data-i="${i}" value="${esc(r.name)}" maxlength="20" placeholder="이름" enterkeyhint="next" aria-label="${i + 1}번 참가자 이름">
+        ${gsel(r.g, `data-i="${i}"`)}
+        <button type="button" class="rdel" data-act="rdel" data-i="${i}" aria-label="${i + 1}번 줄 지우기">✕</button>
+      </div>`).join('');
+    if (focus != null) { const el = box.querySelector(`.rn[data-i="${focus}"]`); if (el) el.focus(); }
+    updatePreview();
   }
   function checkTeams(teams) {
     if (!teams.length) return '참가자 명단을 적거나, 명단 없이 시작할 팀 수를 적어 주세요.';
@@ -188,17 +187,19 @@
           <label class="field">한 팀 인원<select id="f-size">${[2, 3, 4, 5, 6].map(n => `<option ${n === 4 ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
           <label class="field">팀 점수 방식<select id="f-rule"><option value="all">팀원 모두의 타수 합계</option><option value="best3">잘 친 3명의 타수 합계</option></select></label>
         </div>
-        <label class="field">참가자 명단 <small>한 줄에 한 명 · 여성은 이름 뒤에 (여)</small>
-          <textarea id="f-roster" rows="8" placeholder="김영수&#10;이정희 (여)&#10;박철민&#10;최순자 (여)&#10;…"></textarea></label>
-        <details class="tip"><summary>팀을 직접 정하고 싶다면?</summary>
-          <p>한 줄에 한 팀씩 쉼표로 적으세요.<br><code>1팀: 김영수, 이정희(여), 박철민, 최순자(여)</code><br>또는 팀과 팀 사이에 빈 줄을 한 줄 넣으세요.</p></details>
-        <label class="check"><input type="checkbox" id="f-shuffle"> 팀을 무작위로 섞기 (순서대로 나눌 때)</label>
+        <div class="field"><span>참가자 명단 <small>한 줄에 한 명씩 이름을 적고 성별을 누르세요 · 엔터를 치면 다음 줄로</small></span>
+          <div id="f-roster" class="roster-rows"></div>
+          <div class="btn-row radd">
+            <button type="button" class="btn secondary" data-act="radd" data-n="1">＋ 한 명 추가</button>
+            <button type="button" class="btn secondary" data-act="radd" data-n="4">＋ 4명 추가</button>
+          </div></div>
+        <label class="check"><input type="checkbox" id="f-shuffle"> 팀을 무작위로 섞기 (체크하지 않으면 적은 순서대로 4명씩 나눕니다)</label>
         <label class="field">명단 없이 시작 <small>(팀 수만 정하고 선수 이름은 '1팀-1'처럼 자동으로)</small>
           <input id="f-nteams" type="number" min="1" max="${MAXT}" inputmode="numeric" placeholder="예: 5"></label>
         <p class="guide" id="f-preview">명단을 적으면 몇 팀이 되는지 여기에 보여 드립니다.</p>
         <button class="btn primary big-cta" data-act="start">▶ 게임 시작</button>
         <button class="btn secondary" data-act="demo">예시 명단 채워 보기</button>`;
-      updatePreview();
+      renderRoster();
       return;
     }
     const tr = G.rule === 'best3' ? '잘 친 3명의 타수 합계' : '팀원 모두의 타수 합계';
@@ -217,9 +218,8 @@
     html += `<h3 class="sub-h">✏️ 명단·팀 이름 고치기</h3>
       <div class="edit-teams">${G.teams.map((t, ti) => `
         <fieldset class="et"><legend><input class="tn" data-t="${ti}" value="${esc(t.name)}" maxlength="20" aria-label="팀 이름"></legend>
-          ${t.players.map((p, pi) => `<input class="pn" data-t="${ti}" data-p="${pi}" value="${esc(p.name + (p.g === '여' ? ' (여)' : ''))}" maxlength="24" aria-label="선수 이름">`).join('')}
+          ${t.players.map((p, pi) => `<div class="rrow ed"><input class="pn" data-t="${ti}" data-p="${pi}" value="${esc(p.name)}" maxlength="20" aria-label="선수 이름">${gsel(p.g, `data-t="${ti}" data-p="${pi}"`)}</div>`).join('')}
         </fieldset>`).join('')}</div>
-      <p class="src">여성은 이름 뒤에 (여)를 붙이면 여자부 순위에 들어갑니다.</p>
       <button class="btn secondary" data-act="savenames">이름 저장</button>
       <h3 class="sub-h">게임 정리</h3>
       <div class="btn-row">
@@ -231,7 +231,7 @@
   function readSetup() {
     const pars = [...document.querySelectorAll('#f-pars .par-in')].map(i => parseInt(i.value, 10));
     const size = parseInt($('#f-size').value, 10);
-    let teams = parseRoster($('#f-roster').value, size, $('#f-shuffle').checked);
+    let teams = splitTeams(R, size, $('#f-shuffle').checked);
     const nt = parseInt($('#f-nteams').value, 10);
     if (!teams.length && nt > 0)
       teams = Array.from({ length: nt }, (_, i) => ({ name: '', players: Array.from({ length: size }, (_, j) => ({ name: `${i + 1}팀-${j + 1}`, g: '' })) }));
@@ -430,8 +430,30 @@
   }
 
   // ------------------------------------------------------------ 이벤트
-  const DEMO = '김영수\n이정희 (여)\n박철민\n최순자 (여)\n정대호\n강미경 (여)\n조성훈\n윤옥자 (여)\n장만수\n임경숙 (여)\n한상철\n오말순 (여)';
-  document.addEventListener('input', e => { if (e.target.closest('#v-setup') && !G) updatePreview(); });
+  const DEMO = '김영수 이정희:여 박철민 최순자:여 정대호 강미경:여 조성훈 윤옥자:여 장만수 임경숙:여 한상철 오말순:여'.split(' ').map(x => { const [name, g] = x.split(':'); return { name, g: g || '남' }; });
+  document.addEventListener('input', e => {
+    if (e.target.classList.contains('rn')) R[+e.target.dataset.i].name = e.target.value.trim();
+    if (e.target.closest('#v-setup') && !G) updatePreview();
+  });
+  document.addEventListener('keydown', e => {   // 엔터 → 다음 줄 (마지막 줄이면 새 줄)
+    if (e.key !== 'Enter' || !e.target.classList.contains('rn') || e.isComposing) return;
+    e.preventDefault();
+    const i = +e.target.dataset.i;
+    if (i === R.length - 1) { if (!e.target.value.trim()) return; R.push({ name: '', g: '남' }); renderRoster(i + 1); }
+    else { const n = $(`#f-roster .rn[data-i="${i + 1}"]`); if (n) n.focus(); }
+  });
+  document.addEventListener('paste', e => {      // 여러 이름을 한꺼번에 붙여 넣으면 여러 줄로 나눈다
+    if (!e.target.classList.contains('rn')) return;
+    const text = (e.clipboardData || window.clipboardData).getData('text');
+    const names = text.split(/[\r\n,，、\t]+/).map(x => x.trim()).filter(Boolean);
+    if (names.length < 2) return;
+    e.preventDefault();
+    const i = +e.target.dataset.i;
+    const rows = names.map(x => { const n = parseName(x); return { name: n.name, g: n.g || '남' }; });
+    R.splice(i, R[i].name ? 0 : 1, ...rows);
+    renderRoster(i + rows.length - 1);
+    toast(`${rows.length}명을 붙여 넣었습니다. 성별을 확인해 주세요.`);
+  });
   document.addEventListener('change', e => {
     if (e.target.name === 'f-holes') {
       const n = parseInt(e.target.value, 10);
@@ -445,7 +467,15 @@
     const act = b.dataset.act, d = b.dataset;
     if (act === 'rtab') e.preventDefault();
     switch (act) {
-      case 'demo': $('#f-roster').value = DEMO; updatePreview(); break;
+      case 'demo': R = DEMO.map(x => ({ ...x })); renderRoster(); break;
+      case 'radd': { const n = +d.n || 1; for (let k = 0; k < n; k++) R.push({ name: '', g: '남' }); renderRoster(R.length - n); break; }
+      case 'rdel': R.splice(+d.i, 1); if (!R.length) R.push({ name: '', g: '남' }); renderRoster(); break;
+      case 'g': {
+        const box = b.closest('.gsel');
+        box.querySelectorAll('button').forEach(x => { const on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+        if (box.dataset.i != null) { R[+box.dataset.i].g = d.g; updatePreview(); }
+        break;
+      }
       case 'start': {
         const o = readSetup();
         if (!o.pars.every(p => Number.isInteger(p) && p >= 2 && p <= 6)) { toast('홀별 파는 2~6 사이 숫자로 적어 주세요.'); return; }
@@ -487,8 +517,10 @@
         document.querySelectorAll('#v-setup .tn').forEach(i => { const v = i.value.trim(); if (v) G.teams[+i.dataset.t].name = v.slice(0, 20); });
         document.querySelectorAll('#v-setup .pn').forEach(i => {
           if (!i.value.trim()) return;
-          const p = G.teams[+i.dataset.t].players[+i.dataset.p], n = parseName(i.value);
-          p.name = n.name; p.g = n.g;
+          const p = G.teams[+i.dataset.t].players[+i.dataset.p];
+          p.name = i.value.trim().slice(0, 20);
+          const on = i.parentElement.querySelector('.gsel .on');
+          p.g = on && on.dataset.g === '여' ? '여' : '남';
         });
         save(); render(); toast('이름을 저장했습니다.'); break;
       }

@@ -103,3 +103,22 @@
   .top, .foot, .sc-tabs, .btns, .flash, #sc-toast { display: none !important; }
   .panel { border: 0; padding: 0; }
 }
+
+/* 참가자 명단 줄 (이름 + 성별 버튼) */
+.roster-rows { display: grid; gap: 6px; margin-top: 6px; }
+.rrow { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto 40px; gap: 6px; align-items: center; }
+.rrow.ed { grid-template-columns: minmax(0, 1fr) auto; }
+.rrow .no { text-align: center; color: var(--muted); font-weight: 700; }
+.rrow input { width: 100%; min-width: 0; font-size: 1.1rem; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 10px; }
+.rrow.ed input { font-size: 1rem; padding: 7px 10px; }
+.gsel { display: inline-flex; border: 1.5px solid var(--line); border-radius: 10px; overflow: hidden; }
+.gsel button { border: 0; background: #fff; font: inherit; font-weight: 800; font-size: 1.05rem; padding: 0 16px; min-height: 46px; cursor: pointer; color: var(--muted); touch-action: manipulation; }
+.rrow.ed .gsel button { min-height: 38px; padding: 0 12px; font-size: .95rem; }
+.gsel button + button { border-left: 1.5px solid var(--line); }
+.gsel button.on { background: var(--blue); color: #fff; }
+.gsel button.f.on { background: #c2407a; }
+.rdel { border: 0; background: none; font-size: 1.2rem; color: #9aa39d; cursor: pointer; min-height: 44px; }
+.rdel:hover { color: var(--red); }
+.radd { margin-top: 8px; }
+.radd .btn { min-height: 46px; }
+.et { align-content: start; }
