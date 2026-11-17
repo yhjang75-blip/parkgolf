@@ -1,4 +1,4 @@
-"""나이스파크 회원·커뮤니티 기능.
+"""이지 파크골프 회원·커뮤니티 기능.
 
 - 카카오 로그인 (가입 = 처음 로그인 + 약관 동의)
 - 게시판 (글·사진·댓글·추천·신고)
@@ -279,7 +279,7 @@ def agree():
                 fav_sido=request.form.get("fav_sido") or None, fav_sigungu=request.form.get("fav_sigungu") or None))
         if first:
             add_points(g.user["id"], "가입 축하")
-            flash("나이스파크 회원이 되신 것을 환영합니다! 가입 축하 20포인트를 드렸습니다.")
+            flash("이지 파크골프 회원이 되신 것을 환영합니다! 가입 축하 20포인트를 드렸습니다.")
         return redirect(safe_next(request.form.get("next")))
     return render_template("agree.html", next=safe_next(request.args.get("next")))
 

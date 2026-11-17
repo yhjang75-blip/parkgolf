@@ -497,7 +497,7 @@ async function loadMy() {
   box.hidden = false;
   if (!j.login) {
     box.className = "panel my join-cta";
-    box.innerHTML = `<div><h2>⛳ 나이스파크 회원이 되어 보세요</h2>
+    box.innerHTML = `<div><h2>⛳ 이지 파크골프 회원이 되어 보세요</h2>
       <p>⭐ 내 구장 즐겨찾기 · 📍 우리 동네 파크골프 소식 · 📸 후기·사진 공유 · 🎁 포인트로 제휴 혜택</p></div>
       <a class="btn kakao" href="/login">💬 카카오로 3초 가입 (+20P)</a>`;
     return;
@@ -512,7 +512,7 @@ async function loadMy() {
   box.className = "panel my";
   box.innerHTML = `
     <div class="my-head">
-      <h2>${esc(g.icon)} ${esc(j.nickname)}님의 나이스파크</h2>
+      <h2>${esc(g.icon)} ${esc(j.nickname)}님의 이지 파크골프</h2>
       <a class="pill" href="/me">${esc(g.name)} · ${j.points}P · 내 정보 →</a>
     </div>
     <div class="grid2 in">

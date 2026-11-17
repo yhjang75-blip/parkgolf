@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}회원 혜택 — 나이스파크{% endblock %}
+{% block title %}회원 혜택 — 이지 파크골프{% endblock %}
 {% block content %}
 <main class="wrap page">
   <section class="panel">
-    <h1>🎁 나이스파크 회원 혜택</h1>
+    <h1>🎁 이지 파크골프 회원 혜택</h1>
     <p class="lead">활동할수록 포인트가 쌓이고 등급이 오릅니다. 모은 포인트는 제휴 혜택으로 바꿀 수 있습니다.</p>
     {% if me and me.agreed_at %}
       <p class="guide">{{ me.grade.icon }} <b>{{ me.nickname }}</b>님은 <b>{{ me.grade.name }}</b> 등급, 쓸 수 있는 포인트 <b>{{ me.points }}P</b>입니다.</p>

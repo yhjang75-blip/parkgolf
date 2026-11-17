@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}파크골프 대회 안내 — 나이스파크{% endblock %}
+{% block title %}파크골프 대회 안내 — 이지 파크골프{% endblock %}
 {% macro won(n) -%}
   {%- if n >= 10000 -%}{{ n // 10000 }}억{% if n % 10000 %} {{ "{:,}".format(n % 10000) }}만{% endif %}{%- else -%}{{ "{:,}".format(n) }}만{%- endif -%}
 {%- endmacro %}
