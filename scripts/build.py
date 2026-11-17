@@ -55,7 +55,7 @@ SEOUL_GU = set("종로구 중구 용산구 성동구 광진구 동대문구 중�
                "송파구 강동구".split())
 # 행정구역 개편으로 이름이 바뀐 구 (옛 자료와 새 자료를 같은 곳으로 본다)
 SIGUNGU_COMPAT = [{("인천광역시", "서구"), ("인천광역시", "서해구"), ("인천광역시", "검단구")}]
-RANK = {"공단": 0, "시군구": 1, "시도": 2, "OSM": 3}
+RANK = {"공단": 0, "시군구": 1, "시도": 2, "OSM": 3, "전국": 4}
 EMPTY = {"", "-", "없음", "해당없음", "해당 없음", "미정", "n/a", "na", "null"}
 
 
@@ -171,6 +171,9 @@ def to_course(row, ds_id, meta):
     if sigungu == "본청":
         sigungu = None
     sigungu = sigungu or parse_sigungu(addr) or parse_sigungu(name) or DEFAULT_SIGUNGU.get(ds_id)
+    if ds_id == "mcst2023":  # 문체부 전국 현황: 시도·시군구 칸이 따로 있음 (주소는 비어 있는 경우가 많음)
+        sido = clean(row.get("시도")) or sido
+        sigungu = clean(row.get("시군구")) or sigungu
     if not sigungu and sido == "서울특별시":  # 예: '안양천 파크골프장 (금천)', '(구로②)'
         m = re.search(r"\(([가-힣]{1,3})[①-⑩\d]*\)", name)
         if m and m.group(1) + "구" in SEOUL_GU:
@@ -256,6 +259,11 @@ def classify_reserve(c, gov):
     c["portal"] = portal if portal and portal["url"] != c.get("reserve_url") else None
 
 
+def geo_key(c):
+    """좌표 찾기 결과를 저장하는 열쇠: 주소, 주소가 없으면 시도·시군구·이름 (geocode.py 와 같아야 함)."""
+    return c["address"] or f"@{c['sido']} {c['sigungu'] or ''} {c['name']}"
+
+
 # ---------- 합치기 ----------
 def same(a, b):
     # 같은 자료 안의 행은 서로 다른 구장으로 본다
@@ -301,6 +309,17 @@ def main():
     osm = ROOT / "data" / "osm_courses.json"
     if osm.exists():
         items += json.loads(osm.read_text(encoding="utf-8"))
+    # 지자체 공식 누리집에서 직접 확인한 구장 (공공데이터 파일에 아직 없는 곳)
+    extra = ROOT / "data" / "extra_courses.json"
+    if extra.exists():
+        for e in json.loads(extra.read_text(encoding="utf-8"))["courses"]:
+            c = {k: None for k in ("address_jibun", "lat", "lng", "coord_source", "holes", "course_count", "area_m2",
+                                   "par_info", "facilities", "phone", "operator", "opened", "hours", "closed_days",
+                                   "fee", "reserve_method", "reserve_url", "reserve_note", "reserve_phone", "turf",
+                                   "course_length_m", "note")}
+            c.update({k: v for k, v in e.items() if not k.startswith("_")})
+            c["_rank"] = RANK["공단"]   # 지자체가 직접 밝힌 최신 정보
+            items.append(c)
 
     raw_count = len(items)
     items.sort(key=lambda c: c["_rank"])
@@ -326,8 +345,8 @@ def main():
     for c in merged:
         c.pop("_rank", None)
         c["id"] = hashlib.md5(f"{c['sido']}|{c['sigungu']}|{c['name']}".encode()).hexdigest()[:10]
-        if c["lat"] is None and c["address"]:
-            g = geocache.get(c["address"])
+        if c["lat"] is None:
+            g = geocache.get(geo_key(c))
             if g and g.get("lat"):
                 c["lat"], c["lng"], c["coord_source"] = g["lat"], g["lng"], g.get("source", "주소변환")
         # 시·군 예약 사이트 (공개 자료에 예약 주소가 없을 때만)

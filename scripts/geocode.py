@@ -76,6 +76,12 @@ def osm(s, c):
             return {"lat": float(res["lat"]), "lng": float(res["lon"]),
                     "source": "OpenStreetMap(구장 이름)", "precise": True}
     # 2) 주소를 뒤에서부터 줄여 가며 찾기 → 읍면동 중심 (대략 위치)
+    if not c["address"]:  # 주소가 없는 자료(문체부 전국 현황 등) → 시·군·구 중심
+        for res in nominatim(s, f"{c['sido']} {region}".strip()):
+            if not region or region in res.get("display_name", ""):
+                return {"lat": float(res["lat"]), "lng": float(res["lon"]),
+                        "source": "대략 위치(시·군·구 중심)", "precise": False}
+        return None
     toks = simplify(c["address"]).split()
     while len(toks) >= 3:
         res = nominatim(s, " ".join(toks))
@@ -93,8 +99,10 @@ def main():
     print(f"주소 변환 방식: {fn.__name__}")
     s = requests.Session()
     s.headers.update(UA)
-    todo = [c for c in data if c["lat"] is None and c["address"]
-            and (c["address"] not in cache or (fn is not osm and not cache[c["address"]].get("precise")))]
+    key = lambda c: c["address"] or f"@{c['sido']} {c['sigungu'] or ''} {c['name']}"   # build.py geo_key 와 같음
+    todo = [c for c in data if c["lat"] is None
+            and (key(c) not in cache or (fn is not osm and not cache[key(c)].get("precise")))]
+    todo = [c for c in todo if c["address"] or fn is osm]  # 카카오·브이월드는 주소가 있어야 찾을 수 있음
     found = 0
     for i, c in enumerate(todo, 1):
         try:
@@ -102,7 +110,7 @@ def main():
         except Exception as e:
             print(f"  오류 {c['name']}: {e}")
             continue
-        cache[c["address"]] = g or {"lat": None}
+        cache[key(c)] = g or {"lat": None}
         found += bool(g)
         print(f"[{i}/{len(todo)}] {c['name']} -> {g['source'] if g else '못 찾음'}")
         if i % 10 == 0:
