@@ -24,7 +24,6 @@
         <a href="/compete">대회 참가</a>
         <a href="/tournament">대회 안내</a>
         <a href="/benefits">회원 혜택</a>
-        <a href="/about">소개</a>
         {% if me and me.agreed_at %}
           <a class="me-link" href="/me">{{ me.grade.icon }} {{ me.nickname }} · {{ me.points }}P</a>
           {% if me.is_admin %}<a href="/admin">관리</a>{% endif %}
@@ -43,7 +42,7 @@
 
   <footer class="foot">
     <div class="wrap">
-      <p class="foot-links"><a href="/about">나이스파크 소개</a> · <a href="/terms">이용약관</a> · <b><a href="/privacy">개인정보처리방침</a></b> · <a href="/benefits">회원 혜택</a></p>
+      <p class="foot-links"><a href="/terms">이용약관</a> · <b><a href="/privacy">개인정보처리방침</a></b> · <a href="/benefits">회원 혜택</a></p>
       자료: <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 지자체·시설관리공단 공개 자료, <a href="https://www.mcst.go.kr/kor/s_policy/dept/deptView.jsp?pSeq=1965&pDataCD=0417000000" target="_blank" rel="noopener">문화체육관광부 전국 공공체육시설 현황</a> ·
       지도 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ·
       날씨 <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> ·

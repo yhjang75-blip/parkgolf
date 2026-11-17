@@ -19,7 +19,6 @@ const n = (s: string) => parseInt(s, 10);
 on("GET", "/", async (ctx, db) => ctx.render("index.html", { open_comps: await compete.openComps(db) }));
 on("GET", "/score", (ctx) => ctx.render("score.html"));
 on("GET", "/tournament", (ctx) => feeds.tournamentPage(ctx));
-on("GET", "/about", (ctx) => ctx.render("about.html"));
 on("GET", "/terms", (ctx) => ctx.render("terms.html"));
 on("GET", "/privacy", (ctx) => ctx.render("privacy.html"));
 on("GET", "/benefits", (ctx, db) => m.benefitsPage(ctx, db));
