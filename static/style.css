@@ -419,3 +419,7 @@ details.tbl summary { cursor: pointer; color: var(--green); font-weight: 700; fo
   display: grid; place-items: center; font-size: 1.4rem; }
 .near .t { font-weight: 700; line-height: 1.3; }
 .near .m { color: #5b6b60; font-size: .85rem; }
+.near.picks a { background: #fff8e1; border: 1px solid #f3dc9a; }
+.near.picks a:hover { background: #fff1c7; }
+.near.picks .noimg { background: #ffe9a8; }
+.near .t small { color: #8a6d1f; font-weight: 700; margin-left: 4px; }

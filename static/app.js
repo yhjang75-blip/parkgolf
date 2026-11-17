@@ -325,7 +325,7 @@ async function loadNearby(c) {
   if (!box) return;
   let j;
   try { j = await fetch(`/api/nearby/${encodeURIComponent(c.id)}`).then((r) => r.json()); } catch { return; }
-  if (state.active !== c.id || !j.enabled || j.error) return;
+  if (state.active !== c.id || !j.enabled || (j.error && !(j.picks || []).length)) return;
   const km = (m) => (m == null ? "" : m < 1000 ? `${m}m` : `${(m / 1000).toFixed(1)}km`);
   const group = (title, list) => !list || !list.length ? "" : `
     <h4 class="near-h">${title}</h4>
@@ -335,9 +335,22 @@ async function loadNearby(c) {
         <span class="t">${esc(x.title)}</span>
         <span class="m">${esc(km(x.dist))}${x.addr ? ` · ${esc(x.addr.split(" ").slice(1, 3).join(" "))}` : ""}</span>
       </a></li>`).join("")}</ul>`;
-  const html = group("📸 가까운 관광지", j.tour) + group("🏨 가까운 숙소", j.stay) + group("🍽️ 가까운 음식점", j.food);
-  if (!html) return;
-  box.innerHTML = html + `<p class="src">구장에서 10km 안, 가까운 순 · 자료: ${esc(j.source)} (${esc(j.fetched)} 기준) · 누르면 네이버 지도로 이동</p>`;
+  // 운영자 추천 (data/nearby_picks.json)
+  const KIND = { food: "🍽️", stay: "🏨", tour: "📸", cafe: "☕" };
+  const picks = (j.picks || []).length ? `
+    <h4 class="near-h">⭐ 나이스파크 추천</h4>
+    <ul class="near picks">${j.picks.map((x) => `
+      <li><a href="${esc(safeUrl(x.url) || `https://map.naver.com/p/search/${encodeURIComponent(x.name + " " + (x.address || ""))}`)}" target="_blank" rel="noopener">
+        <span class="noimg">${KIND[x.kind] || "⭐"}</span>
+        <span class="t">${esc(x.name)}${x.category ? ` <small>${esc(x.category)}</small>` : ""}</span>
+        <span class="m">${esc(x.address || "")}${x.hours ? ` · ${esc(x.hours)}` : ""}</span>
+      </a></li>`).join("")}</ul>` : "";
+  const tourHtml = group("📸 가까운 관광지", j.tour) + group("🏨 가까운 숙소", j.stay) + group("🍽️ 가까운 음식점", j.food);
+  if (!picks && !tourHtml) return;
+  box.innerHTML = picks + tourHtml + (tourHtml
+    ? `<p class="src">구장에서 10km 안, 가까운 순 · 자료: ${esc(j.source)} (${esc(j.fetched)} 기준) · 누르면 네이버 지도로 이동</p>` : "");
+  // 관광공사 사진 주소가 깨진 경우 📍 그림으로 바꾼다
+  box.querySelectorAll("img").forEach((im) => { im.onerror = () => { const sp = document.createElement("span"); sp.className = "noimg"; sp.textContent = "📍"; im.replaceWith(sp); }; });
 }
 
 /* 구장 상세: 즐겨찾기 버튼 + 이 구장 후기 글 */

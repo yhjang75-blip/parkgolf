@@ -1,5 +1,6 @@
 // 바깥 자료: 날씨(Open-Meteo), 뉴스(구글 뉴스 RSS), 영상(유튜브 RSS), 대회 일정(data/media.json).
 import MEDIA from "../data/media.json";
+import PICKS from "../data/nearby_picks.json";
 import { cached, DB } from "./db";
 import { abort, courseById, courses, Ctx, dayDiff, fmtKst, json, Row, today } from "./lib";
 
@@ -53,14 +54,17 @@ async function tourList(key: string, lat: number, lng: number, typeId: string) {
 export async function nearby(ctx: Ctx, db: DB, cid: string) {
   const c = courseById[cid];
   if (!c) abort(404);
+  // 운영자 추천 (data/nearby_picks.json) — 관광공사 자료와 상관없이 늘 보여 줌
+  const picks = ((PICKS as Row)[cid] || []).map(({ _course, ...p }: Row) => p);
   const key = ctx.env.TOUR_API_KEY;
-  if (!key || c!.lat == null) return json({ enabled: false });
+  if (!key || c!.lat == null) return json(picks.length ? { enabled: true, picks } : { enabled: false });
   const out = await cached(db, `nearby:${cid}`, NEARBY_TTL, async () => {
     const lists = await Promise.all(NEARBY_TYPES.map(async ([k, t]) => [k, await tourList(key, c!.lat, c!.lng, t)] as const));
     return { ...Object.fromEntries(lists), source: "한국관광공사", fetched: fmtKst(Date.now()).slice(0, 10) };
   }).catch((e) => { console.log("nearby", cid, String(e)); return null; });
-  if (!out) return json({ enabled: true, error: "주변 정보를 잠시 가져올 수 없습니다." }, 502);
-  return json({ enabled: true, ...out }, 200, { "cache-control": "public, max-age=3600" });
+  if (!out) return json(picks.length ? { enabled: true, picks } : { enabled: true, error: "주변 정보를 잠시 가져올 수 없습니다." },
+    picks.length ? 200 : 502);
+  return json({ enabled: true, picks, ...out }, 200, { "cache-control": "public, max-age=3600" });
 }
 
 // ---------------------------------------------------------------- XML 읽기 (간단한 RSS·Atom 용)

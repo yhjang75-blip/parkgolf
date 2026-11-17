@@ -1,0 +1,15 @@
+{
+ "_설명": "운영자가 직접 고른 구장 주변 추천 장소. 구장 번호(courses.json 의 id) 아래에 넣으면 구장 상세 '주변 맛집·숙소·관광지' 맨 위에 '나이스파크 추천'으로 나온다. kind: food(맛집) | stay(숙소) | tour(관광지) | cafe(카페). 개인 휴대폰 번호는 넣지 않는다.",
+ "15e51fdb08": [
+  {
+   "name": "감성36",
+   "kind": "food",
+   "category": "삼겹살구이",
+   "address": "경상북도 구미시 해평면 강동로 1653",
+   "hours": "16:00~23:30",
+   "url": "https://www.diningcode.com/profile.php?rid=hTuVqI7dPV44",
+   "added": "2026-11-17",
+   "_course": "해평파크골프장"
+  }
+ ]
+}
