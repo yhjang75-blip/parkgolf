@@ -6,13 +6,16 @@
 {% endblock %}
 {% block content %}
   <section class="hero">
-    <div class="wrap">
-      <p class="hero-sub" id="summary">불러오는 중…</p>
-      <form class="hero-search" id="hero-form" role="search">
-        <input id="hero-q" type="search" placeholder="구장 이름이나 지역 (예: 성주, 한강)" aria-label="구장 검색">
-        <button type="submit">구장 찾기</button>
-      </form>
-      <div class="stats" id="stats"></div>
+    <div class="wrap with-mybox">
+      <div class="hero-main">
+        <p class="hero-sub" id="summary">불러오는 중…</p>
+        <form class="hero-search" id="hero-form" role="search">
+          <input id="hero-q" type="search" placeholder="구장 이름이나 지역 (예: 성주, 한강)" aria-label="구장 검색">
+          <button type="submit">구장 찾기</button>
+        </form>
+        <div class="stats" id="stats"></div>
+      </div>
+      <aside id="mybox" class="mybox" hidden aria-label="내 나이스파크"></aside>
     </div>
   </section>
 
@@ -69,8 +72,6 @@
     </section>
     {% endif %}
 
-    <!-- 회원 맞춤 정보 (로그인 전에는 가입 안내) -->
-    <section class="panel my" id="my" hidden></section>
 
     <section class="panel" id="sec-brief" aria-labelledby="h-brief">
       <div class="panel-head">
@@ -105,5 +106,6 @@
   <script>window.CSRF = {{ csrf|tojson }};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-  <script src="/static/app.js?v=9"></script>
+  <script src="/static/mybox.js?v=2"></script>
+  <script src="/static/app.js?v=10"></script>
 {% endblock %}

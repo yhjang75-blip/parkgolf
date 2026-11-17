@@ -26,7 +26,8 @@
     <g fill="#2f6e3e"><circle cx="96" cy="216" r="22"/><circle cx="122" cy="206" r="26"/><circle cx="1110" cy="222" r="24"/><circle cx="1140" cy="212" r="18"/></g>
     <g fill="#5b4632"><rect x="106" y="226" width="6" height="22"/><rect x="1120" y="232" width="6" height="20"/></g>
   </svg>
-  <div class="wrap bhero-in">
+  <div class="wrap bhero-in with-mybox">
+    <div class="hero-main">
     <p class="bhero-kicker">💬 파크골퍼 게시판</p>
     {% if course %}
       <h1>📍 {{ course.name }} 이야기</h1>
@@ -40,6 +41,8 @@
       <a class="btn ghost" href="/board/write?cat=photo{{ '&course=' ~ course.id if course }}">📷 사진 올리기</a>
       {% if course %}<a class="btn ghost" href="/#id={{ course.id }}">구장 정보</a>{% endif %}
     </div>
+    </div>
+    <aside id="mybox" class="mybox" hidden aria-label="내 나이스파크"></aside>
   </div>
 </section>
 
@@ -106,3 +109,4 @@
   {% endif %}
 </main>
 {% endblock %}
+{% block scripts %}<script src="/static/mybox.js?v=2"></script>{% endblock %}

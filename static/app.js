@@ -545,52 +545,10 @@ async function loadTournaments() {
 }
 
 /* ---------- 회원 맞춤 정보 (로그인 전: 가입 안내) ---------- */
-async function loadMy() {
-  const box = $("#my");
-  let j;
-  try { j = await fetch("/api/me").then((r) => r.json()); } catch { return; }
-  if (!j.enabled) return;
-  box.hidden = false;
-  if (!j.login) {
-    box.className = "panel my join-cta";
-    box.innerHTML = `<div><h2>⛳ 나이스파크 회원이 되어 보세요</h2>
-      <p>⭐ 내 구장 즐겨찾기 · 📍 우리 동네 파크골프 소식 · 🏅 대회 참가 신청 · 🎁 포인트로 제휴 혜택</p></div>
-      <a class="btn primary" href="/login">회원가입·로그인 (+20P)</a>`;
-    return;
-  }
-  const g = j.grade, region = j.fav_sigungu || j.fav_sido;
-  const favs = j.favorites.slice(0, 6).map((c) => {
-    const url = safeUrl(c.reserve_url) || (c.portal && safeUrl(c.portal.url));
-    return `<li><button class="link" data-id="${esc(c.id)}">${esc(c.name)}</button>
-      <span class="m">${esc(c.sigungu ?? c.sido)} · ${c.holes ?? "?"}홀</span>
-      ${url ? `<a class="pill" href="${esc(url)}" target="_blank" rel="noopener">예약 ↗</a>` : ""}</li>`;
-  }).join("");
-  box.className = "panel my";
-  box.innerHTML = `
-    <div class="my-head">
-      <h2>${esc(g.icon)} ${esc(j.nickname)}님의 나이스파크</h2>
-      <a class="pill" href="/me">${esc(g.name)} · ${j.points}P · 내 정보 →</a>
-    </div>
-    <div class="grid2 in">
-      <div><h3 class="sub-h">⭐ 즐겨찾기 구장</h3>
-        ${favs ? `<ul class="favs">${favs}</ul>` : `<p class="muted">구장 상세 화면에서 ☆ 즐겨찾기를 누르면 여기 모입니다.</p>`}</div>
-      <div><h3 class="sub-h">📍 ${region ? esc(region) + " 파크골프 소식" : "우리 동네 소식"}</h3>
-        ${region ? `<ul class="feed" id="feed-local"><li class="muted">불러오는 중…</li></ul>`
-                 : `<p class="muted"><a href="/me">내 정보</a>에서 관심 지역을 정하면 그 지역 소식을 보여 드립니다.</p>`}</div>
-    </div>`;
-  box.querySelectorAll("button.link").forEach((b) => b.addEventListener("click", () => openDetail(b.dataset.id)));
-  if (region) {
-    const el = $("#feed-local");
-    try {
-      const r = await fetch(`/api/news?topic=local&region=${encodeURIComponent(region)}`).then((x) => x.json());
-      el.innerHTML = r.items.slice(0, 5).map((x) => `<li><a href="${esc(safeUrl(x.url) || "#")}" target="_blank" rel="noopener">
-        <span class="t">${esc(x.title)}</span><span class="m">${esc(x.source)} · ${esc(ago(x.date))}</span></a></li>`).join("")
-        || `<li class="muted">최근 30일 동안 ${esc(region)} 파크골프 기사가 없습니다.</li>`;
-    } catch { el.innerHTML = `<li class="muted">소식을 잠시 불러올 수 없습니다.</li>`; }
-  }
+/* 내 나이스파크 카드는 static/mybox.js (첫 화면·게시판 공통). 즐겨찾기를 바꾸면 다시 그린다. */
+function loadMy() {
+  if (typeof window.loadMyBox === "function") window.loadMyBox();
 }
-
-loadMy();
 loadTournaments();
 loadFeed(["winner"], $("#feed-winner"), 4);
 loadFeed(["tournament", "news"], $("#feed-news"), 4);

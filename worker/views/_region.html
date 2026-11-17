@@ -3,7 +3,7 @@
   <div class="row2">
     <select name="fav_sido" id="fav_sido">
       <option value="">시·도 선택</option>
-      {% for s in R %}<option value="{{ s }}" {{ 'selected' if ru.fav_sido == s }}>{{ s }}</option>{% endfor %}
+      {% for s, _sg in R %}<option value="{{ s }}" {{ 'selected' if ru.fav_sido == s }}>{{ s }}</option>{% endfor %}
     </select>
     <select name="fav_sigungu" id="fav_sigungu" data-value="{{ ru.fav_sigungu or '' }}">
       <option value="">시·군·구 선택</option>
