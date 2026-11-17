@@ -8,7 +8,7 @@
     {% if me and me.agreed_at %}
       <p class="guide">{{ me.grade.icon }} <b>{{ me.nickname }}</b>님은 <b>{{ me.grade.name }}</b> 등급, 쓸 수 있는 포인트 <b>{{ me.points }}P</b>입니다.</p>
     {% elif db_on %}
-      <a class="btn kakao" href="/login?next=/benefits">💬 카카오로 가입하고 20포인트 받기</a>
+      <a class="btn primary" href="/join?next=/benefits">회원가입하고 20포인트 받기</a>
     {% endif %}
   </section>
 

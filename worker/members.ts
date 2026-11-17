@@ -10,7 +10,38 @@ export const RULES: Record<string, [number, number]> = {
 };
 const BOARD_RULES = ["글쓰기", "사진 올리기", "댓글", "추천 받음"];
 
-const adminIds = (ctx: Ctx) => new Set((ctx.env.ADMIN_KAKAO_IDS || "").split(",").map((x) => x.trim()).filter(Boolean));
+/** 관리자: 비밀값 ADMIN_IDS (가입 아이디, 쉼표로 여러 명). 예전 카카오용 ADMIN_KAKAO_IDS 도 계속 인정 */
+const adminIds = (ctx: Ctx) => new Set(`${ctx.env.ADMIN_IDS || ""},${ctx.env.ADMIN_KAKAO_IDS || ""}`
+  .split(",").map((x) => x.trim().toLowerCase()).filter(Boolean));
+
+// ---------------------------------------------------------------- 비밀번호 (PBKDF2-SHA256, 사람마다 다른 소금값)
+// 무료 요금제는 요청 하나에 계산 10ms 까지라 20,000회로 함 (약 3ms). 횟수는 저장값에 함께 적어 나중에 올릴 수 있음.
+const PW_ITER = 20000;
+const b64 = (b: ArrayBuffer | Uint8Array) => btoa(String.fromCharCode(...new Uint8Array(b)));
+const unb64 = (s: string) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+async function pbkdf2(pw: string, salt: Uint8Array, iter: number) {
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveBits"]);
+  return crypto.subtle.deriveBits({ name: "PBKDF2", hash: "SHA-256", salt, iterations: iter }, key, 256);
+}
+export async function hashPassword(pw: string) {
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  return `pbkdf2$${PW_ITER}$${b64(salt)}$${b64(await pbkdf2(pw, salt, PW_ITER))}`;
+}
+async function checkPassword(pw: string, stored: string | null) {
+  const [kind, iter, salt, hash] = String(stored || "").split("$");
+  if (kind !== "pbkdf2" || !hash) return false;
+  const got = new Uint8Array(await pbkdf2(pw, unb64(salt), parseInt(iter, 10)));
+  const want = unb64(hash);
+  if (got.length !== want.length) return false;
+  let diff = 0;
+  for (let i = 0; i < got.length; i++) diff |= got[i] ^ want[i];  // 걸리는 시간으로 추측 못 하게
+  return diff === 0;
+}
+const ID_RE = /^[a-z0-9_]{4,20}$/;
+const pwProblem = (pw: string) => pw.length < 8 ? "비밀번호는 8자 이상으로 정해 주세요."
+  : pw.length > 64 ? "비밀번호가 너무 깁니다 (64자까지)."
+  : !/[A-Za-z]/.test(pw) || !/\d/.test(pw) ? "비밀번호에 영문과 숫자를 함께 넣어 주세요." : null;
+const LOCK_AFTER = 5, LOCK_MIN = 10;  // 비밀번호 5번 틀리면 10분 잠금
 const devLogin = (ctx: Ctx) => ctx.env.DEV_LOGIN === "1" && ["localhost", "127.0.0.1"].includes(ctx.url.hostname);
 
 /** 규칙에 따라 포인트를 준다. 하루 최대 횟수를 넘으면 주지 않는다. */
@@ -33,8 +64,8 @@ export async function loadUser(ctx: Ctx, db: DB) {
   const u = await db.one("SELECT * FROM users WHERE id = ?", uid);
   if (!u || u.banned) { ctx.pop("uid"); return; }
   u.grade = gradeOf(u.earned);
-  const ids = adminIds(ctx), kid = String(u.kakao_id);
-  u.is_admin = ids.has(kid) || ids.has(kid.replace(/^kakao:/, "")) || (devLogin(ctx) && kid === "dev:시험회원");
+  const ids = adminIds(ctx), kid = String(u.kakao_id).toLowerCase();
+  u.is_admin = ids.has(kid) || ids.has(kid.replace(/^(kakao|id):/, "")) || (devLogin(ctx) && kid === "dev:시험회원");
   ctx.user = u;
   if (u.agreed_at && u.last_attend !== today()) {
     await db.run("UPDATE users SET last_attend = ? WHERE id = ?", today(), uid);
@@ -65,10 +96,92 @@ const cleanNick = (s: any) => {
 };
 const fv = (f: FormData, k: string) => String(f.get(k) ?? "");
 
-// ---------------------------------------------------------------- 로그인 (카카오)
-export function login(ctx: Ctx) {
+// ---------------------------------------------------------------- 로그인·회원가입 (아이디·비밀번호)
+export async function login(ctx: Ctx, db: DB) {
   if (ctx.user) return redirect(safeNext(ctx.arg("next")));
-  return ctx.render("login.html", { next: safeNext(ctx.arg("next")), kakao_ready: !!ctx.env.KAKAO_REST_API_KEY, dev_login: devLogin(ctx) });
+  const next = safeNext(ctx.arg("next"));
+  if (ctx.req.method === "GET") return ctx.render("login.html", { next, form: {}, dev_login: devLogin(ctx) });
+  const f = await ctx.req.formData();
+  const id = fv(f, "login_id").trim().toLowerCase(), pw = fv(f, "password");
+  const nxt = safeNext(fv(f, "next"));
+  const again = (msg: string) => {
+    ctx.flash(msg);
+    return ctx.render("login.html", { next: nxt, form: { login_id: id }, dev_login: devLogin(ctx) });
+  };
+  if (!id || !pw) return again("아이디와 비밀번호를 적어 주세요.");
+  const t = Date.now();
+  const fail = await db.one("SELECT n, until FROM login_fail WHERE login_id = ?", id);
+  if (fail && fail.until > t) return again(`비밀번호를 여러 번 틀려 잠시 잠겼습니다. ${Math.ceil((fail.until - t) / 60000)}분 뒤에 다시 해 주세요.`);
+  const u = await db.one("SELECT * FROM users WHERE login_id = ?", id);
+  if (!u || !(await checkPassword(pw, u.pw_hash))) {
+    const n = (fail && fail.until <= t && fail.n >= LOCK_AFTER ? 0 : fail?.n || 0) + 1;
+    await db.run("INSERT OR REPLACE INTO login_fail (login_id, n, until) VALUES (?, ?, ?)", id, n,
+      n >= LOCK_AFTER ? t + LOCK_MIN * 60000 : 0);
+    return again(n >= LOCK_AFTER ? `비밀번호를 ${LOCK_AFTER}번 틀려 ${LOCK_MIN}분 동안 로그인을 막았습니다.`
+      : "아이디 또는 비밀번호가 맞지 않습니다." + (n >= 3 ? ` (${LOCK_AFTER - n}번 더 틀리면 ${LOCK_MIN}분 동안 잠깁니다)` : ""));
+  }
+  if (fail) await db.run("DELETE FROM login_fail WHERE login_id = ?", id);
+  if (u.banned) return again("이용이 제한된 계정입니다. 운영자에게 문의해 주세요.");
+  ctx.session = {}; ctx.dirty = true;  // 로그인 때 새로 시작 (세션 고정 공격 방지)
+  ctx.set("uid", u.id);
+  return redirect(nxt);
+}
+
+export async function signup(ctx: Ctx, db: DB) {
+  if (ctx.user) return redirect(safeNext(ctx.arg("next")));
+  const next = safeNext(ctx.arg("next"));
+  if (ctx.req.method === "GET") return ctx.render("signup.html", { next, form: {} });
+  const f = await ctx.req.formData();
+  const form = Object.fromEntries([...f.keys()].filter((k) => !/password/.test(k)).map((k) => [k, fv(f, k)]));
+  const id = fv(f, "login_id").trim().toLowerCase(), pw = fv(f, "password");
+  const nick = cleanNick(f.get("nickname"));
+  const err = !ID_RE.test(id) ? "아이디는 영문 소문자·숫자·밑줄(_)로 4~20자로 정해 주세요."
+    : pwProblem(pw) || (pw !== fv(f, "password2") ? "비밀번호 확인이 맞지 않습니다. 같은 비밀번호를 두 번 적어 주세요."
+    : !nick ? "닉네임은 2~20자로 적어 주세요."
+    : !(f.get("terms") && f.get("privacy") && f.get("age14")) ? "필수 항목에 모두 동의해 주세요." : null);
+  if (err) { ctx.flash(err); return ctx.render("signup.html", { next: safeNext(fv(f, "next")), form }); }
+  if (await db.one("SELECT 1 FROM users WHERE login_id = ? OR kakao_id = ?", id, `id:${id}`)) {
+    ctx.flash("이미 쓰고 있는 아이디입니다. 다른 아이디로 정해 주세요.");
+    return ctx.render("signup.html", { next: safeNext(fv(f, "next")), form });
+  }
+  const r = await db.one(`INSERT INTO users (kakao_id, login_id, pw_hash, nickname, points, earned, agreed_at, marketing,
+      fav_sido, fav_sigungu, created_at) VALUES (?, ?, ?, ?, 0, 0, ?, ?, ?, ?, ?) RETURNING id`,
+    `id:${id}`, id, await hashPassword(pw), nick, now(), f.get("marketing") ? 1 : 0,
+    fv(f, "fav_sido") || null, fv(f, "fav_sigungu") || null, now());
+  await addPoints(db, r!.id, "가입 축하");
+  ctx.session = {}; ctx.dirty = true;
+  ctx.set("uid", r!.id);
+  ctx.flash("나이스파크 회원이 되신 것을 환영합니다! 가입 축하 20포인트를 드렸습니다.");
+  return redirect(safeNext(fv(f, "next")));
+}
+
+/** 내 정보: 비밀번호 바꾸기 */
+export async function changePassword(ctx: Ctx, db: DB) {
+  const r0 = needLogin(ctx); if (r0) return r0;
+  const f = await ctx.req.formData();
+  const u = ctx.user!;
+  const pw = fv(f, "new_password");
+  const err = !(await checkPassword(fv(f, "old_password"), u.pw_hash)) ? "지금 쓰는 비밀번호가 맞지 않습니다."
+    : pwProblem(pw) || (pw !== fv(f, "new_password2") ? "새 비밀번호 확인이 맞지 않습니다." : null);
+  if (err) ctx.flash(err);
+  else {
+    await db.run("UPDATE users SET pw_hash = ? WHERE id = ?", await hashPassword(pw), u.id);
+    ctx.flash("비밀번호를 바꿨습니다.");
+  }
+  return redirect("/me#account");
+}
+
+/** 관리자: 비밀번호를 잊은 회원에게 임시 비밀번호 발급 */
+export async function adminResetPw(ctx: Ctx, db: DB, uid: number) {
+  const r0 = needAdmin(ctx); if (r0) return r0;
+  const u = await db.one("SELECT id, login_id, nickname FROM users WHERE id = ?", uid);
+  if (!u || !u.login_id) abort(404);
+  const digits = Array.from(crypto.getRandomValues(new Uint8Array(4)), (b) => String(b % 10)).join("");
+  const temp = `park${digits}`;
+  await db.batch([db.q("UPDATE users SET pw_hash = ? WHERE id = ?", await hashPassword(temp), uid),
+    db.q("DELETE FROM login_fail WHERE login_id = ?", u!.login_id)]);
+  ctx.flash(`${u!.nickname}(${u!.login_id}) 님의 임시 비밀번호: ${temp} — 회원에게 알려 주고, 로그인 후 '내 정보'에서 바꾸도록 안내하세요.`);
+  return redirect("/admin#members");
 }
 
 const callbackUrl = (ctx: Ctx) => `${ctx.url.origin}/auth/kakao/callback`;

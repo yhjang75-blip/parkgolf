@@ -41,12 +41,15 @@ on("GET", "/api/videos", (ctx, db) => feeds.videos(ctx, db));
 on("GET", "/api/tournaments", () => feeds.tournamentsApi());
 on("GET", "/status", async (ctx, db) => json({
   "데이터베이스": `연결됨 (Cloudflare D1, 회원 ${await db.val("SELECT COUNT(*) FROM users")}명)`, "회원기능": true,
-  "카카오키": !!ctx.env.KAKAO_REST_API_KEY, "관리자번호": !!ctx.env.ADMIN_KAKAO_IDS,
+  "로그인방식": "아이디·비밀번호", "관리자지정": !!(ctx.env.ADMIN_IDS || ctx.env.ADMIN_KAKAO_IDS),
   "로그인비밀값": ctx.env.SECRET_KEY ? "직접 입력함" : "자동 생성됨", "서버": "Cloudflare Workers (무료)",
 }));
 
 // ---------------------------------------------------------------- 회원
-on("GET", "/login", (ctx) => m.login(ctx));
+on("GET|POST", "/login", (ctx, db) => m.login(ctx, db));
+on("GET|POST", "/join", (ctx, db) => m.signup(ctx, db));
+on("POST", "/me/password", (ctx, db) => m.changePassword(ctx, db));
+on("POST", "/admin/user/:int/resetpw", (ctx, db, [u]) => m.adminResetPw(ctx, db, n(u)));
 on("GET", "/auth/kakao", (ctx) => m.kakaoStart(ctx));
 on("GET", "/auth/kakao/callback", (ctx, db) => m.kakaoCallback(ctx, db));
 on("GET", "/auth/dev", (ctx, db) => m.devLoginRoute(ctx, db));

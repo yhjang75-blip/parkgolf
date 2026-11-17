@@ -59,11 +59,13 @@
           <form method="post" action="/admin/post/{{ p.id }}/show" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">다시 보이기</button></form></p></li>
       {% else %}<li class="muted">없습니다.</li>{% endfor %}</ul>
     </section>
-    <section class="panel">
+    <section class="panel" id="members">
       <h2>회원 (모은 포인트 순)</h2>
+      <p class="src">비밀번호를 잊은 회원은 '임시 비밀번호'를 눌러 새 비밀번호를 만들어 알려 주세요.</p>
       <table class="tbl">{% for u in users_ %}
-        <tr><td>{{ grade_of(u.earned).icon }} {{ u.nickname }}</td><td class="num">{{ u.earned }} / {{ u.points }}P</td><td>{{ u.created_at[:10] }}</td>
-          <td><form method="post" action="/admin/user/{{ u.id }}/ban" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">{{ '제한 풀기' if u.banned else '이용 제한' }}</button></form></td></tr>
+        <tr><td>{{ grade_of(u.earned).icon }} {{ u.nickname }}{% if u.login_id %}<br><small class="muted">{{ u.login_id }}</small>{% endif %}</td><td class="num">{{ u.earned }} / {{ u.points }}P</td><td>{{ u.created_at[:10] }}</td>
+          <td><form method="post" action="/admin/user/{{ u.id }}/ban" class="inline"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">{{ '제한 풀기' if u.banned else '이용 제한' }}</button></form>
+            {% if u.login_id %}<form method="post" action="/admin/user/{{ u.id }}/resetpw" class="inline" onsubmit="return confirm('이 회원의 비밀번호를 임시 비밀번호로 바꿀까요?')"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn">임시 비밀번호</button></form>{% endif %}</td></tr>
       {% endfor %}</table>
     </section>
   </div>

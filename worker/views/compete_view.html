@@ -25,7 +25,7 @@
       <a class="btn secondary" href="#my-entry">내 신청 내용 보기</a>
     {% elif c.can_apply %}
       <a class="btn primary big-cta" href="/compete/{{ c.id }}/apply">✍️ 참가 신청하기</a>
-      {% if not me %}<p class="src center">카카오로 로그인하면 바로 신청할 수 있습니다.</p>{% endif %}
+      {% if not me %}<p class="src center">로그인하면 바로 신청할 수 있습니다. 처음이면 <a href="/join?next=/compete/{{ c.id }}/apply">회원가입</a>부터 해 주세요.</p>{% endif %}
     {% endif %}
   </section>
 

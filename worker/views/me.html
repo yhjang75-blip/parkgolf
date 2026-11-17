@@ -72,9 +72,19 @@
     </section>
   </div>
 
-  <section class="panel">
+  <section class="panel" id="account">
     <h2>계정</h2>
-    <p class="src">회원번호: {{ me.kakao_id }} · 가입일 {{ me.created_at[:10] }}</p>
+    <p class="src">아이디: <b>{{ me.login_id or me.kakao_id }}</b> · 가입일 {{ me.created_at[:10] }}</p>
+    {% if me.login_id %}
+    <form method="post" action="/me/password" class="aform pwform">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <h3 class="sub-h">비밀번호 바꾸기</h3>
+      <label class="field">지금 비밀번호<input type="password" name="old_password" maxlength="64" required autocomplete="current-password"></label>
+      <label class="field">새 비밀번호 <small>(영문과 숫자를 섞어 8자 이상)</small><input type="password" name="new_password" maxlength="64" minlength="8" required autocomplete="new-password"></label>
+      <label class="field">새 비밀번호 확인<input type="password" name="new_password2" maxlength="64" minlength="8" required autocomplete="new-password"></label>
+      <button class="btn secondary" type="submit">비밀번호 바꾸기</button>
+    </form>
+    {% endif %}
     <div class="btn-row">
       <form method="post" action="/logout"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="btn secondary" type="submit">로그아웃</button></form>
       <form method="post" action="/me/withdraw" onsubmit="return confirmWithdraw(this)">

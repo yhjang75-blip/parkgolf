@@ -2,7 +2,17 @@
 // 표는 처음 요청 때 자동으로 만든다 (따로 설정할 것 없음). 표를 바꾸면 SCHEMA_VERSION 을 올린다.
 import { Env, Row, randomToken } from "./lib";
 
-const SCHEMA_VERSION = "1";
+const SCHEMA_VERSION = "2";
+// 표를 고칠 때: 이미 있는 데이터베이스에 덧붙일 문장 (버전 → 문장들)
+const MIGRATIONS: Record<number, string[]> = {
+  // 2026-11-17 아이디·비밀번호 회원가입
+  2: [
+    `ALTER TABLE users ADD COLUMN login_id TEXT`,
+    `ALTER TABLE users ADD COLUMN pw_hash TEXT`,
+    `CREATE UNIQUE INDEX IF NOT EXISTS ux_users_login_id ON users (login_id)`,
+    `CREATE TABLE IF NOT EXISTS login_fail (login_id TEXT PRIMARY KEY, n INTEGER NOT NULL, until INTEGER NOT NULL)`,
+  ],
+};
 const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)`,
   `CREATE TABLE IF NOT EXISTS cache (key TEXT PRIMARY KEY, value TEXT NOT NULL, at INTEGER NOT NULL)`,
@@ -80,9 +90,16 @@ export async function openDb(env: Env) {
   if (!ready) {
     let ver = null;
     try { ver = await db.val("SELECT value FROM settings WHERE key = 'schema'"); } catch { /* 처음: 표 없음 */ }
-    if (ver !== SCHEMA_VERSION) {
-      await db.batch([...SCHEMA.map((s) => db.q(s)),
-        db.q("INSERT OR REPLACE INTO settings (key, value) VALUES ('schema', ?)", SCHEMA_VERSION)]);
+    const cur = ver ? parseInt(ver, 10) : 0, latest = parseInt(SCHEMA_VERSION, 10);
+    if (cur < latest) {
+      if (cur < 1) await db.batch(SCHEMA.map((s) => db.q(s)));
+      // 여러 서버가 동시에 고칠 수 있으므로 한 문장씩, '이미 있음' 오류는 무시
+      for (let v = Math.max(2, cur + 1); v <= latest; v++) {
+        for (const s of MIGRATIONS[v] || []) {
+          try { await db.run(s); } catch (e) { if (!/duplicate column|already exists/i.test(String(e))) throw e; }
+        }
+      }
+      await db.run("INSERT OR REPLACE INTO settings (key, value) VALUES ('schema', ?)", SCHEMA_VERSION);
     }
     ready = true;
   }

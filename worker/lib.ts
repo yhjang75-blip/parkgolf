@@ -13,6 +13,7 @@ export interface Env {
   KAKAO_REST_API_KEY?: string;
   KAKAO_CLIENT_SECRET?: string;
   ADMIN_KAKAO_IDS?: string;
+  ADMIN_IDS?: string;  // 관리자 가입 아이디 (쉼표로 여러 명)
   DEV_LOGIN?: string;
 }
 

@@ -494,7 +494,7 @@ async function loadMy() {
     box.className = "panel my join-cta";
     box.innerHTML = `<div><h2>⛳ 나이스파크 회원이 되어 보세요</h2>
       <p>⭐ 내 구장 즐겨찾기 · 📍 우리 동네 파크골프 소식 · 🏅 대회 참가 신청 · 🎁 포인트로 제휴 혜택</p></div>
-      <a class="btn kakao" href="/login">💬 카카오로 3초 가입 (+20P)</a>`;
+      <a class="btn primary" href="/login">회원가입·로그인 (+20P)</a>`;
     return;
   }
   const g = j.grade, region = j.fav_sigungu || j.fav_sido;
