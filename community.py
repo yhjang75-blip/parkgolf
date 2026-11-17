@@ -1,4 +1,4 @@
-"""이지 파크골프 회원·커뮤니티 기능.
+"""나이스파크 회원·커뮤니티 기능.
 
 - 카카오 로그인 (가입 = 처음 로그인 + 약관 동의)
 - 게시판 (글·사진·댓글·추천·신고)
@@ -185,6 +185,22 @@ def need_db():
                                msg="커뮤니티·회원 기능을 곧 열 예정입니다. 조금만 기다려 주세요."), 503
 
 
+# 커뮤니티(게시판)는 2026-11-17 사용자 요청으로 닫음. 코드는 남겨 두고 주소만 막는다 (다시 열려면 BOARD_OPEN = True).
+BOARD_OPEN = False
+BOARD_ENDPOINTS = {"community.board", "community.view", "community.write", "community.delete_post",
+                   "community.add_comment", "community.delete_comment", "community.like", "community.report",
+                   "community.img", "community.api_latest", "community.api_course_posts"}
+BOARD_RULES = ("글쓰기", "사진 올리기", "댓글", "추천 받음")
+
+
+@bp.before_request
+def board_closed():
+    if not BOARD_OPEN and request.endpoint in BOARD_ENDPOINTS:
+        if request.endpoint == "community.api_course_posts":  # 구장 상세의 즐겨찾기 버튼은 계속 쓴다
+            return None
+        abort(404)
+
+
 @bp.get("/login")
 def login():
     if g.user:
@@ -280,7 +296,7 @@ def agree():
                 fav_sido=request.form.get("fav_sido") or None, fav_sigungu=request.form.get("fav_sigungu") or None))
         if first:
             add_points(g.user["id"], "가입 축하")
-            flash("이지 파크골프 회원이 되신 것을 환영합니다! 가입 축하 20포인트를 드렸습니다.")
+            flash("나이스파크 회원이 되신 것을 환영합니다! 가입 축하 20포인트를 드렸습니다.")
         return redirect(safe_next(request.form.get("next")))
     return render_template("agree.html", next=safe_next(request.args.get("next")))
 
@@ -678,7 +694,7 @@ def monthly_ranking(n):
 @bp.get("/benefits")
 def benefits_page():
     rows = all_(select(benefits).where(benefits.c.active.is_(True)).order_by(benefits.c.cost)) if db.ENABLED else []
-    return render_template("benefits.html", rows=rows, rules=RULES,
+    return render_template("benefits.html", rows=rows, rules={k: v for k, v in RULES.items() if BOARD_OPEN or k not in BOARD_RULES},
                            ranking=monthly_ranking(10) if db.ENABLED else [])
 
 

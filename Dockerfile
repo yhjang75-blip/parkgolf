@@ -1,4 +1,4 @@
-# 이지 파크골프 서버 이미지 (Cloudflare Containers 용)
+# 나이스파크 서버 이미지 (Cloudflare Containers 용)
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \

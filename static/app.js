@@ -306,12 +306,7 @@ async function loadCourseTalk(c) {
     const r = await fetch(`/api/me/favorites/${encodeURIComponent(c.id)}`, { method: "POST", headers: { "X-CSRF": window.CSRF } });
     if (r.ok) { setFav((await r.json()).favorite); loadMy(); }
   };
-  box.innerHTML = `<h3>💬 이 구장 이야기</h3>
-    ${j.items.length ? `<ul class="feed">${j.items.map((p) => `<li><a href="/board/${p.id}"><span class="t">${esc(p.title)}${p.photos ? " 📷" : ""}</span>
-      <span class="m">${esc(p.nickname)} · ${esc(p.date)}</span></a></li>`).join("")}</ul>
-      <p class="src"><a href="/board?course=${encodeURIComponent(c.id)}">이 구장 글 모두 보기 →</a></p>`
-      : `<p class="src">아직 후기가 없습니다. 다녀오셨다면 첫 후기를 남겨 주세요!</p>`}
-    <a class="btn secondary" href="/board/write?course=${encodeURIComponent(c.id)}">✏️ 이 구장 후기·사진 올리기 (+10P)</a>`;
+  box.remove();
 }
 
 function reserveGuide(c, url, portal) {
@@ -497,8 +492,8 @@ async function loadMy() {
   box.hidden = false;
   if (!j.login) {
     box.className = "panel my join-cta";
-    box.innerHTML = `<div><h2>⛳ 이지 파크골프 회원이 되어 보세요</h2>
-      <p>⭐ 내 구장 즐겨찾기 · 📍 우리 동네 파크골프 소식 · 📸 후기·사진 공유 · 🎁 포인트로 제휴 혜택</p></div>
+    box.innerHTML = `<div><h2>⛳ 나이스파크 회원이 되어 보세요</h2>
+      <p>⭐ 내 구장 즐겨찾기 · 📍 우리 동네 파크골프 소식 · 🏅 대회 참가 신청 · 🎁 포인트로 제휴 혜택</p></div>
       <a class="btn kakao" href="/login">💬 카카오로 3초 가입 (+20P)</a>`;
     return;
   }
@@ -512,7 +507,7 @@ async function loadMy() {
   box.className = "panel my";
   box.innerHTML = `
     <div class="my-head">
-      <h2>${esc(g.icon)} ${esc(j.nickname)}님의 이지 파크골프</h2>
+      <h2>${esc(g.icon)} ${esc(j.nickname)}님의 나이스파크</h2>
       <a class="pill" href="/me">${esc(g.name)} · ${j.points}P · 내 정보 →</a>
     </div>
     <div class="grid2 in">
@@ -534,25 +529,7 @@ async function loadMy() {
   }
 }
 
-/* ---------- 커뮤니티 요약 ---------- */
-async function loadCommunity() {
-  if (!$("#comm-posts")) return;
-  try {
-    const j = await fetch("/api/community/latest").then((r) => r.json());
-    $("#comm-posts").innerHTML = j.posts.map((p) => `<li><a href="/board/${p.id}">
-        <span class="t"><span class="pc">${esc(p.cat)}</span> ${esc(p.title)}${p.comments ? ` <span class="cc">[${p.comments}]</span>` : ""}${p.photos ? " 📷" : ""}</span>
-        <span class="m">${esc(p.grade)} ${esc(p.nickname)} · ${esc(p.date)}</span></a></li>`).join("")
-      || `<li class="muted">아직 글이 없습니다. <a href="/board/write">첫 글을 남겨 주세요!</a></li>`;
-    $("#comm-photos").innerHTML = j.photos.map((x) => `<a href="/board/${x.post_id}" title="${esc(x.title)}">
-        <img src="/img/${x.id}/thumb" alt="${esc(x.title)}" loading="lazy"></a>`).join("")
-      || `<p class="muted">📸 구장 사진을 올려 주시면 여기에 모입니다.</p>`;
-    $("#comm-rank").innerHTML = j.ranking.map((r) => `<li>${esc(r.grade.icon)} <b>${esc(r.nickname)}</b> <span class="muted">${r.points}P</span></li>`).join("")
-      || `<li class="muted">이번 달 첫 주인공이 되어 보세요.</li>`;
-  } catch { $("#comm-posts").innerHTML = `<li class="muted">잠시 불러올 수 없습니다.</li>`; }
-}
-
 loadMy();
-loadCommunity();
 loadTournaments();
 loadFeed(["winner"], $("#feed-winner"), 4);
 loadFeed(["tournament", "news"], $("#feed-news"), 4);

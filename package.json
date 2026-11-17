@@ -1,5 +1,5 @@
 {
-  "name": "easyparkgolf",
+  "name": "nicepark",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}파크골프 대회 안내 — 이지 파크골프{% endblock %}
+{% block title %}파크골프 대회 안내 — 나이스파크{% endblock %}
 {% macro won(n) -%}
   {%- if n >= 10000 -%}{{ n // 10000 }}억{% if n % 10000 %} {{ "{:,}".format(n % 10000) }}만{% endif %}{%- else -%}{{ "{:,}".format(n) }}만{%- endif -%}
 {%- endmacro %}
@@ -30,7 +30,7 @@
   <div class="wrap narrow">
     <p class="kicker">파크골프 대회</p>
     <h1>대회 일정·참가 방법·경기 규칙</h1>
-    <p><a class="pill" href="/compete" style="background:#fff">🏅 이지 파크골프에서 바로 신청하는 대회 보기 →</a></p>
+    <p><a class="pill" href="/compete" style="background:#fff">🏅 나이스파크에서 바로 신청하는 대회 보기 →</a></p>
   </div>
 </section>
 

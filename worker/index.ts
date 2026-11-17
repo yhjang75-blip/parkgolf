@@ -1,4 +1,4 @@
-// 이지 파크골프 Cloudflare 입구: 모든 요청을 Flask 서버 컨테이너 하나로 넘긴다.
+// 나이스파크 Cloudflare 입구: 모든 요청을 Flask 서버 컨테이너 하나로 넘긴다.
 import { Container } from "@cloudflare/containers";
 
 interface Env {

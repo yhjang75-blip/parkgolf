@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}내 정보 — 이지 파크골프{% endblock %}
+{% block title %}내 정보 — 나이스파크{% endblock %}
 {% block content %}
 {% set gr = me.grade %}
 <main class="wrap page">
@@ -59,16 +59,6 @@
   </section>
 
   <div class="grid2">
-    <section class="panel">
-      <h2>📝 내가 쓴 글</h2>
-      {% if my_posts %}
-        <ul class="feed">{% for p in my_posts %}
-          <li><a href="/board/{{ p.id }}"><span class="t">{{ p.title }}{% if p.hidden %} <span class="badge warn">숨김</span>{% endif %}</span>
-            <span class="m">{{ CATEGORIES[p.category] }} · {{ p.created_at[:10] }} · 댓글 {{ p.comments }} · 추천 {{ p.likes }}</span></a></li>
-        {% endfor %}</ul>
-      {% else %}<p class="muted">아직 쓴 글이 없습니다. <a href="/board/write">첫 글 쓰기 (+10P)</a></p>{% endif %}
-    </section>
-
     <section class="panel">
       <h2>💰 포인트 내역</h2>
       <table class="tbl">

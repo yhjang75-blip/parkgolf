@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}대회 {{ '수정' if c.id else '열기' }} — 이지 파크골프{% endblock %}
+{% block title %}대회 {{ '수정' if c.id else '열기' }} — 나이스파크{% endblock %}
 {% block content %}
 <main class="wrap page narrow">
   <p class="crumb"><a href="{{ '/admin/compete/%d'|format(c.id) if c.id else '/admin/compete' }}">← 돌아가기</a></p>
@@ -8,7 +8,7 @@
     <form method="post">
       <input type="hidden" name="csrf" value="{{ csrf }}">
       <h3 class="sub-h">1. 기본 정보</h3>
-      <label class="field">대회 이름<input name="title" value="{{ c.title or '' }}" maxlength="120" required placeholder="예: 제1회 이지 파크골프 회원 친선대회"></label>
+      <label class="field">대회 이름<input name="title" value="{{ c.title or '' }}" maxlength="120" required placeholder="예: 제1회 나이스파크 회원 친선대회"></label>
       <label class="field">장소 (구장 이름)<input name="venue" value="{{ c.venue or '' }}" maxlength="120" required placeholder="예: ○○ 파크골프장"></label>
       <label class="field">구장 번호 <small>(선택: 구장 상세 주소창의 #id= 뒤 값을 넣으면 '구장 위치 보기'가 생깁니다)</small><input name="course_id" value="{{ c.course_id or '' }}" maxlength="20"></label>
       <div class="row3">

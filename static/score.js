@@ -1,4 +1,4 @@
-/* 이지 파크골프 점수계산기 (연습게임용)
+/* 나이스파크 점수계산기 (연습게임용)
  * - 서버 없이 이 기기의 브라우저(localStorage)에만 저장
  * - 팀별·개인별 타수 입력 → 개인·팀·남녀 순위, 시상(우승·홀인원·버디왕) 자동 계산
  * - 휴대폰 여러 대: 팀별 입력 링크를 보내고, 팀에서 돌려보낸 점수를 붙여 넣어 합친다
@@ -381,7 +381,7 @@
   }
   function resultText() {
     const a = awards();
-    const L = [`[이지 파크골프 점수계산기] ${G.title} (${G.date})`, a.left ? `※ 중간 결과 (경기 중 ${a.left}명)` : '※ 최종 결과', ''];
+    const L = [`[나이스파크 점수계산기] ${G.title} (${G.date})`, a.left ? `※ 중간 결과 (경기 중 ${a.left}명)` : '※ 최종 결과', ''];
     L.push('■ 개인'); a.ind.forEach(({ it: x, rank }) => L.push(`${PL[rank - 1] || rank + '위'} ${x.p.name}(${x.t.name}) ${x.st.tot}타 (${fmt(x.st.tp)})`));
     if (a.teams.length) { L.push('', '■ 팀'); a.teams.forEach(({ it: x, rank }) => L.push(`${PL[rank - 1] || rank + '위'} ${x.t.name} ${x.s.tot}타 - ${x.s.cnt.map(m => m.p.name).join(', ')}`)); }
     if (a.m.length || a.f.length) { L.push(''); a.m.forEach(({ it: x }) => L.push(`남자부 1위 ${x.p.name} ${x.st.tot}타`)); a.f.forEach(({ it: x }) => L.push(`여자부 1위 ${x.p.name} ${x.st.tot}타`)); }
@@ -498,13 +498,13 @@
       case 'shareres': await share(G.title + ' 결과', resultText()); break;
       case 'sendjoin': {
         const t = G.teams[+d.t];
-        await share(`${G.title} ${t.name} 점수 입력`, `[이지 파크골프] ${G.title}\n${t.name} (${t.players.map(p => p.name).join(', ')}) 점수 입력 링크입니다.\n아래 링크를 눌러 입력하세요.\n${joinLink(+d.t)}`);
+        await share(`${G.title} ${t.name} 점수 입력`, `[나이스파크] ${G.title}\n${t.name} (${t.players.map(p => p.name).join(', ')}) 점수 입력 링크입니다.\n아래 링크를 눌러 입력하세요.\n${joinLink(+d.t)}`);
         break;
       }
       case 'sendres': {
         const t = G.teams[0], hd = holesDone(t);
         if (hd < H() && !confirm(`아직 ${H() - hd}개 홀이 비어 있습니다. 지금까지 입력한 점수를 보낼까요?`)) return;
-        await share(`${t.name} 점수`, `[이지 파크골프] ${G.title} - ${t.name} 점수\n(총무님: 이 메시지를 통째로 복사해 점수계산기 설정 화면의 '받은 점수 붙여넣기'에 넣어 주세요)\n${t.players.map(p => `${p.name} ${pst(p).tot}타`).join(', ')}\n${location.origin}/score#res=${resCode()}`);
+        await share(`${t.name} 점수`, `[나이스파크] ${G.title} - ${t.name} 점수\n(총무님: 이 메시지를 통째로 복사해 점수계산기 설정 화면의 '받은 점수 붙여넣기'에 넣어 주세요)\n${t.players.map(p => `${p.name} ${pst(p).tot}타`).join(', ')}\n${location.origin}/score#res=${resCode()}`);
         break;
       }
       case 'import': {
