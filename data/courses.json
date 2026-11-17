@@ -826,8 +826,13 @@
    "id": "3d95506b9a",
    "data_date": "2025-11-28",
    "gov_home": "https://www.wonju.go.kr",
-   "reserve_level": "phone",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.wonju.go.kr/www/main.do",
+    "name": "원주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "http://news.lghellovision.net/news/photo/202506/510930_135693_5345.jpg",
     "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/kQB3BICtV",
@@ -885,8 +890,13 @@
    "id": "02dca118d4",
    "data_date": "2025-11-28",
    "gov_home": "https://www.wonju.go.kr",
-   "reserve_level": "phone",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.wonju.go.kr/www/main.do",
+    "name": "원주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "https://postfiles.pstatic.net/MjAyNDA4MTdfMTMw/MDAxNzIzODkzNDYzNzkw.XwN73EKX3gkbNfsO4lzRZQI1ovLz2Qps3bFAzFrI1REg.0vw_aO1oMxD6iu_3n-mz44K4hfpV6Ii1NPeFP3YeQl0g.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_(2).jpg?type=w773",
     "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/6cn5J4Zwe3Y",
@@ -944,8 +954,13 @@
    "id": "5c2a356f24",
    "data_date": "2025-11-28",
    "gov_home": "https://www.wonju.go.kr",
-   "reserve_level": "phone",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.wonju.go.kr/www/main.do",
+    "name": "원주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "https://postfiles.pstatic.net/MjAyNjA3MDRfMTky/MDAxNzgzMTU3ODAzNTUx.h0jhjSVbBoqIR5Ko8d0iL5dWO7nshUKfZUL8uFI_zfkg.w0hV1zt48LtYj7Yvxx4ftljgZO6ASTNkZNj8zFJ93jAg.PNG/%EB%AC%B8%EB%A7%89c3.png?type=w580",
     "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/LevZJHLBF8y",
@@ -1003,8 +1018,13 @@
    "id": "cead05e38e",
    "data_date": "2025-11-28",
    "gov_home": "https://www.wonju.go.kr",
-   "reserve_level": "phone",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.wonju.go.kr/www/main.do",
+    "name": "원주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "http://cfile274.uf.daum.net/image/22309D4A56FF8F7919363D",
     "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/LKoRST66tnk",
@@ -1062,8 +1082,13 @@
    "id": "84d0580168",
    "data_date": "2025-11-28",
    "gov_home": "https://www.wonju.go.kr",
-   "reserve_level": "phone",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.wonju.go.kr/www/main.do",
+    "name": "원주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Flee.leetae.com%2Fwp-content%2Fuploads%2F2026%2F04%2F%25ED%258C%258C%25ED%2581%25AC%25EA%25B3%25A8%25ED%2594%258411111-4.png%22&type=ff500_300",
     "thumb": "https://search4.kakaocdn.net/argon/130x130_85_c/FqZMhcSKUW9",
@@ -1121,8 +1146,13 @@
    "id": "0a815be00d",
    "data_date": "2025-11-28",
    "gov_home": "https://www.wonju.go.kr",
-   "reserve_level": "phone",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.wonju.go.kr/www/main.do",
+    "name": "원주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "https://postfiles.pstatic.net/MjAyNjA3MjRfMzAg/MDAxNzg0ODQ3ODE0NzM4.I66wgHf6RM-3m3rS2IVMJbXfRDcujyFyhJQRHb1abnMg.1jo-9vjhIGzgtZ3XUGmYiRhf40w2WThH7bIAlVxIlX8g.JPEG/img_ab2fbd7a.jpg?type=w966",
     "thumb": "https://search3.kakaocdn.net/argon/130x130_85_c/7hcz66q6ZMI",
@@ -2631,7 +2661,7 @@
    ],
    "id": "f5020ea6b1",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.gjcity.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -2717,9 +2747,14 @@
    ],
    "id": "0ef3da83eb",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.gimpo.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gimpo.go.kr/reserve/index.do",
+    "name": "김포시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -3018,7 +3053,7 @@
    ],
    "id": "f3f89ddcff",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yangju.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -3061,7 +3096,7 @@
    ],
    "id": "9b2966077a",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yp21.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -3388,9 +3423,14 @@
    ],
    "id": "9af383fc29",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.paju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.paju.go.kr/user/facilityReserve/BD_selectSportsFacilityList.do",
+    "name": "파주시 체육시설 대관",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -3431,9 +3471,14 @@
    ],
    "id": "18bed4e1c4",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.paju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.paju.go.kr/user/facilityReserve/BD_selectSportsFacilityList.do",
+    "name": "파주시 체육시설 대관",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -3474,9 +3519,14 @@
    ],
    "id": "918cf13d51",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.pyeongtaek.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.pyeongtaek.go.kr/sports/fmcs/1",
+    "name": "평택시 공공체육시설 예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -3560,9 +3610,14 @@
    ],
    "id": "80913faa36",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.hscity.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.hscity.go.kr/indexIntro.do",
+    "name": "화성시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -3603,9 +3658,14 @@
    ],
    "id": "da2c7f58d7",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.hscity.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.hscity.go.kr/indexIntro.do",
+    "name": "화성시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4327,9 +4387,14 @@
    ],
    "id": "f59fca0ada",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.gimhae.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gimhae.go.kr/yes/main.web",
+    "name": "김해시 공공예약포털",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4370,9 +4435,14 @@
    ],
    "id": "345a5a178f",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.gimhae.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gimhae.go.kr/yes/main.web",
+    "name": "김해시 공공예약포털",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4413,9 +4483,14 @@
    ],
    "id": "771f365aa6",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.gimhae.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gimhae.go.kr/yes/main.web",
+    "name": "김해시 공공예약포털",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4456,9 +4531,14 @@
    ],
    "id": "679c12c240",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.gimhae.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.gimhae.go.kr/yes/main.web",
+    "name": "김해시 공공예약포털",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4499,9 +4579,14 @@
    ],
    "id": "ffefea4492",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.namhae.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.namhae.go.kr/reserve/index.do",
+    "name": "남해군 통합예약포털",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4542,9 +4627,14 @@
    ],
    "id": "ade9351975",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.miryang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.miryang.go.kr/",
+    "name": "밀양시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4585,9 +4675,14 @@
    ],
    "id": "0fb917413c",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.miryang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.miryang.go.kr/",
+    "name": "밀양시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4628,9 +4723,14 @@
    ],
    "id": "8f28f7b0f9",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.miryang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.miryang.go.kr/",
+    "name": "밀양시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4671,9 +4771,14 @@
    ],
    "id": "eb233dad48",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.miryang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.miryang.go.kr/",
+    "name": "밀양시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4714,9 +4819,14 @@
    ],
    "id": "359b42e61e",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.miryang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://yeyak.miryang.go.kr/",
+    "name": "밀양시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4757,9 +4867,14 @@
    ],
    "id": "ed8142d1bb",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sacheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sacheon.go.kr/sports/main.web",
+    "name": "사천시 체육시설 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4800,9 +4915,14 @@
    ],
    "id": "f13dcedf80",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sacheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sacheon.go.kr/sports/main.web",
+    "name": "사천시 체육시설 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4843,9 +4963,14 @@
    ],
    "id": "77e7a21f9c",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sancheong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sancheong.go.kr/yeyak/main.web",
+    "name": "산청군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4886,9 +5011,14 @@
    ],
    "id": "e8e29d65a2",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sancheong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sancheong.go.kr/yeyak/main.web",
+    "name": "산청군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4929,9 +5059,14 @@
    ],
    "id": "bf944eeda4",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sancheong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sancheong.go.kr/yeyak/main.web",
+    "name": "산청군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -4972,9 +5107,14 @@
    ],
    "id": "b495d32c75",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sancheong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sancheong.go.kr/yeyak/main.web",
+    "name": "산청군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5015,9 +5155,14 @@
    ],
    "id": "16422f36f7",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sancheong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sancheong.go.kr/yeyak/main.web",
+    "name": "산청군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5058,7 +5203,7 @@
    ],
    "id": "e16020263f",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yangsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -5101,7 +5246,7 @@
    ],
    "id": "1dc631a09e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yangsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -5144,7 +5289,7 @@
    ],
    "id": "617d3f28c9",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yangsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -5187,7 +5332,7 @@
    ],
    "id": "2cae8e5ba9",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yangsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -5230,7 +5375,7 @@
    ],
    "id": "9e4059ba66",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yangsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -5273,9 +5418,14 @@
    ],
    "id": "c192fbad42",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5316,9 +5466,14 @@
    ],
    "id": "9216f49052",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5359,9 +5514,14 @@
    ],
    "id": "e78d3f5893",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5402,9 +5562,14 @@
    ],
    "id": "261a313505",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5445,9 +5610,14 @@
    ],
    "id": "6be7bf4c3b",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5488,9 +5658,14 @@
    ],
    "id": "cfa7b6b840",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5531,9 +5706,14 @@
    ],
    "id": "000577a58a",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5574,9 +5754,14 @@
    ],
    "id": "84c9c0f213",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5617,9 +5802,14 @@
    ],
    "id": "8135ec49c1",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.jinju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.jinju.go.kr/yeyak/main.web",
+    "name": "진주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5660,9 +5850,14 @@
    ],
    "id": "1e94bca327",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.hadong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hadong.go.kr/yeyak/main.web",
+    "name": "하동군 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5703,9 +5898,14 @@
    ],
    "id": "0793c53ffa",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.hadong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hadong.go.kr/yeyak/main.web",
+    "name": "하동군 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5746,9 +5946,14 @@
    ],
    "id": "68073205b4",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.hadong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hadong.go.kr/yeyak/main.web",
+    "name": "하동군 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5789,9 +5994,14 @@
    ],
    "id": "48a20ec1fa",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.haman.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.haman.go.kr/yeyak.web",
+    "name": "함안군 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5832,9 +6042,14 @@
    ],
    "id": "0b356da59d",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.haman.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.haman.go.kr/yeyak.web",
+    "name": "함안군 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5875,9 +6090,14 @@
    ],
    "id": "6030172d23",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.haman.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.haman.go.kr/yeyak.web",
+    "name": "함안군 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -5918,7 +6138,7 @@
    ],
    "id": "bbf9e89128",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -5961,7 +6181,7 @@
    ],
    "id": "bca9cde57f",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -6004,7 +6224,7 @@
    ],
    "id": "f5ff8dcd4c",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -6047,7 +6267,7 @@
    ],
    "id": "2d6d5586cf",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -6090,7 +6310,7 @@
    ],
    "id": "00a2fa3987",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -6133,7 +6353,7 @@
    ],
    "id": "cf09e1fa8d",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -6176,7 +6396,7 @@
    ],
    "id": "beaadbe74e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.hc.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -10940,7 +11160,7 @@
    ],
    "id": "0f5c686707",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.nam.daegu.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -10983,7 +11203,7 @@
    ],
    "id": "b90a1aab48",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.dalseo.daegu.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12451,7 +12671,7 @@
    ],
    "id": "84402c712c",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.suseong.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12494,7 +12714,7 @@
    ],
    "id": "dd2ca1684b",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.suseong.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12537,9 +12757,14 @@
    ],
    "id": "c3bbf4d3bd",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.seogu.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.seogu.go.kr/yeyak/index.do",
+    "name": "대전 서구 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -12580,7 +12805,7 @@
    ],
    "id": "9af66d9a19",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yuseong.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12623,7 +12848,7 @@
    ],
    "id": "8a375f33ae",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.yuseong.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12666,7 +12891,7 @@
    ],
    "id": "c7f342ddf1",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.djjunggu.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12709,7 +12934,7 @@
    ],
    "id": "ddb7d9b57e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.bsgangseo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12752,7 +12977,7 @@
    ],
    "id": "c21a30f73e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.bsgangseo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12795,7 +13020,7 @@
    ],
    "id": "d66ed45042",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.gijang.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -12838,9 +13063,14 @@
    ],
    "id": "cdbb1b5d4f",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.bsbukgu.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.bsbukgu.go.kr/reservation/index.do",
+    "name": "부산 북구 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -12881,9 +13111,14 @@
    ],
    "id": "4d353b08b3",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.sasang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.sasang.go.kr/yeyak/index.sasang",
+    "name": "사상구 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -12924,9 +13159,14 @@
    ],
    "id": "89c81c27fe",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.saha.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.saha.go.kr/reserve/main.do",
+    "name": "사하구 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -14497,7 +14737,7 @@
    ],
    "id": "34155af09e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.ulsannamgu.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -14540,7 +14780,7 @@
    ],
    "id": "6efa17c92d",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.donggu.ulsan.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -14583,7 +14823,7 @@
    ],
    "id": "7b7b04ab79",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.bukgu.ulsan.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -14626,7 +14866,7 @@
    ],
    "id": "0480fc46f3",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.ulju.ulsan.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -14669,7 +14909,7 @@
    ],
    "id": "86d3ec73e6",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.ulju.ulsan.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -14712,7 +14952,7 @@
    ],
    "id": "b4a3c8ef85",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.ulju.ulsan.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -14755,7 +14995,7 @@
    ],
    "id": "05b0c0f3cb",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.junggu.ulsan.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -15597,8 +15837,13 @@
    "id": "d8338300ab",
    "data_date": "2026-02-27",
    "gov_home": "https://www.naju.go.kr",
-   "reserve_level": "unknown",
-   "portal": null,
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.naju.go.kr/sports",
+    "name": "나주시 체육시설 예약포털",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": {
     "url": "https://postfiles.pstatic.net/MjAyMjEwMTRfMjU1/MDAxNjY1NzA3OTk0ODk2.z9_JfXHSUOWN68gY5Z6JCT62X36QIEjokCD0kCy7iCog.AePxP-RweeAeN2ZcKLvOmIAzpzP1iUb07_TOoSoK_dMg.JPEG.eumseonggun/%EC%82%AC%EC%A7%844.JPG?type=w773",
     "thumb": "https://search2.kakaocdn.net/argon/130x130_85_c/1b1Gku9gANo",
@@ -19455,7 +19700,7 @@
    ],
    "id": "3adf437043",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.seogwipo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19498,7 +19743,7 @@
    ],
    "id": "78d2b12546",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.seogwipo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19541,7 +19786,7 @@
    ],
    "id": "4c288ae858",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.seogwipo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19584,7 +19829,7 @@
    ],
    "id": "341c51a440",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.seogwipo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19627,7 +19872,7 @@
    ],
    "id": "3dbb7ca46e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.jejusi.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19670,7 +19915,7 @@
    ],
    "id": "28c63aa702",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.jejusi.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19713,7 +19958,7 @@
    ],
    "id": "8047caaafc",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.jejusi.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19756,7 +20001,7 @@
    ],
    "id": "a25b8c1317",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.gyeryong.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19799,7 +20044,7 @@
    ],
    "id": "a2ab436aae",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.gongju.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19842,7 +20087,7 @@
    ],
    "id": "668056ec14",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.gongju.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19885,7 +20130,7 @@
    ],
    "id": "8c933769b0",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.geumsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19928,7 +20173,7 @@
    ],
    "id": "1d18876a5c",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.nonsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -19971,7 +20216,7 @@
    ],
    "id": "75a2071463",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.nonsan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20014,9 +20259,14 @@
    ],
    "id": "3556feacf9",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.dangjin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.dangjin.go.kr/fmres/",
+    "name": "당진시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20057,9 +20307,14 @@
    ],
    "id": "e9e2463ad5",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.dangjin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.dangjin.go.kr/fmres/",
+    "name": "당진시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20100,9 +20355,14 @@
    ],
    "id": "bc4fbdd304",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.dangjin.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.dangjin.go.kr/fmres/",
+    "name": "당진시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20143,7 +20403,7 @@
    ],
    "id": "3bc471ac0d",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.brcn.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20186,7 +20446,7 @@
    ],
    "id": "7ff66a6076",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.brcn.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20229,7 +20489,7 @@
    ],
    "id": "141bafe53e",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.brcn.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20272,7 +20532,7 @@
    ],
    "id": "60cfda585b",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.buyeo.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20315,7 +20575,7 @@
    ],
    "id": "624fe08fb4",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.seosan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20358,7 +20618,7 @@
    ],
    "id": "bcdae6a004",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.seosan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20401,9 +20661,14 @@
    ],
    "id": "aee955f0f8",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.seocheon.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.seocheon.go.kr/yeyak/main.do",
+    "name": "서천군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20530,9 +20795,14 @@
    ],
    "id": "4b87a31567",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.yesan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.yesan.go.kr/yeyak/main.do",
+    "name": "예산군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20573,9 +20843,14 @@
    ],
    "id": "a4d9a63dbe",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.yesan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.yesan.go.kr/yeyak/main.do",
+    "name": "예산군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20616,9 +20891,14 @@
    ],
    "id": "889534bfbe",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.cheonan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.cheonan.go.kr/yeyak/main.do",
+    "name": "천안시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20659,9 +20939,14 @@
    ],
    "id": "feb0ced494",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.cheonan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.cheonan.go.kr/yeyak/main.do",
+    "name": "천안시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20702,9 +20987,14 @@
    ],
    "id": "bebfc07a9c",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.cheonan.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.cheonan.go.kr/yeyak/main.do",
+    "name": "천안시 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20745,9 +21035,14 @@
    ],
    "id": "f5a2aea02a",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.cheongyang.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.cheongyang.go.kr/sports.do",
+    "name": "청양군 공공체육시설 예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20831,9 +21126,14 @@
    ],
    "id": "cb7ed0af83",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.hongseong.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.hongseong.go.kr/yeyak/main.do",
+    "name": "홍성군 통합예약",
+    "parkgolf": false,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -20874,7 +21174,7 @@
    ],
    "id": "84216f887a",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.goesan.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20917,7 +21217,7 @@
    ],
    "id": "afcbc9245b",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.danyang.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -20960,7 +21260,7 @@
    ],
    "id": "36c6e780bb",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.danyang.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -21132,7 +21432,7 @@
    ],
    "id": "909228e2b6",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.jecheon.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -21175,7 +21475,7 @@
    ],
    "id": "71e0e42a68",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.jp.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -21218,7 +21518,7 @@
    ],
    "id": "e042f40237",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.jincheon.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -21261,7 +21561,7 @@
    ],
    "id": "9567e12fe3",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.cheongju.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -21304,7 +21604,7 @@
    ],
    "id": "41a3063128",
    "data_date": "2025-03-24",
-   "gov_home": null,
+   "gov_home": "https://www.cheongju.go.kr",
    "reserve_level": "unknown",
    "portal": null,
    "photo": null
@@ -21347,9 +21647,14 @@
    ],
    "id": "fa07024dff",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.chungju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chungju.go.kr/rev/reserve/1",
+    "name": "충주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -21390,9 +21695,14 @@
    ],
    "id": "e48917c2aa",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.chungju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chungju.go.kr/rev/reserve/1",
+    "name": "충주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -21433,9 +21743,14 @@
    ],
    "id": "f2930fc0fc",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.chungju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chungju.go.kr/rev/reserve/1",
+    "name": "충주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -21476,9 +21791,14 @@
    ],
    "id": "9ae83c6a78",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.chungju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chungju.go.kr/rev/reserve/1",
+    "name": "충주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   },
   {
@@ -21519,9 +21839,14 @@
    ],
    "id": "0ea4f170b8",
    "data_date": "2025-03-24",
-   "gov_home": null,
-   "reserve_level": "unknown",
-   "portal": null,
+   "gov_home": "https://www.chungju.go.kr",
+   "reserve_level": "portal",
+   "portal": {
+    "url": "https://www.chungju.go.kr/rev/reserve/1",
+    "name": "충주시 통합예약",
+    "parkgolf": true,
+    "_확인": "2026-11-17"
+   },
    "photo": null
   }
  ],
