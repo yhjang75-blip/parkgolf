@@ -1,0 +1,16 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+node_modules
+.wrangler
+worker
+screenshots
+docs
+data/community.db
+data/.secret_key
+data/geocode_log.txt
+data/reserve_probe.json
+*.bat
+.dev.vars*

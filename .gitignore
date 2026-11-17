@@ -5,3 +5,6 @@ data/geocode_log.txt
 data/reserve_probe.json
 data/community.db
 data/.secret_key
+node_modules/
+.wrangler/
+.dev.vars*

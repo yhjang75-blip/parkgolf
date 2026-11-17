@@ -31,7 +31,7 @@ if url.startswith("postgres://"):
 if url.startswith("postgresql://"):
     url = "postgresql+psycopg://" + url[len("postgresql://"):]
 
-ON_SERVER = bool(os.environ.get("RENDER"))
+ON_SERVER = bool(os.environ.get("RENDER") or os.environ.get("CLOUDFLARE"))  # Render 또는 Cloudflare 서버에서 실행 중
 ENABLED = bool(url) or not ON_SERVER
 if not url:
     url = f"sqlite:///{ROOT / 'data' / 'community.db'}"

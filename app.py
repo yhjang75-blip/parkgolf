@@ -28,7 +28,7 @@ DATA = ROOT / "data" / "courses.json"
 
 app = Flask(__name__)
 app.json.ensure_ascii = False
-app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)  # Render 뒤에서 https 주소를 바르게 만들기
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)  # Render·Cloudflare 뒤에서 https 주소를 바르게 만들기
 
 
 def secret_key():
@@ -47,7 +47,7 @@ app.config.update(
     PERMANENT_SESSION_LIFETIME=timedelta(days=30),
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE="Lax",
-    SESSION_COOKIE_SECURE=bool(os.environ.get("RENDER")),
+    SESSION_COOKIE_SECURE=cdb.ON_SERVER,
 )
 app.register_blueprint(community.bp)
 cdb.init()

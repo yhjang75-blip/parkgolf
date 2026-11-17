@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nicepark",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-17",
+  "observability": { "enabled": true },
+  "containers": [
+    {
+      "class_name": "ParkgolfApp",
+      "image": "./Dockerfile",
+      "instance_type": "basic",
+      "max_instances": 2
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "APP", "class_name": "ParkgolfApp" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ParkgolfApp"] }]
+}
