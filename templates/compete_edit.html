@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}대회 {{ '수정' if c.id else '열기' }} — 이지 파크골프{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <p class="crumb"><a href="{{ '/admin/compete/%d'|format(c.id) if c.id else '/admin/compete' }}">← 돌아가기</a></p>
+  <section class="panel">
+    <h1>{{ '✏️ 대회 정보 수정' if c.id else '➕ 새 대회 열기' }}</h1>
+    <form method="post">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <h3 class="sub-h">1. 기본 정보</h3>
+      <label class="field">대회 이름<input name="title" value="{{ c.title or '' }}" maxlength="120" required placeholder="예: 제1회 이지 파크골프 회원 친선대회"></label>
+      <label class="field">장소 (구장 이름)<input name="venue" value="{{ c.venue or '' }}" maxlength="120" required placeholder="예: ○○ 파크골프장"></label>
+      <label class="field">구장 번호 <small>(선택: 구장 상세 주소창의 #id= 뒤 값을 넣으면 '구장 위치 보기'가 생깁니다)</small><input name="course_id" value="{{ c.course_id or '' }}" maxlength="20"></label>
+      <div class="row3">
+        <label class="field">접수 시작<input type="date" name="open_date" value="{{ c.open_date or '' }}" required></label>
+        <label class="field">접수 마감<input type="date" name="close_date" value="{{ c.close_date or '' }}" required></label>
+        <label class="field">대회일<input type="date" name="play_date" value="{{ c.play_date or '' }}" required></label>
+      </div>
+      <div class="row2">
+        <label class="field">주최·주관<input name="host" value="{{ c.host or '' }}" maxlength="120"></label>
+        <label class="field">문의처<input name="contact" value="{{ c.contact or '' }}" maxlength="120" placeholder="예: 사무국 010-0000-0000"></label>
+      </div>
+
+      <h3 class="sub-h">2. 참가 조건</h3>
+      <label class="field">참가 부문 <small>(쉼표로 구분)</small><input name="divisions" value="{{ c.divisions or '' }}" required placeholder="예: 남자부,여자부,70세이상부"></label>
+      <div class="row2">
+        <label class="field">참가비 (원, 무료면 0)<input type="number" name="fee" min="0" step="1000" value="{{ c.fee or 0 }}"></label>
+        <label class="field">정원 (0 = 제한 없음)<input type="number" name="capacity" min="0" value="{{ c.capacity or 0 }}"></label>
+      </div>
+      <label class="field">입금 안내 <small>(신청자에게만 보입니다)</small><input name="pay_info" value="{{ c.pay_info or '' }}" maxlength="300" placeholder="예: ○○은행 000-0000-0000 (예금주 ○○협회)"></label>
+
+      <h3 class="sub-h">3. 경기 운영</h3>
+      <label class="field">경기 방식 설명<input name="format" value="{{ c.format or '' }}" maxlength="200"></label>
+      <div class="row2">
+        <label class="field">경기 코스 <small>(쉼표 구분, 코스당 9홀)</small><input name="play_courses" value="{{ c.play_courses or 'A,B,C,D' }}" required></label>
+        <label class="field">한 조 인원<input type="number" name="group_size" min="2" max="6" value="{{ c.group_size or 4 }}"></label>
+      </div>
+      <div class="row2">
+        <label class="field">첫 출발 시각<input type="time" name="start_time" value="{{ c.start_time or '08:00' }}" required></label>
+        <label class="field">다음 출발까지 간격 (분) <small>(조가 홀 수보다 많을 때)</small><input type="number" name="wave_gap" min="0" value="{{ c.wave_gap if c.wave_gap is not none else 30 }}"></label>
+      </div>
+      <label class="field">대회 요강·유의사항<textarea name="body" rows="8" placeholder="시상 내역, 준비물, 집결 시각, 동타 처리 규정, 환불 규정 등">{{ c.body or '' }}</textarea></label>
+      <label class="check"><input type="checkbox" name="hidden" {{ 'checked' if c.hidden }}> 목록에서 숨김 (준비가 끝나면 체크를 풀어 공개)</label>
+      <button class="btn primary" type="submit">저장</button>
+    </form>
+  </section>
+</main>
+{% endblock %}

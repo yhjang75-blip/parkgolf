@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}대회 관리 — 이지 파크골프{% endblock %}
+{% block content %}
+<main class="wrap page">
+  <section class="panel">
+    <div class="panel-head">
+      <h1>🏅 대회 관리</h1>
+      <a class="btn primary small inl" href="/admin/compete/new">➕ 새 대회 열기</a>
+    </div>
+    <p class="src"><a href="/admin">← 관리자 첫 화면</a> · 대회를 연 뒤 '목록에서 숨김'을 풀어야 회원에게 보입니다.</p>
+    <div class="tscroll"><table class="tbl">
+      <tr><th>대회일</th><th>대회</th><th>상태</th><th class="n">신청</th><th class="n">확정</th><th class="n">취소요청</th><th></th></tr>
+      {% for c in items %}
+        <tr><td>{{ c.play_date }}</td><td><a href="/compete/{{ c.id }}">{{ c.title }}</a><br><span class="muted">{{ c.venue }}</span></td>
+          <td><span class="badge {{ c.tone }}">{{ c.state }}</span></td>
+          <td class="n">{{ c.cnt.active }}{% if c.capacity %}/{{ c.capacity }}{% endif %}</td>
+          <td class="n">{{ c.cnt.get('입금확인', 0) }}</td>
+          <td class="n">{% if c.cnt.get('취소요청') %}<b class="cc">{{ c.cnt['취소요청'] }}</b>{% else %}0{% endif %}</td>
+          <td><a class="pill" href="/admin/compete/{{ c.id }}">관리</a></td></tr>
+      {% else %}<tr><td colspan="7" class="muted">아직 연 대회가 없습니다. '새 대회 열기'를 눌러 시작하세요.</td></tr>{% endfor %}
+    </table></div>
+  </section>
+</main>
+{% endblock %}

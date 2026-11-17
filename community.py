@@ -32,7 +32,7 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 from sqlalchemy import and_, delete, desc, insert, or_, update
 
 import db
-from db import (all_, benefits, comments, favorites, func, images, likes, now, one, point_log, posts,
+from db import (all_, benefits, comments, entries, favorites, func, images, likes, now, one, point_log, posts,
                 redemptions, reports, scalar, select, today, users)
 
 bp = Blueprint("community", __name__)
@@ -60,6 +60,7 @@ RULES = {
     "사진 올리기": (5, 3),
     "댓글": (2, 10),
     "추천 받음": (1, 20),
+    "대회 참가": (30, 3),
 }
 MAX_PHOTOS = 4
 MAX_PHOTO_BYTES = 15 * 1024 * 1024
@@ -107,7 +108,7 @@ def load_user():
 
 @bp.before_app_request
 def csrf_check():
-    if request.method == "POST" and request.blueprint == "community":
+    if request.method == "POST" and request.blueprint in ("community", "compete"):
         token = request.form.get("csrf") or request.headers.get("X-CSRF")
         if not token or token != session.get("csrf"):
             abort(400, "보안 확인값이 맞지 않습니다. 새로고침 후 다시 시도해 주세요.")
@@ -319,7 +320,10 @@ def me():
     log = all_(select(point_log).where(point_log.c.user_id == uid).order_by(desc(point_log.c.id)).limit(15))
     reds = all_(select(redemptions, benefits.c.title, benefits.c.partner).join(benefits)
                 .where(redemptions.c.user_id == uid).order_by(desc(redemptions.c.id)).limit(10))
-    return render_template("me.html", favs=favs, my_posts=my_posts, log=log, reds=reds)
+    from db import comps
+    my_comps = all_(select(entries, comps.c.title, comps.c.play_date, comps.c.venue, comps.c.groups_open)
+                    .join(comps).where(entries.c.user_id == uid).order_by(desc(comps.c.play_date)).limit(10))
+    return render_template("me.html", favs=favs, my_posts=my_posts, log=log, reds=reds, my_comps=my_comps)
 
 
 @bp.post("/me/withdraw")
@@ -333,7 +337,7 @@ def withdraw():
             c.execute(delete(images).where(images.c.post_id.in_(pids)))
             c.execute(delete(comments).where(comments.c.post_id.in_(pids)))
             c.execute(delete(likes).where(likes.c.post_id.in_(pids)))
-        for t in (comments, likes, favorites, point_log, reports, redemptions):
+        for t in (comments, likes, favorites, point_log, reports, redemptions, entries):
             c.execute(delete(t).where(t.c.user_id == uid))
         c.execute(delete(posts).where(posts.c.user_id == uid))
         c.execute(delete(users).where(users.c.id == uid))

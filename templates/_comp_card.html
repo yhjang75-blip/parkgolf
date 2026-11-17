@@ -1,0 +1,13 @@
+<a class="ccard" href="/compete/{{ c.id }}">
+  <span class="ctop"><span class="badge {{ c.tone }}">{{ c.state }}</span>{% if c.dday is not none %}<b class="dday">{{ '오늘 마감' if c.dday == 0 else 'D-%d'|format(c.dday) }}</b>{% endif %}</span>
+  <span class="ct">{{ c.title }}</span>
+  <span class="cm">📅 {{ c.play_date }} · 📍 {{ c.venue }}</span>
+  <span class="cm">🏷️ {{ c.div_list|join(' · ') }} · 💳 {{ '{:,}'.format(c.fee) ~ '원' if c.fee else '무료' }}</span>
+  {% if c.capacity %}
+    <span class="cbar" aria-hidden="true"><span style="width:{{ [100, (100 * c.cnt.active / c.capacity)|round|int]|min }}%"></span></span>
+    <span class="cm">신청 <b>{{ c.cnt.active }}</b> / 정원 {{ c.capacity }}명</span>
+  {% else %}
+    <span class="cm">신청 <b>{{ c.cnt.active }}</b>명</span>
+  {% endif %}
+  {% if mine and mine.get(c.id) %}{% set e = mine[c.id] %}<span class="mine est est-{{ e.status }}">내 신청: {{ '참가 확정' if e.status == '입금확인' else e.status }}</span>{% endif %}
+</a>

@@ -9,7 +9,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from sqlalchemy import (Boolean, Column, ForeignKey, Integer, LargeBinary, MetaData, String, Table, Text,
+from sqlalchemy import (Boolean, Column, ForeignKey, Integer, LargeBinary, MetaData, String, Table, Text, UniqueConstraint,
                         create_engine, func, select)
 
 KST = timezone(timedelta(hours=9))
@@ -163,6 +163,60 @@ redemptions = Table(
 )
 
 
+# ---------------------------------------------------------------- 대회 참가 (compete.py)
+comps = Table(
+    "comps", md,
+    Column("id", Integer, primary_key=True),
+    Column("title", String(120), nullable=False),
+    Column("play_date", String(10), nullable=False),      # 대회일 YYYY-MM-DD
+    Column("open_date", String(10), nullable=False),      # 접수 시작일
+    Column("close_date", String(10), nullable=False),     # 접수 마감일
+    Column("venue", String(120), nullable=False),         # 장소 (구장 이름)
+    Column("course_id", String(20)),                      # 구장 자료와 연결 (선택)
+    Column("host", String(120)),                          # 주최·주관
+    Column("contact", String(120)),                       # 문의처
+    Column("divisions", String(200), nullable=False),     # 참가 부문, 쉼표 구분 (예: 남자부,여자부,시니어부)
+    Column("fee", Integer, nullable=False, default=0),    # 참가비 (원)
+    Column("pay_info", String(300)),                      # 입금 안내 (계좌 등, 주최자가 입력)
+    Column("capacity", Integer, nullable=False, default=0),  # 정원 (0 = 제한 없음)
+    Column("play_courses", String(40), nullable=False, default="A,B,C,D"),  # 경기 코스 (각 9홀)
+    Column("group_size", Integer, nullable=False, default=4),
+    Column("start_time", String(5), nullable=False, default="08:00"),
+    Column("wave_gap", Integer, nullable=False, default=30),  # 출발 순서가 밀릴 때 간격 (분)
+    Column("format", String(200)),                        # 경기 방식 설명
+    Column("body", Text),                                 # 대회 요강·유의사항
+    Column("closed", Boolean, nullable=False, default=False),       # 조기 마감
+    Column("groups_open", Boolean, nullable=False, default=False),  # 조편성 공개
+    Column("results_open", Boolean, nullable=False, default=False), # 결과 공개
+    Column("hidden", Boolean, nullable=False, default=False),       # 목록에서 숨김 (준비 중)
+    Column("created_at", String(19), nullable=False),
+)
+
+entries = Table(
+    "entries", md,
+    Column("id", Integer, primary_key=True),
+    Column("comp_id", Integer, ForeignKey("comps.id", ondelete="CASCADE"), nullable=False, index=True),
+    Column("user_id", Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True),
+    Column("name", String(30), nullable=False),
+    Column("phone", String(20), nullable=False),
+    Column("gender", String(4), nullable=False),
+    Column("birth_year", Integer),
+    Column("club", String(60)),                           # 소속 클럽·협회
+    Column("division", String(40), nullable=False),
+    Column("memo", String(300)),
+    Column("status", String(10), nullable=False, default="신청"),  # 신청 | 입금확인 | 취소요청 | 취소
+    Column("group_no", Integer),                          # 조 번호
+    Column("start_spot", String(10)),                     # 출발 위치 (예: A-3 = A코스 3번홀)
+    Column("tee_time", String(5)),
+    Column("scores", String(80)),                         # 코스별 타수, 쉼표 구분
+    Column("total", Integer),
+    Column("rank", Integer),
+    Column("created_at", String(19), nullable=False),
+    Column("paid_at", String(19)),
+    UniqueConstraint("comp_id", "user_id", name="uq_entry_user"),
+)
+
+
 def init():
     """표를 만든다. 접속에 실패하면 사이트는 그대로 두고 회원 기능만 끈다 (로그에 이유를 남김)."""
     global engine, ENABLED
@@ -195,4 +249,4 @@ def scalar(stmt):
 
 __all__ = ["engine", "ENABLED", "init", "one", "all_", "scalar", "now", "today", "func", "select",
            "users", "favorites", "posts", "images", "comments", "likes", "reports", "point_log",
-           "benefits", "redemptions"]
+           "benefits", "redemptions", "comps", "entries"]

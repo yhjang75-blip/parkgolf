@@ -44,6 +44,20 @@
     </section>
   </div>
 
+  <section class="panel" id="my-comps">
+    <div class="panel-head"><h2>🏅 내 대회 참가</h2><a class="pill" href="/compete">대회 둘러보기 →</a></div>
+    {% if my_comps %}
+      <table class="tbl">
+        <tr><th>대회일</th><th>대회</th><th>부문</th><th>상태</th><th>조·출발</th></tr>
+        {% for e in my_comps %}
+          <tr><td>{{ e.play_date }}</td><td><a href="/compete/{{ e.comp_id }}">{{ e.title }}</a><br><span class="muted">{{ e.venue }}</span></td>
+            <td>{{ e.division }}</td><td><span class="est est-{{ e.status }}">{{ '참가 확정' if e.status == '입금확인' else e.status }}</span></td>
+            <td>{% if e.groups_open and e.group_no %}{{ e.group_no }}조 · {{ e.start_spot }}번홀 · {{ e.tee_time }}{% else %}<span class="muted">편성 전</span>{% endif %}</td></tr>
+        {% endfor %}
+      </table>
+    {% else %}<p class="muted">아직 신청한 대회가 없습니다. <a href="/compete">대회 참가 신청하러 가기</a></p>{% endif %}
+  </section>
+
   <div class="grid2">
     <section class="panel">
       <h2>📝 내가 쓴 글</h2>

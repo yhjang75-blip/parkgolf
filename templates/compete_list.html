@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}대회 참가 신청 — 이지 파크골프{% endblock %}
+{% block content %}
+<section class="about-hero t-hero">
+  <div class="wrap narrow">
+    <p class="kicker">대회 참가</p>
+    <h1>파크골프 대회, 신청부터 결과까지 한곳에서</h1>
+    <p class="lead">휴대폰으로 신청하고, 입금 확인·조 편성·출발 시각·순위를 바로 확인하세요.</p>
+  </div>
+</section>
+
+<main class="wrap page">
+  <section class="panel">
+    <h2>이렇게 진행됩니다</h2>
+    <ol class="steps">
+      <li><b>1</b><span class="s-t">참가 신청</span><span class="s-d">카카오로 로그인하고 이름·연락처·부문을 적습니다</span></li>
+      <li><b>2</b><span class="s-t">참가비 입금</span><span class="s-d">안내된 계좌로 입금하면 주최 측이 확인합니다</span></li>
+      <li><b>3</b><span class="s-t">조 편성 확인</span><span class="s-d">내 조 번호·출발 홀·출발 시각을 미리 봅니다</span></li>
+      <li><b>4</b><span class="s-t">결과 확인</span><span class="s-d">대회가 끝나면 부문별 순위를 봅니다</span></li>
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2>🏅 신청할 수 있는 대회</h2>
+    {% if upcoming %}
+      <div class="ccards">{% for c in upcoming %}{% include "_comp_card.html" %}{% endfor %}</div>
+    {% else %}
+      <p class="muted empty">지금 열려 있는 대회가 없습니다. 새 대회가 열리면 이곳과 첫 화면에 안내합니다.<br>
+        다른 기관이 여는 대회 일정은 <a href="/tournament">대회 안내</a>에서 보실 수 있습니다.</p>
+    {% endif %}
+  </section>
+
+  {% if past %}
+  <section class="panel">
+    <h2>지난 대회</h2>
+    <ul class="feed">{% for c in past %}
+      <li><a href="/compete/{{ c.id }}"><span class="t">{{ c.title }}</span>
+        <span class="m">{{ c.play_date }} · {{ c.venue }} · {{ c.state }}</span></a></li>
+    {% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  {% if me and me.is_admin %}<p class="center"><a class="btn secondary small inl" href="/admin/compete">🔧 대회 개설·관리</a></p>{% endif %}
+</main>
+{% endblock %}

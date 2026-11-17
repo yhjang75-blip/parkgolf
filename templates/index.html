@@ -57,6 +57,18 @@
       </p>
     </section>
 
+    {% if open_comps %}
+    <section class="panel" id="sec-compete" aria-labelledby="h-compete">
+      <div class="panel-head">
+        <h2 id="h-compete">🏅 대회 참가 신청</h2>
+        <a class="pill" href="/compete">전체 대회 보기 →</a>
+      </div>
+      <div class="ccards">
+        {% for c in open_comps %}{% include "_comp_card.html" %}{% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
     <!-- 회원 맞춤 정보 (로그인 전에는 가입 안내) -->
     <section class="panel my" id="my" hidden></section>
 

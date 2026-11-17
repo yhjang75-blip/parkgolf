@@ -19,6 +19,7 @@ from flask import Flask, abort, jsonify, render_template, request
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 import community
+import compete
 import db as cdb
 
 KST = timezone(timedelta(hours=9))
@@ -50,6 +51,7 @@ app.config.update(
     SESSION_COOKIE_SECURE=cdb.ON_SERVER,
 )
 app.register_blueprint(community.bp)
+app.register_blueprint(compete.bp)
 cdb.init()
 
 _db = {"mtime": 0, "data": None}
@@ -81,7 +83,7 @@ app.config["COURSE_DB"] = db  # community.py 가 구장 자료를 쓸 때
 
 @app.get("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", open_comps=compete.open_comps())
 
 
 @app.get("/api/courses")
