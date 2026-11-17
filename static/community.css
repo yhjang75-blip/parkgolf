@@ -276,3 +276,24 @@ form.inline { display: inline; }
   .mybox { padding: 8px 12px 10px; }
   .mb-news li:nth-child(n+2) { display: none; }  /* 휴대폰: 소식은 한 줄만 */
 }
+
+/* '내 나이스파크' 카드: 초록 바탕에 은은하게 (반투명 유리 느낌) */
+.mybox { background: rgba(255,255,255,.10); color: #fff; border: 1px solid rgba(255,255,255,.22); box-shadow: none;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.bhero .mybox { background: rgba(24,84,45,.60); border-color: rgba(255,255,255,.28); }
+.mybox a { color: #ffe28a; }
+.mb-head { border-bottom-color: rgba(255,255,255,.18); }
+.mb-who, .mb-who b { color: #fff; }
+.mb-who small { color: rgba(255,255,255,.72); }
+.mb-go { color: #ffe28a; }
+.mb-h { color: rgba(255,255,255,.88); }
+.mb-s { color: rgba(255,255,255,.70); }
+.mb-s a { color: #ffe28a; }
+.mb-chip, .mb-more { background: rgba(255,255,255,.14); color: #fff; }
+.mb-chip:hover, .mb-more:hover { background: rgba(255,255,255,.26); }
+.mb-news a { color: rgba(255,255,255,.88); }
+.mb-news a:hover { color: #fff; }
+.mybox.guest .mb-t { color: #fff; }
+.mybox.guest .btn { background: #ffd75e; color: #2b2300; border: 0; }
+.mybox.guest .btn:hover { background: #ffcb2b; }
+.mybox .mb-chip, .mybox .mb-more { color: #fff; }
