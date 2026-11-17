@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}가입 동의 — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <form class="panel" method="post">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <input type="hidden" name="next" value="{{ next }}">
+    <h1>반갑습니다! 가입을 마무리해 주세요</h1>
+
+    <label class="field">닉네임 (게시판에 보이는 이름, 2~20자)
+      <input name="nickname" value="{{ me.nickname }}" maxlength="20" required minlength="2"></label>
+
+    {% include "_region.html" %}
+
+    <div class="agree-box">
+      <label class="check"><input type="checkbox" id="all"> <b>아래 내용에 모두 동의합니다</b></label>
+      <hr>
+      <label class="check"><input type="checkbox" name="age14" required> (필수) 만 14세 이상입니다</label>
+      <label class="check"><input type="checkbox" name="terms" required> (필수) <a href="/terms" target="_blank">이용약관</a>에 동의합니다</label>
+      <label class="check"><input type="checkbox" name="privacy" required> (필수) <a href="/privacy" target="_blank">개인정보 수집·이용</a>에 동의합니다</label>
+      <p class="src" style="margin-left:30px">수집 항목: 카카오 회원번호, 닉네임, 프로필 사진 · 목적: 회원 식별, 게시판, 포인트·혜택 · 보관: 탈퇴할 때까지</p>
+      <label class="check"><input type="checkbox" name="marketing"> (선택) 새 제휴 혜택·이벤트 소식을 받겠습니다</label>
+    </div>
+    <button class="btn primary" type="submit">가입 완료하고 20포인트 받기</button>
+  </form>
+</main>
+{% endblock %}
+{% block scripts %}
+<script>
+  document.getElementById("all").addEventListener("change", (e) =>
+    document.querySelectorAll(".agree-box input[type=checkbox]").forEach((x) => (x.checked = e.target.checked)));
+</script>
+{% endblock %}

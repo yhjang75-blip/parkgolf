@@ -1,19 +1,16 @@
 {
+  // 나이스파크 — Cloudflare Workers 무료 요금제 설정
+  // 배포: GitHub 에 올리면 .github/workflows/deploy-cloudflare.yml 이 자동으로 배포
+  // 내 PC 시험: npx wrangler dev  →  http://localhost:8787
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "nicepark",
   "main": "worker/index.ts",
   "compatibility_date": "2026-11-17",
   "observability": { "enabled": true },
-  "containers": [
-    {
-      "class_name": "ParkgolfApp",
-      "image": "./Dockerfile",
-      "instance_type": "basic",
-      "max_instances": 2
-    }
-  ],
-  "durable_objects": {
-    "bindings": [{ "name": "APP", "class_name": "ParkgolfApp" }]
-  },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ParkgolfApp"] }]
+  // 배포·시험 직전에 화면 틀과 구장 자료를 준비
+  "build": { "command": "node scripts/build-worker.mjs" },
+  // 구장 자료·CSS·JS 는 정적 파일로 (무료·무제한)
+  "assets": { "directory": "public", "binding": "ASSETS" },
+  // 회원·대회 자료 (D1). 처음 배포할 때 Cloudflare 가 데이터베이스를 자동으로 만든다.
+  "d1_databases": [{ "binding": "DB", "database_name": "nicepark" }]
 }

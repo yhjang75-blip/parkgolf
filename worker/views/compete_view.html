@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}{{ c.title }} — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <p class="crumb"><a href="/compete">← 대회 목록</a></p>
+
+  <section class="panel chead">
+    <span class="badge {{ c.tone }}">{{ c.state }}</span>
+    {% if c.dday is not none %}<b class="dday">{{ '오늘 마감' if c.dday == 0 else '마감까지 D-%d'|format(c.dday) }}</b>{% endif %}
+    <h1>{{ c.title }}</h1>
+    <dl class="cfacts">
+      <dt>대회일</dt><dd>{{ c.play_date }} · {{ c.start_time }} 출발</dd>
+      <dt>장소</dt><dd>{{ c.venue }}{% if course %} · <a href="/#id={{ course.id }}">구장 위치 보기</a>{% endif %}</dd>
+      <dt>접수 기간</dt><dd>{{ c.open_date }} ~ {{ c.close_date }}</dd>
+      <dt>참가 부문</dt><dd>{{ c.div_list|join(' · ') }}</dd>
+      <dt>경기 방식</dt><dd>{{ c.format or ('%d홀 스트로크'|format(c.holes)) }} <span class="muted">(코스 {{ c.course_list|join('·') }})</span></dd>
+      <dt>참가비</dt><dd>{{ (c.fee|comma ~ '원') if c.fee else '무료' }}</dd>
+      <dt>정원</dt><dd>{% if c.capacity %}{{ c.capacity }}명{% else %}제한 없음{% endif %} (현재 {{ c.cnt.active }}명 신청)</dd>
+      {% if c.host %}<dt>주최·주관</dt><dd>{{ c.host }}</dd>{% endif %}
+      {% if c.contact %}<dt>문의</dt><dd>{{ c.contact }}</dd>{% endif %}
+    </dl>
+    {% if c.capacity %}<div class="cbar big" aria-hidden="true"><span style="width:{{ [100, (100 * c.cnt.active / c.capacity)|round|int]|min }}%"></span></div>{% endif %}
+
+    {% if my and my.status in ['신청', '입금확인'] %}
+      <a class="btn secondary" href="#my-entry">내 신청 내용 보기</a>
+    {% elif c.can_apply %}
+      <a class="btn primary big-cta" href="/compete/{{ c.id }}/apply">✍️ 참가 신청하기</a>
+      {% if not me %}<p class="src center">카카오로 로그인하면 바로 신청할 수 있습니다.</p>{% endif %}
+    {% endif %}
+  </section>
+
+  {% if my %}
+  {% set s = my.status %}
+  <section class="panel myentry" id="my-entry">
+    <h2>📋 내 신청</h2>
+    <ol class="track">
+      <li class="{{ 'on' if s in ['신청', '입금확인'] }}">신청 접수</li>
+      <li class="{{ 'on' if s == '입금확인' }}">{{ '입금 확인' if c.fee else '참가 확인' }}</li>
+      <li class="{{ 'on' if s == '입금확인' and my.group_no and c.groups_open }}">조 편성</li>
+      <li class="{{ 'on' if s == '입금확인' and c.results_open }}">결과 발표</li>
+    </ol>
+    <p class="lead">상태: <span class="est est-{{ s }}">{{ '참가 확정' if s == '입금확인' else s }}</span></p>
+    {% if s == '신청' and c.fee %}
+      <div class="guide warn">참가비 <b>{{ (c.fee|comma ~ '원') }}</b>을 입금해 주세요.
+        {% if c.pay_info %}<br>입금 안내: <b>{{ c.pay_info }}</b>{% endif %}
+        <br>입금자 이름은 <b>신청자 이름({{ my.name }})</b>과 같게 해 주세요. 주최 측이 확인하면 '참가 확정'으로 바뀝니다.</div>
+    {% elif s == '취소요청' %}
+      <div class="guide">취소를 요청하셨습니다. 참가비 환불은 주최 측이 확인 후 연락드립니다.</div>
+    {% endif %}
+    {% if c.groups_open and my.group_no and s in ['신청', '입금확인'] %}
+      <div class="myslot"><span><small>조</small><b>{{ my.group_no }}조</b></span><span><small>출발 홀</small><b>{{ my.start_spot }}</b></span><span><small>출발 시각</small><b>{{ my.tee_time }}</b></span></div>
+    {% endif %}
+    <table class="tbl">
+      <tr><th>이름</th><td>{{ my.name }}</td></tr>
+      <tr><th>연락처</th><td>{{ my.phone }}</td></tr>
+      <tr><th>성별·출생</th><td>{{ my.gender }} · {{ my.birth_year }}년</td></tr>
+      <tr><th>소속</th><td>{{ my.club or '없음' }}</td></tr>
+      <tr><th>부문</th><td>{{ my.division }}</td></tr>
+      {% if my.memo %}<tr><th>요청사항</th><td>{{ my.memo }}</td></tr>{% endif %}
+    </table>
+    <div class="btn-row">
+      {% if s in ['신청', '입금확인'] %}
+        <a class="btn secondary" href="/compete/{{ c.id }}/apply">신청 내용 고치기</a>
+        <form method="post" action="/compete/{{ c.id }}/cancel" onsubmit="return confirm(this.dataset.msg)"
+              data-msg="{{ '신청을 취소할까요?' if s == '신청' else '이미 입금이 확인되었습니다. 취소를 요청할까요? (환불은 주최 측이 처리합니다)' }}">
+          <input type="hidden" name="csrf" value="{{ csrf }}"><button class="btn danger" type="submit">신청 취소</button></form>
+      {% elif c.can_apply %}
+        <a class="btn primary" href="/compete/{{ c.id }}/apply">다시 신청하기</a>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if c.body %}
+  <section class="panel">
+    <h2>📄 대회 요강·유의사항</h2>
+    <div class="pbody">{{ c.body }}</div>
+  </section>
+  {% endif %}
+
+  {% if results %}
+  <section class="panel" id="results">
+    <div class="panel-head"><h2>🏆 대회 결과</h2><a class="pill" href="/compete/{{ c.id }}/print/results" target="_blank">🖨️ 결과표 인쇄</a></div>
+    {% for d in results %}
+      <h3 class="sub-h">{{ d.division }}</h3>
+      <div class="tscroll"><table class="tbl rtbl">
+        <tr><th>순위</th><th>이름</th><th>소속</th>{% for x in c.course_list %}<th class="n">{{ x }}</th>{% endfor %}<th class="n">합계</th></tr>
+        {% for r in d.rows %}
+          <tr class="{{ 'top3' if r.place <= 3 }}"><td><b>{{ ['🥇','🥈','🥉'][r.place-1] if r.place <= 3 else r.place }}</b></td>
+            <td>{{ mask(r.name) }}</td><td>{{ r.club or '' }}</td>
+            {% for s in r.score_list %}<td class="n">{{ s }}</td>{% endfor %}<td class="n"><b>{{ r.total }}</b></td></tr>
+        {% endfor %}
+      </table></div>
+    {% endfor %}
+    <p class="src">동타는 마지막 코스 타수부터 거꾸로 비교해 순위를 정했습니다. 주최 측 규정이 다르면 그에 따릅니다.</p>
+  </section>
+  {% endif %}
+
+  {% if groups %}
+  <section class="panel" id="groups">
+    <div class="panel-head"><h2>👥 조 편성표</h2><a class="pill" href="/compete/{{ c.id }}/print/groups" target="_blank">🖨️ 조편성표 인쇄</a></div>
+    <p class="src">출발 홀 'A-3'은 A코스 3번 홀에서 출발한다는 뜻입니다.</p>
+    <div class="tgroups">
+      {% for grp in groups %}
+        <div class="tgroup {{ 'mine' if my and my.group_no == grp.no }}">
+          <div class="gh"><b>{{ grp.no }}조</b><span>{{ grp.spot }} · {{ grp.time }}</span></div>
+          <div class="gd">{{ grp.division }}</div>
+          <ul>{% for p in grp.players %}<li>{{ mask(p.name) }} <span class="muted">{{ p.club or '' }}</span></li>{% endfor %}</ul>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="panel" id="roster">
+    <h2>🙋 참가 신청자 ({{ c.cnt.active }}명)</h2>
+    {% if by_div %}
+      {% for d, lst in by_div %}
+        <h3 class="sub-h">{{ d }} <span class="muted">{{ lst|length }}명</span></h3>
+        <p class="roster">{% for e in lst %}<span>{{ mask(e.name) }}{% if e.club %} <small>{{ e.club }}</small>{% endif %}{% if e.status == '입금확인' %} <i title="참가 확정">✔</i>{% endif %}</span>{% endfor %}</p>
+      {% endfor %}
+      <p class="src">개인정보 보호를 위해 이름 가운데 글자를 가렸습니다. ✔ 표시는 참가 확정자입니다.</p>
+    {% else %}<p class="muted">아직 신청자가 없습니다. 첫 번째로 신청해 보세요!</p>{% endif %}
+  </section>
+
+  {% if me and me.is_admin %}<p class="center"><a class="btn secondary small inl" href="/admin/compete/{{ c.id }}">🔧 이 대회 관리</a></p>{% endif %}
+</main>
+{% endblock %}

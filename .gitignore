@@ -8,3 +8,5 @@ data/.secret_key
 node_modules/
 .wrangler/
 .dev.vars*
+public/
+worker/gen/

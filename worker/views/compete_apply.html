@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}참가 신청 — {{ c.title }}{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <p class="crumb"><a href="/compete/{{ c.id }}">← {{ c.title }}</a></p>
+  <section class="panel">
+    <h1>✍️ {{ '신청 내용 고치기' if my and my.status in ['신청', '입금확인'] else '참가 신청' }}</h1>
+    <p class="lead">{{ c.title }} · {{ c.play_date }} · {{ c.venue }}</p>
+    <form method="post" class="aform">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <label class="field">이름 <small>(입금자 이름과 같게)</small>
+        <input name="name" value="{{ form.name or '' }}" maxlength="30" required autocomplete="name"></label>
+      <label class="field">휴대폰 번호 <small>(대회 안내 문자를 받을 번호)</small>
+        <input name="phone" value="{{ form.phone or '' }}" inputmode="tel" placeholder="010-1234-5678" required autocomplete="tel"></label>
+      <fieldset class="field choice">
+        <legend>성별</legend>
+        {% for v in ['남', '여'] %}<label><input type="radio" name="gender" value="{{ v }}" {{ 'checked' if form.gender == v }} required> {{ v }}</label>{% endfor %}
+      </fieldset>
+      <label class="field">출생연도 <small>(4자리, 연령별 부문 확인용)</small>
+        <input name="birth_year" value="{{ form.birth_year or '' }}" inputmode="numeric" maxlength="4" placeholder="예: 1958" required></label>
+      <label class="field">소속 클럽·협회 <small>(없으면 비워 두세요)</small>
+        <input name="club" value="{{ form.club or '' }}" maxlength="60" placeholder="예: ○○구 파크골프협회"></label>
+      <fieldset class="field choice">
+        <legend>참가 부문</legend>
+        {% for d in c.div_list %}<label><input type="radio" name="division" value="{{ d }}" {{ 'checked' if form.division == d }} required> {{ d }}</label>{% endfor %}
+      </fieldset>
+      <label class="field">요청사항 <small>(선택)</small>
+        <textarea name="memo" rows="2" maxlength="300" placeholder="예: 같은 조 희망, 이동 불편 등">{{ form.memo or '' }}</textarea></label>
+
+      <div class="agree-box">
+        <p><b>개인정보 수집·이용 동의 (필수)</b></p>
+        <p class="src">수집 항목: 이름, 휴대폰 번호, 성별, 출생연도, 소속 · 목적: 대회 참가 접수, 조 편성, 대회 안내 연락, 결과 발표 ·
+          보관: 대회 종료 후 1년 뒤 삭제 (탈퇴 시 즉시 삭제) · 공개 화면에는 이름 가운데 글자를 가리고 소속만 표시합니다.
+          동의하지 않으실 수 있으나 그 경우 신청이 어렵습니다.</p>
+        <label class="check"><input type="checkbox" name="agree" {{ 'checked' if my }} required> 위 내용에 동의합니다</label>
+      </div>
+      {% if c.fee %}<div class="guide">참가비 <b>{{ (c.fee|comma ~ '원') }}</b>은 신청 후 안내되는 방법으로 입금해 주세요.{% if c.pay_info %} ({{ c.pay_info }}){% endif %}</div>{% endif %}
+      <button class="btn primary big-cta" type="submit">{{ '고친 내용 저장' if my and my.status in ['신청', '입금확인'] else '신청하기' }}</button>
+    </form>
+  </section>
+</main>
+{% endblock %}

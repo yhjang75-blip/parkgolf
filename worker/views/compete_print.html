@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ c.title }} — {{ {'groups': '조편성표', 'results': '결과표', 'cards': '점수카드'}[kind] }}</title>
+  <style>
+    body { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; color: #111; margin: 20px; font-size: 14px; }
+    h1 { font-size: 20px; margin: 0 0 4px; } .sub { color: #444; margin: 0 0 14px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 16px; page-break-inside: auto; }
+    th, td { border: 1px solid #555; padding: 5px 6px; text-align: center; } th { background: #eee; }
+    td.l { text-align: left; } h2 { font-size: 16px; margin: 16px 0 6px; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .card { border: 2px solid #111; padding: 8px; page-break-inside: avoid; } .card h3 { margin: 0 0 6px; font-size: 15px; }
+    .noprint { margin-bottom: 14px; } .noprint button { font-size: 16px; padding: 8px 18px; }
+    @media print { .noprint { display: none; } body { margin: 0; } }
+  </style>
+</head>
+<body>
+  <div class="noprint"><button onclick="print()">🖨️ 인쇄하기</button> <a href="/compete/{{ c.id }}">← 대회 화면으로</a></div>
+  <h1>{{ c.title }} — {{ {'groups': '조편성표', 'results': '결과표', 'cards': '조별 점수카드'}[kind] }}</h1>
+  <p class="sub">{{ c.play_date }} · {{ c.venue }}{% if c.host %} · {{ c.host }}{% endif %}</p>
+
+  {% if kind == 'groups' %}
+    <table>
+      <tr><th>조</th><th>출발</th><th>시각</th><th>부문</th><th>참가자 (소속)</th></tr>
+      {% for grp in groups %}
+        <tr><td><b>{{ grp.no }}</b></td><td>{{ grp.spot }}</td><td>{{ grp.time }}</td><td>{{ grp.division }}</td>
+          <td class="l">{% for p in grp.players %}{{ p.name if admin else mask(p.name) }}{% if p.club %}({{ p.club }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</td></tr>
+      {% endfor %}
+    </table>
+  {% elif kind == 'results' %}
+    {% for d in results %}
+      <h2>{{ d.division }}</h2>
+      <table>
+        <tr><th>순위</th><th>이름</th><th>소속</th>{% for x in c.course_list %}<th>{{ x }}</th>{% endfor %}<th>합계</th></tr>
+        {% for r in d.rows %}<tr><td>{{ r.place }}</td><td>{{ r.name if admin else mask(r.name) }}</td><td>{{ r.club or '' }}</td>
+          {% for s in r.score_list %}<td>{{ s }}</td>{% endfor %}<td><b>{{ r.total }}</b></td></tr>{% endfor %}
+      </table>
+    {% endfor %}
+  {% else %}
+    <div class="cards">
+      {% for grp in groups %}
+        <div class="card">
+          <h3>{{ grp.no }}조 · 출발 {{ grp.spot }} · {{ grp.time }} · {{ grp.division }}</h3>
+          {% for course in c.course_list %}
+            <table>
+              <tr><th>{{ course }}코스</th>{% for h in range(1, 10) %}<th>{{ h }}</th>{% endfor %}<th>계</th></tr>
+              {% for p in grp.players %}<tr><td class="l">{{ p.name }}</td>{% for h in range(10) %}<td>&nbsp;</td>{% endfor %}</tr>{% endfor %}
+            </table>
+          {% endfor %}
+          <p>심판 확인: ____________ &nbsp; 선수 확인: ____________</p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</body>
+</html>

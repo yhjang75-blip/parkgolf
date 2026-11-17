@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}내 정보 — 나이스파크{% endblock %}
+{% block content %}
+{% set gr = me.grade %}
+<main class="wrap page">
+  <section class="panel profile">
+    <div class="avatar">{% if me.profile_img %}<img src="{{ me.profile_img }}" alt="" referrerpolicy="no-referrer">{% else %}{{ gr.icon }}{% endif %}</div>
+    <div class="who">
+      <h1>{{ me.nickname }} <span class="grade g{{ gr.level }}">{{ gr.icon }} {{ gr.name }}</span></h1>
+      <p class="lead">쓸 수 있는 포인트 <b>{{ me.points }}P</b> · 지금까지 모은 포인트 {{ me.earned }}P</p>
+      {% if gr.next %}
+        <div class="bar"><span style="width:{{ (100 * me.earned / gr.next)|round|int }}%"></span></div>
+        <p class="src">다음 등급 <b>{{ GRADES[gr.level + 1][2] }} {{ GRADES[gr.level + 1][1] }}</b>까지 {{ gr.next - me.earned }}P 남았습니다.</p>
+      {% else %}
+        <p class="src">최고 등급입니다. 감사합니다!</p>
+      {% endif %}
+      <p><a class="pill" href="/benefits">🎁 혜택 보러 가기</a></p>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <h2>⭐ 내 즐겨찾기 구장</h2>
+      {% if favs %}
+        <ul class="feed">
+          {% for c in favs %}
+            <li><a href="/#id={{ c.id }}"><span class="t">{{ c.name }}</span><span class="m">{{ c.sido }} {{ c.sigungu or '' }} · {{ c.holes or '?' }}홀</span></a></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">아직 없습니다. 구장 상세 화면에서 <b>☆ 즐겨찾기</b>를 누르면 여기와 첫 화면에 모입니다.</p>
+      {% endif %}
+    </section>
+
+    <section class="panel">
+      <h2>⚙️ 내 설정</h2>
+      <form method="post">
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+        <label class="field">닉네임<input name="nickname" value="{{ me.nickname }}" maxlength="20" minlength="2" required></label>
+        {% include "_region.html" %}
+        <label class="check"><input type="checkbox" name="marketing" {{ 'checked' if me.marketing }}> 새 제휴 혜택·이벤트 소식 받기</label>
+        <button class="btn primary" type="submit">저장</button>
+      </form>
+    </section>
+  </div>
+
+  <section class="panel" id="my-comps">
+    <div class="panel-head"><h2>🏅 내 대회 참가</h2><a class="pill" href="/compete">대회 둘러보기 →</a></div>
+    {% if my_comps %}
+      <table class="tbl">
+        <tr><th>대회일</th><th>대회</th><th>부문</th><th>상태</th><th>조·출발</th></tr>
+        {% for e in my_comps %}
+          <tr><td>{{ e.play_date }}</td><td><a href="/compete/{{ e.comp_id }}">{{ e.title }}</a><br><span class="muted">{{ e.venue }}</span></td>
+            <td>{{ e.division }}</td><td><span class="est est-{{ e.status }}">{{ '참가 확정' if e.status == '입금확인' else e.status }}</span></td>
+            <td>{% if e.groups_open and e.group_no %}{{ e.group_no }}조 · {{ e.start_spot }}번홀 · {{ e.tee_time }}{% else %}<span class="muted">편성 전</span>{% endif %}</td></tr>
+        {% endfor %}
+      </table>
+    {% else %}<p class="muted">아직 신청한 대회가 없습니다. <a href="/compete">대회 참가 신청하러 가기</a></p>{% endif %}
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <h2>💰 포인트 내역</h2>
+      <table class="tbl">
+        {% for l in log %}<tr><td>{{ l.created_at[5:16] }}</td><td>{{ l.reason }}</td><td class="num {{ 'minus' if l.delta < 0 }}">{{ '%+d'|format(l.delta) }}</td></tr>
+        {% else %}<tr><td class="muted">내역이 없습니다.</td></tr>{% endfor %}
+      </table>
+      {% if reds %}
+        <h3 class="sub-h">혜택 교환 신청</h3>
+        <table class="tbl">{% for r in reds %}<tr><td>{{ r.created_at[:10] }}</td><td>{{ r.partner }} · {{ r.title }}</td><td>{{ r.status }}</td></tr>{% endfor %}</table>
+      {% endif %}
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>계정</h2>
+    <p class="src">회원번호: {{ me.kakao_id }} · 가입일 {{ me.created_at[:10] }}</p>
+    <div class="btn-row">
+      <form method="post" action="/logout"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="btn secondary" type="submit">로그아웃</button></form>
+      <form method="post" action="/me/withdraw" onsubmit="return confirmWithdraw(this)">
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+        <button class="btn danger" type="submit">회원 탈퇴</button></form>
+    </div>
+    <p class="src">탈퇴하면 회원 정보, 쓴 글·사진·댓글, 포인트가 모두 즉시 삭제되며 되돌릴 수 없습니다.</p>
+  </section>
+</main>
+{% endblock %}
+{% block scripts %}
+<script>
+  // 확인 창 대신 버튼을 한 번 더 누르게 한다
+  function confirmWithdraw(f) {
+    const b = f.querySelector("button");
+    if (b.dataset.sure) return true;
+    b.dataset.sure = "1"; b.textContent = "정말 탈퇴하려면 한 번 더 누르세요";
+    return false;
+  }
+</script>
+{% endblock %}

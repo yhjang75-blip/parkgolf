@@ -1,0 +1,313 @@
+{% extends "base.html" %}
+{% block title %}파크골프 대회 안내 — 나이스파크{% endblock %}
+{% macro won(n) -%}
+  {%- if n >= 10000 -%}{{ n // 10000 }}억{% if n % 10000 %} {{ (n % 10000)|comma }}만{% endif %}{%- else -%}{{ (n|comma) }}만{%- endif -%}
+{%- endmacro %}
+{% macro day(s) -%}{{ s[5:7]|int }}.{{ s[8:10]|int }}{%- endmacro %}
+{% macro refs(t) -%}
+  {%- if t.refs %}<p class="src">출처: {% for r in t.refs %}<a href="{{ r[1] }}" target="_blank" rel="noopener">{{ r[0] }} ↗</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif -%}
+{%- endmacro %}
+{% macro facts(t) -%}
+  {%- if t.format or t.eligibility or t.entry or t.tie or t.prize %}
+  <details class="more">
+    <summary>자세히</summary>
+    <dl class="t-facts">
+      {% if t.players_note %}<dt>참가 인원</dt><dd>{{ t.players }} ({{ t.players_note }})</dd>{% endif %}
+      {% if t.format %}<dt>경기 방식</dt><dd>{{ t.format }}</dd>{% endif %}
+      {% if t.eligibility %}<dt>참가 자격</dt><dd>{{ t.eligibility }}</dd>{% endif %}
+      {% if t.entry %}<dt>신청 방법</dt><dd>{{ t.entry }}</dd>{% endif %}
+      {% if t.fee %}<dt>참가비</dt><dd>{{ t.fee }}</dd>{% endif %}
+      {% if t.prize %}<dt>시상</dt><dd>{{ t.prize }}</dd>{% endif %}
+      {% if t.tie %}<dt>동타 처리</dt><dd>{{ t.tie }}</dd>{% endif %}
+      {% if t.host %}<dt>주최·주관</dt><dd>{{ t.host }}</dd>{% endif %}
+    </dl>
+    {{ refs(t) }}
+  </details>
+  {%- else %}{{ refs(t) }}{%- endif %}
+{%- endmacro %}
+{% block content %}
+<section class="about-hero t-hero">
+  <div class="wrap narrow">
+    <p class="kicker">파크골프 대회</p>
+    <h1>대회 일정·참가 방법·경기 규칙</h1>
+    <p><a class="pill" href="/compete" style="background:#fff">🏅 나이스파크에서 바로 신청하는 대회 보기 →</a></p>
+  </div>
+</section>
+
+<main class="wrap page t-page">
+  <nav class="t-icons" aria-label="대회 안내 바로가기">
+    <a href="#t-list"><span class="ic">📅</span>대회 일정</a>
+    <a href="#t-stats"><span class="ic">📊</span>참가 인원</a>
+    <a href="#g-entry"><span class="ic">📝</span>참가 신청</a>
+    <a href="#g-flow"><span class="ic">⛳</span>경기 진행</a>
+    <a href="#g-rules"><span class="ic">📏</span>규칙·벌타</a>
+    <a href="#g-rank"><span class="ic">🏅</span>순위·시상</a>
+    <a href="#g-gear"><span class="ic">🎒</span>준비물</a>
+    <a href="#g-manner"><span class="ic">🤝</span>에티켓</a>
+    <a href="#t-video"><span class="ic">📺</span>대회 영상</a>
+    <a href="#t-news"><span class="ic">📰</span>대회 소식</a>
+  </nav>
+
+  <!-- 📅 대회 일정: 다가오는 대회 먼저, 종료된 대회는 아래 -->
+  <section class="panel" id="t-list" aria-labelledby="h-list">
+    <h2 id="h-list">📅 대회 일정</h2>
+
+    <h3 class="grp">🔜 진행 중·다가오는 대회 <span>{{ upcoming|length }}</span></h3>
+    <div class="t-cards">
+      {% for t in upcoming %}
+      {% set st = '진행' if t.status == '진행 중' else t.status %}
+      <article class="t-card up">
+        <div class="cal {{ st }}">
+          {% if t.start %}
+            <span class="mo">{{ t.start[5:7]|int }}월</span>
+            <span class="dd">{{ t.start[8:10]|int }}{% if t.end and t.end != t.start %}<small>~ {% if t.end[5:7] != t.start[5:7] %}{{ t.end[5:7]|int }}.{% endif %}{{ t.end[8:10]|int }}일</small>{% endif %}</span>
+          {% else %}
+            <span class="mo">{{ t.when_short or '미정' }}</span>
+            <span class="dd tbd">날짜<br>미정</span>
+          {% endif %}
+        </div>
+        <div class="t-body">
+          <span class="st {{ st }}">{% if st == '진행' %}진행 중{% elif t.days is not none %}D-{{ t.days }}{% else %}날짜 발표 예정{% endif %}</span>
+          <h4>{{ t.name }}</h4>
+          {% if t.place %}<p class="place">📍 {{ t.place }}</p>{% endif %}
+          <div class="chips">
+            <span class="chip"><i>👥</i>{% if t.players_n %}<b>{{ (t.players_n|comma) }}</b>명{% else %}요강 발표 전{% endif %}</span>
+            {% if t.holes_short %}<span class="chip"><i>⛳</i>{{ t.holes_short }}</span>{% endif %}
+            {% if t.prize_man %}<span class="chip"><i>🏆</i>총상금 <b>{{ won(t.prize_man) }}</b>원</span>{% endif %}
+            {% if t.fee_short %}<span class="chip"><i>💳</i>참가비 {{ t.fee_short }}</span>{% endif %}
+          </div>
+          {{ facts(t) }}
+        </div>
+      </article>
+      {% else %}
+      <p class="muted">지금 예정된 대회가 없습니다.</p>
+      {% endfor %}
+    </div>
+
+    {% if ended %}
+    <h3 class="grp done">✔️ 종료된 대회 <span>{{ ended|length }}</span></h3>
+    <ul class="ended">
+      {% for t in ended %}
+      <li>
+        <span class="e-date">{{ day(t.start) }}{% if t.end and t.end != t.start %} ~ {{ day(t.end) }}{% endif %}</span>
+        <span class="e-name">{{ t.name }}</span>
+        <span class="e-chips">
+          {% if t.players_n %}<span class="chip"><i>👥</i>{{ (t.players_n|comma) }}명</span>{% endif %}
+          {% if t.prize_man %}<span class="chip"><i>🏆</i>{{ won(t.prize_man) }}원</span>{% endif %}
+        </span>
+        {{ facts(t) }}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p class="src">참가비 입금 계좌와 최종 일정은 반드시 주최 측 공식 요강에서 확인하세요.</p>
+  </section>
+
+  <!-- 📊 참가 인원·총상금 막대그래프 -->
+  <section class="panel" id="t-stats" aria-labelledby="h-stats">
+    <h2 id="h-stats">📊 대회 규모 비교</h2>
+    <div class="grid2 in">
+      <figure class="hbar">
+        <figcaption>👥 참가 인원 <small>(명)</small></figcaption>
+        {% set mx = by_n[0].players_n %}
+        {% for t in by_n %}
+        <div class="hb-row" title="{{ t.name }} · {{ t.players }}">
+          <span class="hb-name">{{ t.short }}</span>
+          <span class="hb-track"><span class="hb-bar" style="width:{{ (t.players_n / mx * 100)|round(1) }}%"></span></span>
+          <span class="hb-val">{{ (t.players_n|comma) }}</span>
+        </div>
+        {% endfor %}
+      </figure>
+      <figure class="hbar gold">
+        <figcaption>🏆 총상금 <small>(원)</small></figcaption>
+        {% set mx = by_p[0].prize_man %}
+        {% for t in by_p %}
+        <div class="hb-row" title="{{ t.name }} · {{ t.prize }}">
+          <span class="hb-name">{{ t.short }}</span>
+          <span class="hb-track"><span class="hb-bar" style="width:{{ (t.prize_man / mx * 100)|round(1) }}%"></span></span>
+          <span class="hb-val">{{ won(t.prize_man) }}</span>
+        </div>
+        {% endfor %}
+      </figure>
+    </div>
+    <details class="tbl">
+      <summary>표로 보기</summary>
+      <table class="t-table">
+        <thead><tr><th>대회</th><th>참가 인원</th><th>총상금</th></tr></thead>
+        <tbody>
+          {% for t in stat_rows %}
+          <tr><td>{{ t.name }}</td><td>{{ t.players or '-' }}{% if t.players_note %}<small>{{ t.players_note }}</small>{% endif %}</td><td>{{ (won(t.prize_man) ~ '원') if t.prize_man else '-' }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </details>
+    <p class="src">순창은 예선 정원, 화천은 신청자 수 기준. 문체부장관기는 총상금 합계가 공개되지 않아 상금 그래프에서 뺐습니다.</p>
+  </section>
+
+  <!-- 📝 참가 신청 5단계 -->
+  <section class="panel" id="g-entry" aria-labelledby="h-entry">
+    <h2 id="h-entry">📝 대회 참가 5단계</h2>
+    <ol class="flow">
+      <li><span class="fi">🪪</span><b>협회 회원 등록</b><small>시·군·구 협회 통해<br>대한파크골프협회 등록</small></li>
+      <li><span class="fi">📄</span><b>요강 확인</b><small>등록 기준일·자격<br>참가비·접수 기간</small></li>
+      <li><span class="fi">⏱️</span><b>선착순 접수</b><small>앱·폼·이메일<br>전화 접수 대부분 불가</small></li>
+      <li><span class="fi">💳</span><b>참가비 입금</b><small>기한 내 입금<br>환불 안 되는 경우 많음</small></li>
+      <li><span class="fi">📩</span><b>출전 확정</b><small>문자 통보<br>조편성은 전날까지</small></li>
+    </ol>
+  </section>
+
+  <!-- ⛳ 당일 진행 -->
+  <section class="panel" id="g-flow" aria-labelledby="h-flow">
+    <h2 id="h-flow">⛳ 대회 당일 진행</h2>
+    <div class="kpis">
+      <div class="kpi"><b>3~4명</b><span>한 조 (남녀 구분)</span></div>
+      <div class="kpi"><b>36홀</b><span>보통 18홀 × 2일</span></div>
+      <div class="kpi"><b>동시 출발</b><span>샷건 방식</span></div>
+      <div class="kpi warn"><b>2홀</b><span>이상 뒤처지면 조원 전원 +2타</span></div>
+    </div>
+    <ol class="flow">
+      <li><span class="fi">🧾</span><b>선수 등록</b><small>용구 검사<br>명찰 받기</small></li>
+      <li><span class="fi">👥</span><b>조 확인</b><small>배정 홀로 이동</small></li>
+      <li><span class="fi">📣</span><b>샷건 출발</b><small>신호와 함께<br>모든 조 동시에</small></li>
+      <li><span class="fi">🏌️</span><b>스트로크 경기</b><small>모든 타수 합산</small></li>
+      <li><span class="fi">✍️</span><b>스코어카드 제출</b><small>본인 서명 필수<br>미제출 시 실격</small></li>
+    </ol>
+  </section>
+
+  <!-- 📏 규칙·벌타 -->
+  <section class="panel" id="g-rules" aria-labelledby="h-rules">
+    <h2 id="h-rules">📏 기본 규칙과 벌타</h2>
+    <div class="kpis">
+      <div class="kpi"><b>클럽 1개</b><span>공도 1개</span></div>
+      <div class="kpi warn"><b>+2타</b><span>모든 벌타는 2타</span></div>
+      <div class="kpi"><b>2클럽</b><span>공 옮길 때 거리</span></div>
+      <div class="kpi"><b>3분</b><span>잃어버린 공 찾는 시간</span></div>
+    </div>
+    <div class="rule-grid">
+      <div class="rule"><span class="pen">+2</span><span class="ri">🚩</span><b>OB (경계 밖)</b></div>
+      <div class="rule"><span class="pen">+2</span><span class="ri">🔍</span><b>공 분실</b></div>
+      <div class="rule"><span class="pen">+2</span><span class="ri">🌊</span><b>칠 수 없는 곳·물</b></div>
+      <div class="rule"><span class="pen">+2</span><span class="ri">🔄</span><b>남의 공·공 바꿈</b></div>
+      <div class="rule"><span class="pen">+2</span><span class="ri">⛳</span><b>깃대 뽑고 퍼팅</b></div>
+      <div class="rule"><span class="pen free">무벌타</span><span class="ri">💧</span><b>고인 물·배수구</b></div>
+      <div class="rule"><span class="pen dq">실격</span><span class="ri">🏌️</span><b>코스에서 연습 타격</b></div>
+      <div class="rule"><span class="pen dq">실격</span><span class="ri">✍️</span><b>스코어 적게 기록</b></div>
+    </div>
+    <div class="order">
+      <b>치는 순서</b>
+      <span class="o-step">1번 홀<br><small>추첨·가위바위보</small></span><span class="o-arrow">→</span>
+      <span class="o-step">다음 홀<br><small>앞 홀 적게 친 사람 먼저</small></span><span class="o-arrow">→</span>
+      <span class="o-step">두 번째 샷부터<br><small>홀에서 먼 공 먼저</small></span>
+    </div>
+  </section>
+
+  <!-- 🏅 순위·시상 -->
+  <section class="panel" id="g-rank" aria-labelledby="h-rank">
+    <h2 id="h-rank">🏅 순위와 시상</h2>
+    <div class="rank-wrap">
+      <div class="podium" aria-label="적은 타수가 1위">
+        <div class="pd p2"><span>🥈</span><b>2위</b></div>
+        <div class="pd p1"><span>🥇</span><b>1위</b><small>가장 적은 타수</small></div>
+        <div class="pd p3"><span>🥉</span><b>3위</b></div>
+      </div>
+      <div class="ties">
+        <p class="ties-h">⚖️ 타수가 같으면</p>
+        <div class="tie"><b>백카운트</b>
+          <div class="holes"><span>18</span><span>17</span><span>16</span><span>…</span></div>
+          <small>마지막 홀부터 거꾸로 비교</small></div>
+        <div class="tie"><b>서든데스 · 니어핀</b>
+          <div class="nearpin" aria-hidden="true"><span class="cup"></span><span class="ball near"></span><span class="ball far"></span></div>
+          <small>지정 홀에서 홀에 가장 가깝게</small></div>
+        <p class="src">어느 방식을 쓸지는 대회 요강에 적혀 있습니다.</p>
+      </div>
+    </div>
+    <div class="awards">
+      <span>🏅 남녀 1~5위</span><span>👥 단체전</span><span>🗺️ 시·도 종합</span><span>🎯 홀인원상</span><span>🧾 상금은 세금 공제 후 지급</span>
+    </div>
+  </section>
+
+  <!-- 🎒 준비물 · 🤝 에티켓 -->
+  <div class="grid2">
+    <section class="panel" id="g-gear" aria-labelledby="h-gear">
+      <h2 id="h-gear">🎒 준비물과 복장</h2>
+      <div class="tiles">
+        <div class="tile ok"><span>🏑</span>공인 클럽</div>
+        <div class="tile ok"><span>⚪</span>공인 공</div>
+        <div class="tile ok"><span>📍</span>볼마커</div>
+        <div class="tile ok"><span>🧢</span>모자</div>
+        <div class="tile ok"><span>👕</span>운동복</div>
+        <div class="tile ok"><span>👟</span>운동화·골프화</div>
+        <div class="tile ok"><span>🪪</span>신분증</div>
+        <div class="tile no"><span>🥾</span>등산화·구두</div>
+        <div class="tile no"><span>😷</span>얼굴 가리개</div>
+      </div>
+      <p class="src">공인 용품 외 물건은 가져가지 않습니다. 신분증은 요구하는 대회가 있습니다.</p>
+    </section>
+
+    <section class="panel" id="g-manner" aria-labelledby="h-manner">
+      <h2 id="h-manner">🤝 경기 에티켓</h2>
+      <div class="tiles">
+        <div class="tile ok"><span>📢</span>위험하면 크게 알리기</div>
+        <div class="tile ok"><span>🗣️</span>치기 전 이름·타수</div>
+        <div class="tile ok"><span>📵</span>휴대폰 무음</div>
+        <div class="tile no"><span>👣</span>퍼팅 길 밟기</div>
+        <div class="tile no"><span>🚬</span>코스 안 흡연</div>
+        <div class="tile no"><span>🗑️</span>음식물·쓰레기</div>
+        <div class="tile no"><span>🤫</span>경기 중 조언</div>
+        <div class="tile no"><span>😤</span>판정 불복·지연</div>
+        <div class="tile ok"><span>🙋</span>판정 문의는 감독·코치</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 📺 대회 영상 -->
+  <section class="panel" id="t-video" aria-labelledby="h-video">
+    <div class="panel-head">
+      <h2 id="h-video">📺 대회 영상</h2>
+      <a class="pill live" target="_blank" rel="noopener"
+         href="https://www.youtube.com/results?search_query=%ED%8C%8C%ED%81%AC%EA%B3%A8%ED%94%84+%EB%8C%80%ED%9A%8C&sp=EgJAAQ%253D%253D">● 지금 생중계 찾기 ↗</a>
+    </div>
+    <div class="video">
+      <div class="player" id="player"></div>
+      <ul class="vlist" id="vlist"></ul>
+    </div>
+    <p class="src" id="video-src">방송사·파크골프 채널의 유튜브 공개 영상</p>
+  </section>
+
+  <!-- 📰 대회 소식 -->
+  <section class="panel" id="t-news" aria-labelledby="h-news">
+    <h2 id="h-news">📰 최근 대회·우승 소식</h2>
+    <ul class="brief" id="t-feed"><li class="muted">불러오는 중…</li></ul>
+    <p class="src">최근 30일 기사 · 출처: Google 뉴스</p>
+  </section>
+
+  <p class="src t-foot">
+    규칙 출처: (사)대한파크골프협회 대회운영규정(2026.2.5 개정)·경기규칙 — 지역 파크골프협회 게시본 기준.
+    <b>실제 대회에서는 해당 대회 요강과 당일 공지가 우선</b>합니다.
+    공식 대회 신청: <a href="https://kpga7330.com/" target="_blank" rel="noopener">대한파크골프협회 ↗</a>
+  </p>
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="/static/video.js?v=1"></script>
+<script>
+(async () => {
+  const el = document.getElementById("t-feed");
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safe = (u) => /^https?:\/\//.test(u || "") ? u : "";
+  const ago = (s) => {
+    if (!s) return "";
+    const m = Math.round((Date.now() - new Date(s.replace(" ", "T") + "+09:00").getTime()) / 60000);
+    return m < 60 ? `${Math.max(m, 1)}분 전` : m < 1440 ? `${Math.round(m / 60)}시간 전` : m < 10080 ? `${Math.round(m / 1440)}일 전` : s.slice(0, 10);
+  };
+  const get = (t) => fetch(`/api/news?topic=${t}`).then((r) => r.json()).then((j) => j.items).catch(() => []);
+  const lists = await Promise.all([get("tournament"), get("winner")]);
+  const seen = new Set();
+  const items = lists.flat().filter((x) => !seen.has(x.title) && seen.add(x.title))
+    .sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 6);
+  el.innerHTML = items.length ? items.map((x) => `<li><a href="${esc(safe(x.url) || "#")}" target="_blank" rel="noopener" title="${esc(x.title)}">
+      <span class="t">${esc(x.title)}</span><span class="m">${esc(ago(x.date))}</span></a></li>`).join("")
+    : `<li class="muted">최근 대회 소식이 없습니다.</li>`;
+})();
+</script>
+{% endblock %}

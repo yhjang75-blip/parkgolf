@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}관리 — {{ c.title }}{% endblock %}
+{% macro tog(field, on, yes, no) -%}
+  <form method="post" action="/admin/compete/{{ c.id }}/toggle/{{ field }}" class="inline">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <button class="tog {{ 'on' if on }}" type="submit">{{ yes if on else no }}</button></form>
+{%- endmacro %}
+{% block content %}
+<main class="wrap page">
+  <p class="crumb"><a href="/admin/compete">← 대회 관리</a> · <a href="/compete/{{ c.id }}">참가자 화면 보기</a></p>
+  <section class="panel">
+    <div class="panel-head">
+      <h1>{{ c.title }}</h1>
+      <a class="pill" href="/admin/compete/{{ c.id }}/edit">✏️ 대회 정보 수정</a>
+    </div>
+    <p class="lead"><span class="badge {{ c.tone }}">{{ c.state }}</span> {{ c.play_date }} · {{ c.venue }} · 부문 {{ c.div_list|join('·') }} · 참가비 {{ (c.fee|comma ~ '원') if c.fee else '무료' }}</p>
+    <div class="stats dark">
+      <span class="stat"><b>{{ c.cnt.active }}</b> 신청{% if c.capacity %}/{{ c.capacity }}{% endif %}</span>
+      <span class="stat"><b>{{ c.cnt.get('입금확인', 0) }}</b> 참가 확정</span>
+      <span class="stat"><b>{{ c.cnt.get('신청', 0) }}</b> 입금 대기</span>
+      <span class="stat"><b>{{ c.cnt.get('취소요청', 0) }}</b> 취소 요청</span>
+    </div>
+    <h3 class="sub-h">공개 설정</h3>
+    <div class="togs">
+      {{ tog('hidden', not c.hidden, '✅ 목록에 공개 중', '🙈 숨김 (준비 중)') }}
+      {{ tog('closed', c.closed, '⛔ 접수 마감함', '🟢 접수 받는 중 (기간 내)') }}
+      {{ tog('groups_open', c.groups_open, '✅ 조편성 공개 중', '조편성 비공개') }}
+      {{ tog('results_open', c.results_open, '✅ 결과 공개 중', '결과 비공개') }}
+    </div>
+    <p class="src">버튼을 누르면 켜고 끕니다. 조편성·결과는 확인을 마친 뒤 공개하세요.</p>
+  </section>
+
+  <section class="panel">
+    <h2>진행 순서</h2>
+    <ol class="steps admin">
+      <li><b>1</b><span class="s-t">입금 확인</span><span class="s-d">아래 표에서 입금한 분의 '입금확인'을 누릅니다 (참가 포인트 30P 지급)</span></li>
+      <li><b>2</b><span class="s-t">조 편성</span>
+        <form method="post" action="/admin/compete/{{ c.id }}/groups" onsubmit="return confirm('지금 조를 새로 짭니다. 이미 짠 조는 지워집니다. 계속할까요?')">
+          <input type="hidden" name="csrf" value="{{ csrf }}">
+          <label class="check"><input type="checkbox" name="only_paid" checked> 참가 확정자만</label>
+          <button class="btn primary small" type="submit">🔀 자동 조 편성</button></form>
+        <span class="s-d">부문별로 {{ c.group_size }}명씩, 같은 클럽은 되도록 다른 조로 나눕니다. 코스 {{ c.course_list|join('·') }}의 각 홀에서 {{ c.start_time }}에 동시 출발.</span></li>
+      <li><b>3</b><span class="s-t">출력</span>
+        <span class="s-d"><a href="/compete/{{ c.id }}/print/groups" target="_blank">🖨️ 조편성표</a> · <a href="/compete/{{ c.id }}/print/cards" target="_blank">🖨️ 조별 점수카드</a> · <a href="/admin/compete/{{ c.id }}/csv">📥 신청자 명단 (엑셀용 CSV)</a></span></li>
+      <li><b>4</b><span class="s-t">점수 입력</span><span class="s-d">아래 표에 코스별 타수를 넣고 '저장'. 순위는 자동 계산됩니다.</span></li>
+      <li><b>5</b><span class="s-t">결과 발표</span><span class="s-d">위 '결과 공개'를 켜고 <a href="/compete/{{ c.id }}/print/results" target="_blank">🖨️ 결과표</a>를 출력합니다.</span></li>
+    </ol>
+  </section>
+
+  <section class="panel" id="entries">
+    <div class="panel-head">
+      <h2>참가자 ({{ rows|length }}{% if st %}/{{ all_count }}{% endif %}명)</h2>
+      <nav class="cats">
+        <a href="?#entries" class="{{ 'on' if not st }}">전체</a>
+        {% for s in STATUS_ALL %}<a href="?status={{ s }}#entries" class="{{ 'on' if st == s }}">{{ s }}</a>{% endfor %}
+      </nav>
+    </div>
+    <form method="post" action="/admin/compete/{{ c.id }}/save?status={{ st }}" id="save-form">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+    </form>
+    <div class="tscroll"><table class="tbl mtbl">
+      <tr><th>번호</th><th>이름·연락처</th><th>성별·출생</th><th>소속</th><th>부문</th><th>상태</th>
+        <th>조</th><th>출발</th><th>시각</th>{% for x in c.course_list %}<th>{{ x }}</th>{% endfor %}<th>합계</th></tr>
+      {% for r in rows %}
+        <tr class="row-{{ r.status }}">
+          <td>{{ r.id }}<input type="hidden" name="eid" value="{{ r.id }}" form="save-form"></td>
+          <td><b>{{ r.name }}</b><br>{{ r.phone }}{% if r.memo %}<br><small class="muted">💬 {{ r.memo }}</small>{% endif %}</td>
+          <td>{{ r.gender }} · {{ r.birth_year }}</td><td>{{ r.club or '' }}</td><td>{{ r.division }}</td>
+          <td><span class="est est-{{ r.status }}">{{ r.status }}</span><br>
+            {% set acts = {'신청': [['paid', '입금확인'], ['cancel', '취소']], '입금확인': [['unpaid', '입금 취소'], ['cancel', '취소·환불함']],
+                           '취소요청': [['cancel', '환불 완료'], ['restore', '되돌리기']], '취소': [['restore', '되돌리기']]}[r.status] %}
+            {% for a, label in acts %}<form method="post" action="/admin/compete/{{ c.id }}/entry/{{ r.id }}/{{ a }}?status={{ st }}" class="inline">
+              <input type="hidden" name="csrf" value="{{ csrf }}"><button class="linkbtn {{ 'go' if a == 'paid' }}">{{ label }}</button></form>{% endfor %}</td>
+          <td><input class="sm" name="g_{{ r.id }}" value="{{ r.group_no or '' }}" inputmode="numeric" form="save-form" aria-label="조"></td>
+          <td><input class="sm" name="spot_{{ r.id }}" value="{{ r.start_spot or '' }}" form="save-form" aria-label="출발 홀"></td>
+          <td><input class="sm" name="time_{{ r.id }}" value="{{ r.tee_time or '' }}" form="save-form" aria-label="출발 시각"></td>
+          {% for s in r.score_list %}<td><input class="sm" name="s_{{ r.id }}_{{ loop.index0 }}" value="{{ s if s is not none }}" inputmode="numeric" form="save-form" aria-label="{{ c.course_list[loop.index0] }}코스 타수"></td>{% endfor %}
+          <td class="num">{{ r.total if r.total is not none else '' }}</td>
+        </tr>
+      {% else %}<tr><td colspan="20" class="muted">신청자가 없습니다.</td></tr>{% endfor %}
+    </table></div>
+    {% if rows %}<button class="btn primary" type="submit" form="save-form">💾 조·점수 저장</button>{% endif %}
+  </section>
+
+  {% if results %}
+  <section class="panel">
+    <h2>🏆 현재 순위 (참가 확정자 · 점수 입력 완료)</h2>
+    {% for d in results %}
+      <h3 class="sub-h">{{ d.division }} {% if d.todo %}<span class="muted">· 점수 미입력 {{ d.todo|length }}명</span>{% endif %}</h3>
+      <ol class="rank">{% for r in d.rows[:10] %}<li value="{{ r.place }}">{{ r.name }} ({{ r.club or '개인' }}) — <b>{{ r.total }}</b>타</li>{% endfor %}</ol>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <section class="panel">
+    <h2>대회 삭제</h2>
+    <p class="src">대회 종료 후 1년이 지나면 참가자 개인정보 보호를 위해 대회를 삭제해 주세요 (신청 자료가 모두 지워집니다).</p>
+    <form method="post" action="/admin/compete/{{ c.id }}/delete" onsubmit="return confirm('이 대회와 모든 신청 자료를 지웁니다. 되돌릴 수 없습니다. 계속할까요?')">
+      <input type="hidden" name="csrf" value="{{ csrf }}"><button class="btn danger small" type="submit">대회 삭제</button></form>
+  </section>
+</main>
+{% endblock %}
