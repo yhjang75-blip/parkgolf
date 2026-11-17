@@ -10,7 +10,7 @@
 | 첫 접속 속도 | 한동안 접속이 없으면 서버가 잠들어 30초~1분 대기 | **잠들지 않음** — 늘 바로 열림 |
 | 회원·대회 자료 보관 | Neon (연결 안 된 상태) | **Cloudflare D1** — 첫 배포 때 자동으로 생김 |
 | 프로그램 | 파이썬 (Flask) | TypeScript (Cloudflare Workers) |
-| 주소 | parkgolf.onrender.com | nicepark.<계정이름>.workers.dev |
+| 주소 | parkgolf.onrender.com | nicepark.parkgolf.workers.dev |
 
 - **개발은 끝났고**, 내 PC에서 시험을 마쳤습니다.
 - 남은 일은 **Cloudflare 가입과 열쇠(토큰) 등록**입니다. 운영자가 직접 해야 합니다 (4장).
@@ -90,7 +90,7 @@
 1. 새 코드를 GitHub에 올리면 자동 배포가 시작됩니다.
 2. 처음 배포할 때 Cloudflare가 데이터베이스(`nicepark`)를 자동으로 만듭니다.
 3. 배포 결과: https://github.com/yhjang75-blip/parkgolf/actions 에서 초록 ✔ 이면 성공입니다.
-4. 사이트 주소: `https://nicepark.<①에서 정한 이름>.workers.dev`
+4. 사이트 주소: `https://nicepark.parkgolf.workers.dev`
 
 ### ⑤ 카카오 로그인 연결
 1. Cloudflare → Workers & Pages → **nicepark** → **Settings** → **Variables and Secrets** → **Add**
@@ -98,8 +98,8 @@
    - `ADMIN_KAKAO_IDS` (종류: Secret) = 관리자 카카오 회원번호
    - `KAKAO_CLIENT_SECRET` = 카카오에서 '클라이언트 시크릿'을 켠 경우에만
 2. 카카오 개발자 콘솔 → 내 애플리케이션 → 카카오 로그인 → **Redirect URI** 에 아래 주소를 **추가**합니다. Render 주소는 지우지 않습니다.
-   `https://nicepark.<이름>.workers.dev/auth/kakao/callback`
-3. 카카오 콘솔 **플랫폼 → Web 사이트 도메인** 에도 `https://nicepark.<이름>.workers.dev` 를 추가합니다.
+   `https://nicepark.parkgolf.workers.dev/auth/kakao/callback`
+3. 카카오 콘솔 **플랫폼 → Web 사이트 도메인** 에도 `https://nicepark.parkgolf.workers.dev` 를 추가합니다.
 
 ### ⑥ 확인
 | 확인할 것 | 방법 | 정상 |
