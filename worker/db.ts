@@ -2,7 +2,7 @@
 // 표는 처음 요청 때 자동으로 만든다 (따로 설정할 것 없음). 표를 바꾸면 SCHEMA_VERSION 을 올린다.
 import { Env, Row, randomToken } from "./lib";
 
-const SCHEMA_VERSION = "2";
+const SCHEMA_VERSION = "3";
 // 표를 고칠 때: 이미 있는 데이터베이스에 덧붙일 문장 (버전 → 문장들)
 const MIGRATIONS: Record<number, string[]> = {
   // 2026-11-17 아이디·비밀번호 회원가입
@@ -11,6 +11,19 @@ const MIGRATIONS: Record<number, string[]> = {
     `ALTER TABLE users ADD COLUMN pw_hash TEXT`,
     `CREATE UNIQUE INDEX IF NOT EXISTS ux_users_login_id ON users (login_id)`,
     `CREATE TABLE IF NOT EXISTS login_fail (login_id TEXT PRIMARY KEY, n INTEGER NOT NULL, until INTEGER NOT NULL)`,
+  ],
+  // 2026-11-17 게시판: 사진 정보(사진 파일은 KV 'PHOTOS'), 이모티콘 공감
+  3: [
+    `CREATE TABLE IF NOT EXISTS images (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+      width INTEGER, height INTEGER, created_at TEXT NOT NULL)`,
+    `CREATE INDEX IF NOT EXISTS ix_images_post ON images (post_id)`,
+    `CREATE TABLE IF NOT EXISTS reactions (post_id INTEGER NOT NULL, user_id INTEGER NOT NULL, emoji TEXT NOT NULL,
+      created_at TEXT NOT NULL, PRIMARY KEY (post_id, user_id, emoji))`,
+    `CREATE INDEX IF NOT EXISTS ix_posts_list ON posts (hidden, category, id)`,
+    `CREATE INDEX IF NOT EXISTS ix_posts_course ON posts (course_id, id)`,
+    `CREATE INDEX IF NOT EXISTS ix_posts_user ON posts (user_id)`,
+    `CREATE INDEX IF NOT EXISTS ix_comments_post ON comments (post_id)`,
   ],
 };
 const SCHEMA = [

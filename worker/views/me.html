@@ -44,6 +44,16 @@
     </section>
   </div>
 
+  <section class="panel" id="my-posts">
+    <div class="panel-head"><h2>💬 내가 쓴 글</h2><a class="pill" href="/board/write">✏️ 글쓰기</a></div>
+    {% if my_posts|length %}
+      <ul class="feed">{% for p in my_posts %}
+        <li><a href="/board/{{ p.id }}"><span class="t">{{ p.title }}{% if p.hidden %} <span class="badge warn">숨김</span>{% endif %}</span>
+          <span class="m">{{ CATEGORIES[p.category] }} · {{ p.created_at[:10] }} · 댓글 {{ p.comments }} · 공감 {{ p.likes }}</span></a></li>
+      {% endfor %}</ul>
+    {% else %}<p class="muted">아직 쓴 글이 없습니다. 다녀온 구장 후기를 남겨 보세요 (+10P). <a href="/board">게시판 가기</a></p>{% endif %}
+  </section>
+
   <section class="panel" id="my-comps">
     <div class="panel-head"><h2>🏅 내 대회 참가</h2><a class="pill" href="/compete">대회 둘러보기 →</a></div>
     {% if my_comps %}

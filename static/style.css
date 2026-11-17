@@ -215,7 +215,7 @@ body { overflow-x: hidden; }
   :root { font-size: 17px; }
   .wrap { padding: 0 16px; }
   .top-in { padding: 8px 16px; gap: 6px; }
-  .topnav { margin-left: 0; width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+  .topnav { margin-left: 0; width: 100%; flex-wrap: wrap; row-gap: 2px; }  /* 휴대폰: 옆으로 밀지 않아도 모든 메뉴가 보이게 두 줄로 */
   .topnav a { white-space: nowrap; padding: 4px 10px; }
   .hero-search button { padding: 0 14px; }
   .grid2 { grid-template-columns: minmax(0, 1fr); }

@@ -355,7 +355,19 @@ async function loadCourseTalk(c) {
     const r = await fetch(`/api/me/favorites/${encodeURIComponent(c.id)}`, { method: "POST", headers: { "X-CSRF": window.CSRF } });
     if (r.ok) { setFav((await r.json()).favorite); loadMy(); }
   };
-  box.remove();
+  if (!Array.isArray(j.items) || j.total === undefined) { box.remove(); return; }  // 게시판이 없는 서버
+  const write = `/board/write?cat=review&course=${encodeURIComponent(c.id)}`;
+  box.innerHTML = `<h3>💬 이 구장 이야기 ${j.total ? `<span class="muted">${j.total}개</span>` : ""}</h3>
+    ${j.items.length ? `<ul class="talk">${j.items.map((p) => `
+      <li><a href="/board/${p.id}">
+        ${p.img ? `<img src="/img/${p.img}/thumb" alt="" loading="lazy">` : '<span class="noimg">💬</span>'}
+        <span class="t">${esc(p.title)}</span>
+        <span class="m">${esc(p.nickname)} · ${esc(p.date)}${p.comments ? ` · 댓글 ${p.comments}` : ""}${p.likes ? ` · 공감 ${p.likes}` : ""}</span>
+      </a></li>`).join("")}</ul>` : '<p class="src">아직 후기가 없습니다. 다녀오셨다면 첫 후기를 남겨 주세요 (+10P).</p>'}
+    <div class="btn-row">
+      <a class="btn primary" href="${write}">✏️ 후기 쓰기</a>
+      ${j.total ? `<a class="btn secondary" href="/board?course=${encodeURIComponent(c.id)}">후기 모두 보기</a>` : ""}
+    </div>`;
 }
 
 function reserveGuide(c, url, portal) {

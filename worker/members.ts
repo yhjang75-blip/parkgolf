@@ -1,14 +1,15 @@
 // 회원 기능: 카카오 로그인·가입 동의, 내 정보, 즐겨찾기, 포인트·등급, 제휴 혜택, 관리자 화면.
 // (게시판은 2026-11-17 사용자 요청으로 닫아 두어 옮기지 않음 — 표는 db.ts 에 남겨 둠)
+import { deletePostsData } from "./board";
 import { DB } from "./db";
 import { abort, courseById, Ctx, gradeOf, GRADES, json, now, redirect, Row, safeNext, today, randomToken } from "./lib";
 
 // 포인트 규칙: [점수, 하루 최대 횟수]
 export const RULES: Record<string, [number, number]> = {
-  "가입 축하": [20, 1], "출석": [1, 1], "글쓰기": [10, 3], "사진 올리기": [5, 3], "댓글": [2, 10], "추천 받음": [1, 20],
+  "가입 축하": [20, 1], "출석": [1, 1], "글쓰기": [10, 3], "사진 올리기": [5, 3], "댓글": [2, 10], "공감 받음": [1, 20],
   "대회 참가": [30, 3],
 };
-const BOARD_RULES = ["글쓰기", "사진 올리기", "댓글", "추천 받음"];
+// 게시판 포인트(글쓰기·사진·댓글·공감 받음)도 2026-11-17 게시판을 다시 열면서 혜택 화면에 보임
 
 /** 관리자: 비밀값 ADMIN_IDS (가입 아이디, 쉼표로 여러 명). 예전 카카오용 ADMIN_KAKAO_IDS 도 계속 인정 */
 const adminIds = (ctx: Ctx) => new Set(`${ctx.env.ADMIN_IDS || ""},${ctx.env.ADMIN_KAKAO_IDS || ""}`
@@ -290,28 +291,34 @@ export async function mePage(ctx: Ctx, db: DB) {
     return redirect("/me");
   }
   const favRows = await db.all("SELECT course_id FROM favorites WHERE user_id = ? ORDER BY created_at DESC", uid);
-  const [log, reds, myComps] = await Promise.all([
+  const [log, reds, myComps, myPosts] = await Promise.all([
     db.all("SELECT * FROM point_log WHERE user_id = ? ORDER BY id DESC LIMIT 15", uid),
     db.all(`SELECT r.*, b.title, b.partner FROM redemptions r JOIN benefits b ON b.id = r.benefit_id
             WHERE r.user_id = ? ORDER BY r.id DESC LIMIT 10`, uid),
     db.all(`SELECT e.*, c.title, c.play_date, c.venue, c.groups_open FROM entries e JOIN comps c ON c.id = e.comp_id
             WHERE e.user_id = ? ORDER BY c.play_date DESC LIMIT 10`, uid),
+    db.all("SELECT id, title, category, comments, likes, created_at, hidden FROM posts WHERE user_id = ? ORDER BY id DESC LIMIT 10", uid),
   ]);
-  return ctx.render("me.html", { favs: favRows.map((f) => courseById[f.course_id]).filter(Boolean), log, reds, my_comps: myComps });
+  return ctx.render("me.html", { favs: favRows.map((f) => courseById[f.course_id]).filter(Boolean), log, reds, my_comps: myComps, my_posts: myPosts });
 }
 
 export async function withdraw(ctx: Ctx, db: DB) {
   const r0 = needLogin(ctx); if (r0) return r0;
   const uid = ctx.user!.id;
-  const pids = (await db.all("SELECT id FROM posts WHERE user_id = ?", uid)).map((r) => r.id);
+  // 내 글(사진·댓글·공감 포함) 삭제
+  await deletePostsData(ctx, db, (await db.all("SELECT id FROM posts WHERE user_id = ?", uid)).map((r) => r.id));
+  // 다른 사람 글에 남긴 댓글·공감도 지우고, 그 글들의 댓글·공감 수를 다시 센다
+  const touched = (await db.all(`SELECT post_id FROM comments WHERE user_id = ? UNION SELECT post_id FROM reactions WHERE user_id = ?`, uid, uid))
+    .map((r) => r.post_id);
   const stmts = [];
-  if (pids.length) {
-    const ph = pids.map(() => "?").join(",");
-    for (const t of ["comments", "likes"]) stmts.push(db.q(`DELETE FROM ${t} WHERE post_id IN (${ph})`, ...pids));
-  }
-  for (const t of ["comments", "likes", "favorites", "point_log", "reports", "redemptions", "entries"])
+  for (const t of ["comments", "likes", "reactions", "favorites", "point_log", "reports", "redemptions", "entries"])
     stmts.push(db.q(`DELETE FROM ${t} WHERE user_id = ?`, uid));
-  stmts.push(db.q("DELETE FROM posts WHERE user_id = ?", uid), db.q("DELETE FROM users WHERE id = ?", uid));
+  if (touched.length) {
+    const ph = touched.map(() => "?").join(",");
+    stmts.push(db.q(`UPDATE posts SET comments = (SELECT COUNT(*) FROM comments c WHERE c.post_id = posts.id),
+      likes = (SELECT COUNT(*) FROM reactions r WHERE r.post_id = posts.id) WHERE id IN (${ph})`, ...touched));
+  }
+  stmts.push(db.q("DELETE FROM users WHERE id = ?", uid));
   await db.batch(stmts);
   ctx.session = {}; ctx.dirty = true;
   ctx.flash("탈퇴했습니다. 회원 정보와 작성한 글이 모두 삭제되었습니다.");
@@ -340,11 +347,6 @@ export async function toggleFav(ctx: Ctx, db: DB, cid: string) {
   return json({ favorite: true });
 }
 
-/** 구장 상세 화면: 즐겨찾기 여부 (게시판이 닫혀 있어 글 목록은 비어 있음) */
-export async function apiCoursePosts(ctx: Ctx, db: DB, cid: string) {
-  const fav = !!(ctx.user && await db.one("SELECT 1 FROM favorites WHERE user_id = ? AND course_id = ?", ctx.user.id, cid));
-  return json({ enabled: true, favorite: fav, login: !!ctx.user, items: [] });
-}
 
 // ---------------------------------------------------------------- 혜택
 async function monthlyRanking(db: DB, n: number) {
@@ -356,7 +358,7 @@ async function monthlyRanking(db: DB, n: number) {
 
 export async function benefitsPage(ctx: Ctx, db: DB) {
   const rows = await db.all("SELECT * FROM benefits WHERE active = 1 ORDER BY cost");
-  const rules = Object.entries(RULES).filter(([k]) => !BOARD_RULES.includes(k)).map(([k, [p, c]]) => [k, p, c]);
+  const rules = Object.entries(RULES).map(([k, [p, c]]) => [k, p, c]);
   return ctx.render("benefits.html", { rows, rules, ranking: await monthlyRanking(db, 10) });
 }
 
@@ -391,7 +393,7 @@ export async function redeem(ctx: Ctx, db: DB, bid: number) {
 // ---------------------------------------------------------------- 관리자
 export async function adminPage(ctx: Ctx, db: DB) {
   const r0 = needAdmin(ctx); if (r0) return r0;
-  const [bens, reds, reps, hidden, users_, nUsers, nPosts, nToday] = await Promise.all([
+  const [bens, reds, reps, hidden, users_, nUsers, nPosts, nToday, nImgs] = await Promise.all([
     db.all("SELECT * FROM benefits ORDER BY id DESC"),
     db.all(`SELECT r.*, u.nickname, b.title FROM redemptions r JOIN users u ON u.id = r.user_id
             JOIN benefits b ON b.id = r.benefit_id ORDER BY r.id DESC LIMIT 100`),
@@ -399,10 +401,10 @@ export async function adminPage(ctx: Ctx, db: DB) {
     db.all(`SELECT p.*, u.nickname FROM posts p JOIN users u ON u.id = p.user_id WHERE p.hidden = 1 ORDER BY p.id DESC LIMIT 50`),
     db.all("SELECT * FROM users ORDER BY earned DESC LIMIT 50"),
     db.val("SELECT COUNT(*) FROM users"), db.val("SELECT COUNT(*) FROM posts"),
-    db.val("SELECT COUNT(*) FROM users WHERE created_at LIKE ?", `${today()}%`),
+    db.val("SELECT COUNT(*) FROM users WHERE created_at LIKE ?", `${today()}%`), db.val("SELECT COUNT(*) FROM images"),
   ]);
   return ctx.render("admin.html", { bens, bens_plus: [...bens, null], reds, reps, hidden, users_,
-    stats: { "회원": nUsers, "글": nPosts, "오늘 가입": nToday } });
+    stats: { "회원": nUsers, "글": nPosts, "사진": nImgs, "오늘 가입": nToday } });
 }
 
 export async function adminBenefit(ctx: Ctx, db: DB) {

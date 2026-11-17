@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}{{ '글 고치기' if old else '글쓰기' }} — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page narrow">
+  <form class="panel aform" method="post" enctype="multipart/form-data" id="wform">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <h1>{{ '✏️ 글 고치기' if old else '✏️ 글쓰기' }}</h1>
+    <label class="field">게시판
+      <select name="category">{% for k, v in CATEGORIES %}<option value="{{ k }}" {{ 'selected' if k == cat }}>{{ v }}</option>{% endfor %}</select></label>
+    <label class="field">구장 <small>(구장 후기라면 골라 주세요)</small>
+      {% if course %}
+        <input type="hidden" name="course_id" value="{{ course.id }}">
+        <input value="{{ course.name }} ({{ course.sigungu or course.sido }})" disabled>
+      {% else %}
+        <input name="course_name" list="courses" placeholder="구장 이름을 적으면 목록이 나옵니다">
+        <datalist id="courses">{% for n in course_names %}<option value="{{ n }}">{% endfor %}</datalist>
+      {% endif %}
+    </label>
+    <label class="field">제목<input name="title" maxlength="100" required minlength="2" value="{{ old.title if old }}"></label>
+    <label class="field">내용<textarea name="body" rows="10" maxlength="5000" required minlength="2"
+      placeholder="잔디 상태, 코스 난이도, 예약 팁, 주차·화장실, 주변 맛집 등 자유롭게 나눠 주세요.">{{ old.body if old }}</textarea></label>
+
+    {% if old_imgs|length %}
+      <p class="field">올린 사진 <small>(체크를 풀면 지워집니다)</small></p>
+      <div class="keep">
+        {% for i in old_imgs %}
+          <label><img src="/img/{{ i.id }}/thumb" alt=""><span class="check"><input type="checkbox" name="keep_img" value="{{ i.id }}" checked> 남기기</span></label>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <label class="field">📷 사진 <small>(최대 4장 · 큰 사진도 자동으로 줄여서 올립니다)</small>
+      <input type="file" name="photos" accept="image/*" multiple id="photos"></label>
+    <div class="preview" id="preview"></div>
+    <p class="src">사진을 올리면 +5P를 더 드립니다. 사진 속 촬영 위치 같은 정보는 지우고 올립니다. 다른 사람 얼굴이 크게 나온 사진은 허락을 받고 올려 주세요.</p>
+    <p class="guide warn" id="werr" hidden></p>
+    <button class="btn primary big-cta" type="submit" id="wsubmit">{{ '저장' if old else '올리기' }}</button>
+  </form>
+</main>
+{% endblock %}
+{% block scripts %}
+<script>
+  // 사진은 이 기기에서 줄인 뒤(긴 변 1280px, 작은 사진 480px) 보낸다 → 빠르게 올라가고, 위치 정보는 빠진다
+  const MAX = 4, form = document.getElementById("wform"), inp = document.getElementById("photos"),
+        pv = document.getElementById("preview"), err = document.getElementById("werr"), btn = document.getElementById("wsubmit");
+  const keepCount = () => document.querySelectorAll("input[name=keep_img]:checked").length;
+  const showErr = (t) => { err.textContent = t; err.hidden = !t; };
+  inp.addEventListener("change", () => {
+    const room = MAX - keepCount();
+    showErr(inp.files.length > room ? `사진은 모두 ${MAX}장까지입니다. 앞의 ${Math.max(0, room)}장만 올라갑니다.` : "");
+    pv.innerHTML = "";
+    [...inp.files].slice(0, Math.max(0, room)).forEach((f) => { const i = document.createElement("img"); i.src = URL.createObjectURL(f); pv.appendChild(i); });
+  });
+  async function decode(file) {
+    try { return await createImageBitmap(file, { imageOrientation: "from-image" }); } catch {}
+    const img = new Image(); img.src = URL.createObjectURL(file); await img.decode(); return img;
+  }
+  async function shrink(src, max, quality, limit) {
+    const w0 = src.width, h0 = src.height, s = Math.min(1, max / Math.max(w0, h0));
+    const c = document.createElement("canvas"); c.width = Math.round(w0 * s); c.height = Math.round(h0 * s);
+    const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, c.width, c.height); g.drawImage(src, 0, 0, c.width, c.height);
+    for (let q = quality; q >= 0.4; q -= 0.15) {
+      const b = await new Promise((r) => c.toBlob(r, "image/jpeg", q));
+      if (b && b.size <= limit) return { blob: b, w: c.width, h: c.height };
+    }
+    throw new Error("big");
+  }
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    if (!form.reportValidity()) return;
+    btn.disabled = true; showErr("");
+    const fd = new FormData(form);
+    fd.delete("photos");
+    const files = [...inp.files].slice(0, Math.max(0, MAX - keepCount()));
+    try {
+      for (let i = 0; i < files.length; i++) {
+        btn.textContent = `사진 줄이는 중… (${i + 1}/${files.length})`;
+        let src;
+        try { src = await decode(files[i]); } catch { throw new Error(`${i + 1}번째 파일은 사진으로 열 수 없습니다. 다른 사진을 골라 주세요.`); }
+        const full = await shrink(src, 1280, 0.82, 1400000), thumb = await shrink(src, 480, 0.75, 280000);
+        fd.append("photo", full.blob, `p${i}.jpg`); fd.append("thumb", thumb.blob, `t${i}.jpg`); fd.append("size", `${full.w}x${full.h}`);
+      }
+      btn.textContent = "올리는 중…";
+      const r = await fetch(location.pathname + location.search, { method: "POST", body: fd, headers: { "X-Requested-With": "fetch" } });
+      const j = await r.json().catch(() => null);
+      if (!r.ok || !j || !j.redirect) throw new Error("저장하지 못했습니다. 잠시 후 다시 시도해 주세요.");
+      location.href = j.redirect;  // 저장 후 글 화면(또는 안내가 있는 쓰기 화면)으로
+    } catch (e) {
+      showErr(e.message && e.message !== "big" ? e.message : "사진을 처리하지 못했습니다. 다른 사진을 골라 보세요.");
+      btn.disabled = false; btn.textContent = "{{ '저장' if old else '올리기' }}";
+    }
+  });
+</script>
+{% endblock %}

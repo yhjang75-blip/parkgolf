@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}{{ CATEGORIES[cat] if cat else '게시판' }} — 나이스파크{% endblock %}
+{% block content %}
+<main class="wrap page">
+  <section class="panel">
+    <div class="panel-head">
+      <h1>💬 파크골퍼 게시판{% if course %} · {{ course.name }}{% endif %}</h1>
+      <a class="btn primary small inl" href="{{ write_url }}">✏️ 글쓰기</a>
+    </div>
+    {% if course %}
+      <p class="guide">📍 <b>{{ course.name }}</b> ({{ course.sigungu or course.sido }}) 이야기만 모아 봅니다. <a href="/board">전체 글 보기</a> · <a href="/#id={{ course.id }}">구장 정보</a></p>
+    {% else %}
+      <p class="lead">다녀온 파크골프장의 잔디·분위기·예약 팁, 사진, 대회 이야기를 나눠 주세요. 글을 쓰면 <b>+10P</b>, 사진을 올리면 <b>+5P</b>를 드립니다.</p>
+    {% endif %}
+    <nav class="cats">
+      <a href="/board{{ '?course=' ~ course.id if course }}" class="{{ 'on' if not cat }}">전체</a>
+      {% for k, v in CATEGORIES %}<a href="/board?cat={{ k }}{{ '&course=' ~ course.id if course }}" class="{{ 'on' if cat == k }}">{{ v }}</a>{% endfor %}
+    </nav>
+    <form class="bsearch" method="get" action="/board">
+      {% if cat %}<input type="hidden" name="cat" value="{{ cat }}">{% endif %}
+      {% if course %}<input type="hidden" name="course" value="{{ course.id }}">{% endif %}
+      <input type="search" name="q" value="{{ q }}" placeholder="제목·내용 검색 (예: 잔디, 주차)">
+      <button class="btn secondary small" type="submit">검색</button>
+    </form>
+
+    {% if cat == 'photo' %}
+      <div class="gallery">
+        {% for p in rows %}
+          <a href="/board/{{ p.id }}" class="gcell">
+            {% if first_img[p.id] %}<img src="/img/{{ first_img[p.id] }}/thumb" alt="" loading="lazy">{% else %}<span class="noimg">📝</span>{% endif %}
+            <span class="gt">{{ p.title }}</span><span class="gm">{{ p.grade.icon }} {{ p.nickname }} · 공감 {{ p.likes }}</span>
+          </a>
+        {% else %}<p class="muted">아직 사진이 없습니다. 첫 사진을 올려 주세요!</p>{% endfor %}
+      </div>
+    {% else %}
+      <ul class="plist">
+        {% for p in rows %}
+          <li><a href="/board/{{ p.id }}">
+            {% if first_img[p.id] %}<img src="/img/{{ first_img[p.id] }}/thumb" alt="" loading="lazy">{% endif %}
+            <span class="pt"><span class="pc">{{ CATEGORIES[p.category] }}</span> {{ p.title }}
+              {% if p.comments %}<span class="cc">[{{ p.comments }}]</span>{% endif %}{% if p.photos %} 📷{% endif %}</span>
+            <span class="pm">{{ p.grade.icon }} {{ p.nickname }} · {{ p.created_at[5:16] }} · 조회 {{ p.views }} · 공감 {{ p.likes }}
+              {% if p.course_id and byid[p.course_id] %} · 📍{{ byid[p.course_id].name }}{% endif %}</span>
+          </a></li>
+        {% else %}
+          <li class="muted empty">아직 글이 없습니다. 첫 글의 주인공이 되어 주세요! (+10P)</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if pages > 1 %}
+      <nav class="pager">
+        {% for n in range(1, pages + 1) %}<a class="{{ 'on' if n == page }}" href="/board?{{ qs(n) }}">{{ n }}</a>{% endfor %}
+      </nav>
+    {% endif %}
+  </section>
+</main>
+{% endblock %}

@@ -3,6 +3,7 @@
 // - 구장 자료·화면 꾸밈 파일(public/)은 Cloudflare 가 직접 내보냄 (무료·무제한, 이 코드까지 오지 않음)
 // - 이 코드는 화면(HTML)·회원·대회·날씨·뉴스 요청만 처리
 // - 회원·대회 자료는 D1 데이터베이스(binding: DB)에 보관
+import * as board from "./board";
 import * as compete from "./compete";
 import { openDb, schemaLost, secretKey } from "./db";
 import * as feeds from "./feeds";
@@ -33,7 +34,20 @@ on("GET", "/api/courses/:str", async (ctx, _db, [cid]) => {
   const r = await asset(ctx, `/data/course/${encodeURIComponent(cid)}.json`);
   return r.ok ? r : abort(404);
 });
-on("GET", "/api/courses/:str/posts", (ctx, db, [cid]) => m.apiCoursePosts(ctx, db, cid));
+on("GET", "/api/courses/:str/posts", (ctx, db, [cid]) => board.coursePosts(ctx, db, cid));
+
+// ---------------------------------------------------------------- 게시판
+on("GET", "/board", (ctx, db) => board.boardPage(ctx, db));
+on("GET|POST", "/board/write", (ctx, db) => board.writePage(ctx, db, null));
+on("GET", "/board/:int", (ctx, db, [p]) => board.viewPage(ctx, db, n(p)));
+on("GET|POST", "/board/:int/edit", (ctx, db, [p]) => board.writePage(ctx, db, n(p)));
+on("POST", "/board/:int/delete", (ctx, db, [p]) => board.deletePost(ctx, db, n(p)));
+on("POST", "/board/:int/comment", (ctx, db, [p]) => board.addComment(ctx, db, n(p)));
+on("POST", "/board/:int/react/:int", (ctx, db, [p, i]) => board.react(ctx, db, n(p), n(i)));
+on("POST", "/comment/:int/delete", (ctx, db, [c]) => board.deleteComment(ctx, db, n(c)));
+on("POST", "/report/:str/:int", (ctx, db, [k, t]) => board.report(ctx, db, k, n(t)));
+on("GET", "/img/:int", (ctx, db, [i]) => board.image(ctx, db, n(i), "full"));
+on("GET", "/img/:int/thumb", (ctx, db, [i]) => board.image(ctx, db, n(i), "thumb"));
 on("GET", "/api/weather/:str", (ctx, db, [cid]) => feeds.weather(ctx, db, cid));
 on("GET", "/api/nearby/:str", (ctx, db, [cid]) => feeds.nearby(ctx, db, cid));
 on("GET", "/api/news", (ctx, db) => feeds.news(ctx, db));

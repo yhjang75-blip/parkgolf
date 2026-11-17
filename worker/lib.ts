@@ -8,6 +8,7 @@ import SITE from "../data/site.json";
 
 export interface Env {
   DB: D1Database;
+  PHOTOS: KVNamespace;  // 게시판 사진 파일 (키: img/<번호>/full, img/<번호>/thumb)
   ASSETS: Fetcher;
   SECRET_KEY?: string;
   KAKAO_REST_API_KEY?: string;
@@ -48,7 +49,7 @@ export function gradeOf(earned: number) {
   GRADES.forEach(([need], i) => { if ((earned || 0) >= need) lv = i; });
   return { level: lv, name: GRADES[lv][1], icon: GRADES[lv][2], next: lv + 1 < GRADES.length ? GRADES[lv + 1][0] : null };
 }
-export const CATEGORIES = { free: "자유게시판", review: "구장 후기", photo: "사진 자랑", tour: "대회 이야기", qna: "질문·정보" };
+export const CATEGORIES = { review: "구장 후기", photo: "사진 자랑", tour: "대회 이야기", qna: "질문·정보", free: "자유게시판" };
 
 // ---------------------------------------------------------------- 화면 그리기
 nunjucks.installJinjaCompat();
