@@ -300,6 +300,15 @@ def healthz():
     return "ok"
 
 
+@app.get("/status")
+def status():
+    """회원 기능 설정 점검 (비밀값은 보여 주지 않고 입력 여부만)."""
+    e = os.environ.get
+    return jsonify({"데이터베이스": cdb.STATUS, "회원기능": cdb.ENABLED,
+                    "카카오키": bool(e("KAKAO_REST_API_KEY")), "관리자번호": bool(e("ADMIN_KAKAO_IDS")),
+                    "로그인비밀값": bool(e("SECRET_KEY")), "서버": "Render" if e("RENDER") else "내 PC"})
+
+
 if __name__ == "__main__":
     import sys
     if "--open" in sys.argv:  # 바탕화면 아이콘으로 실행하면 브라우저를 자동으로 연다

@@ -33,6 +33,9 @@ if url.startswith("postgresql://"):
 
 ON_SERVER = bool(os.environ.get("RENDER") or os.environ.get("CLOUDFLARE"))  # Render 또는 Cloudflare 서버에서 실행 중
 ENABLED = bool(url) or not ON_SERVER
+# 상태 확인용 (비밀값 없이 이유만): /status 에서 보여 준다
+STATUS = ("주소 형식 오류 (postgresql:// 로 시작하는 주소가 아님)" if _raw and not url
+          else "주소 없음 (DATABASE_URL 미입력)" if not url and ON_SERVER else "확인 전")
 if not url:
     url = f"sqlite:///{ROOT / 'data' / 'community.db'}"
 
@@ -219,16 +222,31 @@ entries = Table(
 
 def init():
     """표를 만든다. 접속에 실패하면 사이트는 그대로 두고 회원 기능만 끈다 (로그에 이유를 남김)."""
-    global engine, ENABLED
+    global engine, ENABLED, STATUS
     if engine is None:
-        log.warning("회원 기능 꺼짐: DATABASE_URL 이 없습니다.")
+        log.warning("회원 기능 꺼짐: %s", STATUS)
         return
     try:
         md.create_all(engine)
+        STATUS = "연결됨 (" + ("Postgres" if engine.url.get_backend_name() == "postgresql" else "내 PC 시험용 SQLite") + ")"
         log.warning("데이터베이스 연결 성공: %s", engine.url.host)
     except Exception as e:  # 잘못된 주소·비밀번호 등
-        log.error("데이터베이스 연결 실패 (회원 기능 꺼짐): %s", str(e).splitlines()[0][:200])
+        msg = str(e).splitlines()[0][:200]
+        log.error("데이터베이스 연결 실패 (회원 기능 꺼짐): %s", msg)
+        STATUS = "연결 실패: " + explain(msg)
         engine, ENABLED = None, False
+
+
+def explain(msg):
+    """접속 오류를 쉬운 말로 (주소·비밀번호는 지운다)."""
+    low = msg.lower()
+    for key, text in (("password authentication", "비밀번호가 맞지 않음"), ("translate host", "서버 주소(호스트)가 틀림"), ("getaddrinfo", "서버 주소(호스트)가 틀림"),
+                      ("does not exist", "데이터베이스 이름이 틀림"), ("timeout", "접속 시간 초과"),
+                      ("timed out", "접속 시간 초과"), ("ssl", "SSL(보안 연결) 설정 문제"),
+                      ("endpoint", "Neon 주소(endpoint) 문제"), ("suspended", "Neon 데이터베이스가 정지됨")):
+        if key in low:
+            return text
+    return re.sub(r"\w+://\S+|@\S+|password=\S+", "***", msg)[:120]
 
 
 def one(stmt):
