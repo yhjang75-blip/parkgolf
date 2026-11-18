@@ -20,6 +20,14 @@
     </ol>
   </section>
 
+  {% if not me %}
+  <section class="panel join-note">
+    <p><b>🙋 대회 참가 신청은 회원만 할 수 있습니다.</b> 신청 내역·입금 확인·조 편성·내 순위를 본인만 확인할 수 있도록 하기 위해서입니다.</p>
+    <p class="muted">구장 찾기·예약 안내·점수계산기·대회 일정은 가입 없이 누구나 쓰실 수 있습니다.</p>
+    <p><a class="btn primary" href="/join?next=/compete">회원가입 (+20P)</a> <a class="btn secondary" href="/login?next=/compete">로그인</a></p>
+  </section>
+  {% endif %}
+
   <section class="panel">
     <h2>🏅 신청할 수 있는 대회</h2>
     {% if upcoming %}

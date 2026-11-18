@@ -1,6 +1,7 @@
 /* ===================== 회원·커뮤니티 (style.css 다음에 읽음) ===================== */
 .topnav a.join { background: #ffd75e; color: #2b2300; }
 .topnav a.join:hover { background: #ffcb2b; }
+.topnav a.login-link { font-weight: 500; opacity: .85; font-size: .85rem; }
 .topnav a.me-link { background: rgba(255,255,255,.18); }
 .flash { margin-top: 12px; }
 .flash p { background: var(--green-bg); color: var(--green); border: 1px solid #b9dcc2; border-radius: 10px; padding: 10px 14px; margin: 6px 0; font-weight: 600; }

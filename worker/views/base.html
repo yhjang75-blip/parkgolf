@@ -28,7 +28,7 @@
           <a class="me-link" href="/me">{{ me.grade.icon }} {{ me.nickname }} · {{ me.points }}P</a>
           {% if me.is_admin %}<a href="/admin">관리</a>{% endif %}
         {% elif db_on %}
-          <a class="join" href="/login">로그인·가입</a>
+          <a class="login-link" href="/login">로그인</a>
         {% endif %}
       </nav>
     </div>

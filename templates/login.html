@@ -6,11 +6,12 @@
     <h1>나이스파크 회원이 되어 보세요</h1>
     <p class="lead">카카오 계정으로 <b>버튼 한 번</b>이면 가입됩니다.<br>비밀번호를 따로 만들 필요가 없습니다.</p>
     <ul class="perks">
+      <li>🏅 <b>대회 참가 신청</b> — 신청부터 조 편성·결과 확인까지 (회원 전용)</li>
       <li>⭐ <b>내 구장 즐겨찾기</b> — 자주 가는 구장의 예약 바로가기</li>
       <li>📍 <b>우리 동네 소식</b> — 관심 지역 파크골프 뉴스를 첫 화면에</li>
-      <li>🏅 <b>대회 참가 신청</b> — 신청부터 조 편성·결과 확인까지</li>
       <li>🎁 <b>포인트·등급 혜택</b> — 활동할수록 쌓이는 포인트로 제휴 혜택 교환</li>
     </ul>
+    <p class="src center">구장 찾기·예약 안내·점수계산기·대회 일정은 가입 없이 쓰실 수 있습니다.</p>
     {% if kakao_ready %}
       <a class="btn kakao" href="{{ url_for('community.kakao_start', next=next) }}">
         <span aria-hidden="true">💬</span> 카카오로 3초 만에 시작하기</a>

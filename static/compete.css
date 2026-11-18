@@ -98,3 +98,4 @@ fieldset.choice input { width: 20px; height: 20px; accent-color: var(--green); }
   .track li { font-size: .78rem; }
   .myslot b { font-size: 1.2rem; }
 }
+.join-note p { margin: 0 0 6px; } .join-note .btn { margin: 4px 4px 0 0; }

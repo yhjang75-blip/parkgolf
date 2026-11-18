@@ -1,6 +1,6 @@
 /* 오른쪽 위 '내 나이스파크' 작은 카드 (첫 화면·게시판 공통)
    - 로그인: 등급·포인트, 즐겨찾기 구장 3곳, 관심 지역 소식 2개
-   - 로그인 전: 회원가입 안내
+   - 로그인 전: 표시하지 않음 (가입 안내는 대회 참가 화면에서만)
    화면에 <aside id="mybox" class="mybox" hidden></aside> 를 두고 이 파일을 불러오면 된다. */
 (() => {
   const h = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -12,14 +12,10 @@
     let j;
     try { j = await fetch("/api/me", { credentials: "same-origin" }).then((r) => r.json()); } catch { return; }
     if (!j.enabled) return;
+    // 로그인 전에는 아무것도 띄우지 않는다 (구장 찾기·예약 안내·점수계산기는 가입 없이 쓰고,
+    // 회원가입 안내는 '대회 참가' 화면에서만 한다)
+    if (!j.login) { box.hidden = true; return; }
     box.hidden = false;
-    if (!j.login) {
-      box.className = "mybox guest";
-      box.innerHTML = `<p class="mb-t">⛳ 나이스파크 회원이 되어 보세요</p>
-        <p class="mb-s">⭐ 구장 즐겨찾기 · 📍 우리 동네 소식 · 💬 후기 쓰기</p>
-        <a class="btn primary small" href="/login?next=${encodeURIComponent(location.pathname + location.search)}">회원가입·로그인 (+20P)</a>`;
-      return;
-    }
     const g = j.grade, region = j.fav_sigungu || j.fav_sido;
     const favs = (j.favorites || []).slice(0, 3);
     box.className = "mybox";
